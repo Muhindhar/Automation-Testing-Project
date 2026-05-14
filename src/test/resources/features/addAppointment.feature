@@ -13,7 +13,6 @@ Feature: Muhindhar_12-05-2026_Add Appointment Functionality
     When user navigates to Appointment section
     And user clicks on Add Appointment
     And user enters valid patient details
-      | Doctor            | Shift   | Appointment Date    | Slot                | Appointment Priority | Status  | Live Consultant |
       | Amit Singh (9009) | Morning | 05/20/2026 12:06 PM | 10:00 AM - 12:30 PM | Urgent               | Pending | No              |
     And user clicks on Save button
     Then appointment should be added successfully

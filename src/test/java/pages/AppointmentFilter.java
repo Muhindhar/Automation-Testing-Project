@@ -1,0 +1,36 @@
+package pages;
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import utilities.HelperClass;
+
+public class AppointmentFilter {
+
+	public AppointmentFilter() {
+		PageFactory.initElements(HelperClass.getDriver(), this);
+	}
+	@FindBy(xpath =
+	"//span[normalize-space()='Appointment']")
+	public WebElement appointmentMenu;
+
+	@FindBy(xpath =
+	"//a[normalize-space()='Today Appointment']")
+	public WebElement todayAppointmentFilter;
+
+	@FindBy(xpath =
+	"//*[contains(text(),'Upcoming Appointment')]")
+	public WebElement upcomingAppointmentFilter;
+
+	@FindBy(xpath =
+	"//*[contains(text(),'Old Appointment')]")
+	public WebElement oldAppointmentFilter;
+
+	@FindBy(xpath =
+	"//table/tbody/tr")
+	public List<WebElement> appointmentRows;
+
+}
