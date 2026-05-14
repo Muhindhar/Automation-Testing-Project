@@ -7,14 +7,11 @@
 *.iml
 
 # Build
-target/
+# target/
 bin/
 
 # Reports
-test-output/
-allure-results/
-ExtentReports/
-logs/
-
-# Runner
-src/test/java/runner/TestRunner.java
+# test-output/
+# allure-results/
+# ExtentReports/
+# logs/
