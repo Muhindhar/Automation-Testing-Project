@@ -11,6 +11,7 @@ import definitions.Helper;
 import definitions.Hooks;
 import pages.DashboardPage;
 import pages.LoginPage;
+import utilities.DriverFactory;
 
 public class LoginAction extends BaseAction{
 	
@@ -97,8 +98,8 @@ public class LoginAction extends BaseAction{
 	
 	public void goToLoginPage()
 	{
-		Hooks.driver.switchTo().newWindow(WindowType.TAB);
-		Hooks.driver.get(Helper.getPropertyFile().getProperty("loginUrl"));
+		DriverFactory.getDriver().switchTo().newWindow(WindowType.TAB);
+		DriverFactory.getDriver().get(Helper.getPropertyFile().getProperty("loginUrl"));
 	}
 
 }

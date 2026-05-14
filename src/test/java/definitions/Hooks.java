@@ -1,27 +1,23 @@
 package definitions;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import utilities.DriverFactory;
 
 public class Hooks {
-	public static WebDriver driver;
 	
 	@Before
 	public static void setUp()
 	{
-		driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		DriverFactory.initDriver();
 	}
 	
 	@After
 	public static void tearDown()
 	{
-		if(driver != null)
+		if(DriverFactory.getDriver() != null)
 		{
-			driver.quit();
+			DriverFactory.quitDriver();
 		}
 	}
 }

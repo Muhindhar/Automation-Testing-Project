@@ -5,6 +5,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+import utilities.DriverFactory;
+
 public class Helper {
 	
 	
@@ -34,7 +36,7 @@ public class Helper {
 		
 		String url = prop.getProperty("url");
 		
-		Hooks.driver.get(url);
+		DriverFactory.getDriver().get(url);
 	}
 	
 //	public static void login()
