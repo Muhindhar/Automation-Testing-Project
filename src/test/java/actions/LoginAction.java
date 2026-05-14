@@ -98,7 +98,6 @@ public class LoginAction extends BaseAction{
 	
 	public void goToLoginPage()
 	{
-		DriverFactory.getDriver().switchTo().newWindow(WindowType.TAB);
 		DriverFactory.getDriver().get(Helper.getPropertyFile().getProperty("loginUrl"));
 	}
 
