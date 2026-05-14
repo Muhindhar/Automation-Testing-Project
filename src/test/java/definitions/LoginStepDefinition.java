@@ -6,10 +6,11 @@ import actions.LoginAction;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utilities.DriverFactory;
 
 public class LoginStepDefinition {
 	
-	LoginAction la = new LoginAction(Hooks.driver);
+	LoginAction la = new LoginAction(DriverFactory.getDriver());
 
 	@Given("the user is on the login page")
 	public void the_user_is_on_the_login_page() {
@@ -83,7 +84,7 @@ public class LoginStepDefinition {
 
 	@Then("the user should be redirected to the dashboard")
 	public void the_user_should_be_redirected_to_the_dashboard() {
-		String url = Hooks.driver.getCurrentUrl();
+		String url = DriverFactory.getDriver().getCurrentUrl();
 		Assert.assertTrue(url.contains("dashboard"));
 	}
 
