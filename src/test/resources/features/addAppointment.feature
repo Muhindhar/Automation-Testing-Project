@@ -1,6 +1,6 @@
 Feature: Muhindhar_12-05-2026_Add Appointment Functionality
   Description:
-    Verify whether receptionist user is able to add appointment successfully.
+    Verify whether receptionist user is logged in and able to add appointment successfully.
 
   Background:
     Given the user is on the homepage
