@@ -1,35 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-14T16:52:07 IST" name="Default suite" finished-at="2026-05-14T16:52:32 IST" duration-ms="25381">
+  <suite started-at="2026-05-14T15:37:42 IST" name="Default suite" finished-at="2026-05-14T15:38:32 IST" duration-ms="49973">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-14T16:52:07 IST" name="Default test" finished-at="2026-05-14T16:52:32 IST" duration-ms="25381">
+    <test started-at="2026-05-14T15:37:42 IST" name="Default test" finished-at="2026-05-14T15:38:32 IST" duration-ms="49973">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-14T16:52:07 IST" name="setUpClass" finished-at="2026-05-14T16:52:08 IST" duration-ms="627" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:37:42 IST" name="setUpClass" finished-at="2026-05-14T15:37:43 IST" duration-ms="1011" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4acb7ecc]]>
+                <![CDATA[org.testng.TestRunner@2c56eba5]]>
+>>>>>>> 186e16e33d97a450e825bd73d0f098b50b74b05b
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-14T16:52:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T16:52:21 IST" duration-ms="13121" status="FAIL">
           <params>
             <param index="0">
               <value>
                 <![CDATA["Search for an OPD patient (Valid and Invalid)"]]>
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:37:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:37:54 IST" duration-ms="10307" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with invalid email and password"]]>
+>>>>>>> 186e16e33d97a450e825bd73d0f098b50b74b05b
               </value>
             </param>
             <param index="1">
               <value>
+<<<<<<< HEAD
                 <![CDATA["OPD Patient Search"]]>
               </value>
             </param>
@@ -59,13 +70,84 @@ at ✽.the patient table should display "The single record for Patient ID "Maria
             <param index="1">
               <value>
                 <![CDATA["OPD Patient Search"]]>
+=======
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+>>>>>>> 186e16e33d97a450e825bd73d0f098b50b74b05b
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-14T16:52:32 IST" name="tearDownClass" finished-at="2026-05-14T16:52:32 IST" duration-ms="22" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:37:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:38:02 IST" duration-ms="8467" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with valid email and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:38:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:38:09 IST" duration-ms="7123" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with empty email and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:38:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:38:22 IST" duration-ms="12600" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with empty email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:38:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:38:30 IST" duration-ms="8186" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with empty password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:38:30 IST" name="tearDownClass" finished-at="2026-05-14T15:38:32 IST" duration-ms="2206" status="PASS">
+>>>>>>> 186e16e33d97a450e825bd73d0f098b50b74b05b
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
