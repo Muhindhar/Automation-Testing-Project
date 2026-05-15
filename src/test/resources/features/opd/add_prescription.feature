@@ -4,8 +4,8 @@ Feature: Add Prescription (User Story 4.6)
   So that the patient knows what medication to take
 
   Background:
-    Given the user is logged into the Smart Hospital portal
-    And the user is viewing an existing OPD patient's profile
+    Given the user is logged into the Smart Hospital portal as a doctor
+    And the user is viewing an existing OPD patient profile
 
   @us_4.6 @prescription
   Scenario: Add multiple medicines to a prescription
