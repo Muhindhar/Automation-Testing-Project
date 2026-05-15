@@ -1,4 +1,3 @@
-# IDE
 .metadata/
 .idea/
 .settings/
@@ -6,12 +5,13 @@
 .classpath
 *.iml
 
-# Build
-# target/
+Build
+target/
 bin/
 
-# Reports
-# test-output/
-# allure-results/
-# ExtentReports/
-# logs/
+Reports
+test-output/
+allure-results/
+ExtentReports/
+logs/
+src/test/java/com/runner/TestNgRunner.java

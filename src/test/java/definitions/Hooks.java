@@ -13,11 +13,10 @@ public class Hooks {
 	}
 	
 	@After
-	public static void tearDown()
-	{
-		if(DriverFactory.getDriver() != null)
-		{
-			DriverFactory.quitDriver();
-		}
+	public void tearDown() {
+
+	    if (DriverFactory.getDriver() != null) {
+	        DriverFactory.getDriver().quit();
+	    }
 	}
 }
