@@ -1,9 +1,8 @@
 package utilities;
 
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
 
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,26 +17,23 @@ public class DriverFactory {
 
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-popup-blocking");
-        options.addArguments("--disable-extensions");
-        options.addArguments("--headless=new");
-        options.addArguments("--window-size=1920,1080");
         options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--start-maximized");
 
-        Map<String, Object> prefs = new HashMap<>();
+        options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 
-        prefs.put("profile.default_content_setting_values.notifications", 2);
-        prefs.put("credentials_enable_service", false);
-        prefs.put("profile.password_manager_enabled", false);
+        driver.set(new ChromeDriver(options));
 
-        options.setExperimentalOption("prefs", prefs);
+        getDriver().manage().timeouts()
+                .implicitlyWait(Duration.ofSeconds(10));
 
-        WebDriver webDriver = new ChromeDriver(options);
+        getDriver().manage().timeouts()
+                .pageLoadTimeout(Duration.ofSeconds(60));
 
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-        driver.set(webDriver);
-
-        return webDriver;
+        return getDriver();
     }
 
     public static WebDriver getDriver() {
@@ -45,6 +41,7 @@ public class DriverFactory {
     }
 
     public static void quitDriver() {
+
         if (driver.get() != null) {
             driver.get().quit();
             driver.remove();
