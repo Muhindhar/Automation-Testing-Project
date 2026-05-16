@@ -1,17 +1,33 @@
-.metadata/
+# IDE
+.metadata
 .idea/
-.settings/
 .project
 .classpath
+.settings/
+.factorypath
+
+# IntelliJ
 *.iml
 
-Build
-target/
-bin/
+# Git
+.git
 
-Reports
-test-output/
-allure-results/
-ExtentReports/
+# Logs
 logs/
+
+# Build folders
+target/
+test-output/
+allure-report/
+allure-results/
+
+# Screenshots
+screenshots/
+test-output/Screenshots/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Runner
 src/test/java/com/runner/TestNgRunner.java
