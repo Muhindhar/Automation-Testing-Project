@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Smart Hospital Test Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 14, 2026 10:20:41 pm</span></a>
+<a href="#"><span class="badge badge-primary">May 16, 2026 05:57:05 pm</span></a>
 </li>
 </ul>
 </div>
@@ -79,7 +79,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@TodayAppointmentFilter</a><a class="dropdown-item" href="#">@OldAppointmentFilter</a><a class="dropdown-item" href="#">@UpcomingAppointmentFilter</a>
+<a class="dropdown-item" href="#">@DifferentComplaints</a>
 </ul>
 </li>
 </ul>
@@ -90,9 +90,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Muhindhar_13-05-2026_Appointment Filter Functionality</p>
+            <p class="name">Muhindhar_16-05-2026_Add a complaint in the front office page</p>
             <p class="text-sm">
-              <span>10:20:42 pm</span> / <span>00:02:25:064</span>
+              <span>5:57:05 pm</span> / <span>00:00:12:046</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -100,152 +100,69 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Muhindhar_13-05-2026_Appointment Filter Functionality</h5>
-<span class='badge badge-success'>05.14.2026 10:20:42 pm</span>
-<span class='badge badge-danger'>05.14.2026 10:23:07 pm</span>
-<span class='badge badge-default'>00:02:25:064</span>
+<h5 class="test-status text-pass">Muhindhar_16-05-2026_Add a complaint in the front office page</h5>
+<span class='badge badge-success'>05.16.2026 5:57:05 pm</span>
+<span class='badge badge-danger'>05.16.2026 5:57:17 pm</span>
+<span class='badge badge-default'>00:00:12:046</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
-<div class="m-t-10 m-l-5"> Description:
-Verify whether receptionist user is able to filter appointment records successfully.</div>
+<div class="m-t-10 m-l-5"> Description:To add complaints with different complaint types and different sources using excel data.</div>
 </div>
 </div>
 <div class="accordion mt-4">
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Validate today appointment filter</div>
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Add complaint using excel data</div>
       </div>
     </div>
         <div class="collapse">
           <div class="card-body">
-              <div class="step pass-bg" title="definitions.addAppointment_Def.the_user_is_on_the_homepage()">
-                <span>Given the user is on the homepage</span>
+              <div class="step pass-bg" title="definitions.CallLogfrontofc.user_is_on_login_page_of_site()">
+                <span>Given user is on login page of site</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_clicks_on_receptionist_button()">
+              <div class="step pass-bg" title="definitions.AppointmentFilterDef.user_clicks_on_receptionist_button()">
                 <span>And user clicks on receptionist button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_clicks_on_signin_button()">
-                <span>And user clicks on signin button</span>
+              <div class="step pass-bg" title="definitions.CallLogfrontofc.click_signin_button()">
+                <span>And click signin button</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_should_navigate_to_receptionist_dashboard()">
-                <span>Then user should navigate to receptionist dashboard</span>
+              <div class="step pass-bg" title="definitions.CallLogfrontofc.user_navigates_to_the_front_office_link()">
+                <span>And user navigates to the front office link</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_navigates_to_appointment_section()">
-                <span>And user navigates to Appointment section</span>
+              <div class="step pass-bg" title="definitions.ComplainFo.clicks_on_the_complaint_link()">
+                <span>And clicks on the complaint link</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="definitions.AppointmentFilterDef.user_clicks_on_the_today_appointment_filter()">
-                <span>When user clicks on the Today Appointment filter</span>
+              <div class="step pass-bg" title="definitions.ComplainFo.click_on_the_add_complaint()">
+                <span>And click on the add complaint</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="definitions.AppointmentFilterDef.user_should_be_able_to_see_today_s_appointment_details()">
-                <span>Then user should be able to see today's appointment details</span>
+              <div class="step pass-bg" title="definitions.ComplainFo.user_enters_the_complaint_details_from_excel()">
+                <span>When user enters the complaint details from excel</span>
       <div>
       </div>
               </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="12"><span class="badge log pass-bg mr-2">Pass</span>Validate upcoming appointment filter</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="definitions.addAppointment_Def.the_user_is_on_the_homepage()">
-                <span>Given the user is on the homepage</span>
+              <div class="step pass-bg" title="definitions.ComplainFo.click_save_button_in_the_site()">
+                <span>And click save button in the site</span>
       <div>
       </div>
               </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_clicks_on_receptionist_button()">
-                <span>And user clicks on receptionist button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_clicks_on_signin_button()">
-                <span>And user clicks on signin button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_should_navigate_to_receptionist_dashboard()">
-                <span>Then user should navigate to receptionist dashboard</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_navigates_to_appointment_section()">
-                <span>And user navigates to Appointment section</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.AppointmentFilterDef.user_clicks_on_the_upcoming_appointment_filter()">
-                <span>When user clicks on the Upcoming Appointment filter</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.AppointmentFilterDef.user_should_be_able_to_see_upcoming_appointments()">
-                <span>Then user should be able to see upcoming appointments</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="22"><span class="badge log pass-bg mr-2">Pass</span>Validate old appointment filter</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="definitions.addAppointment_Def.the_user_is_on_the_homepage()">
-                <span>Given the user is on the homepage</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_clicks_on_receptionist_button()">
-                <span>And user clicks on receptionist button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_clicks_on_signin_button()">
-                <span>And user clicks on signin button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_should_navigate_to_receptionist_dashboard()">
-                <span>Then user should navigate to receptionist dashboard</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.addAppointment_Def.user_navigates_to_appointment_section()">
-                <span>And user navigates to Appointment section</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.AppointmentFilterDef.user_clicks_on_the_old_appointment_filter()">
-                <span>When user clicks on the Old Appointment filter</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.AppointmentFilterDef.user_should_be_able_to_see_old_appointments()">
-                <span>Then user should be able to see old appointments</span>
+              <div class="step pass-bg" title="definitions.ComplainFo.user_should_be_able_to_see_the_complaints()">
+                <span>Then user should be able to see the complaints</span>
       <div>
       </div>
               </div>
@@ -268,7 +185,7 @@ Verify whether receptionist user is able to filter appointment records successfu
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
@@ -277,12 +194,12 @@ Verify whether receptionist user is able to filter appointment records successfu
 <span class="meta">
 <span class='badge log pass-bg'>1</span>
 </span>
-<p class="name">@TodayAppointmentFilter</p>
+<p class="name">@DifferentComplaints</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@TodayAppointmentFilter</h4>
+<h4>@DifferentComplaints</h4>
 <span status="pass" class='badge log pass-bg'>1 passed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -296,83 +213,11 @@ Verify whether receptionist user is able to filter appointment records successfu
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>22:20:42 pm</td>
+<td>17:57:05 pm</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Validate today appointment filter</a>
+<a href="#" class="linked" test-id='1' id='2'>Add complaint using excel data</a>
 <div class="">
-<span class="badge badge-default">Muhindhar_13-05-2026_Appointment Filter Functionality.Validate today appointment filter</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@OldAppointmentFilter</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@OldAppointmentFilter</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>22:21:58 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='22'>Validate old appointment filter</a>
-<div class="">
-<span class="badge badge-default">Muhindhar_13-05-2026_Appointment Filter Functionality.Validate old appointment filter</span>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-</li>
-<li class="test-item">
-<div class="test-detail">
-<span class="meta">
-<span class='badge log pass-bg'>1</span>
-</span>
-<p class="name">@UpcomingAppointmentFilter</p>
-<p class="duration text-sm">1 tests</p>
-</div>
-<div class="test-contents d-none">
-<div class="info">
-<h4>@UpcomingAppointmentFilter</h4>
-<span status="pass" class='badge log pass-bg'>1 passed</span>
-</div>
-<table class='table table-sm mt-4'>
-<thead>
-<tr>
-<th class="status-col">Status</th>
-<th class="timestamp-col">Timestamp</th>
-<th>TestName</th>
-</tr>
-</thead>
-<tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>22:21:22 pm</td>
-<td>
-<a href="#" class="linked" test-id='1' id='12'>Validate upcoming appointment filter</a>
-<div class="">
-<span class="badge badge-default">Muhindhar_13-05-2026_Appointment Filter Functionality.Validate upcoming appointment filter</span>
+<span class="badge badge-default">Muhindhar_16-05-2026_Add a complaint in the front office page.Add complaint using excel data</span>
 </div>
 </td>
 </tr>
@@ -393,13 +238,13 @@ Verify whether receptionist user is able to filter appointment records successfu
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 14, 2026 10:20:41 pm</h3>
+<h3>May 16, 2026 05:57:05 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 14, 2026 10:23:07 pm</h3>
+<h3>May 16, 2026 05:57:17 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -450,7 +295,7 @@ Verify whether receptionist user is able to filter appointment records successfu
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>3</b> scenarios passed</small></div>
+<div><small data-tooltip='100%'><b>1</b> scenarios passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> scenarios failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -470,7 +315,7 @@ Verify whether receptionist user is able to filter appointment records successfu
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>21</b> steps passed</small></div>
+<div><small data-tooltip='100%'><b>9</b> steps passed</small></div>
 <div>
 <small data-tooltip='0%'><b>0</b> steps failed,
 <b>0</b> skipped, <b data-tooltip='%'>0</b> others
@@ -489,7 +334,7 @@ Verify whether receptionist user is able to filter appointment records successfu
 </div></div>
 <script>
 var timeline = {
-"Muhindhar_13-05-2026_Appointment Filter Functionality":145.064
+"Muhindhar_16-05-2026_Add a complaint in the front office page":12.046
 };
 </script>
 <div class="row">
@@ -499,23 +344,7 @@ var timeline = {
 <div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
 <thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
 <tr>
-<td>@TodayAppointmentFilter</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@OldAppointmentFilter</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-<tr>
-<td>@UpcomingAppointmentFilter</td>
+<td>@DifferentComplaints</td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
@@ -536,13 +365,13 @@ failParent: 0,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
-passChild: 3,
+passChild: 1,
 failChild: 0,
 warningChild: 0,
 skipChild: 0,
 infoChild: 0,
 grandChildCount: 5,
-passGrandChild: 21,
+passGrandChild: 9,
 failGrandChild: 0,
 warningGrandChild: 0,
 skipGrandChild: 0,

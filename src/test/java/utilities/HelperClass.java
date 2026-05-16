@@ -3,6 +3,9 @@ package utilities;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -12,8 +15,10 @@ import org.openqa.selenium.WebDriver;
 public class HelperClass {
 
 	private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+	public static Logger logger = LogManager.getLogger(HelperClass.class);
 
 	public static void setDriver(WebDriver webDriver) {
+		logger.info("Setting driver");
 		driver.set(webDriver);
 	}
 
@@ -38,6 +43,10 @@ public class HelperClass {
 	}
 
 	public static void sleep(long millis) {
-		try { Thread.sleep(millis); } catch (InterruptedException e) { Thread.currentThread().interrupt(); }
+		try {
+			Thread.sleep(millis);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
 	}
 }

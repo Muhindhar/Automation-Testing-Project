@@ -3,7 +3,7 @@ package runner;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@CucumberOptions(features = "src/test/resources/features/AppointmentFilter.feature", 
+@CucumberOptions(features = "src/test/resources/features/FoComplaint.feature", 
 glue = { "definitions" }, plugin = {"pretty",
 		"html:reports/Cucumber.html",
 		"json:reports/Cucumber.json",

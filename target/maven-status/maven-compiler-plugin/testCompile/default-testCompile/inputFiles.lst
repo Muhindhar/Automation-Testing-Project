@@ -1,6 +1,9 @@
 D:\Automation_Project\Automation-Testing-Project\src\test\java\definitions\Hooks.java
+D:\Automation_Project\Automation-Testing-Project\src\test\java\actions\AppointmentFilterAction.java
 D:\Automation_Project\Automation-Testing-Project\src\test\java\runner\TestRunner.java
 D:\Automation_Project\Automation-Testing-Project\src\test\java\actions\AddAppointmentAction.java
 D:\Automation_Project\Automation-Testing-Project\src\test\java\utilities\HelperClass.java
 D:\Automation_Project\Automation-Testing-Project\src\test\java\pages\AddAppointmentPage.java
 D:\Automation_Project\Automation-Testing-Project\src\test\java\definitions\addAppointment_Def.java
+D:\Automation_Project\Automation-Testing-Project\src\test\java\definitions\AppointmentFilterDef.java
+D:\Automation_Project\Automation-Testing-Project\src\test\java\pages\AppointmentFilter.java

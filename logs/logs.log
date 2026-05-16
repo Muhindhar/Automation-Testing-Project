@@ -1,0 +1,259 @@
+[INFO ] 2026-05-16 11:33:43.006 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:33:44.537 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 11:33:44.694 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 11:33:48.368 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 11:33:50.166 [main] HelperClass - Old appointment
+[INFO ] 2026-05-16 11:33:50.549 [main] HelperClass - pdf button
+[INFO ] 2026-05-16 11:33:51.458 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 11:33:56.376 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:33:57.824 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 11:33:57.989 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 11:33:58.094 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 11:34:02.955 [main] HelperClass - upcoming appointment
+[INFO ] 2026-05-16 11:34:03.150 [main] HelperClass - Csv file
+[INFO ] 2026-05-16 11:34:03.337 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 11:34:07.254 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:34:08.864 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 11:34:08.983 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 11:34:09.090 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 11:34:13.759 [main] HelperClass - Today appointment
+[INFO ] 2026-05-16 11:34:13.912 [main] HelperClass - excel file
+[INFO ] 2026-05-16 11:34:14.086 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 11:36:47.493 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:36:48.467 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:36:50.909 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:36:51.472 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:36:55.106 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:36:55.741 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:36:59.423 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:36:59.575 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:01.316 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 11:37:01.663 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 11:37:01.677 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 11:37:02.202 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 11:37:06.842 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 11:37:08.390 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 11:37:10.288 [main] HelperClass - Old appointment
+[INFO ] 2026-05-16 11:37:10.991 [main] HelperClass - pdf button
+[INFO ] 2026-05-16 11:37:11.507 [main] HelperClass - Old appointment
+[INFO ] 2026-05-16 11:37:11.626 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 11:37:12.249 [main] HelperClass - pdf button
+[INFO ] 2026-05-16 11:37:14.354 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 11:37:15.879 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:17.494 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 11:37:17.983 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 11:37:22.175 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 11:37:22.284 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:23.973 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 11:37:24.181 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 11:37:24.434 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 11:37:24.600 [main] HelperClass - upcoming appointment
+[INFO ] 2026-05-16 11:37:25.091 [main] HelperClass - Csv file
+[INFO ] 2026-05-16 11:37:25.617 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 11:37:28.952 [main] HelperClass - upcoming appointment
+[INFO ] 2026-05-16 11:37:29.089 [main] HelperClass - Csv file
+[INFO ] 2026-05-16 11:37:29.208 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 11:37:29.783 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:31.608 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 11:37:31.793 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 11:37:33.391 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:34.867 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 11:37:34.990 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 11:37:35.092 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 11:37:35.702 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 11:37:37.443 [main] HelperClass - Today appointment
+[INFO ] 2026-05-16 11:37:37.607 [main] HelperClass - excel file
+[INFO ] 2026-05-16 11:37:37.782 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 11:37:40.525 [main] HelperClass - Today appointment
+[INFO ] 2026-05-16 11:37:40.717 [main] HelperClass - excel file
+[INFO ] 2026-05-16 11:37:40.908 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 11:37:41.937 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:44.754 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:45.152 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:47.680 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:48.158 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:37:50.977 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:40:37.332 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:40:39.800 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:40:42.170 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:45:04.824 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:45:07.425 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:45:10.164 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:48:36.178 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:48:38.721 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 11:48:41.198 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:09:04.906 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:09:06.558 [main] HelperClass - User is on login page
+[INFO ] 2026-05-16 12:09:06.572 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 12:09:06.799 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 12:09:10.593 [main] HelperClass - Navigated to receptionist dashboard
+[INFO ] 2026-05-16 12:09:10.595 [main] HelperClass - Navigating to appointment section
+[INFO ] 2026-05-16 12:09:12.188 [main] HelperClass - Clicking Today Appointment filter
+[INFO ] 2026-05-16 12:09:12.378 [main] HelperClass - Verifying today's appointment records
+[INFO ] 2026-05-16 12:09:13.406 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:09:14.951 [main] HelperClass - User is on login page
+[INFO ] 2026-05-16 12:09:14.954 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 12:09:15.098 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 12:09:15.703 [main] HelperClass - Navigated to receptionist dashboard
+[INFO ] 2026-05-16 12:09:15.707 [main] HelperClass - Navigating to appointment section
+[INFO ] 2026-05-16 12:09:20.399 [main] HelperClass - Clicking Upcoming Appointment filter
+[INFO ] 2026-05-16 12:09:20.596 [main] HelperClass - Verifying upcoming appointment records
+[INFO ] 2026-05-16 12:09:21.610 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:09:23.076 [main] HelperClass - User is on login page
+[INFO ] 2026-05-16 12:09:23.077 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 12:09:23.206 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 12:09:23.322 [main] HelperClass - Navigated to receptionist dashboard
+[INFO ] 2026-05-16 12:09:23.325 [main] HelperClass - Navigating to appointment section
+[INFO ] 2026-05-16 12:09:28.289 [main] HelperClass - Clicking Old Appointment filter
+[INFO ] 2026-05-16 12:09:28.562 [main] HelperClass - Verifying old appointment records
+[INFO ] 2026-05-16 12:10:00.205 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:10:02.357 [main] HelperClass - User is on login page
+[INFO ] 2026-05-16 12:10:02.383 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 12:10:02.626 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 12:10:02.816 [main] HelperClass - Navigated to receptionist dashboard
+[INFO ] 2026-05-16 12:10:02.825 [main] HelperClass - Navigating to appointment section
+[INFO ] 2026-05-16 12:10:08.991 [main] HelperClass - Clicking Today Appointment filter
+[INFO ] 2026-05-16 12:10:09.197 [main] HelperClass - Verifying today's appointment records
+[INFO ] 2026-05-16 12:10:10.289 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:10:11.889 [main] HelperClass - User is on login page
+[INFO ] 2026-05-16 12:10:11.891 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 12:10:12.017 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 12:10:12.126 [main] HelperClass - Navigated to receptionist dashboard
+[INFO ] 2026-05-16 12:10:12.129 [main] HelperClass - Navigating to appointment section
+[INFO ] 2026-05-16 12:10:16.391 [main] HelperClass - Clicking Upcoming Appointment filter
+[INFO ] 2026-05-16 12:10:16.585 [main] HelperClass - Verifying upcoming appointment records
+[INFO ] 2026-05-16 12:10:17.552 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:10:19.114 [main] HelperClass - User is on login page
+[INFO ] 2026-05-16 12:10:19.118 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 12:10:19.246 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 12:10:22.823 [main] HelperClass - Navigated to receptionist dashboard
+[INFO ] 2026-05-16 12:10:22.825 [main] HelperClass - Navigating to appointment section
+[INFO ] 2026-05-16 12:10:23.562 [main] HelperClass - Clicking Old Appointment filter
+[INFO ] 2026-05-16 12:10:23.772 [main] HelperClass - Verifying old appointment records
+[INFO ] 2026-05-16 12:10:24.773 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:10:26.289 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 12:10:26.472 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 12:10:26.696 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 12:10:31.369 [main] HelperClass - Old appointment
+[INFO ] 2026-05-16 12:10:31.603 [main] HelperClass - pdf button
+[INFO ] 2026-05-16 12:10:32.018 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 12:10:36.044 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:10:37.581 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 12:10:37.779 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 12:10:37.929 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 12:10:43.007 [main] HelperClass - upcoming appointment
+[INFO ] 2026-05-16 12:10:43.210 [main] HelperClass - Csv file
+[INFO ] 2026-05-16 12:10:43.388 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 12:10:47.387 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 12:10:48.930 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 12:10:49.072 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 12:10:49.207 [main] HelperClass - Clicking appointment buttton
+[INFO ] 2026-05-16 12:10:53.787 [main] HelperClass - Today appointment
+[INFO ] 2026-05-16 12:10:53.928 [main] HelperClass - excel file
+[INFO ] 2026-05-16 12:10:54.087 [main] HelperClass - File downloaded successfully
+[INFO ] 2026-05-16 13:22:25.614 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 13:22:28.383 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:01:10.638 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:01:12.174 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:01:12.490 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:01:12.855 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:01:17.437 [main] HelperClass - Clicking on phone call log
+[INFO ] 2026-05-16 16:01:18.021 [main] HelperClass - clicking on add call log
+[INFO ] 2026-05-16 16:01:19.743 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:01:21.452 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:01:21.684 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:01:25.531 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:01:26.467 [main] HelperClass - Clicking on phone call log for checking invalid
+[INFO ] 2026-05-16 16:01:27.042 [main] HelperClass - clicking on add call log for checking invalid
+[INFO ] 2026-05-16 16:01:27.216 [main] HelperClass - Leaving fields empty
+[INFO ] 2026-05-16 16:13:01.489 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:13:03.259 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:13:03.583 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:13:03.879 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:13:08.561 [main] HelperClass - Clicking on phone call log
+[INFO ] 2026-05-16 16:13:09.240 [main] HelperClass - clicking on add call log
+[INFO ] 2026-05-16 16:13:11.033 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:13:12.613 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:13:12.841 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:13:13.761 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:13:17.741 [main] HelperClass - Clicking on phone call log for checking invalid
+[INFO ] 2026-05-16 16:13:18.347 [main] HelperClass - clicking on add call log for checking invalid
+[INFO ] 2026-05-16 16:13:18.551 [main] HelperClass - Leaving fields empty
+[INFO ] 2026-05-16 16:15:46.534 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:15:48.244 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:15:48.567 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:15:48.956 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:15:54.068 [main] HelperClass - Clicking on phone call log
+[INFO ] 2026-05-16 16:15:54.682 [main] HelperClass - clicking on add call log
+[INFO ] 2026-05-16 16:15:56.419 [main] HelperClass - saving
+[INFO ] 2026-05-16 16:15:56.567 [main] HelperClass - List displayed
+[INFO ] 2026-05-16 16:15:56.610 [main] HelperClass - Listed
+[INFO ] 2026-05-16 16:15:57.566 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:15:59.119 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:15:59.516 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:16:03.773 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:16:04.749 [main] HelperClass - Clicking on phone call log for checking invalid
+[INFO ] 2026-05-16 16:16:05.294 [main] HelperClass - clicking on add call log for checking invalid
+[INFO ] 2026-05-16 16:16:05.503 [main] HelperClass - Leaving fields empty
+[INFO ] 2026-05-16 16:20:36.175 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:20:37.711 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:20:37.971 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:20:38.305 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:20:43.089 [main] HelperClass - Clicking on phone call log
+[INFO ] 2026-05-16 16:20:43.670 [main] HelperClass - clicking on add call log
+[INFO ] 2026-05-16 16:20:45.382 [main] HelperClass - saving
+[INFO ] 2026-05-16 16:20:45.530 [main] HelperClass - List displayed
+[INFO ] 2026-05-16 16:20:45.575 [main] HelperClass - Listed
+[INFO ] 2026-05-16 16:20:46.552 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:20:48.177 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:20:48.357 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:20:48.621 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:20:53.263 [main] HelperClass - Clicking on phone call log for checking invalid
+[INFO ] 2026-05-16 16:20:53.818 [main] HelperClass - clicking on add call log for checking invalid
+[INFO ] 2026-05-16 16:20:54.002 [main] HelperClass - Leaving fields empty
+[INFO ] 2026-05-16 16:20:55.347 [main] HelperClass - Error displayed
+[INFO ] 2026-05-16 16:56:03.520 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:56:05.261 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:56:05.556 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:56:05.929 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:56:41.404 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:56:43.678 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:56:43.958 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:56:47.975 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 16:58:45.096 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 16:58:46.629 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 16:58:46.810 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 16:58:47.097 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 17:52:00.867 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 17:52:02.582 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 17:52:02.910 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 17:52:03.269 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 17:55:29.654 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 17:55:31.458 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 17:55:31.793 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 17:55:32.110 [main] HelperClass - user is on homepage
+[DEBUG] 2026-05-16 17:55:38.454 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-05-16 17:55:38.459 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-05-16 17:55:39.442 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-05-16 17:55:39.444 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-05-16 17:55:39.492 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-05-16 17:55:39.494 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-05-16 17:55:39.576 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-05-16 17:55:39.578 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-05-16 17:55:40.492 [main] HelperClass - verifying
+[INFO ] 2026-05-16 17:57:07.342 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 17:57:08.980 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 17:57:09.223 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 17:57:09.559 [main] HelperClass - user is on homepage
+[DEBUG] 2026-05-16 17:57:15.727 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-05-16 17:57:15.734 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-05-16 17:57:16.595 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-05-16 17:57:16.597 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-05-16 17:57:16.643 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-05-16 17:57:16.646 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[DEBUG] 2026-05-16 17:57:16.718 [main] PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2026-05-16 17:57:16.721 [main] PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+[INFO ] 2026-05-16 17:57:17.695 [main] HelperClass - verifying
+[INFO ] 2026-05-16 18:42:31.554 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 18:42:34.191 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 18:42:36.726 [main] HelperClass - Setting driver

@@ -13,6 +13,11 @@ public class AppointmentFilter {
 	public AppointmentFilter() {
 		PageFactory.initElements(HelperClass.getDriver(), this);
 	}
+	@FindBy(xpath="//a[normalize-space()='Receptionist']")
+	public WebElement recpbtn;
+	@FindBy(xpath="//button[@type='submit']")
+	public WebElement subbtn;
+	
 	@FindBy(xpath =
 	"//span[normalize-space()='Appointment']")
 	public WebElement appointmentMenu;

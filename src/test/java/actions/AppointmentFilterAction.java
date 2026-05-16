@@ -9,7 +9,13 @@ public class AppointmentFilterAction {
 
 	AppointmentFilter af = new AppointmentFilter();
 	WebDriver driver = HelperClass.getDriver();
-
+	
+	public void recptbnclick() {
+		af.recpbtn.click();
+	}
+	public void subbtn() {
+		af.subbtn.click();
+	}
 	public void clickAppointmentSection() {
 		af.appointmentMenu.click();
 	}

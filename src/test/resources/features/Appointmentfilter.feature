@@ -3,7 +3,7 @@ Feature: Muhindhar_13-05-2026_Appointment Filter Functionality
     Verify whether receptionist user is able to filter appointment records successfully.
 
   Background:
-    Given the user is on the homepage
+    Given the user is on the login page
     And user clicks on receptionist button
     And user clicks on signin button
     Then user should navigate to receptionist dashboard
