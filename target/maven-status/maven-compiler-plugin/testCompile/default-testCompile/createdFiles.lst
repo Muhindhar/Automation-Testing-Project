@@ -1,9 +1,0 @@
-actions\AddAppointmentAction.class
-definitions\addAppointment_Def.class
-definitions\Hooks.class
-actions\AppointmentFilterAction.class
-pages\AddAppointmentPage.class
-utilities\HelperClass.class
-pages\AppointmentFilter.class
-definitions\AppointmentFilterDef.class
-runner\TestRunner.class
