@@ -18,13 +18,13 @@ public class AppointmentFilter {
 	public WebElement recpbtn;
 	@FindBy(xpath = "//button[@type='submit']")
 	public WebElement subbtn;
-	@FindBy(xpath = "//span[normalize-space()='Appointment']")
+	@FindBy(xpath = "//li[contains(@class,'treeview')][4]")
 	public WebElement appointmentMenu;
-	@FindBy(xpath = "//a[normalize-space()='Today Appointment']")
+	@FindBy(xpath = "//ul[@class='nav nav-tabs navlistscroll']//li[1]")
 	public WebElement todayAppointmentFilter;
-	@FindBy(xpath = "//*[contains(text(),'Upcoming Appointment')]")
+	@FindBy(xpath = "//ul[@class='nav nav-tabs navlistscroll']//li[2]")
 	public WebElement upcomingAppointmentFilter;
-	@FindBy(xpath = "//*[contains(text(),'Old Appointment')]")
+	@FindBy(xpath = "//ul[@class='nav nav-tabs navlistscroll']//li[3]")
 	public WebElement oldAppointmentFilter;
 	@FindBy(xpath = "//table/tbody/tr")
 	public List<WebElement> appointmentRows;

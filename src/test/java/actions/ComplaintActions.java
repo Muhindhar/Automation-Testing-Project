@@ -18,7 +18,7 @@ public class ComplaintActions extends BaseAction{
 		super(driver);
 		cp = new ComplaintFoPages();
 		 wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		 driver = HelperClass.getDriver();
+		 this.driver = driver;
 		// TODO Auto-generated constructor stub
 	}
 

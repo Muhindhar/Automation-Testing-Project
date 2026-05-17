@@ -1,0 +1,4 @@
+"Patient Name","Appointment No","Created By","Appointment Date","Phone","Gender","Doctor","Source","Priority","Live Consultant","Alternate Address","Fees (INR)","Discount (%)","Paid (INR)","Status"
+"Nidhi Patel (1191)","Pending","Super Admin (9001)","05/30/2026 05:46 PM","7565657878","Female","Sansa Gomez (9008)","Offline","Low","No","","0.00","0.00 (0.00 %)","0.00","Pending"
+"Olivier Thomas (531)","Pending","Super Admin (9001)","05/28/2026 05:46 PM","962547581","Male","Amit  Singh (9009)","Offline","Urgent","No","","0.00","0.00 (0.00 %)","0.00","Pending"
+"Nishant Kadakia (980)","APPNO7731","Super Admin (9001)","05/25/2026 05:45 PM","94564651414","Male","Reyan Jain (9011)","Offline","Urgent","No","","147.60","0.00 (0.00 %)","147.60","Approved"
