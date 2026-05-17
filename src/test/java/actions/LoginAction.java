@@ -21,6 +21,7 @@ public class LoginAction extends BaseAction{
 		super(driver);
 		lp = new LoginPage();
 		dp = new DashboardPage();
+		this.driver = driver;
 	}
 	
 	public void setUsername(String username)
