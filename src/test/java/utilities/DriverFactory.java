@@ -23,6 +23,8 @@ public class DriverFactory {
 		options.addArguments("--disable-extensions");
 
 		options.addArguments("--guest");
+		
+		options.addArguments("--start-maximized");
 
 		Map<String, Object> prefs = new HashMap<>();
 
@@ -46,8 +48,8 @@ public class DriverFactory {
 
 	public static void quitDriver() {
 		if (driver.get() != null) {
-			driver.get().quit();
-			driver.remove();
+			//driver.get().quit();
+			//driver.remove();
 		}
 	}
 }

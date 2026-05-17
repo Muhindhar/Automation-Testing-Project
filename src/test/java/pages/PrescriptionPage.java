@@ -4,98 +4,74 @@ import org.openqa.selenium.By;
 
 public class PrescriptionPage {
 
-    //LOGIN
+    // ── Admin/Doctor Login Page ──────────────────────────────────────────────
+    public By doctorTab    = By.xpath("//a[normalize-space()='Doctor']");
+    public By signInButton = By.xpath("//button[contains(normalize-space(),'Sign In')]");
 
-    public By username = By.id("email");
-    public By password = By.id("password");
-    public By signInButton = By.xpath("//button[contains(text(),'Sign In')]");
+    // ── IPD Menu ──────────────────────────────────────────────────────────────
+    public By ipdMenu = By.xpath("//span[normalize-space()='IPD - In Patient']");
 
-    //DASHBOARD / MENU
+    // ── IPD Patient List ──────────────────────────────────────────────────────
+    public By patientSearchBox = By.xpath("//input[@type='search']");
 
-    public By ipdMenu = By.xpath("//span[contains(text(),'IPD')]");
+    // ── IPD Patient Detail Tabs ───────────────────────────────────────────────
+    public By prescriptionTab = By.xpath(
+            "//a[normalize-space()='Prescription'"
+                    + " or .//span[normalize-space()='Prescription']]");
 
-    // Show button of patient
-    public By showPatientButton = By.xpath("(//a[contains(text(),'Show')])[1]");
+    public By addPrescriptionButton = By.xpath(
+            "//a[@class='btn btn-sm btn-primary dropdown-toggle addprescription']");
 
-    //PRESCRIPTION TAB
+    // ── Wysihtml5 Rich Text Editors ───────────────────────────────────────────
+    public By headerNote =
+            By.xpath("(//iframe[contains(@class,'wysihtml5-sandbox')])[1]");
 
-    public By prescriptionTab = By.xpath("//a[contains(@href,'#prescription')]");
+    public By footerNote =
+            By.xpath("(//iframe[contains(@class,'wysihtml5-sandbox')])[2]");
 
-    public By addPrescriptionButton = By.xpath("//button[contains(text(),'Add Prescription')]");
+    // ── Prescribe By, Pathology, Radiology ───────────────────────────────────
+    public By prescribeByDropdown = By.name("prescribe_by");
+    public By pathologyDropdown   = By.name("pathology[]");
+    public By radiologyDropdown   = By.name("radiology[]");
 
-    //ADD PRESCRIPTION FORM
-
-    // Header Note textbox
-    public By headerNoteFrame = By.xpath("(//div[contains(@class,'note-editable')])[1]");
+    // ── Finding Fields ────────────────────────────────────────────────────────
+    // Finding Category and Findings have NO id/name/placeholder.
+    // Screenshot showed index [1] lands on Findings, so Category is [2], Findings is [3].
+ // Finding Category — anchored to its own column header
+ // Finding Category — hidden <select> with class 'findingtype'
+    public By findingCategory = By.xpath(
+            "//select[contains(@class,'findingtype')]");
     
-    // Prescribe By dropdown
-    public By prescribeByDropdown = By.xpath("//label[contains(text(),'Prescribe By')]/following::select[1]");
+ // Findings — plain text input in the td next to Finding Category td
+    public By findings = By.xpath(
+            "//select[contains(@class,'findingtype')]"
+            + "/ancestor::td/following-sibling::td[1]//input[@type='text'] | "
+            + "//select[contains(@class,'findingtype')]"
+            + "/ancestor::td/following-sibling::td[1]//input");
+
+    // Finding Description — confirmed id from earlier console: finding_description
+    public By findingDescription = By.id("finding_description");
+
+ // Target the ADD medicine row specifically (first occurrence in the add form)
+ // Replace these four locators:
+    public By medicineCategoryDropdown = By.cssSelector("select[name='medicine_cat_1']");
+    public By medicineDropdown = By.cssSelector("select[name='medicine_1']");
+    public By doseDropdown     = By.cssSelector("select[name='dosage_1']");
+    public By doseIntervalDropdown     = By.cssSelector("select[name='interval_dosage_1']");
+    public By doseDurationDropdown     = By.cssSelector("select[name='duration_dosage_1']");
+    // ── Other Form Fields ─────────────────────────────────────────────────────
+    public By instruction     = By.name("instruction_1");
+    public By attachmentInput = By.name("document");
+
+
+    public By saveButton =
+            By.xpath("//button[normalize-space()='Save' and not(contains(text(),'Print'))]");
     
-    // Pathology dropdown
-    public By pathologyDropdown = By.xpath("//label[contains(text(),'Pathology')]/following::select[1]");
-    
-    // Radiology dropdown
-    public By radiologyDropdown = By.xpath("//label[contains(text(),'Radiology')]/following::select[1]");
-    
-    // Finding Category
-    public By findingCategory = By.xpath("//label[contains(text(),'Finding Category')]/following::input[1]");
-    
-    // Findings
-    public By findings = By.xpath("//label[contains(text(),'Findings')]/following::input[1]");
-    
-    // Finding Description
-    public By findingDescription = By.xpath("//label[contains(text(),'Finding Description')]/following::textarea[1]");
-    
-    // Medicine Category dropdown
-    public By medicineCategory = By.xpath("//label[contains(text(),'Medicine Category')]/following::select[1]");
+    // ── Verification ───────────────────────────────────────────────────────────
+    public By prescriptionSuccessMessage =
+            By.xpath("//*[contains(text(),'Record Saved Successfully') or contains(text(),'Prescription added successfully')]");
 
-    // Medicine dropdown
-    public By medicine = By.xpath("//label[contains(text(),'Medicine')]/following::select[1]");
+    public By prescriptionRow =
+            By.xpath("//table//tbody/tr");
 
-    // Dose dropdown
-    public By dose = By.xpath("//label[contains(text(),'Dose')]/following::select[1]");
-
-    // Dose Interval
-    public By doseInterval = By.xpath("//label[contains(text(),'Dose Interval')]/following::select[1]");
-
-    // Dose Duration
-    public By doseDuration = By.xpath("//label[contains(text(),'Dose Duration')]/following::select[1]");
-
-    // Instruction textbox
-    public By instruction = By.xpath("//label[contains(text(),'Instruction')]/following::input[1]");
-
-    // Add Medicine button
-    public By addMedicineButton = By.xpath("//button[contains(text(),'Add Medicine')]");
-
-    // Attachment upload
-    public By attachmentUpload = By.xpath("//input[@type='file']");
-
-    // Footer Note
-    public By footerNote = By.xpath("(//div[contains(@class,'note-editable')])[2]");
-
-    //FOR BUTTONS
-
-    public By saveButton = By.xpath("//button[contains(text(),'Save')]");
-
-    public By saveAndPrintButton = By.xpath("//button[contains(text(),'Save & Print')]");
-
-    //VIEW PRESCRIPTION
-
-    public By viewPrescriptionButton = By.xpath("(//button[contains(text(),'View Prescription')])[1]");
-
-    public By printButton = By.xpath("//button[contains(text(),'Print')]");
-
-    public By editButton = By.xpath("//button[contains(text(),'Edit')]");
-
-    public By deleteButton = By.xpath("//button[contains(text(),'Delete')]");
-
-    //POPUP
-
-    public By confirmDeletePopup = By.xpath("//*[contains(text(),'Are you sure')]");
-
-    public By confirmDeleteYes = By.xpath("//button[contains(text(),'OK') or contains(text(),'Yes')]");
-
-    public By successPopup = By.xpath("//*[contains(text(),'Successfully')]");
-
-    public By validationMessage = By.xpath("//*[contains(@class,'error') or contains(@class,'invalid-feedback')]");
 }

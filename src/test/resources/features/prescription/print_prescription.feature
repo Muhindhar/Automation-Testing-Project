@@ -2,7 +2,7 @@ Feature: S_MYTHILY_2026_05_14_SmartHospital_Print Prescription Validation
 
   Background:
     Given the doctor user is on the login page
-    When the user enters valid doctor credentials
+    When the user selects Doctor login
     And clicks on Login
     Then the doctor dashboard should be displayed
 

@@ -1,187 +1,177 @@
 package definitions;
 
+import java.time.Duration;
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
+import actions.PrescriptionAction;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utilities.DriverFactory;
 
 public class AddPrescriptionStepDefinition {
-	@Given("the doctor user is on the login page")
-	public void the_doctor_user_is_on_the_login_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
 
-	@When("the user enters valid doctor credentials")
-	public void the_user_enters_valid_doctor_credentials() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    private final PrescriptionAction prescriptionAction =
+            new PrescriptionAction(DriverFactory.getDriver());
 
-	@When("clicks on Login")
-	public void clicks_on_login() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    // ─────────────────────────────────────────────────────────
+    // Background Steps
+    // ─────────────────────────────────────────────────────────
 
-	@Then("the doctor dashboard should be displayed")
-	public void the_doctor_dashboard_should_be_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @Given("the doctor user is on the login page")
+    public void the_doctor_user_is_on_the_login_page() {
+        DriverFactory.getDriver()
+                .get("https://demo.smart-hospital.in/site/login");
+    }
 
-	@When("the user navigates to IPD")
-	public void the_user_navigates_to_ipd() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @When("the user selects Doctor login")
+    public void the_user_selects_doctor_login() {
+        // Clicking Doctor tab auto-fills credentials
+        prescriptionAction.clickDoctorTab();
+    }
 
-	@When("clicks Show for a specific patient")
-	public void clicks_show_for_a_specific_patient() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @When("clicks on Login")
+    public void clicks_on_login() {
+        prescriptionAction.clickSignIn();
+    }
 
-	@When("clicks on Prescription")
-	public void clicks_on_prescription() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @Then("the doctor dashboard should be displayed")
+    public void the_doctor_dashboard_should_be_displayed() {
 
-	@When("clicks on Add Prescription")
-	public void clicks_on_add_prescription() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+        WebDriverWait wait =
+                new WebDriverWait(
+                        DriverFactory.getDriver(),
+                        Duration.ofSeconds(15));
 
-	@When("enters header note {string}")
-	public void enters_header_note(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+        wait.until(ExpectedConditions.not(
+                ExpectedConditions.urlContains("/site/login")
+        ));
 
-	@When("selects prescribe by {string}")
-	public void selects_prescribe_by(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+        String currentUrl =
+                DriverFactory.getDriver().getCurrentUrl();
 
-	@When("selects pathology {string}")
-	public void selects_pathology(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+        Assert.assertFalse(
+                currentUrl.contains("/site/login"),
+                "Login failed — still on login page: " + currentUrl
+        );
+    }
 
-	@When("selects radiology {string}")
-	public void selects_radiology(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    // ─────────────────────────────────────────────────────────
+    // Prescription Scenario Steps
+    // ─────────────────────────────────────────────────────────
 
-	@When("enters finding category {string}")
-	public void enters_finding_category(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @When("clicks the IPD -In Patient menu")
+    public void clicks_the_ipd_in_patient_menu() {
+        prescriptionAction.clickIPDMenu();
+    }
 
-	@When("enters findings {string}")
-	public void enters_findings(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @When("searches patient by IPD Number {string}")
+    public void searches_patient_by_ipd_number(String ipdNumber) {
+        prescriptionAction.searchPatientByIPD(ipdNumber);
+    }
 
-	@When("enters finding description {string}")
-	public void enters_finding_description(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @Then("only patient {string} IPD should be displayed")
+    public void only_patient_ipd_should_be_displayed(String ipdNumber) {
 
-	@When("selects medicine category {string}")
-	public void selects_medicine_category(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+        Assert.assertTrue(
+                prescriptionAction.isCorrectPatientDisplayed(ipdNumber),
+                "Expected patient with IPD "
+                        + ipdNumber
+                        + " to be displayed"
+        );
+    }
 
-	@When("selects medicine {string}")
-	public void selects_medicine(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @When("clicks the IPD Number {string}")
+    public void clicks_the_ipd_number(String ipdNumber) {
+        prescriptionAction.clickIPDNumber(ipdNumber);
+    }
 
-	@When("selects dose {string}")
-	public void selects_dose(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @When("clicks on Prescription")
+    public void clicks_on_prescription() {
+        prescriptionAction.clickPrescriptionTab();
+    }
 
-	@When("selects dose interval {string}")
-	public void selects_dose_interval(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @When("clicks on Add Prescription")
+    public void clicks_on_add_prescription() {
+        prescriptionAction.clickAddPrescription();
+    }
 
-	@When("selects dose duration {string}")
-	public void selects_dose_duration(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    // ─────────────────────────────────────────────────────────
+    // Data Table Step
+    // ─────────────────────────────────────────────────────────
 
-	@When("enters instruction {string}")
-	public void enters_instruction(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    @When("enters prescription details")
+    public void enters_prescription_details(DataTable dataTable) {
 
-	@When("uploads attachment {string}")
-	public void uploads_attachment(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+        List<Map<String, String>> prescriptionData =
+                dataTable.asMaps(String.class, String.class);
 
-	@When("enters footer note {string}")
-	public void enters_footer_note(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+        for (Map<String, String> data : prescriptionData) {
 
-	@When("clicks on Save")
-	public void clicks_on_save() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+            prescriptionAction.enterHeaderNote(data.get("headerNote"));
 
-	@Then("the prescription should be saved successfully")
-	public void the_prescription_should_be_saved_successfully() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+            prescriptionAction.selectPrescribeBy(data.get("prescribeBy"));
 
-	@Then("the prescription should appear in the prescription list")
-	public void the_prescription_should_appear_in_the_prescription_list() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+            prescriptionAction.selectPathology(data.get("pathology"));
 
-	@When("clicks on Save And Print")
-	public void clicks_on_save_and_print() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+            prescriptionAction.selectRadiology(data.get("radiology"));
 
-	@Then("the prescription print preview should be displayed")
-	public void the_prescription_print_preview_should_be_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+            prescriptionAction.enterFindingCategory(data.get("findingCategory"));
 
-	@Then("validation messages should be displayed")
-	public void validation_messages_should_be_displayed() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+            prescriptionAction.enterFindings(data.get("findings"));
+            
+            prescriptionAction.enterFindingDescription(data.get("findingDescription"));
 
-	@Then("the prescription should not be saved")
-	public void the_prescription_should_not_be_saved() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+            prescriptionAction.selectMedicineCategory(data.get("medicineCategory"));
+
+            prescriptionAction.selectMedicine(data.get("medicine"));
+
+            prescriptionAction.selectDose(data.get("dose"));
+
+            prescriptionAction.selectDoseInterval(data.get("doseInterval"));
+
+            prescriptionAction.selectDoseDuration(data.get("doseDuration"));
+
+            prescriptionAction.enterInstruction(data.get("instruction"));
+
+            prescriptionAction.uploadAttachment(data.get("attachmentPath"));
+
+            prescriptionAction.enterFooterNote(data.get("footerNote"));
+        }
+    }
+
+    @When("clicks on Save")
+    public void clicks_on_save() {
+        prescriptionAction.selectDoctorNotification();
+        prescriptionAction.clickSave();
+    }
+
+    // ─────────────────────────────────────────────────────────
+    // Assertions
+    // ─────────────────────────────────────────────────────────
+
+    @Then("the prescription should be saved successfully")
+    public void the_prescription_should_be_saved_successfully() {
+
+        Assert.assertTrue(
+                prescriptionAction.isPrescriptionSaved(),
+                "Prescription was not saved successfully"
+        );
+    }
+
+    @Then("the prescription should appear in the prescription list")
+    public void the_prescription_should_appear_in_the_prescription_list() {
+
+        Assert.assertTrue(
+                prescriptionAction.isPrescriptionInList(),
+                "Expected new prescription in the list, "
+                        + "but it was not found."
+        );
+    }
 }

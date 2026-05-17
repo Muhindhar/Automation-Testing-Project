@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>12/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 14 10:35:16 IST 2026</td>
+<td>Started on:</td><td>Sun May 17 10:33:21 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>179 seconds (179211 ms)</td>
+<tr><td>Total time:</td><td>119 seconds (119238 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,114 +76,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at definitions.LoginStepDefinition.the_user_should_be_redirected_to_the_dashboard(LoginStepDefinition.java:87)
-	at ✽.the user should be redirected to the dashboard(file:///D:/SOURCE%20CODE/Automation%20Testing/AutomationTesting/src/test/resources/features/login/login.feature:48)
-</pre></div><a href='#' onClick='toggleBox("stack-trace188193734", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace188193734'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at definitions.LoginStepDefinition.the_user_should_be_redirected_to_the_dashboard(LoginStepDefinition.java:87)
-	at ✽.the user should be redirected to the dashboard(file:///D:/SOURCE%20CODE/Automation%20Testing/AutomationTesting/src/test/resources/features/login/login.feature:48)
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add prescription with valid details and click Save", "Add Prescription Validation - Smart Hospital"</td>
+<td><div><pre>java.lang.RuntimeException: Medicine not found: AUSTELL-PARACETAMOL
+	at actions.PrescriptionAction.selectMedicine(PrescriptionAction.java:374)
+	at definitions.AddPrescriptionStepDefinition.enters_prescription_details(AddPrescriptionStepDefinition.java:133)
+	at ✽.enters prescription details(file:///D:/Automation/Automation-Testing-Project/src/test/resources/features/prescription/add_prescription.feature:19)
+</pre></div><a href='#' onClick='toggleBox("stack-trace664836465", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace664836465'><pre>java.lang.RuntimeException: Medicine not found: AUSTELL-PARACETAMOL
+	at actions.PrescriptionAction.selectMedicine(PrescriptionAction.java:374)
+	at definitions.AddPrescriptionStepDefinition.enters_prescription_details(AddPrescriptionStepDefinition.java:133)
+	at ✽.enters prescription details(file:///D:/Automation/Automation-Testing-Project/src/test/resources/features/prescription/add_prescription.feature:19)
 </pre></div></td>
-<td>13</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at definitions.LoginStepDefinition.the_user_should_be_redirected_to_the_dashboard(LoginStepDefinition.java:87)
-	at ✽.the user should be redirected to the dashboard(file:///D:/SOURCE%20CODE/Automation%20Testing/AutomationTesting/src/test/resources/features/login/login.feature:48)
-</pre></div><a href='#' onClick='toggleBox("stack-trace493519750", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace493519750'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at definitions.LoginStepDefinition.the_user_should_be_redirected_to_the_dashboard(LoginStepDefinition.java:87)
-	at ✽.the user should be redirected to the dashboard(file:///D:/SOURCE%20CODE/Automation%20Testing/AutomationTesting/src/test/resources/features/login/login.feature:48)
-</pre></div></td>
-<td>17</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>21</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with valid email and invalid password", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>8</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>12</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with empty password", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>9</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with empty email", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>9</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>13</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>13</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>12</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>14</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>13</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with invalid email and password", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>13</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
-<tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with empty email and password", "M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"</td>
-<td></td>
-<td>7</td>
-<td>runner.TestRunner@75c56eb9</td></tr>
+<td>118</td>
+<td>runner.TestRunner@5e17553a</td></tr>
 </table><p>
 </body>
 </html>

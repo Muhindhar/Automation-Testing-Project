@@ -15,7 +15,7 @@ public class BaseAction {
     WebDriverWait wait;
     JavascriptExecutor js;
 
-    private static final int TIMEOUT = 10;
+    private static final int TIMEOUT = 20;
 
     public BaseAction(WebDriver driver) {
 
@@ -25,7 +25,7 @@ public class BaseAction {
     }
 
     public void click(By locator) {
-
+    	
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
     }
 

@@ -7,4 +7,5 @@ public class CommonStepDefinition {
 	public void the_user_launches_the_application() {
 		Helper.launchApplication();
 	}
+	
 }
