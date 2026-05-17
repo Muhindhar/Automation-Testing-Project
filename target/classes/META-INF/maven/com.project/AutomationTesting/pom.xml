@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+	https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
 
@@ -11,25 +12,12 @@
 	<properties>
 
 		<java.version>21</java.version>
+
 		<cucumber.version>7.34.3</cucumber.version>
 
 	</properties>
 
 	<dependencies>
-
-		<!-- Extent Reports -->
-
-		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>5.1.2</version>
-		</dependency>
-
-		<dependency>
-			<groupId>tech.grasshopper</groupId>
-			<artifactId>extentreports-cucumber7-adapter</artifactId>
-			<version>1.14.0</version>
-		</dependency>
 
 		<!-- Selenium -->
 
@@ -48,9 +36,7 @@
 			<scope>test</scope>
 		</dependency>
 
-
 		<!-- Cucumber -->
-
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -67,58 +53,17 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>5.5.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>5.5.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.21.0</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.25.4</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.25.4</version>
-		</dependency>
-
-		<dependency>
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-junit</artifactId>
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
 
-
 		<!-- Apache POI -->
-
-
-		<!--  Source:
-		https://mvnrepository.com/artifact/io.qameta.allure/allure-bom  -->
 
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
-			<version>5.5.1</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
 			<version>5.5.1</version>
 		</dependency>
 
@@ -144,10 +89,21 @@
 			<version>2.25.4</version>
 		</dependency>
 
-		<!-- Allure -->
+		<!-- Extent Reports -->
 
-		<!--  Source:
-		https://mvnrepository.com/artifact/io.qameta.allure/allure-testng  -->
+		<dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.14.0</version>
+		</dependency>
+
+		<!-- Allure -->
 
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
@@ -156,8 +112,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--  Source:
-		https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber-jvm  -->
 		<dependency>
 			<groupId>io.qameta.allure</groupId>
 			<artifactId>allure-cucumber7-jvm</artifactId>
@@ -165,9 +119,7 @@
 			<scope>test</scope>
 		</dependency>
 
-
-		<!--  Source:
-		https://mvnrepository.com/artifact/org.aspectj/aspectjweaver  -->
+		<!-- AspectJ -->
 
 		<dependency>
 			<groupId>org.aspectj</groupId>
@@ -187,7 +139,9 @@
 			<plugin>
 
 				<groupId>org.apache.maven.plugins</groupId>
+
 				<artifactId>maven-compiler-plugin</artifactId>
+
 				<version>3.11.0</version>
 
 				<configuration>
@@ -203,10 +157,16 @@
 			<plugin>
 
 				<groupId>org.apache.maven.plugins</groupId>
+
 				<artifactId>maven-surefire-plugin</artifactId>
+
 				<version>3.2.5</version>
 
 				<configuration>
+
+					<parallel>methods</parallel>
+
+					<useUnlimitedThreads>true</useUnlimitedThreads>
 
 					<suiteXmlFiles>
 
@@ -233,26 +193,10 @@
 			<plugin>
 
 				<groupId>io.qameta.allure</groupId>
+
 				<artifactId>allure-maven</artifactId>
+
 				<version>2.12.0</version>
-
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
-				<configuration>
-					<parallel>methods</parallel>
-					<useUnlimitedThreads>true</useUnlimitedThreads>
-					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
-
-					<!-- Allure Result Path -->
-					<systemPropertyVariables>
-						<allure.results.directory>target/allure-results</allure.results.directory>
-					</systemPropertyVariables>
-				</configuration>
 
 			</plugin>
 

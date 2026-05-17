@@ -8,10 +8,10 @@ Description: downloading the reports from the front office page in different for
     And user navigates to the front office link
 
   Scenario Outline: Download reports
-    And user clicks on the "<format>" format 
+    And user clicks on the "<format>" format
     Then the document should be downloaded successfully
 
-    Examples:		
+    Examples:
       | format |
       | pdf    |
       | csv    |
