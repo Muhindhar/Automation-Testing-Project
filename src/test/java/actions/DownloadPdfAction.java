@@ -7,51 +7,54 @@ import org.openqa.selenium.WebDriver;
 import pages.DownloadPdfpage;
 import utilities.HelperClass;
 
-public class DownloadPdfAction {
-
-	DownloadPdfpage dp = new DownloadPdfpage();
-	WebDriver driver = HelperClass.getDriver();
+public class DownloadPdfAction extends BaseAction {
+	DownloadPdfpage dp;
+	WebDriver driver;
+	public DownloadPdfAction(WebDriver driver) {
+		super(driver);
+		dp = new DownloadPdfpage();
+		driver = HelperClass.getDriver();
+		this.driver = driver;
+		// TODO Auto-generated constructor stub
+	}
 
 	public void clickrecp() {
-		driver.findElement(dp.recbtn).click();
+		click(dp.recbtn);
 	}
 
 	public void clicksign() {
-		driver.findElement(dp.signin).click();
+		click(dp.signin);
 	}
 
 	public void clickappbtn() {
-		driver.findElement(dp.appbtn).click();
+		click(dp.appbtn);
 	}
 
 	public void tdyapp() {
-		driver.findElement(dp.tdyapp).click();
+		click(dp.tdyapp);
 	}
 
 	public void tdyexcel() {
-		driver.findElement(dp.tdyxcel).click();
+		click(dp.tdyxcel);
 	}
 
 	public void upcapp() {
-		driver.findElement(dp.upcapp).click();
+		click(dp.upcapp);
 	}
 
 	public void upcsv() {
-		driver.findElement(dp.upcsv).click();
+		click(dp.upcsv);
 	}
 
 	public void oldapp() {
-		driver.findElement(dp.oldapp).click();
+		click(dp.oldapp);
 	}
 
 	public void oldpdf() {
-		driver.findElement(dp.oldpdf).click();
+		click(dp.oldpdf);
 	}
 
 	public boolean veridown() throws InterruptedException {
-
-		Thread.sleep(3000);
-
 		return true;
 	}
 }

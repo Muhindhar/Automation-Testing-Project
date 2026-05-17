@@ -3,36 +3,54 @@ package actions;
 import org.openqa.selenium.WebDriver;
 
 import pages.AppointmentFilter;
-import utilities.HelperClass;
 
-public class AppointmentFilterAction {
+public class AppointmentFilterAction extends BaseAction {
 
-	AppointmentFilter af = new AppointmentFilter();
-	WebDriver driver = HelperClass.getDriver();
-	
+	AppointmentFilter af;
+
+	WebDriver driver;
+
+	public AppointmentFilterAction(WebDriver driver) {
+
+		super(driver);
+
+		this.driver = driver;
+
+		af = new AppointmentFilter();
+	}
+
 	public void recptbnclick() {
-		af.recpbtn.click();
+
+		clickfb(af.recpbtn);
 	}
+
 	public void subbtn() {
-		af.subbtn.click();
-	}
-	public void clickAppointmentSection() {
-		af.appointmentMenu.click();
+
+		clickfb(af.subbtn);
 	}
 
-	public void clickTodayAppointmentFilter() {
-		af.todayAppointmentFilter.click();
+	public void clickapp() {
+
+		clickfb(af.appointmentMenu);
 	}
 
-	public void clickUpcomingAppointmentFilter() {
-		af.upcomingAppointmentFilter.click();
+	public void clicktdyapp() {
+
+		clickfb(af.todayAppointmentFilter);
 	}
 
-	public void clickOldAppointmentFilter() {
-		af.oldAppointmentFilter.click();
+	public void clickupapp() {
+
+		clickfb(af.upcomingAppointmentFilter);
 	}
 
-	public boolean verifyAppointmentRecordsPresent() {
+	public void clickoldapp() {
+
+		clickfb(af.oldAppointmentFilter);
+	}
+
+	public boolean verifyrecord() {
+
 		return af.appointmentRows.size() > 0;
 	}
 }

@@ -3,25 +3,23 @@ package definitions;
 import org.testng.Assert;
 
 import actions.AppointmentFilterAction;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import utilities.DriverFactory;
 import utilities.HelperClass;
 
 public class AppointmentFilterDef {
 
-	AppointmentFilterAction af = new AppointmentFilterAction();
-
-	@Given("the user is on the login page")
-	public void the_user_is_on_the_login_page() {
-		
-		HelperClass.logger.info("User is on login page");
-	}
+	AppointmentFilterAction af = new AppointmentFilterAction(DriverFactory.getDriver());
 
 	@Given("user clicks on receptionist button")
-	public void user_clicks_on_receptionist_button() {
+	public void user_clicks_on_receptionist_button(){
 
 		HelperClass.logger.info("Clicking receptionist button");
+
 		af.recptbnclick();
 	}
 
@@ -29,6 +27,7 @@ public class AppointmentFilterDef {
 	public void user_clicks_on_signin_button() {
 
 		HelperClass.logger.info("Clicking signin button");
+
 		af.subbtn();
 	}
 
@@ -42,7 +41,8 @@ public class AppointmentFilterDef {
 	public void user_navigates_to_appointment_section() {
 
 		HelperClass.logger.info("Navigating to appointment section");
-		af.clickAppointmentSection();
+
+		af.clickapp();
 	}
 
 	@When("user clicks on the Today Appointment filter")
@@ -50,7 +50,7 @@ public class AppointmentFilterDef {
 
 		HelperClass.logger.info("Clicking Today Appointment filter");
 
-		af.clickTodayAppointmentFilter();
+		af.clicktdyapp();
 	}
 
 	@Then("user should be able to see today's appointment details")
@@ -58,7 +58,7 @@ public class AppointmentFilterDef {
 
 		HelperClass.logger.info("Verifying today's appointment records");
 
-		Assert.assertTrue(af.verifyAppointmentRecordsPresent());
+		Assert.assertTrue(af.verifyrecord());
 	}
 
 	@When("user clicks on the Upcoming Appointment filter")
@@ -66,7 +66,7 @@ public class AppointmentFilterDef {
 
 		HelperClass.logger.info("Clicking Upcoming Appointment filter");
 
-		af.clickUpcomingAppointmentFilter();
+		af.clickupapp();
 	}
 
 	@Then("user should be able to see upcoming appointments")
@@ -74,7 +74,7 @@ public class AppointmentFilterDef {
 
 		HelperClass.logger.info("Verifying upcoming appointment records");
 
-		Assert.assertTrue(af.verifyAppointmentRecordsPresent());
+		Assert.assertTrue(af.verifyrecord());
 	}
 
 	@When("user clicks on the Old Appointment filter")
@@ -82,7 +82,7 @@ public class AppointmentFilterDef {
 
 		HelperClass.logger.info("Clicking Old Appointment filter");
 
-		af.clickOldAppointmentFilter();
+		af.clickoldapp();
 	}
 
 	@Then("user should be able to see old appointments")
@@ -90,6 +90,6 @@ public class AppointmentFilterDef {
 
 		HelperClass.logger.info("Verifying old appointment records");
 
-		Assert.assertTrue(af.verifyAppointmentRecordsPresent());
+		Assert.assertTrue(af.verifyrecord());
 	}
 }

@@ -257,3 +257,208 @@
 [INFO ] 2026-05-16 18:42:31.554 [main] HelperClass - Setting driver
 [INFO ] 2026-05-16 18:42:34.191 [main] HelperClass - Setting driver
 [INFO ] 2026-05-16 18:42:36.726 [main] HelperClass - Setting driver
+[INFO ] 2026-05-16 22:49:28.523 [main] HelperClass - User is on login site
+[INFO ] 2026-05-16 22:56:52.653 [main] HelperClass - User is on login page
+[INFO ] 2026-05-16 22:57:55.141 [main] HelperClass - User is on login page
+[INFO ] 2026-05-16 23:02:46.565 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 23:02:53.415 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 23:13:11.518 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 23:13:12.499 [main] HelperClass - Clicking on phone call log
+[INFO ] 2026-05-16 23:13:13.310 [main] HelperClass - clicking on add call log
+[INFO ] 2026-05-16 23:13:13.717 [main] HelperClass - Taking data from data table
+[INFO ] 2026-05-16 23:13:16.132 [main] HelperClass - saving
+[INFO ] 2026-05-16 23:13:16.435 [main] HelperClass - List displayed
+[INFO ] 2026-05-16 23:13:16.595 [main] HelperClass - Listed
+[INFO ] 2026-05-16 23:13:22.964 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-16 23:13:27.570 [main] HelperClass - Clicking on phone call log for checking invalid
+[INFO ] 2026-05-16 23:13:28.371 [main] HelperClass - clicking on add call log for checking invalid
+[INFO ] 2026-05-16 23:13:28.757 [main] HelperClass - Leaving fields empty
+[INFO ] 2026-05-16 23:13:28.765 [main] HelperClass - CLicking the save button
+[INFO ] 2026-05-16 23:13:29.954 [main] HelperClass - Error displayed
+[INFO ] 2026-05-16 23:33:21.505 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 23:33:24.141 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 23:33:26.838 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 23:36:36.493 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 23:36:38.715 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 23:36:40.984 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 23:40:11.444 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 23:40:11.662 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 23:40:11.840 [main] HelperClass - Navigated to receptionist dashboard
+[INFO ] 2026-05-16 23:40:11.844 [main] HelperClass - Navigating to appointment section
+[INFO ] 2026-05-16 23:40:16.053 [main] HelperClass - Clicking Today Appointment filter
+[INFO ] 2026-05-16 23:40:16.245 [main] HelperClass - Verifying today's appointment records
+[INFO ] 2026-05-16 23:40:18.662 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 23:40:18.878 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 23:40:19.078 [main] HelperClass - Navigated to receptionist dashboard
+[INFO ] 2026-05-16 23:40:19.081 [main] HelperClass - Navigating to appointment section
+[INFO ] 2026-05-16 23:40:23.490 [main] HelperClass - Clicking Upcoming Appointment filter
+[INFO ] 2026-05-16 23:40:23.762 [main] HelperClass - Verifying upcoming appointment records
+[INFO ] 2026-05-16 23:40:26.020 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-16 23:40:26.276 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-16 23:40:26.469 [main] HelperClass - Navigated to receptionist dashboard
+[INFO ] 2026-05-16 23:40:26.471 [main] HelperClass - Navigating to appointment section
+[INFO ] 2026-05-16 23:40:31.360 [main] HelperClass - Clicking Old Appointment filter
+[INFO ] 2026-05-16 23:40:31.677 [main] HelperClass - Verifying old appointment records
+[INFO ] 2026-05-17 11:11:05.629 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:11:05.676 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:11:07.158 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:11:07.165 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:11:08.632 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:11:08.637 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:13:25.650 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:13:25.696 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:13:37.259 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:13:37.264 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:13:48.290 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:13:48.292 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:18:07.487 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:18:09.537 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:18:21.001 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:18:23.009 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:18:35.136 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:18:37.142 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:21:04.920 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-17 11:21:16.595 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-17 11:21:23.787 [main] HelperClass - Clicking receptionist button
+[INFO ] 2026-05-17 11:27:24.765 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:27:26.783 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:27:27.041 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:27:27.303 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:27:41.037 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:27:43.053 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:27:43.316 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:27:43.569 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:27:57.228 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:27:59.232 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:27:59.442 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:27:59.668 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:40:53.192 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:40:55.250 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:40:55.912 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:41:01.660 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:41:03.150 [main] HelperClass - Downloading file in format : pdf
+[INFO ] 2026-05-17 11:41:17.861 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:41:19.879 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:41:20.687 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:41:27.882 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:41:30.394 [main] HelperClass - Downloading file in format : csv
+[INFO ] 2026-05-17 11:41:44.498 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:41:46.516 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:41:47.122 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:41:51.522 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:41:53.122 [main] HelperClass - Downloading file in format : excel
+[INFO ] 2026-05-17 11:46:38.036 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:46:40.107 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:46:40.448 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:46:41.016 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:46:47.126 [main] HelperClass - Downloading file in format : pdf
+[INFO ] 2026-05-17 11:46:47.741 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 11:46:54.976 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:46:56.997 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:46:57.491 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:47:01.859 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:47:03.540 [main] HelperClass - Downloading file in format : csv
+[INFO ] 2026-05-17 11:47:04.119 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 11:47:11.138 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:47:13.152 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:47:13.521 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:47:17.847 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:47:19.221 [main] HelperClass - Downloading file in format : excel
+[INFO ] 2026-05-17 11:53:52.958 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:53:55.245 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:53:56.000 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:54:01.726 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:54:15.984 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:54:18.002 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:54:18.709 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:54:25.480 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:54:42.162 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:54:44.185 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:54:45.172 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:54:52.190 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:59:33.705 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:59:35.778 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:59:36.313 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 11:59:36.874 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 11:59:56.164 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 11:59:58.183 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 11:59:58.880 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:00:07.453 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:00:22.208 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:00:24.229 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:00:24.760 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:00:25.246 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:03:57.823 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:03:59.874 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:04:00.517 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:04:06.514 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:04:08.463 [main] HelperClass - Downloading file in format : pdf
+[INFO ] 2026-05-17 12:04:09.402 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 12:04:17.229 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:04:19.256 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:04:19.743 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:04:24.534 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:04:26.285 [main] HelperClass - Downloading file in format : csv
+[INFO ] 2026-05-17 12:04:26.982 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 12:04:35.583 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:04:37.606 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:04:38.195 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:04:42.988 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:04:44.716 [main] HelperClass - Downloading file in format : excel
+[INFO ] 2026-05-17 12:07:50.470 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:07:52.536 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:07:53.096 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:07:58.885 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:07:59.420 [main] HelperClass - Downloading file in format : pdf
+[INFO ] 2026-05-17 12:12:41.663 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:12:43.711 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:12:44.279 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:12:49.805 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:12:51.605 [main] HelperClass - Downloading file in format : pdf
+[INFO ] 2026-05-17 12:12:52.770 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 12:13:01.556 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:13:03.610 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:13:04.074 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:13:08.660 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:13:10.503 [main] HelperClass - Downloading file in format : csv
+[INFO ] 2026-05-17 12:13:11.169 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 12:13:20.322 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:13:22.335 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:13:22.730 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:13:27.477 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:13:29.355 [main] HelperClass - Downloading file in format : excel
+[INFO ] 2026-05-17 12:16:13.792 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:16:15.835 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:16:16.493 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:16:23.160 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:16:25.618 [main] HelperClass - Downloading file in format : pdf
+[INFO ] 2026-05-17 12:16:26.751 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 12:16:34.311 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:16:36.346 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:16:36.928 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:16:41.828 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:16:43.606 [main] HelperClass - Downloading file in format : csv
+[INFO ] 2026-05-17 12:16:44.298 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 12:16:51.480 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:16:53.513 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:16:54.114 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:16:58.802 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:17:00.420 [main] HelperClass - Downloading file in format : excel
+[INFO ] 2026-05-17 12:20:36.068 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:20:38.144 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:20:38.716 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:20:44.638 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:20:46.426 [main] HelperClass - Downloading file in format : pdf
+[INFO ] 2026-05-17 12:20:47.173 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 12:20:54.782 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:20:56.806 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:20:57.426 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:21:02.084 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:21:04.008 [main] HelperClass - Downloading file in format : csv
+[INFO ] 2026-05-17 12:21:04.808 [main] HelperClass - File downloaded
+[INFO ] 2026-05-17 12:21:14.572 [main] HelperClass - User is on login page
+[INFO ] 2026-05-17 12:21:16.593 [main] HelperClass - receptionist button clicked
+[INFO ] 2026-05-17 12:21:17.151 [main] HelperClass - Clicking signin button
+[INFO ] 2026-05-17 12:21:22.099 [main] HelperClass - user is on homepage
+[INFO ] 2026-05-17 12:21:23.668 [main] HelperClass - Downloading file in format : excel
+[INFO ] 2026-05-17 12:21:24.368 [main] HelperClass - File downloaded

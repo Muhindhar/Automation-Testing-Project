@@ -9,10 +9,11 @@ import actions.CallLogFrontofcActions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utilities.DriverFactory;
 import utilities.HelperClass;
 
 public class CallLogfrontofc {
-	CallLogFrontofcActions cfa = new CallLogFrontofcActions();
+	CallLogFrontofcActions cfa = new CallLogFrontofcActions(DriverFactory.getDriver());
 
 	@Given("user is on login page of site")
 	public void user_is_on_login_page_of_site() {

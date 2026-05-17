@@ -10,36 +10,44 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.ComplaintFoPages;
 import utilities.HelperClass;
 
-public class ComplaintActions {
-	ComplaintFoPages cp = new ComplaintFoPages();
-	WebDriver driver = HelperClass.getDriver();
-	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+public class ComplaintActions extends BaseAction{
+	ComplaintFoPages cp;
+	WebDriverWait wait;
+	WebDriver driver;
+	public ComplaintActions(WebDriver driver) {
+		super(driver);
+		cp = new ComplaintFoPages();
+		 wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		 driver = HelperClass.getDriver();
+		// TODO Auto-generated constructor stub
+	}
+
 	public void clickrescp() {
-		driver.findElement(cp.recbtnfo).click();
-		driver.findElement(cp.signinfo).click();
+		click(cp.recbtnfo);
+		click(cp.signinfo);
 	}
 	public void clkfo() {
-		driver.findElement(cp.frontofc).click();
+		click(cp.frontofc);
 	}
 	public void clkcom() {
-		wait.until(ExpectedConditions.elementToBeClickable(cp.complaint)).click();
+		click(cp.complaint);
 	}
 	public void addcomp() {
-		wait.until(ExpectedConditions.elementToBeClickable(cp.addcomp)).click();
+		click(cp.addcomp);
 	}
 	public void compdet(String complainttype,String source,String phone,String description) {
 		Select com = new Select(driver.findElement(cp.comtype));
 		com.selectByVisibleText(complainttype);
 		Select src = new Select(driver.findElement(cp.src));
 		src.selectByVisibleText(source);
-		driver.findElement(cp.phone).sendKeys(phone);
-		driver.findElement(cp.desc).sendKeys(description);
+		sendKeys(cp.phone,phone);
+		sendKeys(cp.desc,description);
 	}
 	public void savebtn() {
-		driver.findElement(cp.savebtn).click();
+		click(cp.savebtn);
 	}
 	public String checklistcom() {
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(cp.checklistcomp)).getText();
+		return getText(cp.checklistcomp);
 	}
 
 }

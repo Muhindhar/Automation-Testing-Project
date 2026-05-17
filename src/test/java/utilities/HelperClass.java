@@ -26,6 +26,7 @@ public class HelperClass {
 		return driver.get();
 	}
 
+	
 	public static String captureScreenshot(String screenshotName) {
 		String dir = "reports/screenshots/";
 		new File(dir).mkdirs();

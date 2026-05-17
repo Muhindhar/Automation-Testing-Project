@@ -9,58 +9,64 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.CallLogFrontofcPages;
 import utilities.HelperClass;
 
-public class CallLogFrontofcActions {
-	WebDriver driver = HelperClass.getDriver();
-	CallLogFrontofcPages cfp = new CallLogFrontofcPages();
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+public class CallLogFrontofcActions extends BaseAction {
+	
+	CallLogFrontofcPages cfp;
+	WebDriverWait wait;
+	public CallLogFrontofcActions(WebDriver driver) {
+		super(driver);
+		this.driver = driver;
+		 wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		 cfp = new CallLogFrontofcPages();
+		
+	}
 
 	public void clckrecp() {
-		wait.until(ExpectedConditions.elementToBeClickable(cfp.recbtnfo)).click();
+		click(cfp.recbtnfo);
 
 	}
 
 	public void clksign() {
-		wait.until(ExpectedConditions.elementToBeClickable(cfp.signinfo)).click();
+		click(cfp.signinfo);
 	}
 
 	public void frontofclink() {
-		wait.until(ExpectedConditions.elementToBeClickable(cfp.frontofc)).click();
+		click(cfp.frontofc);
 
 	}
 
 	public void phcalllog() {
-		wait.until(ExpectedConditions.elementToBeClickable(cfp.phcalllog)).click();
+		click(cfp.phcalllog);
 	}
 
 	public void addcall() {
-		wait.until(ExpectedConditions.elementToBeClickable(cfp.addlog)).click();
+		click(cfp.addlog);
 	}
 
 	public void enterdet(String name, String phone, String description, String calltype) {
-		wait.until(ExpectedConditions.visibilityOfElementLocated(cfp.name)).sendKeys(name);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(cfp.desc)).sendKeys(description);
+		sendKeys(cfp.name,name);
+		sendKeys(cfp.desc,description);
 		if (calltype.equalsIgnoreCase("Incoming")) {
-			wait.until(ExpectedConditions.elementToBeClickable(cfp.incom)).click();
+			click(cfp.incom);
 
 		} else if (calltype.equalsIgnoreCase("Outgoing")) {
-			wait.until(ExpectedConditions.elementToBeClickable(cfp.outgng)).click();
+			click(cfp.outgng);
 
 		}
 	}
 
 	public void clicksave() {
-		wait.until(ExpectedConditions.elementToBeClickable(cfp.savebtn)).click();
+		click(cfp.savebtn);
 
 	}
 
 	public String checklist() {
 
-		return driver.findElement(cfp.checklist).getText();
+		return getText(cfp.checklist);
 	}
 
 	public boolean errorcheck() {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		return wait.until(ExpectedConditions.visibilityOfElementLocated(cfp.error)).isDisplayed();
+		return isDisplayed(cfp.error);
 	}
 
 }

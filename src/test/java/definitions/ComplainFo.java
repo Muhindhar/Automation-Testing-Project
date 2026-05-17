@@ -8,11 +8,12 @@ import actions.ComplaintActions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utilities.DriverFactory;
 import utilities.ExcelUtility;
 import utilities.HelperClass;
 
 public class ComplainFo {
-	ComplaintActions ca = new ComplaintActions();
+	ComplaintActions ca = new ComplaintActions(DriverFactory.getDriver());
 
 	@Given("clicks on the complaint link")
 	public void clicks_on_the_complaint_link() {

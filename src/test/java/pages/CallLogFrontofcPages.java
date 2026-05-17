@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 public class CallLogFrontofcPages {
 	public By recbtnfo = By.xpath("//a[normalize-space()='Receptionist']");
 	public By signinfo = By.xpath("//button[@type='submit']");
-	public By frontofc = By.xpath("//span[normalize-space()='Front Office']");
+	public By frontofc = By.xpath("//li[contains(@class,'treeview')][12]");
 	public By phcalllog = By.xpath("//a[normalize-space()='Phone Call Log']");
 	public By addlog = By.xpath("//a[@class='btn btn-primary btn-sm call_log']");
 	public By name = By.xpath("//form[@id='formadd']//input[@name='name']");
