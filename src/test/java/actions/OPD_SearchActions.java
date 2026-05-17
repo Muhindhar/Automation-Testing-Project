@@ -2,6 +2,7 @@ package actions;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -9,8 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.OPDPage;
 
 public class OPD_SearchActions extends BaseAction {
-	
-	WebDriver driver;
 	OPDPage opdPage;
 	WebDriverWait wait;
 	
@@ -21,24 +20,24 @@ public class OPD_SearchActions extends BaseAction {
 	}
 	
 	public void searchPatient(String patientName) {
-		opdPage.searchBox.sendKeys(patientName);
+		sendKeys(opdPage.searchBox,patientName);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.patientname));
 	}
 	
 	public void navigateToOPDPage() {
-		opdPage.opdButton.click();
-		opdPage.oldOpdTab.click();
+		click(opdPage.opdButton);
+		click(opdPage.oldOpdTab);
 	}
 	
-	public String verifySearchnameResult() {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOf(opdPage.patientname));
-		return opdPage.patientname.getText();
-		
+	public String verifySearchnameResult() throws InterruptedException {
+		Thread.sleep(2000);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.patientname));
+	    return getText(opdPage.patientname);
 	}
-	
-	public String verifySearchFailed() {
-		wait.until(ExpectedConditions.visibilityOf(opdPage.searchFailed));
-		return opdPage.searchFailed.getText();
-		
+
+	public String verifySearchFailed() throws InterruptedException {
+		Thread.sleep(2000);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.searchFailed));
+	    return getText(opdPage.searchFailed);
 	}
 }

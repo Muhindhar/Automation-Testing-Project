@@ -5,13 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title></title>
+<title>Automation Report</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
-<style type="text/css"></style></head><body class="spa bdd-report standard">
+<style type="text/css"></style></head><body class="spa bdd-report dark">
   <div class="app">
     <div class="layout">
 <div class="header navbar">
@@ -32,16 +32,21 @@
 </ul>
 <ul class="nav-right">
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary"></span></a>
+<a href="#"><span class="badge badge-primary">Execution Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 15, 2026 06:24:30 am</span></a>
+<a href="#"><span class="badge badge-primary">May 15, 2026 04:29:49 PM</span></a>
 </li>
 </ul>
 </div>
 </div><div class="side-nav">
 <div class="side-nav-inner">
 <ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
 <li class="nav-item dropdown" onclick="toggleView('test-view')">
 <a id="nav-test" class="dropdown-toggle" href="#">
 <span class="ico"><i class="fa fa-list"></i></span>
@@ -52,16 +57,315 @@
 <span class="ico"><i class="fa fa-tag"></i></span>
 </a>
 </li>
-<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
-<a id="nav-dashboard" class="dropdown-toggle" href="#">
-<span class="ico"><i class="fa fa-bar-chart"></i></span>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
 </a>
 </li>
 </ul>
 </div>
 </div>      <div class="vcontainer">
         <div class="main-content">
-<div class="test-wrapper row view test-view">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>May 15, 2026 04:29:49 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>May 15, 2026 04:34:00 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>3</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>8</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='27%'>
+<b>3</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='72%'><b>8</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='57%'><b>15</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='42%'><b>11</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='62%'><b>102</b> steps passed</small></div>
+<div>
+<small data-tooltip='6%'><b>11</b> steps failed,
+<b>49</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Attendance Report":0,"Profile":0,"M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature":153.853,"OPD Patient Search":22.626,"Add New OPD Patient (User Story 4.2)":10.591,"Add Prescription (User Story 4.6)":2.161,"Filter OPD Patients (User Story 4.3)":20.641,"Move OPD to IPD (User Story 4.5)":9.793,"OPD Payment (User Story 4.8)":10.852,"Download OPD Report (User Story 4.4)":10.37,"Show OPD Patient Details (User Story 4.7)":9.876
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@add_patient</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@us_4.6</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@move_to_ipd</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@us_4.7</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@us_4.1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@us_4.8</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@us_4.3</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@us_4.5</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@ValidLoginWithOutline</td>
+<td>9</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@search</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@negative</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@filter</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@us_4.4</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@us_4.2</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@report</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@pay</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@show_details</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@prescription</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>version</td>
+<td>10</td>
+</tr>
+<tr>
+<td>os</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 3,
+failParent: 8,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 15,
+failChild: 11,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 102,
+failGrandChild: 11,
+warningGrandChild: 0,
+skipGrandChild: 49,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
   <div class="test-list">
     <div class="test-list-tools">
 <ul class="tools pull-left">
@@ -72,6 +376,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -79,7 +384,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
 <ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" href="#">@negative</a><a class="dropdown-item" href="#">@ValidLoginWithOutline</a>
+<a class="dropdown-item" href="#">@add_patient</a><a class="dropdown-item" href="#">@us_4.6</a><a class="dropdown-item" href="#">@move_to_ipd</a><a class="dropdown-item" href="#">@us_4.7</a><a class="dropdown-item" href="#">@us_4.1</a><a class="dropdown-item" href="#">@us_4.8</a><a class="dropdown-item" href="#">@us_4.3</a><a class="dropdown-item" href="#">@us_4.5</a><a class="dropdown-item" href="#">@ValidLoginWithOutline</a><a class="dropdown-item" href="#">@search</a><a class="dropdown-item" href="#">@negative</a><a class="dropdown-item" href="#">@filter</a><a class="dropdown-item" href="#">@us_4.4</a><a class="dropdown-item" href="#">@us_4.2</a><a class="dropdown-item" href="#">@report</a><a class="dropdown-item" href="#">@pay</a><a class="dropdown-item" href="#">@show_details</a><a class="dropdown-item" href="#">@prescription</a>
 </ul>
 </li>
 </ul>
@@ -90,9 +395,67 @@
           tag=""
           device="">
           <div class="test-detail">
+            <p class="name">Attendance Report</p>
+            <p class="text-sm">
+              <span>4:29:49 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Attendance Report</h5>
+<span class='badge badge-success'>05.15.2026 4:29:49 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:29:49 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Profile</p>
+            <p class="text-sm">
+              <span>4:29:49 PM</span> / <span>00:00:00:000</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Profile</h5>
+<span class='badge badge-success'>05.15.2026 4:29:49 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:29:49 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
             <p class="name">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature</p>
             <p class="text-sm">
-              <span>6:24:32 am</span> / <span>00:02:25:666</span>
+              <span>4:29:49 PM</span> / <span>00:02:33:853</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -101,10 +464,10 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature</h5>
-<span class='badge badge-success'>05.15.2026 6:24:32 am</span>
-<span class='badge badge-danger'>05.15.2026 6:26:57 am</span>
-<span class='badge badge-default'>00:02:25:666</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-success'>05.15.2026 4:29:49 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:32:23 PM</span>
+<span class='badge badge-default'>00:02:33:853</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -116,7 +479,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Login with invalid email and password</div>
+        <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>Login with invalid email and password</div>
       </div>
     </div>
         <div class="collapse">
@@ -162,490 +525,7 @@
   <div class="card">
     <div class="card-header" role="tab">
       <div class="card-title">
-        <div class="node" id="3"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-      </div>
-    </div>
-        <div class="scenario_outline collapse">
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="4"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given the user launches the application</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user clicks the "Super Admin" button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on the Login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then the user should be redirected to the dashboard</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the role of the user in profile should "Super Admin"</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="13"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given the user launches the application</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user clicks the "Admin" button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on the Login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then the user should be redirected to the dashboard</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the role of the user in profile should "Admin"</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given the user launches the application</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user clicks the "Doctor" button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on the Login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then the user should be redirected to the dashboard</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the role of the user in profile should "Doctor"</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given the user launches the application</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user clicks the "Pharmacist" button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on the Login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then the user should be redirected to the dashboard</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the role of the user in profile should "Pharmacist"</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given the user launches the application</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user clicks the "Pathologist" button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on the Login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then the user should be redirected to the dashboard</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the role of the user in profile should "Pathologist"</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="90"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given the user launches the application</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user clicks the "Radiologist" button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on the Login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then the user should be redirected to the dashboard</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the role of the user in profile should "Radiologist"</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="94"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given the user launches the application</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user clicks the "Accountant" button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on the Login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then the user should be redirected to the dashboard</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the role of the user in profile should "Accountant"</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="107"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given the user launches the application</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user clicks the "Receptionist" button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on the Login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then the user should be redirected to the dashboard</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the role of the user in profile should "Receptionist"</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-            <div class="card-body l1">
-              <div class="card-header">
-                <div class="card-title outline-child">
-                  <div class="node" id="109"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
-                </div>
-              </div>
-              <div class="card-body mt-3 collapse">
-                  <div class="step pass-bg">
-                    <span>Given the user launches the application</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the user is on the login page</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>When the user clicks the "Nurse" button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And clicks on the Login button</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>Then the user should be redirected to the dashboard</span>
-      <div>
-      </div>
-                  </div>
-                  <div class="step pass-bg">
-                    <span>And the role of the user in profile should "Nurse"</span>
-      <div>
-      </div>
-                  </div>
-              </div>
-            </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="5"><span class="badge log pass-bg mr-2">Pass</span>Login with empty email and password</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="definitions.CommonStepDefinition.the_user_launches_the_application()">
-                <span>Given the user launches the application</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_is_on_the_login_page()">
-                <span>And the user is on the login page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_leaves_the_email_field_empty()">
-                <span>When the user leaves the email field empty</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_leaves_the_password_field_empty()">
-                <span>And the user leaves the password field empty</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.clicks_on_the_login_button()">
-                <span>And clicks on the Login button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.validation_messages_should_be_displayed_for_mandatory_fields()">
-                <span>Then validation messages should be displayed for mandatory fields</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Login with empty password</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="definitions.CommonStepDefinition.the_user_launches_the_application()">
-                <span>Given the user launches the application</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_is_on_the_login_page()">
-                <span>And the user is on the login page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_enters_email()">
-                <span>When the user enters email</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_leaves_the_password_field_empty()">
-                <span>And the user leaves the password field empty</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.clicks_on_the_login_button()">
-                <span>And clicks on the Login button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.a_password_required_validation_message_should_be_displayed()">
-                <span>Then a password required validation message should be displayed</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Login with empty email</div>
-      </div>
-    </div>
-        <div class="collapse">
-          <div class="card-body">
-              <div class="step pass-bg" title="definitions.CommonStepDefinition.the_user_launches_the_application()">
-                <span>Given the user launches the application</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_is_on_the_login_page()">
-                <span>And the user is on the login page</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_leaves_the_email_field_empty()">
-                <span>When the user leaves the email field empty</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_enters_password()">
-                <span>And the user enters password</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.clicks_on_the_login_button()">
-                <span>And clicks on the Login button</span>
-      <div>
-      </div>
-              </div>
-              <div class="step pass-bg" title="definitions.LoginStepDefinition.a_email_required_validation_message_should_be_displayed()">
-                <span>Then a email required validation message should be displayed</span>
-      <div>
-      </div>
-              </div>
-          </div>
-        </div>
-  </div>
-  <div class="card">
-    <div class="card-header" role="tab">
-      <div class="card-title">
-        <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>Login with valid email and invalid password</div>
+        <div class="node" id="16"><span class="badge log pass-bg mr-2">Pass</span>Login with valid email and invalid password</div>
       </div>
     </div>
         <div class="collapse">
@@ -688,6 +568,1289 @@
           </div>
         </div>
   </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="28"><span class="badge log pass-bg mr-2">Pass</span>Login with empty email and password</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.CommonStepDefinition.the_user_launches_the_application()">
+                <span>Given the user launches the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_is_on_the_login_page()">
+                <span>And the user is on the login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_leaves_the_email_field_empty()">
+                <span>When the user leaves the email field empty</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_leaves_the_password_field_empty()">
+                <span>And the user leaves the password field empty</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.clicks_on_the_login_button()">
+                <span>And clicks on the Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.validation_messages_should_be_displayed_for_mandatory_fields()">
+                <span>Then validation messages should be displayed for mandatory fields</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="39"><span class="badge log pass-bg mr-2">Pass</span>Login with empty email</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.CommonStepDefinition.the_user_launches_the_application()">
+                <span>Given the user launches the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_is_on_the_login_page()">
+                <span>And the user is on the login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_leaves_the_email_field_empty()">
+                <span>When the user leaves the email field empty</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_enters_password()">
+                <span>And the user enters password</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.clicks_on_the_login_button()">
+                <span>And clicks on the Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.a_email_required_validation_message_should_be_displayed()">
+                <span>Then a email required validation message should be displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="50"><span class="badge log pass-bg mr-2">Pass</span>Login with empty password</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.CommonStepDefinition.the_user_launches_the_application()">
+                <span>Given the user launches the application</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_is_on_the_login_page()">
+                <span>And the user is on the login page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_enters_email()">
+                <span>When the user enters email</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.the_user_leaves_the_password_field_empty()">
+                <span>And the user leaves the password field empty</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.clicks_on_the_login_button()">
+                <span>And clicks on the Login button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="definitions.LoginStepDefinition.a_password_required_validation_message_should_be_displayed()">
+                <span>Then a password required validation message should be displayed</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="61"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+      </div>
+    </div>
+        <div class="scenario_outline collapse">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="62"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user launches the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks the "Super Admin" button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the Login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be redirected to the dashboard</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the role of the user in profile should "Super Admin"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="73"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user launches the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks the "Admin" button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the Login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be redirected to the dashboard</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the role of the user in profile should "Admin"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="84"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user launches the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks the "Doctor" button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the Login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be redirected to the dashboard</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the role of the user in profile should "Doctor"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="95"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user launches the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks the "Pharmacist" button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the Login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be redirected to the dashboard</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the role of the user in profile should "Pharmacist"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="106"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user launches the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks the "Pathologist" button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the Login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be redirected to the dashboard</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the role of the user in profile should "Pathologist"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="117"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user launches the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks the "Radiologist" button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the Login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be redirected to the dashboard</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the role of the user in profile should "Radiologist"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="128"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user launches the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks the "Accountant" button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the Login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be redirected to the dashboard</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the role of the user in profile should "Accountant"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="139"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user launches the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks the "Receptionist" button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the Login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be redirected to the dashboard</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the role of the user in profile should "Receptionist"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="150"><span class="badge log pass-bg mr-2">Pass</span>Verify login functionality for multiple user roles</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user launches the application</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the login page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user clicks the "Nurse" button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And clicks on the Login button</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the user should be redirected to the dashboard</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the role of the user in profile should "Nurse"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="161"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">OPD Patient Search</p>
+            <p class="text-sm">
+              <span>4:32:23 PM</span> / <span>00:00:22:626</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">OPD Patient Search</h5>
+<span class='badge badge-success'>05.15.2026 4:32:23 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:32:46 PM</span>
+<span class='badge badge-default'>00:00:22:626</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=161</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a receptionist
+I want to search for OPD patients by name or ID
+So that I can quickly find their records</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="162"><span class="badge log fail-bg mr-2">Fail</span>Search for an OPD patient (Valid and Invalid)</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="163"><span class="badge log fail-bg mr-2">Fail</span>Search for an OPD patient (Valid and Invalid)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the OPD page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user types "maria" into the OPD search box</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then the patient table should display "The single record for Patient ID "Maria""</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.manage()" because "this.driver" is null
+	at actions.OPD_SearchActions.verifySearchnameResult(OPD_SearchActions.java:33)
+	at definitions.OPD_SearchDefinitions.the_patient_table_should_display_patient_records_containing_the_name_maria(OPD_SearchDefinitions.java:51)
+	at ✽.the patient table should display "The single record for Patient ID "Maria""(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/Search.feature:15)
+</textarea>
+      
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="172"><span class="badge log pass-bg mr-2">Pass</span>Search for an OPD patient (Valid and Invalid)</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>And the user is on the OPD page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When the user types "XYZ999" into the OPD search box</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then the patient table should display "A "No data available in table" message"</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="181"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add New OPD Patient (User Story 4.2)</p>
+            <p class="text-sm">
+              <span>4:32:46 PM</span> / <span>00:00:10:591</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add New OPD Patient (User Story 4.2)</h5>
+<span class='badge badge-success'>05.15.2026 4:32:46 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:32:57 PM</span>
+<span class='badge badge-default'>00:00:10:591</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=181</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a receptionist
+I want to add new patients to the OPD system
+So that their visits can be tracked</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="182"><span class="badge log fail-bg mr-2">Fail</span>Add a new OPD patient successfully (Valid Case)</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.OPD_SearchDefinitions.the_user_is_logged_into_the_smart_hospital_portal_as_a_receptionist()">
+                <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>And the user is on the "OPD - Out Patient" page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" title="definitions.LoginStepDefinition.the_user_clicks_the_button(java.lang.String)">
+                <span>When the user clicks the "Add Patient" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the user fills the Add Patient form with the following details:</span>
+      <div><table class='markup-table table '><tr><td>Name</td><td>Jane Doe</td></tr><tr><td>Gender</td><td>Female</td></tr><tr><td>Age</td><td>30</td></tr><tr><td>Consultant</td><td>Amit Singh</td></tr><tr><td>Charge Category</td><td>Standard</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And clicks the "Save" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then a "Record Saved Successfully" message should appear</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the patient "Jane Doe" should be visible in the OPD list</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="194"><span class="badge log fail-bg mr-2">Fail</span>Fail to add patient with missing required fields (Invalid Case)</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.OPD_SearchDefinitions.the_user_is_logged_into_the_smart_hospital_portal_as_a_receptionist()">
+                <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>And the user is on the "OPD - Out Patient" page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" title="definitions.LoginStepDefinition.the_user_clicks_the_button(java.lang.String)">
+                <span>When the user clicks the "Add Patient" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the user leaves the mandatory "Patient Name" field blank</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And clicks the "Save" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then the system should highlight the "Patient Name" field with an error</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the patient record should not be created</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="206"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Add Prescription (User Story 4.6)</p>
+            <p class="text-sm">
+              <span>4:32:57 PM</span> / <span>00:00:02:161</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Add Prescription (User Story 4.6)</h5>
+<span class='badge badge-success'>05.15.2026 4:32:57 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:32:59 PM</span>
+<span class='badge badge-default'>00:00:02:161</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=206</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a doctor or admin
+I want to add prescriptions to an OPD visit
+So that the patient knows what medication to take</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="207"><span class="badge log fail-bg mr-2">Fail</span>Add multiple medicines to a prescription</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" >
+                <span>Given the user is logged into the Smart Hospital portal as a doctor</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the user is viewing an existing OPD patient profile</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="definitions.LoginStepDefinition.the_user_clicks_the_button(java.lang.String)">
+                <span>When the user clicks the "Add Prescription" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And adds the following medications to the prescription list:</span>
+      <div><table class='markup-table table '><tr><td>Category</td><td>Medicine</td><td>Dosage</td><td>Duration</td><td>Instruction</td></tr><tr><td>Tablet</td><td>Paracetamol</td><td>500mg</td><td>5 Days</td><td>After Meal</td></tr><tr><td>Syrup</td><td>Cough Syrup ABC</td><td>10ml</td><td>3 Days</td><td>Before Meal</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And clicks "Save"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then the prescription should be saved successfully</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the medications should be visible under the "Prescription" tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="219"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Filter OPD Patients (User Story 4.3)</p>
+            <p class="text-sm">
+              <span>4:32:59 PM</span> / <span>00:00:20:641</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Filter OPD Patients (User Story 4.3)</h5>
+<span class='badge badge-success'>05.15.2026 4:32:59 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:33:19 PM</span>
+<span class='badge badge-default'>00:00:20:641</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=219</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a receptionist
+I want to filter the OPD list by specific criteria like the Consultant Doctor
+So that I can organize the patient list easily</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="220"><span class="badge log fail-bg mr-2">Fail</span>Filter patients by Consultant Doctor</div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="221"><span class="badge log fail-bg mr-2">Fail</span>Filter patients by Consultant Doctor</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And the user is on the "OPD - Out Patient" page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user selects "Sonia Bush" from the "Consultant" filter dropdown</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks the "Search" button in the filter bar</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then the resulting table should only show patients assigned to "Sonia Bush"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="231"><span class="badge log fail-bg mr-2">Fail</span>Filter patients by Consultant Doctor</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>And the user is on the "OPD - Out Patient" page</span>
+      <div>Step undefined
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>When the user selects "Amit Singh" from the "Consultant" filter dropdown</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>And clicks the "Search" button in the filter bar</span>
+      <div>Step skipped
+      </div>
+                  </div>
+                  <div class="step skip-bg">
+                    <span>Then the resulting table should only show patients assigned to "Amit Singh"</span>
+      <div>Step skipped
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="241"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Move OPD to IPD (User Story 4.5)</p>
+            <p class="text-sm">
+              <span>4:33:19 PM</span> / <span>00:00:09:793</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Move OPD to IPD (User Story 4.5)</h5>
+<span class='badge badge-success'>05.15.2026 4:33:19 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:33:29 PM</span>
+<span class='badge badge-default'>00:00:09:793</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=241</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a hospital administrator
+I want to transfer an OPD patient to the In-Patient Department (IPD)
+So that they can be admitted to a ward</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="242"><span class="badge log fail-bg mr-2">Fail</span>Successfully move a patient from OPD to IPD</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.OPD_SearchDefinitions.the_user_is_logged_into_the_smart_hospital_portal_as_a_receptionist()">
+                <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>And the user is on the "OPD - Out Patient" page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Given the user opens the profile of an existing OPD patient</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="definitions.LoginStepDefinition.the_user_clicks_the_button(java.lang.String)">
+                <span>When the user clicks the "Move to IPD" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And fills in the admission form with the following details:</span>
+      <div><table class='markup-table table '><tr><td>Bed Group</td><td>General Ward</td></tr><tr><td>Bed Number</td><td>G-105</td></tr><tr><td>Symptoms</td><td>High fever</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And clicks the "Save" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then a success message should be displayed</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the patient should now appear in the "IPD - In Patient" module</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="255"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">OPD Payment (User Story 4.8)</p>
+            <p class="text-sm">
+              <span>4:33:29 PM</span> / <span>00:00:10:852</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">OPD Payment (User Story 4.8)</h5>
+<span class='badge badge-success'>05.15.2026 4:33:29 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:33:40 PM</span>
+<span class='badge badge-default'>00:00:10:852</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=255</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5">As a receptionist
+I want to collect and record payments from OPD patients
+So that hospital billing is accurate</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="256"><span class="badge log fail-bg mr-2">Fail</span>Make a valid OPD payment</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.OPD_SearchDefinitions.the_user_is_logged_into_the_smart_hospital_portal_as_a_receptionist()">
+                <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>And the user is viewing an OPD patient with a pending balance</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" title="definitions.LoginStepDefinition.the_user_clicks_the_button(java.lang.String)">
+                <span>When the user clicks the "Add Payment" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And enters "500" in the "Amount" field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And selects "Cash" as the "Payment Mode"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And clicks the "Save" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then a "Payment Successful" message should appear</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the patient's "Paid Amount" should increase by 500</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the "Balance Amount" should decrease by 500</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="270"><span class="badge log fail-bg mr-2">Fail</span>Attempt to make a payment with an invalid amount</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.OPD_SearchDefinitions.the_user_is_logged_into_the_smart_hospital_portal_as_a_receptionist()">
+                <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>And the user is viewing an OPD patient with a pending balance</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" title="definitions.LoginStepDefinition.the_user_clicks_the_button(java.lang.String)">
+                <span>When the user clicks the "Add Payment" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And enters "-50" in the "Amount" field</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And clicks the "Save" button</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then the system should display a validation error "Amount must be valid"</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the payment should not be processed</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="282"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Download OPD Report (User Story 4.4)</p>
+            <p class="text-sm">
+              <span>4:33:40 PM</span> / <span>00:00:10:370</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Download OPD Report (User Story 4.4)</h5>
+<span class='badge badge-success'>05.15.2026 4:33:40 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:33:50 PM</span>
+<span class='badge badge-default'>00:00:10:370</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=282</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a receptionist or patient
+I want to download OPD visit reports
+So that I can have a physical or digital copy of the bill/details</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="283"><span class="badge log fail-bg mr-2">Fail</span>Download a patient's OPD bill report</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.OPD_SearchDefinitions.the_user_is_logged_into_the_smart_hospital_portal_as_a_receptionist()">
+                <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>And the user is on the "OPD - Out Patient" page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Given there is an OPD patient with a completed visit</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When the user clicks the "Show" icon for that patient</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And navigates to the "Visits" tab</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And clicks the "Print" icon on a specific visit record</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then a print preview should open</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the user should be able to save the report as a PDF</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="296"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Show OPD Patient Details (User Story 4.7)</p>
+            <p class="text-sm">
+              <span>4:33:50 PM</span> / <span>00:00:09:876</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Show OPD Patient Details (User Story 4.7)</h5>
+<span class='badge badge-success'>05.15.2026 4:33:50 PM</span>
+<span class='badge badge-danger'>05.15.2026 4:34:00 PM</span>
+<span class='badge badge-default'>00:00:09:876</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=296</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> As a hospital worker
+I want to view the full details and history of an OPD patient
+So that I have full context of their treatment</div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="297"><span class="badge log fail-bg mr-2">Fail</span>View all tabs in the patient details view</div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step pass-bg" title="definitions.OPD_SearchDefinitions.the_user_is_logged_into_the_smart_hospital_portal_as_a_receptionist()">
+                <span>Given the user is logged into the Smart Hospital portal as a receptionist</span>
+      <div>
+      </div>
+              </div>
+              <div class="step fail-bg" >
+                <span>And the user is on the "OPD - Out Patient" page</span>
+      <div>Step undefined
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>When the user clicks the "Show" (eye icon) button for a patient</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>Then the patient profile should open displaying the following tabs:</span>
+      <div><table class='markup-table table '><tr><td>Tab Name</td></tr><tr><td>Visits</td></tr><tr><td>Lab Investigation</td></tr><tr><td>Treatment History</td></tr><tr><td>Timeline</td></tr></table>
+      </div>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" >
+                <span>And the basic patient details (Name, Age, Blood Group) should be visible at the top</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
 </div>
           </div>
         </li>
@@ -704,22 +1867,22 @@
 <div class="test-list">
 <div class="test-list-tools">
 <ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
-<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">18</span></a></li></ul>
 </div>
 <div class="test-list-wrapper scrollable">
 <ul class="test-list-item">
 <li class="test-item">
 <div class="test-detail">
 <span class="meta">
-<span class='badge log pass-bg'>5</span>
+<span class='badge log badge-danger'>2</span>
 </span>
-<p class="name">@negative</p>
-<p class="duration text-sm">5 tests</p>
+<p class="name">@add_patient</p>
+<p class="duration text-sm">2 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>@negative</h4>
-<span status="pass" class='badge log pass-bg'>5 passed</span>
+<h4>@add_patient</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
 </div>
 <table class='table table-sm mt-4'>
 <thead>
@@ -730,53 +1893,307 @@
 </tr>
 </thead>
 <tbody>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:46 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='2'>Login with invalid email and password</a>
+<a href="#" class="linked" test-id='181' id='182'>Add a new OPD patient successfully (Valid Case)</a>
 <div class="">
-<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with invalid email and password</span>
+<span class="badge badge-default">Add New OPD Patient (User Story 4.2).Add a new OPD patient successfully (Valid Case)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='181' id='194'>Fail to add patient with missing required fields (Invalid Case)</a>
+<div class="">
+<span class="badge badge-default">Add New OPD Patient (User Story 4.2).Fail to add patient with missing required fields (Invalid Case)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@us_4.6</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@us_4.6</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='206' id='207'>Add multiple medicines to a prescription</a>
+<div class="">
+<span class="badge badge-default">Add Prescription (User Story 4.6).Add multiple medicines to a prescription</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@move_to_ipd</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@move_to_ipd</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='241' id='242'>Successfully move a patient from OPD to IPD</a>
+<div class="">
+<span class="badge badge-default">Move OPD to IPD (User Story 4.5).Successfully move a patient from OPD to IPD</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@us_4.7</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@us_4.7</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='296' id='297'>View all tabs in the patient details view</a>
+<div class="">
+<span class="badge badge-default">Show OPD Patient Details (User Story 4.7).View all tabs in the patient details view</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@us_4.1</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@us_4.1</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='161' id='163'>Search for an OPD patient (Valid and Invalid)</a>
+<div class="">
+<span class="badge badge-default">OPD Patient Search.Search for an OPD patient (Valid and Invalid)</span>
 </div>
 </td>
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+<td>16:32:34 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='5'>Login with empty email and password</a>
+<a href="#" class="linked" test-id='161' id='172'>Search for an OPD patient (Valid and Invalid)</a>
 <div class="">
-<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with empty email and password</span>
+<span class="badge badge-default">OPD Patient Search.Search for an OPD patient (Valid and Invalid)</span>
 </div>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@us_4.8</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@us_4.8</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:29 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='9'>Login with empty password</a>
+<a href="#" class="linked" test-id='255' id='256'>Make a valid OPD payment</a>
 <div class="">
-<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with empty password</span>
+<span class="badge badge-default">OPD Payment (User Story 4.8).Make a valid OPD payment</span>
 </div>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:35 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='10'>Login with empty email</a>
+<a href="#" class="linked" test-id='255' id='270'>Attempt to make a payment with an invalid amount</a>
 <div class="">
-<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with empty email</span>
+<span class="badge badge-default">OPD Payment (User Story 4.8).Attempt to make a payment with an invalid amount</span>
 </div>
 </td>
 </tr>
-<tr class="tag-test-status" status="pass">
-<td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@us_4.3</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@us_4.3</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:59 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='18'>Login with valid email and invalid password</a>
+<a href="#" class="linked" test-id='219' id='221'>Filter patients by Consultant Doctor</a>
 <div class="">
-<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with valid email and invalid password</span>
+<span class="badge badge-default">Filter OPD Patients (User Story 4.3).Filter patients by Consultant Doctor</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='219' id='231'>Filter patients by Consultant Doctor</a>
+<div class="">
+<span class="badge badge-default">Filter OPD Patients (User Story 4.3).Filter patients by Consultant Doctor</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@us_4.5</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@us_4.5</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:19 PM</td>
+<td>
+<a href="#" class="linked" test-id='241' id='242'>Successfully move a patient from OPD to IPD</a>
+<div class="">
+<span class="badge badge-default">Move OPD to IPD (User Story 4.5).Successfully move a patient from OPD to IPD</span>
 </div>
 </td>
 </tr>
@@ -808,9 +2225,9 @@
 <tbody>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+<td>16:30:32 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='4'>Verify login functionality for multiple user roles</a>
+<a href="#" class="linked" test-id='3' id='62'>Verify login functionality for multiple user roles</a>
 <div class="">
 <span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Verify login functionality for multiple user roles</span>
 </div>
@@ -818,9 +2235,9 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+<td>16:30:44 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='13'>Verify login functionality for multiple user roles</a>
+<a href="#" class="linked" test-id='3' id='73'>Verify login functionality for multiple user roles</a>
 <div class="">
 <span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Verify login functionality for multiple user roles</span>
 </div>
@@ -828,9 +2245,9 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+<td>16:30:55 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='14'>Verify login functionality for multiple user roles</a>
+<a href="#" class="linked" test-id='3' id='84'>Verify login functionality for multiple user roles</a>
 <div class="">
 <span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Verify login functionality for multiple user roles</span>
 </div>
@@ -838,9 +2255,9 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+<td>16:31:08 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='17'>Verify login functionality for multiple user roles</a>
+<a href="#" class="linked" test-id='3' id='95'>Verify login functionality for multiple user roles</a>
 <div class="">
 <span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Verify login functionality for multiple user roles</span>
 </div>
@@ -848,9 +2265,9 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:24:32 am</td>
+<td>16:31:20 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='20'>Verify login functionality for multiple user roles</a>
+<a href="#" class="linked" test-id='3' id='106'>Verify login functionality for multiple user roles</a>
 <div class="">
 <span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Verify login functionality for multiple user roles</span>
 </div>
@@ -858,9 +2275,9 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:26:08 am</td>
+<td>16:31:33 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='90'>Verify login functionality for multiple user roles</a>
+<a href="#" class="linked" test-id='3' id='117'>Verify login functionality for multiple user roles</a>
 <div class="">
 <span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Verify login functionality for multiple user roles</span>
 </div>
@@ -868,9 +2285,9 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:26:09 am</td>
+<td>16:31:47 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='94'>Verify login functionality for multiple user roles</a>
+<a href="#" class="linked" test-id='3' id='128'>Verify login functionality for multiple user roles</a>
 <div class="">
 <span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Verify login functionality for multiple user roles</span>
 </div>
@@ -878,9 +2295,9 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:26:27 am</td>
+<td>16:31:58 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='107'>Verify login functionality for multiple user roles</a>
+<a href="#" class="linked" test-id='3' id='139'>Verify login functionality for multiple user roles</a>
 <div class="">
 <span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Verify login functionality for multiple user roles</span>
 </div>
@@ -888,11 +2305,417 @@
 </tr>
 <tr class="tag-test-status" status="pass">
 <td><span class="badge log pass-bg">Pass</span></td>
-<td>06:26:29 am</td>
+<td>16:32:10 PM</td>
 <td>
-<a href="#" class="linked" test-id='1' id='109'>Verify login functionality for multiple user roles</a>
+<a href="#" class="linked" test-id='3' id='150'>Verify login functionality for multiple user roles</a>
 <div class="">
 <span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Verify login functionality for multiple user roles</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@search</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@search</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='161' id='163'>Search for an OPD patient (Valid and Invalid)</a>
+<div class="">
+<span class="badge badge-default">OPD Patient Search.Search for an OPD patient (Valid and Invalid)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:32:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='161' id='172'>Search for an OPD patient (Valid and Invalid)</a>
+<div class="">
+<span class="badge badge-default">OPD Patient Search.Search for an OPD patient (Valid and Invalid)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>5</span>
+</span>
+<p class="name">@negative</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@negative</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='4'>Login with invalid email and password</a>
+<div class="">
+<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with invalid email and password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:29:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='16'>Login with valid email and invalid password</a>
+<div class="">
+<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with valid email and invalid password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:30:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='28'>Login with empty email and password</a>
+<div class="">
+<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with empty email and password</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:30:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='39'>Login with empty email</a>
+<div class="">
+<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with empty email</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>16:30:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='50'>Login with empty password</a>
+<div class="">
+<span class="badge badge-default">M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature.Login with empty password</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@filter</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@filter</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='219' id='221'>Filter patients by Consultant Doctor</a>
+<div class="">
+<span class="badge badge-default">Filter OPD Patients (User Story 4.3).Filter patients by Consultant Doctor</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='219' id='231'>Filter patients by Consultant Doctor</a>
+<div class="">
+<span class="badge badge-default">Filter OPD Patients (User Story 4.3).Filter patients by Consultant Doctor</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@us_4.4</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@us_4.4</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='282' id='283'>Download a patient's OPD bill report</a>
+<div class="">
+<span class="badge badge-default">Download OPD Report (User Story 4.4).Download a patient's OPD bill report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@us_4.2</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@us_4.2</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='181' id='182'>Add a new OPD patient successfully (Valid Case)</a>
+<div class="">
+<span class="badge badge-default">Add New OPD Patient (User Story 4.2).Add a new OPD patient successfully (Valid Case)</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='181' id='194'>Fail to add patient with missing required fields (Invalid Case)</a>
+<div class="">
+<span class="badge badge-default">Add New OPD Patient (User Story 4.2).Fail to add patient with missing required fields (Invalid Case)</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@report</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@report</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='282' id='283'>Download a patient's OPD bill report</a>
+<div class="">
+<span class="badge badge-default">Download OPD Report (User Story 4.4).Download a patient's OPD bill report</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@pay</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@pay</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='255' id='256'>Make a valid OPD payment</a>
+<div class="">
+<span class="badge badge-default">OPD Payment (User Story 4.8).Make a valid OPD payment</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:35 PM</td>
+<td>
+<a href="#" class="linked" test-id='255' id='270'>Attempt to make a payment with an invalid amount</a>
+<div class="">
+<span class="badge badge-default">OPD Payment (User Story 4.8).Attempt to make a payment with an invalid amount</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@show_details</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@show_details</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:50 PM</td>
+<td>
+<a href="#" class="linked" test-id='296' id='297'>View all tabs in the patient details view</a>
+<div class="">
+<span class="badge badge-default">Show OPD Patient Details (User Story 4.7).View all tabs in the patient details view</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@prescription</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@prescription</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:57 PM</td>
+<td>
+<a href="#" class="linked" test-id='206' id='207'>Add multiple medicines to a prescription</a>
+<div class="">
+<span class="badge badge-default">Add Prescription (User Story 4.6).Add multiple medicines to a prescription</span>
 </div>
 </td>
 </tr>
@@ -908,178 +2731,59 @@
 <div class="detail-body"></div>
 </div>
 </div>
-</div><div class="container-fluid p-4 view dashboard-view">
-<div class="row">
-<div class="col-md-3">
-<div class="card"><div class="card-body">
-<p class="m-b-0">Started</p>
-<h3>May 15, 2026 06:24:30 am</h3>
-</div></div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
 </div>
-<div class="col-md-3">
-<div class="card"><div class="card-body">
-<p class="m-b-0">Ended</p>
-<h3>May 15, 2026 06:26:57 am</h3>
-</div></div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">java.lang.NullPointerException</p>
+<p class="duration text-sm">1 tests</p>
 </div>
-<div class="col-md-3">
-<div class="card"><div class="card-body">
-<p class="m-b-0 text-pass">Features Passed</p>
-<h3>1</h3>
-</div></div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.NullPointerException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
-<div class="col-md-3">
-<div class="card"><div class="card-body">
-<p class="m-b-0 text-fail">Features Failed</p>
-<h3>0</h3>
-</div></div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-4">
-<div class="card">
-<div class="card-header">
-<h6 class="card-title">Features</h6>
-</div>
-<div class="card-body">
-<div class="">
-<canvas id='parent-analysis' width='115' height='90'></canvas>
-</div>
-</div>
-<div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>1</b> features passed
-</small>
-</div>
-<div>
-<small data-tooltip='0%'><b>0</b> features failed,
-<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
-</small>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card">
-<div class="card-header">
-<h6 class="card-title">Scenarios</h6>
-</div>
-<div class="card-body">
-<div class="">
-<canvas id='child-analysis' width='115' height='90'></canvas>
-</div>
-</div>
-<div class="card-footer">
-<div><small data-tooltip='100%'><b>14</b> scenarios passed</small></div>
-<div>
-<small data-tooltip='0%'><b>0</b> scenarios failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
-</small>
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card">
-<div class="card-header">
-<h6 class="card-title">Steps</h6>
-</div>
-<div class="card-body">
-<div class="">
-<canvas id='grandchild-analysis' width='115' height='90'></canvas>
-</div>
-</div>
-<div class="card-footer">
-<div><small data-tooltip='100%'><b>86</b> steps passed</small></div>
-<div>
-<small data-tooltip='0%'><b>0</b> steps failed,
-<b>0</b> skipped, <b data-tooltip='%'>0</b> others
-</small>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="row"><div class="col-md-12">
-<div class="card"><div class="card-header"><p>Timeline</p></div>
-<div class="card-body pt-0"><div>
-<canvas id="timeline" height="120"></canvas>
-</div></div>
-</div>
-</div></div>
-<script>
-var timeline = {
-"M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature":145.666
-};
-</script>
-<div class="row">
-<div class="col-lg-6 col-md-12 category-container">
-<div class="card">
-<div class="card-header"><p>Tags</p></div>
-<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
-<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<table class='table table-sm mt-4'>
+<thead>
 <tr>
-<td>@negative</td>
-<td>5</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
 </tr>
-<tr>
-<td>@ValidLoginWithOutline</td>
-<td>9</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>100%</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-</div>
-<div class="col-lg-6 col-md-12 sysenv-container">
-<div class="card">
-<div class="card-header"><p>System/Environment</p></div>
-<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
-<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+</thead>
 <tbody>
-<tr>
-<td>version</td>
-<td>10</td>
-</tr>
-<tr>
-<td>os</td>
-<td>Windows</td>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:32:34 PM</td>
+<td>
+<a href="#" class="linked" test-id='161' id='169'>Then the patient table should display "The single record for Patient ID "Maria""</a>
+<div class="">
+<span class="badge badge-default">OPD Patient Search.Search for an OPD patient (Valid and Invalid).Then the patient table should display "The single record for Patient ID "Maria""</span>
+</div>
+</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
+</li>
+</ul>
 </div>
 </div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
 </div>
 </div>
-<script>
-var statusGroup = {
-parentCount: 5,
-passParent: 1,
-failParent: 0,
-warningParent: 0,
-skipParent: 0,
-childCount: 5,
-passChild: 14,
-failChild: 0,
-warningChild: 0,
-skipChild: 0,
-infoChild: 0,
-grandChildCount: 5,
-passGrandChild: 86,
-failGrandChild: 0,
-warningGrandChild: 0,
-skipGrandChild: 0,
-infoGrandChild: 0,
-eventsCount: 5,
-};
-</script>        </div>
+</div>        </div>
       </div>
     </div>
   </div>

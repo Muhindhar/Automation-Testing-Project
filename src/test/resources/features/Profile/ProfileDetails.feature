@@ -1,7 +1,10 @@
 Feature: Profile 
 	    
-	Scenario:
-		Given the user is logged in and on the dashboard
+	Scenario Outline: View Profile Details
+		Given the user is logged into the Smart Hospital portal as "<role>"
 		When the user clicks the profile image
 		And clicks the profile button
-		Then the user should be navigated to the profile page
+		Then the user should be navigated to the profile page showing "<role>"
+		
+		Examples:
+            | role          |            | Doctor        |            | Nurse         |            | Receptionist  |            | Admin         |

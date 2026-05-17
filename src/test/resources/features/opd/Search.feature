@@ -1,3 +1,4 @@
+@OPD_Search
 Feature: OPD Patient Search
   As a receptionist
   I want to search for OPD patients by name or ID

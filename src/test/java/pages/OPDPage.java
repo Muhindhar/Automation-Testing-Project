@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,25 +16,23 @@ public class OPDPage{
 
 	// LOCATORS: User Story 4.1 - Search
 	
-	@FindBy(xpath = "//ul[@class='sidebar-menu verttop']/li[5]")
-	public WebElement opdButton;
+	public By opdButton = By.xpath("//ul[@class='sidebar-menu verttop']/li[5]");
 	
-	@FindBy(xpath = "//ul[@class='nav nav-tabs navlistscroll']//li[3]")
-	public WebElement oldOpdTab;
+	public By oldOpdTab = By.xpath("//ul[@class='nav nav-tabs navlistscroll']//li[3]");
 
-    @FindBy(xpath = "//div[@id='DataTables_Table_1_filter']/label/input") 
-    public WebElement searchBox;
+    public By searchBox = By.xpath("//div[@id='DataTables_Table_1_filter']/label/input");
     
-    @FindBy(xpath = "//table[@id='DataTables_Table_1']/tbody[1]/tr[1]/td[2]") 
-    public WebElement patientname;
+    public By patientname = By.xpath("//table[@id='DataTables_Table_1']/tbody[1]/tr[1]/td[2]");
     
-    @FindBy(xpath = "//table[@id='DataTables_Table_1']/tbody[1]/tr[1]/td[1]/a") 
-    public WebElement patientid;
+    public By patientid = By.xpath("//table[@id='DataTables_Table_1']/tbody[1]/tr[1]/td[1]/a");
     
-    @FindBy(xpath = "//td[@class='dataTables_empty']/div")
-    public WebElement searchFailed;
+    public By searchFailed = By.xpath("//td[@class='dataTables_empty']/div");
     
     
-
+ // User Story 4.4 - Report Download
+    public By opdOutPatientTab = By.xpath("//a[contains(text(),'OPD - Out Patient')]");
+    public By showIconFirstPatient = By.xpath("(//a[contains(@href,'OpdPatient/show')])[1]");
+    public By visitsTab = By.xpath("//a[contains(text(),'Visits')]");
+    public By printIcon = By.xpath("(//a[contains(@href,'print') or @title='Print'])[1]");
 
 }

@@ -1,46 +1,401 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="28" passed="15" failed="13" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-14T15:37:42 IST" name="Default suite" finished-at="2026-05-14T15:38:32 IST" duration-ms="49973">
+  <suite started-at="2026-05-15T16:29:49 IST" name="Default suite" finished-at="2026-05-15T16:34:01 IST" duration-ms="251893">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-14T15:37:42 IST" name="Default test" finished-at="2026-05-14T15:38:32 IST" duration-ms="49973">
+    <test started-at="2026-05-15T16:29:49 IST" name="Default test" finished-at="2026-05-15T16:34:01 IST" duration-ms="251893">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:37:42 IST" name="setUpClass" finished-at="2026-05-14T15:37:43 IST" duration-ms="1011" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:29:49 IST" name="setUpClass" finished-at="2026-05-15T16:29:49 IST" duration-ms="562" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@2c56eba5]]>
->>>>>>> 186e16e33d97a450e825bd73d0f098b50b74b05b
+                <![CDATA[org.testng.TestRunner@6e627ab8]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-14T16:52:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T16:52:21 IST" duration-ms="13121" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:29:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:29:49 IST" duration-ms="130" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Search for an OPD patient (Valid and Invalid)"]]>
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:37:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:37:54 IST" duration-ms="10307" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login with invalid email and password"]]>
->>>>>>> 186e16e33d97a450e825bd73d0f098b50b74b05b
+                <![CDATA[""]]>
               </value>
             </param>
             <param index="1">
               <value>
-<<<<<<< HEAD
+                <![CDATA["Attendance Report"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Test name must not be null or empty]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Test name must not be null or empty
+at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
+at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:97)
+at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:154)
+at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.createTestCase(ExtentCucumberAdapter.java:424)
+at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.handleTestCaseStarted(ExtentCucumberAdapter.java:163)
+at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:107)
+at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:104)
+at io.cucumber.core.eventbus.AbstractEventPublisher.send(AbstractEventPublisher.java:51)
+at io.cucumber.core.eventbus.AbstractEventBus.send(AbstractEventBus.java:12)
+at io.cucumber.core.runtime.SynchronizedEventBus.send(SynchronizedEventBus.java:47)
+at io.cucumber.core.runtime.ThreadLocalRunnerSupplier$LocalEventBus.send(ThreadLocalRunnerSupplier.java:62)
+at io.cucumber.core.runner.TestCase.emitTestCaseStarted(TestCase.java:230)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:75)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:29:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:29:49 IST" duration-ms="7" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Profile"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[Test name must not be null or empty]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: Test name must not be null or empty
+at com.aventstack.extentreports.util.Assert.notEmpty(Assert.java:12)
+at com.aventstack.extentreports.ExtentTest.<init>(ExtentTest.java:97)
+at com.aventstack.extentreports.ExtentTest.createNode(ExtentTest.java:154)
+at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.createTestCase(ExtentCucumberAdapter.java:424)
+at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter.handleTestCaseStarted(ExtentCucumberAdapter.java:163)
+at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:107)
+at com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter$3.receive(ExtentCucumberAdapter.java:104)
+at io.cucumber.core.eventbus.AbstractEventPublisher.send(AbstractEventPublisher.java:51)
+at io.cucumber.core.eventbus.AbstractEventBus.send(AbstractEventBus.java:12)
+at io.cucumber.core.runtime.SynchronizedEventBus.send(SynchronizedEventBus.java:47)
+at io.cucumber.core.runtime.ThreadLocalRunnerSupplier$LocalEventBus.send(ThreadLocalRunnerSupplier.java:62)
+at io.cucumber.core.runner.TestCase.emitTestCaseStarted(TestCase.java:230)
+at io.cucumber.core.runner.TestCase.run(TestCase.java:75)
+at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:135)
+at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:29:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:29:58 IST" duration-ms="8478" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with invalid email and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:29:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:30:06 IST" duration-ms="7898" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with valid email and invalid password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:30:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:30:14 IST" duration-ms="8480" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with empty email and password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:30:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:30:23 IST" duration-ms="8528" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with empty email"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:30:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:30:32 IST" duration-ms="8713" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login with empty password"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:30:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:30:44 IST" duration-ms="12015" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login functionality for multiple user roles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:30:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:30:55 IST" duration-ms="11548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login functionality for multiple user roles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:30:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:31:08 IST" duration-ms="12840" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login functionality for multiple user roles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:31:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:31:20 IST" duration-ms="12336" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login functionality for multiple user roles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:31:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:31:33 IST" duration-ms="13112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login functionality for multiple user roles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:31:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:31:47 IST" duration-ms="13109" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login functionality for multiple user roles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:31:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:31:58 IST" duration-ms="11701" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login functionality for multiple user roles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:31:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:32:10 IST" duration-ms="11825" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login functionality for multiple user roles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:32:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:32:23 IST" duration-ms="13269" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login functionality for multiple user roles"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:32:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:32:34 IST" duration-ms="10709" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for an OPD patient (Valid and Invalid)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
                 <![CDATA["OPD Patient Search"]]>
               </value>
             </param>
@@ -60,7 +415,7 @@ at ✽.the patient table should display "The single record for Patient ID "Maria
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-14T16:52:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T16:52:32 IST" duration-ms="11545" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:32:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:32:46 IST" duration-ms="11921" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -70,84 +425,911 @@ at ✽.the patient table should display "The single record for Patient ID "Maria
             <param index="1">
               <value>
                 <![CDATA["OPD Patient Search"]]>
-=======
-                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
->>>>>>> 186e16e33d97a450e825bd73d0f098b50b74b05b
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-14T16:52:32 IST" name="tearDownClass" finished-at="2026-05-14T16:52:32 IST" duration-ms="22" status="PASS">
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:37:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:38:02 IST" duration-ms="8467" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:32:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:32:51 IST" duration-ms="5193" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with valid email and invalid password"]]>
+                <![CDATA["Add a new OPD patient successfully (Valid Case)"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+                <![CDATA["Add New OPD Patient (User Story 4.2)"]]>
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the "OPD - Out Patient" page' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user fills the Add Patient form with the following details:")
+public void the_user_fills_the_add_patient_form_with_the_following_details(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("a {string} message should appear")
+public void a_message_should_appear(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient {string} should be visible in the OPD list")
+public void the_patient_should_be_visible_in_the_opd_list(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the "OPD - Out Patient" page' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user fills the Add Patient form with the following details:")
+public void the_user_fills_the_add_patient_form_with_the_following_details(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("a {string} message should appear")
+public void a_message_should_appear(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient {string} should be visible in the OPD list")
+public void the_patient_should_be_visible_in_the_opd_list(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/add_patient.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:38:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:38:09 IST" duration-ms="7123" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:32:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:32:57 IST" duration-ms="5413" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with empty email and password"]]>
+                <![CDATA["Fail to add patient with missing required fields (Invalid Case)"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+                <![CDATA["Add New OPD Patient (User Story 4.2)"]]>
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the "OPD - Out Patient" page' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user leaves the mandatory {string} field blank")
+public void the_user_leaves_the_mandatory_field_blank(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the system should highlight the {string} field with an error")
+public void the_system_should_highlight_the_field_with_an_error(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient record should not be created")
+public void the_patient_record_should_not_be_created() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the "OPD - Out Patient" page' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user leaves the mandatory {string} field blank")
+public void the_user_leaves_the_mandatory_field_blank(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the system should highlight the {string} field with an error")
+public void the_system_should_highlight_the_field_with_an_error(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient record should not be created")
+public void the_patient_record_should_not_be_created() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/add_patient.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:38:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:38:22 IST" duration-ms="12600" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:32:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:32:59 IST" duration-ms="2174" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with empty email"]]>
+                <![CDATA["Add multiple medicines to a prescription"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+                <![CDATA["Add Prescription (User Story 4.6)"]]>
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is logged into the Smart Hospital portal as a doctor' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is logged into the Smart Hospital portal as a doctor")
+public void the_user_is_logged_into_the_smart_hospital_portal_as_a_doctor() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("the user is viewing an existing OPD patient profile")
+public void the_user_is_viewing_an_existing_opd_patient_profile() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("adds the following medications to the prescription list:")
+public void adds_the_following_medications_to_the_prescription_list(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks {string}")
+public void clicks(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the prescription should be saved successfully")
+public void the_prescription_should_be_saved_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the medications should be visible under the {string} tab")
+public void the_medications_should_be_visible_under_the_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is logged into the Smart Hospital portal as a doctor' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is logged into the Smart Hospital portal as a doctor")
+public void the_user_is_logged_into_the_smart_hospital_portal_as_a_doctor() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("the user is viewing an existing OPD patient profile")
+public void the_user_is_viewing_an_existing_opd_patient_profile() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("adds the following medications to the prescription list:")
+public void adds_the_following_medications_to_the_prescription_list(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks {string}")
+public void clicks(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the prescription should be saved successfully")
+public void the_prescription_should_be_saved_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the medications should be visible under the {string} tab")
+public void the_medications_should_be_visible_under_the_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is logged into the Smart Hospital portal as a doctor(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/add_prescription.feature:7)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:38:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-14T15:38:30 IST" duration-ms="8186" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:32:59 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:33:10 IST" duration-ms="10945" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login with empty password"]]>
+                <![CDATA["Filter patients by Consultant Doctor"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["M_VIGNESHWARAN_2026_05_05_SmartHospital_LoginFeature"]]>
+                <![CDATA["Filter OPD Patients (User Story 4.3)"]]>
               </value>
             </param>
           </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the "OPD - Out Patient" page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user selects {string} from the {string} filter dropdown")
+public void the_user_selects_from_the_filter_dropdown(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button in the filter bar")
+public void clicks_the_button_in_the_filter_bar(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resulting table should only show patients assigned to {string}")
+public void the_resulting_table_should_only_show_patients_assigned_to(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the "OPD - Out Patient" page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user selects {string} from the {string} filter dropdown")
+public void the_user_selects_from_the_filter_dropdown(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button in the filter bar")
+public void clicks_the_button_in_the_filter_bar(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resulting table should only show patients assigned to {string}")
+public void the_resulting_table_should_only_show_patients_assigned_to(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/filter.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@75c56eb9]" started-at="2026-05-14T15:38:30 IST" name="tearDownClass" finished-at="2026-05-14T15:38:32 IST" duration-ms="2206" status="PASS">
->>>>>>> 186e16e33d97a450e825bd73d0f098b50b74b05b
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:33:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:33:19 IST" duration-ms="9703" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Filter patients by Consultant Doctor"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Filter OPD Patients (User Story 4.3)"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the "OPD - Out Patient" page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user selects {string} from the {string} filter dropdown")
+public void the_user_selects_from_the_filter_dropdown(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button in the filter bar")
+public void clicks_the_button_in_the_filter_bar(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resulting table should only show patients assigned to {string}")
+public void the_resulting_table_should_only_show_patients_assigned_to(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the "OPD - Out Patient" page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user selects {string} from the {string} filter dropdown")
+public void the_user_selects_from_the_filter_dropdown(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button in the filter bar")
+public void clicks_the_button_in_the_filter_bar(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the resulting table should only show patients assigned to {string}")
+public void the_resulting_table_should_only_show_patients_assigned_to(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/filter.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:33:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:33:29 IST" duration-ms="9800" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successfully move a patient from OPD to IPD"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Move OPD to IPD (User Story 4.5)"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the "OPD - Out Patient" page' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("the user opens the profile of an existing OPD patient")
+public void the_user_opens_the_profile_of_an_existing_opd_patient() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("fills in the admission form with the following details:")
+public void fills_in_the_admission_form_with_the_following_details(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("a success message should be displayed")
+public void a_success_message_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient should now appear in the {string} module")
+public void the_patient_should_now_appear_in_the_module(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the "OPD - Out Patient" page' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("the user opens the profile of an existing OPD patient")
+public void the_user_opens_the_profile_of_an_existing_opd_patient() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("fills in the admission form with the following details:")
+public void fills_in_the_admission_form_with_the_following_details(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("a success message should be displayed")
+public void a_success_message_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient should now appear in the {string} module")
+public void the_patient_should_now_appear_in_the_module(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/move_to_ipd.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:33:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:33:35 IST" duration-ms="5282" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Make a valid OPD payment"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OPD Payment (User Story 4.8)"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is viewing an OPD patient with a pending balance' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is viewing an OPD patient with a pending balance")
+public void the_user_is_viewing_an_opd_patient_with_a_pending_balance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("enters {string} in the {string} field")
+public void enters_in_the_field(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("selects {string} as the {string}")
+public void selects_as_the(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("a {string} message should appear")
+public void a_message_should_appear(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient's {string} should increase by {int}")
+public void the_patient_s_should_increase_by(String string, Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the {string} should decrease by {int}")
+public void the_should_decrease_by(String string, Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is viewing an OPD patient with a pending balance' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is viewing an OPD patient with a pending balance")
+public void the_user_is_viewing_an_opd_patient_with_a_pending_balance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("enters {string} in the {string} field")
+public void enters_in_the_field(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("selects {string} as the {string}")
+public void selects_as_the(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("a {string} message should appear")
+public void a_message_should_appear(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient's {string} should increase by {int}")
+public void the_patient_s_should_increase_by(String string, Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the {string} should decrease by {int}")
+public void the_should_decrease_by(String string, Integer int1) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is viewing an OPD patient with a pending balance(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/pay.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:33:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:33:40 IST" duration-ms="5574" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Attempt to make a payment with an invalid amount"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["OPD Payment (User Story 4.8)"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is viewing an OPD patient with a pending balance' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is viewing an OPD patient with a pending balance")
+public void the_user_is_viewing_an_opd_patient_with_a_pending_balance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("enters {string} in the {string} field")
+public void enters_in_the_field(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the system should display a validation error {string}")
+public void the_system_should_display_a_validation_error(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the payment should not be processed")
+public void the_payment_should_not_be_processed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is viewing an OPD patient with a pending balance' and 4 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is viewing an OPD patient with a pending balance")
+public void the_user_is_viewing_an_opd_patient_with_a_pending_balance() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("enters {string} in the {string} field")
+public void enters_in_the_field(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} button")
+public void clicks_the_button(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the system should display a validation error {string}")
+public void the_system_should_display_a_validation_error(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the payment should not be processed")
+public void the_payment_should_not_be_processed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is viewing an OPD patient with a pending balance(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/pay.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:33:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:33:50 IST" duration-ms="10378" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Download a patient's OPD bill report"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Download OPD Report (User Story 4.4)"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the "OPD - Out Patient" page' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("there is an OPD patient with a completed visit")
+public void there_is_an_opd_patient_with_a_completed_visit() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user clicks the {string} icon for that patient")
+public void the_user_clicks_the_icon_for_that_patient(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("navigates to the {string} tab")
+public void navigates_to_the_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} icon on a specific visit record")
+public void clicks_the_icon_on_a_specific_visit_record(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("a print preview should open")
+public void a_print_preview_should_open() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the user should be able to save the report as a PDF")
+public void the_user_should_be_able_to_save_the_report_as_a_pdf() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the "OPD - Out Patient" page' and 6 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("there is an OPD patient with a completed visit")
+public void there_is_an_opd_patient_with_a_completed_visit() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user clicks the {string} icon for that patient")
+public void the_user_clicks_the_icon_for_that_patient(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("navigates to the {string} tab")
+public void navigates_to_the_tab(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("clicks the {string} icon on a specific visit record")
+public void clicks_the_icon_on_a_specific_visit_record(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("a print preview should open")
+public void a_print_preview_should_open() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the user should be able to save the report as a PDF")
+public void the_user_should_be_able_to_save_the_report_as_a_pdf() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/report_download.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:33:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-15T16:34:00 IST" duration-ms="9881" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View all tabs in the patient details view"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Show OPD Patient Details (User Story 4.7)"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.testng.UndefinedStepException">
+            <message>
+              <![CDATA[The step 'the user is on the "OPD - Out Patient" page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user clicks the {string} \\(eye icon) button for a patient")
+public void the_user_clicks_the_eye_icon_button_for_a_patient(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient profile should open displaying the following tabs:")
+public void the_patient_profile_should_open_displaying_the_following_tabs(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the basic patient details \\(Name, Age, Blood Group) should be visible at the top")
+public void the_basic_patient_details_name_age_blood_group_should_be_visible_at_the_top() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.testng.UndefinedStepException: The step 'the user is on the "OPD - Out Patient" page' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is on the {string} page")
+public void the_user_is_on_the_page(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("the user clicks the {string} \\(eye icon) button for a patient")
+public void the_user_clicks_the_eye_icon_button_for_a_patient(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the patient profile should open displaying the following tabs:")
+public void the_patient_profile_should_open_displaying_the_following_tabs(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@Then("the basic patient details \\(Name, Age, Blood Group) should be visible at the top")
+public void the_basic_patient_details_name_age_blood_group_should_be_visible_at_the_top() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/show_details.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.testng.UndefinedStepException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-15T16:34:00 IST" name="tearDownClass" finished-at="2026-05-15T16:34:01 IST" duration-ms="290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
