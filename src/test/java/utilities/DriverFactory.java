@@ -1,55 +1,51 @@
 package utilities;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.time.Duration;
 
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverFactory {
 
-	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-	public static WebDriver initDriver() {
-		ChromeOptions options = new ChromeOptions();
+    public static WebDriver initDriver() {
 
-		options.addArguments("--disable-notifications");
+        ChromeOptions options = new ChromeOptions();
 
-		options.addArguments("--disable-popup-blocking");
+        options.addArguments("--disable-notifications");
+        options.addArguments("--disable-popup-blocking");
+        options.addArguments("--remote-allow-origins=*");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-gpu");
+        options.addArguments("--start-maximized");
 
-		options.addArguments("--disable-infobars");
+        options.setPageLoadStrategy(PageLoadStrategy.EAGER);
 
-		options.addArguments("--disable-extensions");
+        driver.set(new ChromeDriver(options));
 
-		options.addArguments("--guest");
-		
-		options.addArguments("--start-maximized");
+        getDriver().manage().timeouts()
+                .implicitlyWait(Duration.ofSeconds(10));
 
-		Map<String, Object> prefs = new HashMap<>();
 
-		prefs.put("profile.default_content_setting_values.notifications", 2);
+        getDriver().manage().timeouts()
+                .pageLoadTimeout(Duration.ofSeconds(60));
 
-		prefs.put("credentials_enable_service", false);
+        return getDriver();
+    }
 
-		prefs.put("profile.password_manager_enabled", false);
+    public static WebDriver getDriver() {
+        return driver.get();
+    }
 
-		prefs.put("profile.managed_default_content_settings.ads", 2);
+    public static void quitDriver() {
 
-		options.setExperimentalOption("prefs", prefs);
-		WebDriver webDriver = new ChromeDriver(options);
-		driver.set(webDriver);
-		return webDriver;
-	}
-
-	public static WebDriver getDriver() {
-		return driver.get();
-	}
-
-	public static void quitDriver() {
-		if (driver.get() != null) {
-			//driver.get().quit();
-			//driver.remove();
-		}
-	}
+        if (driver.get() != null) {
+            driver.get().quit();
+            driver.remove();
+        }
+    }
 }

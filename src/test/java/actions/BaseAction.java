@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseAction {
 
-    WebDriver driver;
+	protected WebDriver driver;
     WebDriverWait wait;
     JavascriptExecutor js;
 
@@ -25,8 +25,13 @@ public class BaseAction {
     }
 
     public void click(By locator) {
-    	
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+
+        WebElement element =
+                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+
+        element.click();
     }
 
 
@@ -66,5 +71,11 @@ public class BaseAction {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 
         return element.getText();
+    }
+    
+    public void waitForVisibility(By locator) {
+
+        wait.until(
+            ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }

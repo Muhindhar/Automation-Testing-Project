@@ -7,17 +7,13 @@ import utilities.DriverFactory;
 public class Hooks {
 	
 	@Before
-	public static void setUp()
-	{
-		DriverFactory.initDriver();
+	public void setUp() {
+	    DriverFactory.initDriver();
+	    DriverFactory.getDriver().manage().deleteAllCookies();
 	}
 	
 	@After
-	public static void tearDown()
-	{
-		if(DriverFactory.getDriver() != null)
-		{
-			DriverFactory.quitDriver();
-		}
+	public void tearDown() {
+	    DriverFactory.quitDriver();
 	}
 }
