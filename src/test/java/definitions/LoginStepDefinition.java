@@ -12,10 +12,7 @@ public class LoginStepDefinition {
 	
 	LoginAction la = new LoginAction(DriverFactory.getDriver());
 
-	@Given("the user is on the login page")
-	public void the_user_is_on_the_login_page() {
-	    la.goToLoginPage();
-	}
+
 
 	@When("the user enters wrong email")
 	public void the_user_enters_wrong_email() {

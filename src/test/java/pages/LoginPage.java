@@ -15,7 +15,7 @@ public class LoginPage {
 	public By accountant = By.xpath("//a[text() = \"Accountant\"]");
 	public By receptionist = By.xpath("//a[text() = \"Receptionist\"]");
 	public By nurse = By.xpath("//a[text() = \"Nurse\"]");
-	public By usernameErrorMessage = By.xpath("//p[text() = \"Username field is required\"]");
-	public By passwordErrorMessage = By.xpath("//p[text() = \"Password field is required\"]");
-	public By invalidErrorMessage = By.xpath("//div[text()=\"Invalid Username or Password\"]");
+	public By usernameErrorMessage = By.xpath("//input[@name='username']/parent::div/descendant::p");
+	public By passwordErrorMessage = By.xpath("//input[@name='password']/parent::div/descendant::p");
+	public By invalidErrorMessage = By.xpath("//div[@class = \"alert alert-danger\"]");
 }

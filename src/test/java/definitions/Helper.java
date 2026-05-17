@@ -9,8 +9,6 @@ import utilities.DriverFactory;
 
 public class Helper {
 	
-	
-	
 	public static Properties getPropertyFile()
 	{
 		try

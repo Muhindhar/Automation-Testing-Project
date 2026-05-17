@@ -22,8 +22,7 @@ public class OPD_ReportActions extends BaseAction {
 
     // Navigate to OPD - Out Patient tab
     public void navigateToOPDOutPatientPage() {
-        click(opdPage.opdButton);           // expand OPD menu
-        click(opdPage.opdOutPatientTab);    // click OPD - Out Patient
+        click(opdPage.opdButton);
     }
 
     // Verify a patient with completed visit exists (first row in table)
