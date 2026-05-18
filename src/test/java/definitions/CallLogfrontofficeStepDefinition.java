@@ -12,7 +12,7 @@ import io.cucumber.java.en.When;
 import utilities.DriverFactory;
 import utilities.HelperClass;
 
-public class CallLogfrontoffice {
+public class CallLogfrontofficeStepDefinition {
 	CallLogFrontofcActions cfa = new CallLogFrontofcActions(DriverFactory.getDriver());
 
 	@Given("user is on login page of site")

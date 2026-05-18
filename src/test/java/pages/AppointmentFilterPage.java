@@ -11,8 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.DriverFactory;
 
-public class AppointmentFilter {
-	public AppointmentFilter() {
+public class AppointmentFilterPage {
+	public AppointmentFilterPage() {
 		PageFactory.initElements(DriverFactory.getDriver(), this);
 	}
 

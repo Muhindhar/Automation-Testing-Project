@@ -12,7 +12,7 @@ import utilities.DriverFactory;
 import utilities.ExcelUtility;
 import utilities.HelperClass;
 
-public class ComplainFrontOffice {
+public class ComplaintFrontOfficeStepDefinition {
 	ComplaintActions ca = new ComplaintActions(DriverFactory.getDriver());
 
 	@Given("clicks on the complaint link")

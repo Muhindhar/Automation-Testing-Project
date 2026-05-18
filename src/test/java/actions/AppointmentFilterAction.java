@@ -2,17 +2,17 @@ package actions;
 
 import org.openqa.selenium.WebDriver;
 
-import pages.AppointmentFilter;
+import pages.AppointmentFilterPage;
 import utilities.HelperClass;
 
 public class AppointmentFilterAction extends BaseAction {
 
-	AppointmentFilter af;
+	AppointmentFilterPage af;
 	WebDriver driver;
 	public AppointmentFilterAction(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
-		af = new AppointmentFilter();
+		af = new AppointmentFilterPage();
 	}
 
 	public void recptbnclick() {
