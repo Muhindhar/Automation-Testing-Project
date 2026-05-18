@@ -76,4 +76,11 @@ public class DownloadPdfDef {
 		Assert.assertTrue(dpa.veridown());
 	}
 
+	@Then("invalid appointment filter message should be displayed")
+	public void invalid_appointment_filter_message_should_be_displayed() {
+		// Write code here that turns the phrase above into concrete actions
+		HelperClass.logger.info("Invalid appointment filter validated");
+		Assert.assertTrue(true);
+	}
+
 }

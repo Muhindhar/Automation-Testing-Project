@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 import pages.PathalogyPage;
+import utilities.HelperClass;
 
 public class PathalogyAction extends BaseAction {
 
@@ -20,11 +21,12 @@ public class PathalogyAction extends BaseAction {
     }
     
     public void clickLogin() {
+    	HelperClass.logger.info("Clicking login ");
     	click(pathoPage.login);
     }
 
     public void clickUserlog() {
-
+    	HelperClass.logger.info("clicking login");
         click(pathoPage.userlog);
         waitForVisibility(pathoPage.signup);
         System.out.println("After User Login click URL: "+ driver.getCurrentUrl());
@@ -35,11 +37,13 @@ public class PathalogyAction extends BaseAction {
         waitForVisibility(pathoPage.signup);
 
         System.out.println("Current URL before Sign In: "+ driver.getCurrentUrl());
+        HelperClass.logger.info("Getting url");
         click(pathoPage.signup);
         System.out.println("Clicked Sign In button");
     }
 
     public void clickPathology() {
+    	HelperClass.logger.info("Clicking pathology");
         click(pathoPage.pathlogyMenu);
     }
 
