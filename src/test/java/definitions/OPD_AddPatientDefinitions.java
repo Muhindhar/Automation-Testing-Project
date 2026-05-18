@@ -20,8 +20,8 @@ public class OPD_AddPatientDefinitions {
         apa = new OPD_AddPatientActions(DriverFactory.getDriver());
     }
 
-    @When("the user clicks the {string} button")
-    public void the_user_clicks_the_button(String buttonName) {
+    @When("the user clicks the Add Patient button")
+    public void the_user_clicks_the_button() {
         apa.clickAddPatientButton();
     }
 

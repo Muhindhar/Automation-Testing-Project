@@ -6,7 +6,7 @@ Feature: Jerishwin_Joseph_17-05-2026_Add New OPD Patient
   Background:
     Given the user is logged into the Smart Hospital portal as a receptionist
     And the user is on the "OPD - Out Patient" page
-    When the user clicks the "Add Patient" button
+    When the user clicks the Add Patient button
     And selects add icon
 
   @us_4.2 @add_patient

@@ -26,16 +26,16 @@ public class OPDPage {
     public By printIcon            = By.xpath("//a[contains(@class,'buttons-pdf') and @aria-controls='DataTables_Table_1']");
     
  // User Story 4.2 - Add Patient
-    public By addPatientButton  = By.xpath("//a[contains(text(),'Add Patient') or contains(@href,'OpdPatient/create')]");
-    public By addIcon           = By.xpath("//a[@title='Add' or contains(@class,'btn-success')][1]");
+    public By addPatientButton  = By.xpath("//div[@id='tab_2']/child::div/a");
+    public By addIcon           = By.xpath("//div[@id='myModal']/child::div/div/div/div/div/a");
 
-    public By nameField         = By.xpath("//input[@id='patient_name' or @name='patient_name']");
-    public By genderDropdown    = By.xpath("//select[@id='sex' or @name='sex']");
-    public By yearField         = By.xpath("//input[@id='age' or @name='age']");
-    public By monthField        = By.xpath("//input[@id='age_month' or @name='age_month']");
-    public By dayField          = By.xpath("//input[@id='age_day' or @name='age_day']");
+    public By nameField         = By.id("name");
+    public By genderDropdown    = By.id("addformgender");
+    public By yearField         = By.id("age_year");
+    public By monthField        = By.id("age_month");
+    public By dayField          = By.id("age_day");
 
-    public By saveButton        = By.xpath("//button[@type='submit' and contains(text(),'Save')]");
-    public By successMessage    = By.xpath("//*[contains(text(),'Record Saved Successfully')]");
-    public By nameErrorMessage  = By.xpath("//*[contains(text(),'Name field is required') or contains(@class,'error') and contains(text(),'Name')]");
+    public By saveButton        = By.cssSelector("div.pull-right button#formaddpabtn");
+    public By successMessage    = By.cssSelector("div#toast-container div.toast-success");
+    public By nameErrorMessage  = By.cssSelector("div#toast-container div.toast-error");
 }
