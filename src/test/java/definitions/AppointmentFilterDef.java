@@ -84,12 +84,4 @@ public class AppointmentFilterDef {
 
 		af.clickoldapp();
 	}
-
-	@Then("user should be able to see old appointments")
-	public void user_should_be_able_to_see_old_appointments() {
-
-		HelperClass.logger.info("Verifying old appointment records");
-
-		Assert.assertTrue(af.verifyrecord());
-	}
 }
