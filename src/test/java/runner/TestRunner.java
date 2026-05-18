@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features\\pathalogy\\pay.feature",
+		features = "src\\test\\resources\\features",
 		glue = "definitions",
 		plugin = {"pretty",
 				"html:target/cucumber-report.html",
@@ -15,6 +15,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				"rerun:target/failed-rerun.txt" },
+		tags  = "@TodayAppointmentFilter",
 		monochrome = true)
 
 
