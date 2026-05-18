@@ -1,5 +1,9 @@
 package definitions;
 
+import java.time.Duration;
+
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import actions.LoginAction;
@@ -9,10 +13,8 @@ import io.cucumber.java.en.When;
 import utilities.DriverFactory;
 
 public class LoginStepDefinition {
-	
+
 	LoginAction la = new LoginAction(DriverFactory.getDriver());
-
-
 
 	@When("the user enters wrong email")
 	public void the_user_enters_wrong_email() {
@@ -26,7 +28,7 @@ public class LoginStepDefinition {
 
 	@When("clicks on the Login button")
 	public void clicks_on_the_login_button() {
-	    la.clickLoginButton();
+		la.clickLoginButton();
 	}
 
 	@Then("an authentication error message should be displayed")
@@ -36,7 +38,8 @@ public class LoginStepDefinition {
 
 	@Then("the user should remain on the login page")
 	public void the_user_should_remain_on_the_login_page() {
-	   Assert.assertEquals(Helper.getPropertyFile().getProperty("loginUrl"), "https://demo.smart-hospital.in/site/login");
+		Assert.assertEquals(Helper.getPropertyFile().getProperty("loginUrl"),
+				"https://demo.smart-hospital.in/site/login");
 	}
 
 	@When("the user enters email")
@@ -46,17 +49,17 @@ public class LoginStepDefinition {
 
 	@When("the user leaves the email field empty")
 	public void the_user_leaves_the_email_field_empty() {
-	  
+
 	}
 
 	@When("the user leaves the password field empty")
 	public void the_user_leaves_the_password_field_empty() {
-	    
+
 	}
 
 	@Then("validation messages should be displayed for mandatory fields")
 	public void validation_messages_should_be_displayed_for_mandatory_fields() {
-	    
+
 	}
 
 	@When("the user enters password")
@@ -71,16 +74,18 @@ public class LoginStepDefinition {
 
 	@Then("a password required validation message should be displayed")
 	public void a_password_required_validation_message_should_be_displayed() {
-	   Assert.assertEquals(la.getPasswordErrorMessage(), "Password field is required");
+		Assert.assertEquals(la.getPasswordErrorMessage(), "Password field is required");
 	}
 
 	@When("the user clicks the {string} button")
 	public void the_user_clicks_the_button(String string) {
-	    la.clickLogin(string);
+		la.clickLogin(string);
 	}
 
 	@Then("the user should be redirected to the dashboard")
 	public void the_user_should_be_redirected_to_the_dashboard() {
+		WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.urlContains("dashboard"));
 		String url = DriverFactory.getDriver().getCurrentUrl();
 		Assert.assertTrue(url.contains("dashboard"));
 	}
