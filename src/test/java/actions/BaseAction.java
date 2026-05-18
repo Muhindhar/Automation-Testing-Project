@@ -1,6 +1,5 @@
 package actions;
 
-
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -15,6 +14,7 @@ public class BaseAction {
 	WebDriverWait wait;
 	JavascriptExecutor js;
 	private static final int TIMEOUT = 10;
+
 	public BaseAction(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
@@ -77,7 +77,15 @@ public class BaseAction {
 	public WebElement waitForVisibility(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
+
 	public WebElement waitForClickable(By locator) {
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
+
+	protected void sleep(long ms) {
+		try {
+			Thread.sleep(ms);
+		} catch (InterruptedException ignored) {
+		}
 	}
 }
