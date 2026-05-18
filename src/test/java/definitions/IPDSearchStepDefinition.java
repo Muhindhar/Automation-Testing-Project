@@ -6,11 +6,11 @@ import io.cucumber.java.en.When;
 import pages.IPDSearchPage;
 import utilities.DriverFactory;
 
-public class IPDSearchSteps extends DriverFactory {
+public class IPDSearchStepDefinition extends DriverFactory {
 
     IPDSearchPage searchPage;
 
-    public IPDSearchSteps() {
+    public IPDSearchStepDefinition() {
 
         searchPage = new IPDSearchPage(DriverFactory.getDriver());
     }

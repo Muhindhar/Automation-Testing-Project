@@ -12,7 +12,7 @@ import utilities.DriverFactory;
 import utilities.ExcelUtility;
 import utilities.HelperClass;
 
-public class ComplainFo {
+public class ComplaintFrontOfficeStepDefinition {
 	ComplaintActions ca = new ComplaintActions(DriverFactory.getDriver());
 
 	@Given("clicks on the complaint link")
@@ -59,5 +59,12 @@ public class ComplainFo {
 		String act = ca.checklistcom();
 		Assert.assertEquals(exp, act);
 	}
+	@When("user leaves all complaint fields empty")
+	public void user_leaves_all_complaint_fields_empty() {
+	    // Write code here that turns the phrase above into concrete actions
+	    ca.emptyfields();
+	    System.out.println("Fields are empty");
+	}
+
 
 }
