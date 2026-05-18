@@ -23,7 +23,6 @@ public class CallLogFrontofcActions extends BaseAction {
 
 	public void clckrecp() {
 		jsClick(cfp.recbtnfo);
-
 	}
 
 	public void clksign() {
@@ -32,7 +31,6 @@ public class CallLogFrontofcActions extends BaseAction {
 
 	public void frontofclink() {
 		jsClick(cfp.frontofc);
-
 	}
 
 	public void phcalllog() {
@@ -57,11 +55,9 @@ public class CallLogFrontofcActions extends BaseAction {
 
 	public void clicksave() {
 		jsClick(cfp.savebtn);
-
 	}
 
 	public String checklist() {
-
 		return getText(cfp.checklist);
 	}
 
