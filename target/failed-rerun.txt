@@ -1,10 +1,11 @@
-file:src/test/resources/features/Appointment/Appointmentfilter.feature:13:18:23
-file:src/test/resources/features/Appointment/DownloadPdf.feature:18:19:20
-file:src/test/resources/features/FrontOffice/FoComplaint.feature:11
+file:src/test/resources/features/Appointment/AppointmentReportDownload.feature:18:19:20:23:29
+file:src/test/resources/features/Appointment/Appointmentfilter.feature:12:17:22
 file:src/test/resources/features/FrontOffice/FrontOfcCallLog.feature:12:23
-file:src/test/resources/features/FrontOffice/ReportFrontOfc.feature:16:17:18
+file:src/test/resources/features/FrontOffice/FrontOfficeComplaint.feature:13:21
+file:src/test/resources/features/FrontOffice/ReportFrontOffice.feature:18:19:20:23
 file:src/test/resources/features/IPD/AddPatient.feature:28:39
 file:src/test/resources/features/liveConsultation/joinconsultation.feature:11:16:20:26
+file:src/test/resources/features/opd/report_download.feature:12
 file:src/test/resources/features/pathalogy/pay.feature:26:42:56
 file:src/test/resources/features/prescription/add_prescription.feature:11
 file:src/test/resources/features/prescription/delete_prescription.feature:11
