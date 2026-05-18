@@ -74,7 +74,6 @@ public class PrescriptionAction extends BaseAction {
 		wait.until(ExpectedConditions.presenceOfElementLocated(prescriptionPage.headerNote));
 	}
 
-
 	private void typeInWysihtml5(By iframeLocator, String value) {
 		WebElement iframe = wait.until(ExpectedConditions.presenceOfElementLocated(iframeLocator));
 
@@ -108,7 +107,6 @@ public class PrescriptionAction extends BaseAction {
 		new Select(element).selectByVisibleText(value);
 	}
 
-
 	private void selectHiddenDropdown(By locator, String value) {
 		WebElement select = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		js.executeScript(
@@ -123,7 +121,6 @@ public class PrescriptionAction extends BaseAction {
 		}
 	}
 
-
 	public void enterHeaderNote(String value) {
 		typeInWysihtml5(prescriptionPage.headerNote, value);
 	}
@@ -133,7 +130,7 @@ public class PrescriptionAction extends BaseAction {
 		selectByVisibleText(prescriptionPage.prescribeByDropdown, value);
 	}
 
-	public void selectDoctorNotification() {
+	public void selectDoctorNotification() throws InterruptedException {
 		try {
 			WebElement prescribeBy = driver.findElement(By.cssSelector("select[name='prescribe_by']"));
 
@@ -153,11 +150,6 @@ public class PrescriptionAction extends BaseAction {
 				}
 			}
 
-			try {
-				Thread.sleep(500);
-			} catch (InterruptedException ignored) {
-			}
-
 		} catch (Exception e) {
 			System.out.println("[selectDoctorNotification] Error: " + e.getMessage());
 		}
@@ -171,32 +163,23 @@ public class PrescriptionAction extends BaseAction {
 		selectByVisibleText(prescriptionPage.radiologyDropdown, value);
 	}
 
-	public void enterFindingCategory(String value) {
+	public void enterFindingCategory(String value) throws InterruptedException {
 		driver.switchTo().defaultContent();
 		selectHiddenDropdown(prescriptionPage.findingCategory, value);
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException ignored) {
-		}
 	}
 
-	public void enterFindings(String value) {
+	public void enterFindings(String value) throws InterruptedException {
 		driver.switchTo().defaultContent();
 
 		try {
 			driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
-			Thread.sleep(300);
+			
 		} catch (Exception ignored) {
 		}
 
 		WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(prescriptionPage.findings));
 		input.click();
 		input.sendKeys(value);
-
-		try {
-			Thread.sleep(500);
-		} catch (InterruptedException ignored) {
-		}
 
 		try {
 			By option = By.xpath("//label[contains(normalize-space(),'" + value + "')]"
@@ -214,7 +197,7 @@ public class PrescriptionAction extends BaseAction {
 		sendKeys(prescriptionPage.findingDescription, value);
 	}
 
-	private void setSelect2Value(By locator, String displayText) {
+	private void setSelect2Value(By locator, String displayText) throws InterruptedException {
 		WebElement select = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 
 		String optionValue = (String) js.executeScript("var sel = arguments[0], txt = arguments[1].trim();"
@@ -230,14 +213,9 @@ public class PrescriptionAction extends BaseAction {
 		}
 
 		js.executeScript("jQuery(arguments[0]).val(arguments[1]).trigger('change');", select, optionValue);
-
-		try {
-			Thread.sleep(600);
-		} catch (InterruptedException ignored) {
-		}
 	}
 
-	public void selectMedicineCategory(String value) {
+	public void selectMedicineCategory(String value) throws InterruptedException {
 
 		WebElement select = wait
 				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("select[name='medicine_cat_1']")));
@@ -259,11 +237,6 @@ public class PrescriptionAction extends BaseAction {
 		});
 
 		System.out.println("[selectMedicineCategory] Medicine loaded successfully");
-
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException ignored) {
-		}
 	}
 
 	public void selectMedicine(String value) {
@@ -314,11 +287,6 @@ public class PrescriptionAction extends BaseAction {
 		WebElement doseDropdown = wait
 				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("select[name='dosage_1']")));
 
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException ignored) {
-		}
-
 		java.util.List<WebElement> options = doseDropdown.findElements(By.tagName("option"));
 
 		System.out.println("========= DOSE OPTIONS =========");
@@ -352,11 +320,11 @@ public class PrescriptionAction extends BaseAction {
 		}
 	}
 
-	public void selectDoseInterval(String value) {
+	public void selectDoseInterval(String value) throws InterruptedException {
 		setSelect2Value(prescriptionPage.doseIntervalDropdown, value);
 	}
 
-	public void selectDoseDuration(String value) {
+	public void selectDoseDuration(String value) throws InterruptedException {
 		setSelect2Value(prescriptionPage.doseDurationDropdown, value);
 	}
 

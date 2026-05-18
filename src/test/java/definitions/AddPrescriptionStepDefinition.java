@@ -107,7 +107,7 @@ public class AddPrescriptionStepDefinition {
     // ─────────────────────────────────────────────────────────
 
     @When("enters prescription details")
-    public void enters_prescription_details(DataTable dataTable) {
+    public void enters_prescription_details(DataTable dataTable) throws InterruptedException {
 
         List<Map<String, String>> prescriptionData =
                 dataTable.asMaps(String.class, String.class);
@@ -148,7 +148,12 @@ public class AddPrescriptionStepDefinition {
 
     @When("clicks on Save")
     public void clicks_on_save() {
-        prescriptionAction.selectDoctorNotification();
+        try {
+			prescriptionAction.selectDoctorNotification();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         prescriptionAction.clickSave();
     }
 
