@@ -2,6 +2,7 @@ package actions;
 
 import java.util.List;
 
+import org.jspecify.annotations.NonNull;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +20,8 @@ public class PathalogyAction extends BaseAction {
         super(driver);
         this.pathoPage = new PathalogyPage(driver);
     }
+    
+   //for search
     
     public void clickLogin() {
     	HelperClass.logger.info("Clicking login ");
@@ -76,5 +79,99 @@ public class PathalogyAction extends BaseAction {
     
     public String getErrorTxt() {
     	return getText(pathoPage.notFound);
+    }
+    
+    //for payment
+    
+    public void clickpay() {
+    	click(pathoPage.paybtn);
+    }
+    
+    public void enterAmt(String amt) {
+    	sendKeys(pathoPage.payAmt, amt);
+    }
+    
+    public void clickadd() {
+    	click(pathoPage.add);
+    }
+    
+    public void ensure_makepay() {
+
+        click(pathoPage.makepay);
+
+        System.out.println("Clicked Make Payment");
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.tagName("iframe")));
+        System.out.println("Switched to Razorpay iframe");
+    }
+    
+    public void enterMob(String mobile) {
+    
+        try {
+            WebElement mobileField = wait.withTimeout(java.time.Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.mobile));
+            mobileField.clear();
+            mobileField.sendKeys(mobile);
+            System.out.println("Entered mobile number");
+        } catch (org.openqa.selenium.TimeoutException e) {
+            System.out.println("Mobile input screen skipped — number already pre-filled by Razorpay");
+        }
+    }
+
+    public void clickContinue() {
+
+        try {
+            WebElement continueBtn = wait.withTimeout(java.time.Duration.ofSeconds(5))
+                .until(ExpectedConditions.elementToBeClickable(pathoPage.cont));
+            continueBtn.click();
+            System.out.println("Clicked Continue button");
+        } catch (org.openqa.selenium.TimeoutException e) {
+            System.out.println("Continue button not found — already on Payment Options screen");
+        }
+    }
+    
+    public void chooseUpi() {
+    	click(pathoPage.upi);
+    }
+    
+    public void sendUpiId(String upiId) {
+    	sendKeys(pathoPage.email,upiId);
+    }
+    
+    public void clickVerify() {
+    	click(pathoPage.verify);
+    }
+    
+    public String getSuccessTxt() {
+
+        try {
+            driver.switchTo().defaultContent();
+            System.out.println("Switched back to main page from iframe");
+        } catch (Exception e) {
+            System.out.println("Already on main page — no iframe switch needed");
+        }
+
+        wait.withTimeout(java.time.Duration.ofSeconds(30))
+            .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.succ));
+
+        return getText(pathoPage.succ);
+    }
+    
+    public String getPayErrorTxt() {
+        try {
+
+            WebElement errorEl = wait.withTimeout(java.time.Duration.ofSeconds(8))
+                .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.payError));
+            String errorTxt = errorEl.getText().trim();
+            System.out.println("Error message displayed: " + errorTxt);
+            return errorTxt;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            String pageSource = driver.getPageSource();
+            boolean hasExceed = pageSource.contains("Amount Should Not Be Greater Than Balance");
+            boolean hasInvalid = pageSource.contains("Invalid Amount");
+            System.out.println("Error in page source — exceed: " + hasExceed + ", invalid: " + hasInvalid);
+            if (hasExceed) return "Amount Should Not Be Greater Than Balance";
+            if (hasInvalid) return "Invalid Amount";
+            return "";
+        }
     }
 }
