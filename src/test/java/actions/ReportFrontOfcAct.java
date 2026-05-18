@@ -44,21 +44,12 @@ public class ReportFrontOfcAct extends BaseAction {
 	}
 
 	public boolean verifydown() throws InterruptedException {
-
-		Thread.sleep(3000);
-
 		File folder = new File(System.getProperty("user.dir") + File.separator + "downloads");
-
 		File[] files = folder.listFiles();
-
 		if (files != null) {
-
 			for (File file : files) {
-
 				String filename = file.getName().toLowerCase();
-
 				if (filename.endsWith(".pdf") || filename.endsWith(".csv") || filename.endsWith(".xlsx")) {
-
 					return true;
 				}
 			}
