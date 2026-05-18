@@ -1,11 +1,7 @@
 package actions;
 
-import java.util.List;
-import java.util.Set;
-
 import org.openqa.selenium.WebDriver;
 import pages.JoinConsultationPage;
-import utilities.DriverFactory;
 
 public class JoinConsultationAction extends BaseAction{
 	
@@ -24,6 +20,25 @@ public class JoinConsultationAction extends BaseAction{
 	public void clickLiveConsultationOption()
 	{
 		click(jp.liveConsultationOption);
+	}
+
+	public int findRecordWithStatus(String string) {
+		int statusCount = getElements(jp.tableBody).size();
+		
+		for(int i=1; i<=statusCount; i++)
+		{
+			String status = getElement(jp.getStatusDropdown(i)).getText();
+			if(status.equals(string))
+			{
+				return i;
+			}
+		}
+		
+		return -1;
+	}
+
+	public boolean isActionPresent() {
+		
 	}
 
 }

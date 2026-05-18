@@ -1,5 +1,7 @@
 package definitions;
 
+import org.testng.Assert;
+
 import actions.JoinConsultationAction;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,6 +11,7 @@ import utilities.DriverFactory;
 public class JoinConsultationStepDefinition {
 	
 	JoinConsultationAction ja = new JoinConsultationAction(DriverFactory.getDriver());
+	private int index;
 	
 	@When("clicks on the live consultation from the sidebar")
 	public void clicks_on_the_live_consultation_from_the_sidebar() {
@@ -22,12 +25,12 @@ public class JoinConsultationStepDefinition {
 
 	@Given("the user identifies a consultation record with status {string}")
 	public void the_user_identifies_a_consultation_record_with_status(String string) {
-	   
+	   index = ja.findRecordWithStatus(string);
 	}
 
 	@Then("the Join button should be visible for that consultation")
 	public void the_join_button_should_be_visible_for_that_consultation() {
-	    
+	    Assert.assertTrue(ja.isActionPresent(index));
 	}
 
 	@Then("the user should be able to click the Join button")

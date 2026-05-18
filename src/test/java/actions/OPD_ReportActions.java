@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pages.OPDPage;
+import utilities.HelperClass;
 
 public class OPD_ReportActions extends BaseAction {
 
@@ -25,8 +26,10 @@ public class OPD_ReportActions extends BaseAction {
 
     // Expand OPD menu and click OPD - Out Patient tab
     public void navigateToOPDOutPatientPage() {
+    	HelperClass.logger.info("opening ODP page");
         jsClick(opdPage.opdButton);
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdOutPatientNavLink));
+        HelperClass.logger.info("clicking opdOutPatientNavLink ");
         jsClick(opdPage.opdOutPatientNavLink);
     }
 
@@ -47,6 +50,7 @@ public class OPD_ReportActions extends BaseAction {
     // Click PDF/Print icon scoped to the visits table
     public void clickPrintIcon() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.printIcon));
+        HelperClass.logger.info("Clicking print icon");
         click(opdPage.printIcon);
     }
 

@@ -21,6 +21,7 @@ test-output/
 allure-report/
 allure-results/
 ExtentReports/
+reports/
 
 # Screenshots
 screenshots/
@@ -37,4 +38,12 @@ bin/
 #downloads
 downloads/
 /.apt_generated/
+<<<<<<< HEAD
 /.apt_generated_tests/
+=======
+<<<<<<< HEAD
+/.apt_generated_tests/
+=======
+/.apt_generated_tests/
+>>>>>>> e78f85d6f0d520cda9cff3d37621b04cadf64e3d
+>>>>>>> 98917aa702fd6d86257d65f149a9982ed15e2749
