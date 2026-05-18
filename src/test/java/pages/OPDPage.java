@@ -24,4 +24,18 @@ public class OPDPage {
     public By showIconFirstPatient = By.xpath("//table[@id='DataTables_Table_1']/tbody[1]/tr[1]/td[1]/a");
     public By visitsTab            = By.xpath("//ul[@class='nav nav-tabs border-0 navlistscroll']/li[2]/a");
     public By printIcon            = By.xpath("//a[contains(@class,'buttons-pdf') and @aria-controls='DataTables_Table_1']");
+    
+ // User Story 4.2 - Add Patient
+    public By addPatientButton  = By.xpath("//a[contains(text(),'Add Patient') or contains(@href,'OpdPatient/create')]");
+    public By addIcon           = By.xpath("//a[@title='Add' or contains(@class,'btn-success')][1]");
+
+    public By nameField         = By.xpath("//input[@id='patient_name' or @name='patient_name']");
+    public By genderDropdown    = By.xpath("//select[@id='sex' or @name='sex']");
+    public By yearField         = By.xpath("//input[@id='age' or @name='age']");
+    public By monthField        = By.xpath("//input[@id='age_month' or @name='age_month']");
+    public By dayField          = By.xpath("//input[@id='age_day' or @name='age_day']");
+
+    public By saveButton        = By.xpath("//button[@type='submit' and contains(text(),'Save')]");
+    public By successMessage    = By.xpath("//*[contains(text(),'Record Saved Successfully')]");
+    public By nameErrorMessage  = By.xpath("//*[contains(text(),'Name field is required') or contains(@class,'error') and contains(text(),'Name')]");
 }
