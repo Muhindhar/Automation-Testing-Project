@@ -2,15 +2,15 @@ package definitions;
 
 import org.testng.Assert;
 
-import actions.DownloadPdfAction;
+import actions.DownloadReportsAction;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utilities.DriverFactory;
 import utilities.HelperClass;
 
-public class DownloadPdfDef {
-	DownloadPdfAction dpa = new DownloadPdfAction(DriverFactory.getDriver());
+public class AppointmentDownloadReports {
+	DownloadReportsAction dpa = new DownloadReportsAction(DriverFactory.getDriver());
 
 	@Given("the user is logged in as receptionist")
 	public void the_user_is_logged_in_as_receptionist() {
