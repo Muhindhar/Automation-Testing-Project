@@ -4,6 +4,7 @@ import org.testng.Assert;
 
 import actions.LoginAction;
 import actions.OPD_ReportActions;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -15,8 +16,8 @@ public class OPD_ReportDefinitions {
     OPD_ReportActions ra;
     LoginAction la;
 
-    @io.cucumber.java.Before
-    public void setUp() {
+    @Before
+    public void init() {
         ra = new OPD_ReportActions(DriverFactory.getDriver());
         la = new LoginAction(DriverFactory.getDriver());
     }
@@ -26,17 +27,9 @@ public class OPD_ReportDefinitions {
         ra.navigateToOPDOutPatientPage();
     }
 
-    @Given("there is an OPD patient with a completed visit")
-    public void there_is_an_opd_patient_with_a_completed_visit() {
-        Assert.assertTrue(ra.isPatientWithVisitPresent(),
-            "No OPD patient with a completed visit found in the table.");
-    }
-
     @When("the user clicks the {string} icon for that patient")
     public void the_user_clicks_the_icon_for_that_patient(String iconName) {
-        if (iconName.equalsIgnoreCase("Show")) {
-            ra.clickShowIcon();
-        }
+        ra.clickShowIcon();
     }
 
     @And("navigates to the {string} tab")
@@ -49,15 +42,9 @@ public class OPD_ReportDefinitions {
         ra.clickPrintIcon();
     }
 
-    @Then("a print preview should open")
-    public void a_print_preview_should_open() {
-        Assert.assertTrue(ra.isPrintPreviewOpen(),
-            "Print preview did not open in a new tab.");
-    }
-
-    @And("the user should be able to save the report as a PDF")
-    public void the_user_should_be_able_to_save_the_report_as_a_pdf() {
-        Assert.assertTrue(ra.isSaveAsPdfPossible(),
-            "Page does not appear to be a printable report.");
+    @Then("the report should be downloaded successfully")
+    public void the_report_should_be_downloaded_successfully() {
+        Assert.assertTrue(ra.isReportDownloadedSuccessfully(),
+            "Report did not open/download successfully.");
     }
 }

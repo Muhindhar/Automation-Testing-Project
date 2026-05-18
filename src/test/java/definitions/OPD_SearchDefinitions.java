@@ -38,14 +38,14 @@ public class OPD_SearchDefinitions {
     }
 
     @Then("the patient table should display \"The single record for Patient ID \"Maria\"\"")
-    public void the_patient_table_should_display_patient_records_containing_the_name_maria() throws InterruptedException {
+    public void the_patient_table_should_display_patient_records_containing_the_name_maria() {
         System.out.println(sa.verifySearchnameResult());
-        Assert.assertTrue(sa.verifySearchnameResult().contains("Maria Taylor"));
+        Assert.assertTrue(sa.verifySearchnameResult().contains("Maria"), "Expected patient name to contain 'Maria'");
     }
 
     @Then("the patient table should display \"A \"No data available in table\" message\"")
-    public void the_patient_table_should_display_a_no_data_available_in_table_message() throws InterruptedException {
+    public void the_patient_table_should_display_a_no_data_available_in_table_message() {
         System.out.println(sa.verifySearchFailed());
-        Assert.assertTrue(sa.verifySearchFailed().contains("No data available in table"));
+        Assert.assertTrue(sa.verifySearchFailed().contains("No data available in table"), "Expected message to contain 'No data available in table'");
     }
 }

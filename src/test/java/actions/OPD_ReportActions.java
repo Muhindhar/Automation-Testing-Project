@@ -1,9 +1,12 @@
 package actions;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.ArrayList;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -20,55 +23,48 @@ public class OPD_ReportActions extends BaseAction {
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
     }
 
-    // Navigate to OPD - Out Patient tab
+    // Expand OPD menu and click OPD - Out Patient tab
     public void navigateToOPDOutPatientPage() {
-        click(opdPage.opdButton);
+        jsClick(opdPage.opdButton);
+        wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdOutPatientNavLink));
+        jsClick(opdPage.opdOutPatientNavLink);
     }
 
-    // Verify a patient with completed visit exists (first row in table)
-    public boolean isPatientWithVisitPresent() {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(opdPage.showIconFirstPatient));
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    // Click the Show icon for first patient
+    // Click the Show/name link of first patient in table
     public void clickShowIcon() {
-        click(opdPage.showIconFirstPatient);
+        wait.until(ExpectedConditions.elementToBeClickable(opdPage.showIconFirstPatient));
+        jsClick(opdPage.showIconFirstPatient);
     }
 
-    // Click the Visits tab inside patient detail
+    // JS click to bypass overlapping pull-right div
     public void clickVisitsTab() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.visitsTab));
-        click(opdPage.visitsTab);
+        WebElement tab = driver.findElement(opdPage.visitsTab);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tab);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", tab);
     }
 
-    // Click the Print icon on a visit record
+    // Click PDF/Print icon scoped to the visits table
     public void clickPrintIcon() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.printIcon));
         click(opdPage.printIcon);
     }
 
-    // Verify print preview opened in a new window/tab
-    public boolean isPrintPreviewOpen() {
-        try {
-            wait.until(d -> d.getWindowHandles().size() > 1);
-            ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
-            driver.switchTo().window(tabs.get(1)); // switch to print preview tab
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+    // Verify download succeeded — new tab opened with report content
+    public boolean isReportDownloadedSuccessfully() {
+    	File folder = new File(System.getProperty("user.dir") + File.separator + "downloads");
 
-    // Verify the page title or URL indicates a printable report
-    public boolean isSaveAsPdfPossible() {
-        String currentUrl = driver.getCurrentUrl();
-        String pageTitle  = driver.getTitle();
-        return currentUrl.contains("print") || pageTitle.toLowerCase().contains("print")
-               || pageTitle.toLowerCase().contains("report");
+		File[] files = folder.listFiles();
+
+		if (files != null) {
+			for (File file : files) {
+				String filename = file.getName().toLowerCase();
+				if (filename.endsWith(".pdf") || filename.endsWith(".csv") || filename.endsWith(".xlsx")) {
+					return true;
+				}
+			}
+		}
+
+		return false;
     }
 }

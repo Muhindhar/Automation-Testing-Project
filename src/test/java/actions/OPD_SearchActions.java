@@ -25,18 +25,16 @@ public class OPD_SearchActions extends BaseAction {
 	}
 	
 	public void navigateToOPDPage() {
-		click(opdPage.opdButton);
-		click(opdPage.oldOpdTab);
+		jsClick(opdPage.opdButton);
+		jsClick(opdPage.oldOpdTab);
 	}
 	
-	public String verifySearchnameResult() throws InterruptedException {
-		Thread.sleep(2000);
+	public String verifySearchnameResult() {
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.patientname));
 	    return getText(opdPage.patientname);
 	}
 
-	public String verifySearchFailed() throws InterruptedException {
-		Thread.sleep(2000);
+	public String verifySearchFailed(){
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.searchFailed));
 	    return getText(opdPage.searchFailed);
 	}
