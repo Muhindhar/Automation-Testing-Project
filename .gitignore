@@ -1,21 +1,12 @@
-# IDE
 .metadata
 .idea/
 .project
 .classpath
 .settings/
 .factorypath
-
-# IntelliJ
 *.iml
-
-# Git
 .git
-
-# Logs
 logs/
-
-# Build folders
 target/
 test-output/
 allure-report/
@@ -26,16 +17,10 @@ reports/
 # Screenshots
 screenshots/
 test-output/Screenshots/
-
-# OS files
 .DS_Store
 Thumbs.db
-
-# Runner
 src/test/java/com/runner/TestRunner.java
 bin/
-
-#downloads
 downloads/
 /.apt_generated/
 <<<<<<< HEAD
