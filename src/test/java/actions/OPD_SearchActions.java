@@ -1,8 +1,6 @@
 package actions;
 
 import java.time.Duration;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,6 +28,7 @@ public class OPD_SearchActions extends BaseAction {
 	}
 	
 	public String verifySearchnameResult() {
+		
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.patientname));
 	    return getText(opdPage.patientname);
 	}

@@ -1,5 +1,6 @@
 @OPD_Search
-Feature: OPD Patient Search
+@jerishwin
+Feature: Jerishwin_Joseph_13-05-2026_OPD Patient Search
   As a receptionist
   I want to search for OPD patients by name or ID
   So that I can quickly find their records

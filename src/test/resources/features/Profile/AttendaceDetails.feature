@@ -1,4 +1,6 @@
-Feature: Attendance Report 
+@attendanceReport
+@jerishwin
+Feature: Jerishwin_Joseph_16-05-2026_Attendance Report 
 	    
 	Scenario:
 		Given the user is logged into the Smart Hospital portal as "<role>"

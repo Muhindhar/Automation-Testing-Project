@@ -1,4 +1,6 @@
-Feature: Profile 
+@profilePage
+@jerishwin
+Feature: Jerishwin_Joseph_16-05-2026_Profile 
 	    
 	Scenario Outline: View Profile Details
 		Given the user is logged into the Smart Hospital portal as "<role>"
