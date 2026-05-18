@@ -21,12 +21,15 @@ public class PathalogyPage {
     public By notFound = By.xpath("//tr[@class='odd']//td[text()='No matching records found']");
 
     //pay
-	/*public By paybtn = By.xpath("//button[normalize-space()='Pay']");
+	public By paybtn = By.xpath("//td[@class='text-right']//button[normalize-space()='Pay']");
 	public By payAmt = By.xpath("//input[@id='amount_total_paid']");
+	public By add = By.xpath("//div[@class='modal-footer']//button[@id='pay_button']");
 	public By makepay = By.xpath("//button[normalize-space()='Make Payment']");
-	public By upi = By.xpath("//div[@data-value='upi']");
+	public By mobile = By.xpath("//input[@type='tel']");
+	public By cont = By.xpath("//div[@class='bg-surface p-4 d:mt-2 d:px-0 px-0']//button[@type='button']");
+	public By upi = By.xpath("//div[contains(@data-value,'upi')]");
 	public By email = By.xpath("//input[@placeholder='example@okhdfcbank']");
-	public By cont = By.xpath("//button[@name='button']");
+	public By verify = By.xpath("//button[@data-testid='bottom-cta-button']");
     public By succ = By.xpath("//div[@class='alert alert-success alert-dismissible']");
-    */
+    
 }

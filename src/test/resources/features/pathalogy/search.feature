@@ -1,4 +1,4 @@
-Feature: Search pathology report validation - Smart Hospital
+Feature: S_MYTHILY_2025_05_17_Search pathology report validation - Smart Hospital
 
   Background:
     Given the user launches the application

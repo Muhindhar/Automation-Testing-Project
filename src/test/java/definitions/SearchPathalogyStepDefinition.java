@@ -12,6 +12,8 @@ public class SearchPathalogyStepDefinition {
 
     private final PathalogyAction pathoAction = new PathalogyAction(DriverFactory.getDriver());
 
+    //for search step definition
+    
     @Given("the user is logged into the patient dashboard")
     public void the_user_is_logged_into_the_patient_dashboard() {
         System.out.println("User is on the login page");

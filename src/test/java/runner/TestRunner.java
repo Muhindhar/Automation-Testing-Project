@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src/test/resources/features/pathalogy/search.feature",
+		features = "src/test/resources/features/pathalogy/pay.feature",
 		glue = "definitions",
 		plugin = {"pretty",
 				"html:target/cucumber-report.html",
