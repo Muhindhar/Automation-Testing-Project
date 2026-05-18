@@ -27,9 +27,12 @@ public class PathalogyPage {
 	public By makepay = By.xpath("//button[normalize-space()='Make Payment']");
 	public By mobile = By.xpath("//input[@type='tel']");
 	public By cont = By.xpath("//div[@class='bg-surface p-4 d:mt-2 d:px-0 px-0']//button[@type='button']");
-	public By upi = By.xpath("//div[contains(@data-value,'upi')]");
-	public By email = By.xpath("//input[@placeholder='example@okhdfcbank']");
-	public By verify = By.xpath("//button[@data-testid='bottom-cta-button']");
-    public By succ = By.xpath("//div[@class='alert alert-success alert-dismissible']");
-    
+	public By upi = By.xpath("//*[self::a or self::li or self::div or self::span][normalize-space()='UPI']");
+	public By email = By.xpath("//input[contains(@placeholder,'upi') or contains(@placeholder,'UPI') or contains(@placeholder,'okhdfcbank') or contains(@placeholder,'@')]");
+	public By verify = By.xpath("//button[contains(normalize-space(),'Verify') or contains(normalize-space(),'Pay') or contains(normalize-space(),'verify')]");
+	public By succ = By.xpath("//div[contains(@class,'alert-success')]");
+	public By payError = By.xpath(
+		    "//*[contains(text(),'Amount Should Not Be Greater Than Balance')] | " +
+		    "//*[contains(text(),'Invalid Amount')]"
+		);
 }
