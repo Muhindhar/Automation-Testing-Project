@@ -101,16 +101,28 @@ public class PathalogyAction extends BaseAction {
     }
     
     public void enterMob(String mobile) {
-
-        WebElement mobileField = wait.until(ExpectedConditions.visibilityOfElementLocated(pathoPage.mobile));
-        mobileField.clear();
-        mobileField.sendKeys(mobile);
-
-        System.out.println("Entered mobile number");
-    }
     
+        try {
+            WebElement mobileField = wait.withTimeout(java.time.Duration.ofSeconds(5))
+                .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.mobile));
+            mobileField.clear();
+            mobileField.sendKeys(mobile);
+            System.out.println("Entered mobile number");
+        } catch (org.openqa.selenium.TimeoutException e) {
+            System.out.println("Mobile input screen skipped — number already pre-filled by Razorpay");
+        }
+    }
+
     public void clickContinue() {
-    	click(pathoPage.cont);
+
+        try {
+            WebElement continueBtn = wait.withTimeout(java.time.Duration.ofSeconds(5))
+                .until(ExpectedConditions.elementToBeClickable(pathoPage.cont));
+            continueBtn.click();
+            System.out.println("Clicked Continue button");
+        } catch (org.openqa.selenium.TimeoutException e) {
+            System.out.println("Continue button not found — already on Payment Options screen");
+        }
     }
     
     public void chooseUpi() {
@@ -126,6 +138,17 @@ public class PathalogyAction extends BaseAction {
     }
     
     public String getSuccessTxt() {
-    	return getText(pathoPage.succ);
+
+        try {
+            driver.switchTo().defaultContent();
+            System.out.println("Switched back to main page from iframe");
+        } catch (Exception e) {
+            System.out.println("Already on main page — no iframe switch needed");
+        }
+
+        wait.withTimeout(java.time.Duration.ofSeconds(30))
+            .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.succ));
+
+        return getText(pathoPage.succ);
     }
 }

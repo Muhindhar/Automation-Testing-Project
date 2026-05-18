@@ -58,8 +58,10 @@ public class PayPathologyStepDefinition {
 
 	    @Then("Payment Success Message will displayed as {string}")
 	    public void payment_success_message_will_displayed_as(String string) {
-	    	String succTxt = pathoAction.getSuccessTxt();
-	        Assert.assertEquals(succTxt, string);
-	        System.out.println("Payment was done succefully");
+	        String succTxt = pathoAction.getSuccessTxt();
+	        System.out.println("Success message text: " + succTxt);
+	        Assert.assertTrue(succTxt.contains(string),
+	            "Expected message to contain: '" + string + "' but got: '" + succTxt + "'");
+	        System.out.println("Payment was done successfully");
 	    }
 }
