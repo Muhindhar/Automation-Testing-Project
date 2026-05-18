@@ -1,7 +1,5 @@
 package actions;
 
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -15,7 +13,6 @@ import utilities.DriverFactory;
 
 public class LoginAction extends BaseAction{
 	
-	WebDriverWait wait;
 	LoginPage lp;
 	DashboardPage dp;
 
@@ -23,6 +20,7 @@ public class LoginAction extends BaseAction{
 		super(driver);
 		lp = new LoginPage();
 		dp = new DashboardPage();
+		this.driver = driver;
 	}
 	
 	public void setUsername(String username)
@@ -98,6 +96,7 @@ public class LoginAction extends BaseAction{
 	
 	public void goToLoginPage()
 	{
+
 		DriverFactory.getDriver().get(Helper.getPropertyFile().getProperty("loginUrl"));
 	}
 

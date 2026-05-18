@@ -1,5 +1,6 @@
 package actions;
 
+
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -10,61 +11,73 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseAction {
+	WebDriver driver;
+	WebDriverWait wait;
+	JavascriptExecutor js;
+	private static final int TIMEOUT = 10;
+	public BaseAction(WebDriver driver) {
+		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
+		this.js = (JavascriptExecutor) driver;
+	}
 
-    WebDriver driver;
-    WebDriverWait wait;
-    JavascriptExecutor js;
+	public void click(By locator) {
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+		js.executeScript("arguments[0].click();", element);
+	}
 
-    private static final int TIMEOUT = 10;
+	public void clickfb(WebElement element) {
+		WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(element));
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", ele);
+		js.executeScript("arguments[0].click();", ele);
+	}
 
-    public BaseAction(WebDriver driver) {
+	public void jsClick(By locator) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+		js.executeScript("arguments[0].click();", element);
+	}
 
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
-        this.js = (JavascriptExecutor) driver;
-    }
+	public void sendKeys(By locator, String value) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		element.clear();
+		element.sendKeys(value);
+	}
 
-    public void click(By locator) {
+	public void sendKeysfb(WebElement element, String value) {
+		WebElement ele = wait.until(ExpectedConditions.visibilityOf(element));
+		ele.clear();
+		ele.sendKeys(value);
+	}
 
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
-    }
+	public void jsSendKeys(By locator, String value) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		js.executeScript("arguments[0].value=arguments[1];", element, value);
+	}
 
+	public String getText(By locator) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		return element.getText();
+	}
 
-    public void jsClick(By locator) {
+	public String getTextfb(WebElement element) {
+		WebElement ele = wait.until(ExpectedConditions.visibilityOf(element));
+		return ele.getText();
+	}
 
-        WebElement element =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	public boolean isDisplayed(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
+	}
 
-        js.executeScript("arguments[0].click();", element);
-    }
+	public boolean isDisplayedfb(WebElement element) {
+		return wait.until(ExpectedConditions.visibilityOf(element)).isDisplayed();
+	}
 
- 
-    public void sendKeys(By locator, String value) {
-
-        WebElement element =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        element.sendKeys(value);
-    }
-
-
-    public void jsSendKeys(By locator, String value) {
-
-        WebElement element =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-
-        js.executeScript(
-                "arguments[0].value=arguments[1];",
-                element,
-                value
-        );
-    }
-
-
-    public String getText(By locator) {
-
-        WebElement element =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-
-        return element.getText();
-    }
+	public WebElement waitForVisibility(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+	public WebElement waitForClickable(By locator) {
+		return wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
 }

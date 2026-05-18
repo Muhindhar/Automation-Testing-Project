@@ -3,10 +3,11 @@
 
 <suite name="AutomationSuite" thread-count="1">
 
-    <test name="CucumberTests">
-        <classes>
-            <class name="runner.TestRunner"/>
-        </classes>
-    </test>
+	<test name="CucumberTests">
+		<classes>
+			<class name="runner.TestRunner" />
+		</classes>
+	</test>
 
 </suite>
+

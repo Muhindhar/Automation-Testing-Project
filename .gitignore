@@ -32,3 +32,7 @@ Thumbs.db
 
 # Runner
 src/test/java/com/runner/TestRunner.java
+bin/
+
+#downloads
+downloads/
