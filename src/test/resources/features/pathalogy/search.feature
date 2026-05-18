@@ -7,13 +7,25 @@ Feature: Search pathology report validation - Smart Hospital
     Then the user should be redirected to the patient dashboard
 
   @ValidPathologySearch
-  Scenario: Verify pathology report search using valid bill number
+  Scenario Outline: Verify pathology report search using valid bill number
     When the user clicks the Pathology menu
-    And the user searches pathology reports by Bill Number "638"
-    Then only pathology report results for Bill Number "638" should be displayed
+    And the user searches pathology reports by Bill Number "<billNo>"
+    Then only pathology report results for Bill Number "<billNo>" should be displayed
+    
+    Examples:
+      | billNo |
+      |   638  |
+      |   650  |
+      |   644  |
 
   @InvalidPathologySearch
-  Scenario: search with invalid bill number
+  Scenario Outline: search with invalid bill number
     When the user clicks the Pathology menu
-    And the user searches pathology reports by Bill Number "666"
+    And the user searches pathology reports by Bill Number "<billNo>"
     Then "No matching records found" should be displayed
+     
+    Examples:
+      | billNo |
+      |   666  |
+      |   610  |
+      |   607  | 

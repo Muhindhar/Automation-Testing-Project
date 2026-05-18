@@ -12,12 +12,8 @@ public class Hooks {
 
 	@Before
 	public void setUp() {
-
 	    DriverFactory.initDriver();
 	    DriverFactory.getDriver().manage().deleteAllCookies();
-		ConfigReader.loadProperties();
-		DriverFactory.initDriver();
-
 	}
 
 	@After
