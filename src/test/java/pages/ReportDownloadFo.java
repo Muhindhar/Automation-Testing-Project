@@ -28,14 +28,12 @@ public class ReportDownloadFo {
 	@FindBy(xpath ="//li[contains(@class,'treeview')][12]")
 	public WebElement frontof;
 
-	@FindBy(xpath =
-	"//i[@class='fa fa-file-pdf-o']")
+	@FindBy(xpath ="//a[contains(@class,'buttons-pdf')]")
 	public WebElement pdf;
 
-	@FindBy(xpath =
-	"//i[@class='fa fa-file-text-o']")
+	@FindBy(xpath = "//a[contains(@class,'buttons-csv')]")
 	public WebElement csv;
 
-	@FindBy(xpath ="//i[@class='fa fa-file-excel-o']")
+	@FindBy(xpath ="//a[contains(@class,'buttons-excel')]")
 	public WebElement excel;
 }

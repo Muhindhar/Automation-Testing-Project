@@ -48,8 +48,6 @@ public class ReportOfcFo {
 		default:
 			System.out.println("Error in downloadingg");
 		}
-		
-		
 	}
 
 	@Then("the document should be downloaded successfully")

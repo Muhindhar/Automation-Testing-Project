@@ -31,7 +31,7 @@ test-output/Screenshots/
 Thumbs.db
 
 # Runner
-src/test/java/com/runner/TestNgRunner.java
+src/test/java/com/runner/TestRunner.java
 bin/
 
 #downloads
