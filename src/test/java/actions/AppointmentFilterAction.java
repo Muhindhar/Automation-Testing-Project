@@ -23,7 +23,7 @@ public class AppointmentFilterAction extends BaseAction {
 	}
 
 	public void clickapp() {
-		clickfb(af.appointmentMenu);
+		click(af.appointmentMenu);
 	}
 
 	public void clicktdyapp() {

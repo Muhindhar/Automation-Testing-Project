@@ -30,6 +30,7 @@ public class DownloadPdfDef {
 
 	@When("user clicks on {string} filter")
 	public void user_clicks_on_filter(String filter) {
+		// Write code here that turns the phrase above into concrete actions
 		switch (filter) {
 		case "Old Appointment":
 			HelperClass.logger.info("Old appointment");

@@ -19,39 +19,39 @@ public class DownloadPdfAction extends BaseAction {
 	}
 
 	public void clickrecp() {
-		click(dp.recbtn);
+		jsClick(dp.recbtn);
 	}
 
 	public void clicksign() {
-		click(dp.signin);
+		jsClick(dp.signin);
 	}
 
 	public void clickappbtn() {
-		click(dp.appbtn);
+		jsClick(dp.appbtn);
 	}
 
 	public void tdyapp() {
-		click(dp.tdyapp);
+		jsClick(dp.tdyapp);
 	}
 
 	public void tdyexcel() {
-		click(dp.tdyxcel);
+		jsClick(dp.tdyxcel);
 	}
 
 	public void upcapp() {
-		click(dp.upcapp);
+		jsClick(dp.upcapp);
 	}
 
 	public void upcsv() {
-		click(dp.upcsv);
+		jsClick(dp.upcsv);
 	}
 
 	public void oldapp() {
-		click(dp.oldapp);
+		jsClick(dp.oldapp);
 	}
 
 	public void oldpdf() {
-		click(dp.oldpdf);
+		jsClick(dp.oldpdf);
 	}
 
 	public boolean veridown() throws InterruptedException {

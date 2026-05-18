@@ -7,6 +7,7 @@ Description: downloading the reports from the front office page in different for
     And click signin button of smart hospital site
     And user navigates to the front office link
 
+  @downloadreports
   Scenario Outline: Download reports
     And user clicks on the "<format>" format
     Then the document should be downloaded successfully
