@@ -15,7 +15,6 @@ import utilities.DriverFactory;
 
 public class LoginAction extends BaseAction{
 	
-	WebDriverWait wait;
 	LoginPage lp;
 	DashboardPage dp;
 
