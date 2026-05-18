@@ -2,6 +2,7 @@ package actions;
 
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -79,5 +80,15 @@ public class BaseAction {
 	}
 	public WebElement waitForClickable(By locator) {
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
+	
+	public List<WebElement> getElements(By locator)
+	{
+		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+	}
+	
+	public WebElement getElement(By locator)
+	{
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 }
