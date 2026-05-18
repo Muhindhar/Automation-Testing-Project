@@ -21,6 +21,7 @@ test-output/
 allure-report/
 allure-results/
 ExtentReports/
+reports/
 
 # Screenshots
 screenshots/
@@ -31,8 +32,10 @@ test-output/Screenshots/
 Thumbs.db
 
 # Runner
-src/test/java/com/runner/TestNgRunner.java
+src/test/java/com/runner/TestRunner.java
 bin/
 
 #downloads
 downloads/
+/.apt_generated/
+/.apt_generated_tests/
