@@ -11,7 +11,7 @@ import io.cucumber.java.en.When;
 import utilities.DriverFactory;
 import utilities.HelperClass;
 
-public class AppointmentFilterDef {
+public class AppointmentFilter {
 
 	AppointmentFilterAction af = new AppointmentFilterAction(DriverFactory.getDriver());
 

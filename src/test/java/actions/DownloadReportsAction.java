@@ -7,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 import pages.DownloadPdfpage;
 import utilities.HelperClass;
 
-public class DownloadPdfAction extends BaseAction {
+public class DownloadReportsAction extends BaseAction {
 	DownloadPdfpage dp;
 	WebDriver driver;
-	public DownloadPdfAction(WebDriver driver) {
+	public DownloadReportsAction(WebDriver driver) {
 		super(driver);
 		dp = new DownloadPdfpage();
 		driver = HelperClass.getDriver();

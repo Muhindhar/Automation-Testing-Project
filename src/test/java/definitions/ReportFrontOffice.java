@@ -10,7 +10,7 @@ import io.cucumber.java.en.Then;
 import utilities.DriverFactory;
 import utilities.HelperClass;
 
-public class ReportOfcFo {
+public class ReportFrontOffice {
 	ReportFrontOfcAct rfa = new ReportFrontOfcAct(DriverFactory.getDriver());
 	String actualError;
 
