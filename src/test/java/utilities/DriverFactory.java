@@ -12,7 +12,7 @@ public class DriverFactory {
 	public static WebDriver initDriver() {
 		ChromeOptions options = new ChromeOptions();
 		
-		options.addArguments("--headless");
+		//options.addArguments("--headless");
 		options.addArguments("--disable-notifications");
 		options.addArguments("--disable-popup-blocking");
 		options.addArguments("--disable-infobars");
@@ -50,6 +50,7 @@ public class DriverFactory {
 	public static WebDriver getDriver() {
 		return driver.get();
 	}
+
 
 	public static void quitDriver() {
 		if (driver.get() != null) {
