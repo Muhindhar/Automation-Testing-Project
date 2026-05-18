@@ -9,12 +9,34 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">64,981</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">74,264</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">runner.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="3">1779102006219</td><td rowspan="3">12827</td></tr><tr class="passedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m2">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">runner.TestRunner</td><td><a href="#m0">runScenario</a></td><td rowspan="1">1779122721189</td><td rowspan="1">30656</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">runner.TestRunner</td><td><a href="#m1">runScenario</a></td><td rowspan="2">1779122772738</td><td rowspan="2">20317</td></tr><tr class="passedeven"><td><a href="#m2">runScenario</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">runner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify payment fails when negative amount is entered&quot;</td><td>&quot;S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">runner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify payment fails when amount exceeds balance&quot;</td><td>&quot;S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">runner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify pathology report search using valid bill number&quot;</td><td>&quot;S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">runner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify pathology report search using valid bill number&quot;</td><td>&quot;S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=148.0.7778.168)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c163c4b250931456568897fd41eeca9a, sendKeysToElement {id=f.2FBA83AAD23C2F01A1AE1ACCE15A04A7.d.FEEF07492C26201A1F342F0C42433368.e.154, value=[Ljava.lang.CharSequence;@6042d663}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\vigne\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59806}, goog:processID: 5108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59806/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c163c4b250931456568897fd41eeca9a)] -&gt; xpath: //input[contains(@placeholder,&apos;upi&apos;) or contains(@placeholder,&apos;UPI&apos;) or contains(@placeholder,&apos;okhdfcbank&apos;) or contains(@placeholder,&apos;@&apos;)]]
+Session ID: c163c4b250931456568897fd41eeca9a
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
+	at actions.BaseAction.sendKeys(BaseAction.java:48)
+	at actions.PathalogyAction.sendUpiId(PathalogyAction.java:133)
+	at definitions.PayPathologyStepDefinition.enter_the(PayPathologyStepDefinition.java:50)
+	at ✽.enter the &quot;mythily@gmail.com&quot;(file:///D:/SOURCE%20CODE/Automation%20Testing/AutomationTesting/src/test/resources/features/pathalogy/pay.feature:20)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">runner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify payment fails when negative amount is entered&quot;</td><td>&quot;S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">runner.TestRunner#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify payment fails when amount exceeds balance&quot;</td><td>&quot;S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
