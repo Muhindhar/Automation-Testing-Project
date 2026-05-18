@@ -4,16 +4,16 @@ import java.io.File;
 
 import org.openqa.selenium.WebDriver;
 
-import pages.ReportDownloadFo;
+import pages.ReportDownloadFrontOfficePages;
 import utilities.HelperClass;
 
-public class ReportFrontOfcAct extends BaseAction {
-	ReportDownloadFo rd;
+public class ReportFrontOfcAction extends BaseAction {
+	ReportDownloadFrontOfficePages rd;
 	WebDriver driver;
 
-	public ReportFrontOfcAct(WebDriver driver) {
+	public ReportFrontOfcAction(WebDriver driver) {
 		super(driver);
-		rd = new ReportDownloadFo();
+		rd = new ReportDownloadFrontOfficePages();
 		this.driver = driver;
 		driver = HelperClass.getDriver();
 		// TODO Auto-generated constructor stub

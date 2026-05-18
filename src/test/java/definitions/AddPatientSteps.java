@@ -5,14 +5,14 @@ import java.util.Map;
 
 import org.testng.Assert;
 
-import actions.AddPatient;
+import actions.AddPatientAction;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AddPatientSteps {
 
-    AddPatient addPatientAction = new AddPatient();
+    AddPatientAction addPatientAction = new AddPatientAction();
 
     @When("the user clicks on the In Patient option")
     public void the_user_clicks_on_the_in_patient_option() {

@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import pages.AddPatientPage;
 import utilities.DriverFactory;
 
-public class AddPatient extends DriverFactory {
+public class AddPatientAction extends DriverFactory {
 
 
     public void clickInPatient() {

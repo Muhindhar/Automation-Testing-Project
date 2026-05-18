@@ -2,7 +2,7 @@ package definitions;
 
 import org.testng.Assert;
 
-import actions.ReportFrontOfcAct;
+import actions.ReportFrontOfcAction;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,8 +10,8 @@ import io.cucumber.java.en.Then;
 import utilities.DriverFactory;
 import utilities.HelperClass;
 
-public class ReportFrontOffice {
-	ReportFrontOfcAct rfa = new ReportFrontOfcAct(DriverFactory.getDriver());
+public class ReportFrontOfficeStepDefinition {
+	ReportFrontOfcAction rfa = new ReportFrontOfcAction(DriverFactory.getDriver());
 	String actualError;
 
 	@Given("user is on login page of smart hospitals")

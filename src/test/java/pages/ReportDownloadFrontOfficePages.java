@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.DriverFactory;
 
-public class ReportDownloadFo {
-	public ReportDownloadFo() {
+public class ReportDownloadFrontOfficePages {
+	public ReportDownloadFrontOfficePages() {
 		PageFactory.initElements(DriverFactory.getDriver(), this);
 	}
 

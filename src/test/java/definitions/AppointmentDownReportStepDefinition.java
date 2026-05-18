@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import utilities.DriverFactory;
 import utilities.HelperClass;
 
-public class AppointmentDownloadReports {
+public class AppointmentDownReportStepDefinition {
 	DownloadReportsAction dpa = new DownloadReportsAction(DriverFactory.getDriver());
 
 	@Given("the user is logged in as receptionist")
