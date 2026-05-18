@@ -1,7 +1,5 @@
 package actions;
 
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -99,6 +97,7 @@ public class LoginAction extends BaseAction{
 	
 	public void goToLoginPage()
 	{
+
 		DriverFactory.getDriver().get(Helper.getPropertyFile().getProperty("loginUrl"));
 	}
 
