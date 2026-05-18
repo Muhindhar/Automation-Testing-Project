@@ -19,7 +19,6 @@ public class OPD_SearchActions extends BaseAction {
 	
 	public void searchPatient(String patientName) {
 		sendKeys(opdPage.searchBox,patientName);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.patientname));
 	}
 	
 	public void navigateToOPDPage() {
@@ -28,7 +27,7 @@ public class OPD_SearchActions extends BaseAction {
 	}
 	
 	public String verifySearchnameResult() {
-		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.patientname));
 	    return getText(opdPage.patientname);
 	}

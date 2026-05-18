@@ -16,7 +16,7 @@ public class OPDPage {
     public By opdButton   = By.xpath("//ul[@class='sidebar-menu verttop']/li[5]/a");
     public By oldOpdTab   = By.xpath("//ul[@class='nav nav-tabs navlistscroll']//li[3]/a");
     public By searchBox   = By.xpath("//div[@id='DataTables_Table_1_filter']/label/input");
-    public By patientname = By.xpath("//table[@id='DataTables_Table_1']/tbody/tr/td[2]");
+    public By patientname = By.xpath("//table[@id='DataTables_Table_1']/tbody/tr[1]/td[text()='Maria Taylor']");
     public By searchFailed = By.xpath("//td[@class='dataTables_empty']");
 
     // Report Download
