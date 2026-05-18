@@ -22,41 +22,41 @@ public class CallLogFrontofcActions extends BaseAction {
 	}
 
 	public void clckrecp() {
-		click(cfp.recbtnfo);
+		jsClick(cfp.recbtnfo);
 
 	}
 
 	public void clksign() {
-		click(cfp.signinfo);
+		jsClick(cfp.signinfo);
 	}
 
 	public void frontofclink() {
-		click(cfp.frontofc);
+		jsClick(cfp.frontofc);
 
 	}
 
 	public void phcalllog() {
-		click(cfp.phcalllog);
+		jsClick(cfp.phcalllog);
 	}
 
 	public void addcall() {
-		click(cfp.addlog);
+		jsClick(cfp.addlog);
 	}
 
 	public void enterdet(String name, String phone, String description, String calltype) {
 		sendKeys(cfp.name,name);
 		sendKeys(cfp.desc,description);
 		if (calltype.equalsIgnoreCase("Incoming")) {
-			click(cfp.incom);
+			jsClick(cfp.incom);
 
 		} else if (calltype.equalsIgnoreCase("Outgoing")) {
-			click(cfp.outgng);
+			jsClick(cfp.outgng);
 
 		}
 	}
 
 	public void clicksave() {
-		click(cfp.savebtn);
+		jsClick(cfp.savebtn);
 
 	}
 

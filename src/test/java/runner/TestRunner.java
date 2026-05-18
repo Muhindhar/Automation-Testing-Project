@@ -1,12 +1,13 @@
 package runner;
 
+
 import io.cucumber.testng.CucumberOptions;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src/test/resources/features",
+		features = "src\\test\\resources\\features",
 		glue = "definitions",
 		plugin = {"pretty",
 				"html:target/cucumber-report.html",
@@ -16,6 +17,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				"rerun:target/failed-rerun.txt" },
 		monochrome = true)
 
+
 public class TestRunner extends AbstractTestNGCucumberTests {
 
 }
+

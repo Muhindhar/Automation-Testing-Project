@@ -49,13 +49,13 @@ Feature: M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature
     And the role of the user in profile should "<role>"
 
     Examples:
-      | role         | role         |
-      | Super Admin  | Super Admin  |
-      | Admin        | Admin        |
-      | Doctor       | Doctor       |
-      | Pharmacist   | Pharmacist   |
-      | Pathologist  | Pathologist  |
-      | Radiologist  | Radiologist  |
-      | Accountant   | Accountant   |
-      | Receptionist | Receptionist |
-      | Nurse        | Nurse        |
+      | role         |
+      | Super Admin  |
+      | Admin        |
+      | Doctor       |
+      | Pharmacist   |
+      | Pathologist  |
+      | Radiologist  |
+      | Accountant   |
+      | Receptionist |
+      | Nurse        |

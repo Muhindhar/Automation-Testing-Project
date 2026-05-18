@@ -6,7 +6,7 @@ public class CallLogFrontofcPages {
 	public By recbtnfo = By.xpath("//a[normalize-space()='Receptionist']");
 	public By signinfo = By.xpath("//button[@type='submit']");
 	public By frontofc = By.xpath("//li[contains(@class,'treeview')][12]");
-	public By phcalllog = By.xpath("//div[@class='box-tools pull-right']//a[2]");
+	public By phcalllog = By.xpath("//a[contains(normalize-space(),'Phone Call Log')]");
 	public By addlog = By.xpath("//a[@class='btn btn-primary btn-sm call_log']");
 	public By name = By.xpath("//form[@id='formadd']//input[@name='name']");
 	public By phone = By.xpath("//input[@fdprocessedid='panood']");

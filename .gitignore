@@ -32,6 +32,7 @@ Thumbs.db
 
 # Runner
 src/test/java/com/runner/TestNgRunner.java
+bin/
 
 #downloads
 downloads/
