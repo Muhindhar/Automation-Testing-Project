@@ -64,4 +64,16 @@ public class PayPathologyStepDefinition {
 	            "Expected message to contain: '" + string + "' but got: '" + succTxt + "'");
 	        System.out.println("Payment was done successfully");
 	    }
+	    
+	    @Then("an error message should be displayed for invalid payment amount")
+	    public void an_error_message_should_be_displayed_for_invalid_payment_amount() {
+	        String errorTxt = pathoAction.getPayErrorTxt();
+	        System.out.println("Validating invalid payment — response: " + errorTxt);
+	        Assert.assertTrue(
+	            errorTxt.contains("Amount Should Not Be Greater Than Balance") ||
+	            errorTxt.contains("Invalid Amount"),
+	            "Expected error message but got: '" + errorTxt + "'"
+	        );
+	        System.out.println("Invalid payment correctly rejected: " + errorTxt);
+	    }
 }

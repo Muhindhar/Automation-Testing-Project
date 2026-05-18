@@ -151,4 +151,23 @@ public class PathalogyAction extends BaseAction {
 
         return getText(pathoPage.succ);
     }
+    
+    public String getPayErrorTxt() {
+        try {
+
+            WebElement errorEl = wait.withTimeout(java.time.Duration.ofSeconds(8))
+                .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.payError));
+            String errorTxt = errorEl.getText().trim();
+            System.out.println("Error message displayed: " + errorTxt);
+            return errorTxt;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            String pageSource = driver.getPageSource();
+            boolean hasExceed = pageSource.contains("Amount Should Not Be Greater Than Balance");
+            boolean hasInvalid = pageSource.contains("Invalid Amount");
+            System.out.println("Error in page source — exceed: " + hasExceed + ", invalid: " + hasInvalid);
+            if (hasExceed) return "Amount Should Not Be Greater Than Balance";
+            if (hasInvalid) return "Invalid Amount";
+            return "";
+        }
+    }
 }

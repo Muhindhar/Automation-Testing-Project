@@ -31,5 +31,8 @@ public class PathalogyPage {
 	public By email = By.xpath("//input[contains(@placeholder,'upi') or contains(@placeholder,'UPI') or contains(@placeholder,'okhdfcbank') or contains(@placeholder,'@')]");
 	public By verify = By.xpath("//button[contains(normalize-space(),'Verify') or contains(normalize-space(),'Pay') or contains(normalize-space(),'verify')]");
 	public By succ = By.xpath("//div[contains(@class,'alert-success')]");
-    
+	public By payError = By.xpath(
+		    "//*[contains(text(),'Amount Should Not Be Greater Than Balance')] | " +
+		    "//*[contains(text(),'Invalid Amount')]"
+		);
 }
