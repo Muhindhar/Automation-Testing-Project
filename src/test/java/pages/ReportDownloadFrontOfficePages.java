@@ -10,11 +10,15 @@ public class ReportDownloadFrontOfficePages {
 		PageFactory.initElements(DriverFactory.getDriver(), this);
 	}
 
-	@FindBy(xpath = "//*[contains(text(),'Receptionist')]")
-	public WebElement recpbtn;
+//	@FindBy(css = ".btn.btn-primary.width50[href='#'][onclick=\"copy('maria@gmail.com', 'password')\"]")
+//	public WebElement recpbtn;
+	@FindBy(xpath =
+			"//a[contains(@onclick,'maria@gmail.com')]")
+			public WebElement recpbtn;
+
 	@FindBy(xpath = "//button[@type='submit']")
 	public WebElement subbtn;
-	@FindBy(xpath = "//li[contains(@class,'treeview')][12]")
+	@FindBy(xpath = "//li//a//span[text() = 'Front Office']")
 	public WebElement frontof;
 	@FindBy(xpath = "//a[contains(@class,'buttons-pdf')]")
 	public WebElement pdf;

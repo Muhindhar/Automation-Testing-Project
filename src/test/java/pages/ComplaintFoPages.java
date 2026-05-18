@@ -3,9 +3,9 @@ package pages;
 import org.openqa.selenium.By;
 
 public class ComplaintFoPages {
-	public By recbtnfo = By.xpath("//a[normalize-space()='Receptionist']");
+	public By recbtnfo = By.xpath("//div[@class = 'form-bottom']//a[text() = 'Receptionist']");
 	public By signinfo = By.xpath("//button[@type='submit']");
-	public By frontofc = By.xpath("//li[contains(@class,'treeview')][12]");
+	public By frontofc = By.xpath("//li//a//span[text() = 'Front Office']");
 	public By complaint = By.xpath("//div[@class='box-tools pull-right']//a[3]");
 	public By addcomp = By.xpath("//a[@class='btn btn-primary btn-sm complain']");
 	public By comtype = By.xpath("//div[@class='ptt10']//select[@name='complaint']");

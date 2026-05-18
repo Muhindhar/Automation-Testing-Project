@@ -78,4 +78,9 @@ public class AppointmentFilterStepDefinition {
 		HelperClass.logger.info("Clicking Old Appointment filter");
 		af.clickoldapp();
 	}
+	@Then("user should be able to see old appointments")
+	public void user_should_be_able_to_see_old_appointments() {
+	    // Write code here that turns the phrase above into concrete actions
+		Assert.assertTrue(af.verifyrecord());
+	}
 }
