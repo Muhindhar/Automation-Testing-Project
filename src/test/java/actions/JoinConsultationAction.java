@@ -37,8 +37,8 @@ public class JoinConsultationAction extends BaseAction{
 		return -1;
 	}
 
-	public boolean isActionPresent() {
-		
-	}
+//	public boolean isActionPresent() {
+//		
+//	}
 
 }
