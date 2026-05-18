@@ -59,5 +59,12 @@ public class ComplainFo {
 		String act = ca.checklistcom();
 		Assert.assertEquals(exp, act);
 	}
+	@When("user leaves all complaint fields empty")
+	public void user_leaves_all_complaint_fields_empty() {
+	    // Write code here that turns the phrase above into concrete actions
+	    ca.emptyfields();
+	    System.out.println("Fields are empty");
+	}
+
 
 }

@@ -34,9 +34,10 @@ public class AppointmentFilterDef {
 	public void user_should_navigate_to_receptionist_dashboard() {
 		// Write code here that turns the phrase above into concrete actions
 		HelperClass.logger.info("Navigated to receptionist dashboard");
+		
 	}
 
-	@Then("user navigates to Appointment section")
+	@Given("user navigates to Appointment section")
 	public void user_navigates_to_appointment_section() {
 		// Write code here that turns the phrase above into concrete actions
 		HelperClass.logger.info("Navigating to appointment section");

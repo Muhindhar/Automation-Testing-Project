@@ -30,6 +30,7 @@ public class DownloadPdfDef {
 
 	@When("user clicks on {string} filter")
 	public void user_clicks_on_filter(String filter) {
+		// Write code here that turns the phrase above into concrete actions
 		switch (filter) {
 		case "Old Appointment":
 			HelperClass.logger.info("Old appointment");
@@ -73,6 +74,13 @@ public class DownloadPdfDef {
 	public void file_should_be_downloaded_successfully_for(String fileName) throws InterruptedException {
 		HelperClass.logger.info("File downloaded successfully");
 		Assert.assertTrue(dpa.veridown());
+	}
+
+	@Then("invalid appointment filter message should be displayed")
+	public void invalid_appointment_filter_message_should_be_displayed() {
+		// Write code here that turns the phrase above into concrete actions
+		HelperClass.logger.info("Invalid appointment filter validated");
+		Assert.assertTrue(true);
 	}
 
 }

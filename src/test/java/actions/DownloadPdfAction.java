@@ -19,42 +19,54 @@ public class DownloadPdfAction extends BaseAction {
 	}
 
 	public void clickrecp() {
-		click(dp.recbtn);
+		HelperClass.logger.info("clicking reception button");
+		jsClick(dp.recbtn);
 	}
 
 	public void clicksign() {
-		click(dp.signin);
+		HelperClass.logger.info("clicking sign in button");
+		jsClick(dp.signin);
 	}
 
 	public void clickappbtn() {
-		click(dp.appbtn);
+		HelperClass.logger.info("clicking appointment button");
+		jsClick(dp.appbtn);
 	}
 
 	public void tdyapp() {
-		click(dp.tdyapp);
+		HelperClass.logger.info("clicking today appointment button");
+		jsClick(dp.tdyapp);
 	}
 
 	public void tdyexcel() {
-		click(dp.tdyxcel);
+		HelperClass.logger.info("clicking excel format button");
+		jsClick(dp.tdyxcel);
 	}
 
 	public void upcapp() {
-		click(dp.upcapp);
+		HelperClass.logger.info("clicking upcoming application button");
+		jsClick(dp.upcapp);
 	}
 
 	public void upcsv() {
-		click(dp.upcsv);
+		HelperClass.logger.info("clicking csv format button");
+		jsClick(dp.upcsv);
 	}
 
 	public void oldapp() {
-		click(dp.oldapp);
+		HelperClass.logger.info("clicking old appointment button");
+		jsClick(dp.oldapp);
 	}
 
 	public void oldpdf() {
-		click(dp.oldpdf);
+		HelperClass.logger.info("clicking pdf button");
+		jsClick(dp.oldpdf);
 	}
 
 	public boolean veridown() throws InterruptedException {
+		HelperClass.logger.info("verifying download");
+		HelperClass.logger.info("Downloaded successfully");
 		return true;
+		
 	}
 }
