@@ -8,7 +8,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utilities.DriverFactory;
-import utilities.ExcelUtility;
 
 public class ProfileStepDefinition {
 	LoginAction la = new LoginAction(DriverFactory.getDriver());
@@ -20,21 +19,6 @@ public class ProfileStepDefinition {
 	    la.clickLogin(string);
 	    la.clickLoginButton();
 	}
-	
-	@Given("the user is logged into the Smart Hospital portal as role in Excel")
-    public void the_user_is_logged_into_the_smart_hospital_portal_with_roles_from_excel() throws Exception {
-
-        String filePath  = "src/test/resources/testdata/AttendanceTestData.xlsx";
-        String sheetName = "Sheet1";
-
-        for (int rowNum = 1; rowNum <= 4; rowNum++) {
-            String role = ExcelUtility.getCellData(filePath, sheetName, rowNum, 0);
-            System.out.println("Logging in as: " + role);
-            la.goToLoginPage();
-            la.clickLogin(role);
-            la.clickLoginButton();
-        }
-    }
 	
 	
 	@When("the user clicks the profile image")
