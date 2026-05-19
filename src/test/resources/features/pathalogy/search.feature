@@ -1,3 +1,4 @@
+@Mythily
 Feature: S_MYTHILY_2026_05_17_Search pathology report validation - Smart Hospital
 
   Background:
