@@ -13,7 +13,7 @@ Feature: Muhindhar_19-05-2026_Add Visitor Functionality
    @ValidAddVisitor
   Scenario Outline: Validate add visitor with valid details
     When user clicks on "Add Visitor" button
-    And user enters visitor details from CSV "<rowNumber>"
+    And user enters visitor details 
     And user clicks on save button
     Then visitor should be added successfully
 

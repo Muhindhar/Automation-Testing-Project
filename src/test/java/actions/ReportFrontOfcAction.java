@@ -10,52 +10,91 @@ import utilities.HelperClass;
 public class ReportFrontOfcAction extends BaseAction {
 	ReportDownloadFrontOfficePages rd;
 	WebDriver driver;
-
 	public ReportFrontOfcAction(WebDriver driver) {
 		super(driver);
 		rd = new ReportDownloadFrontOfficePages();
 		this.driver = driver;
 		driver = HelperClass.getDriver();
-		// TODO Auto-generated constructor stub
 	}
-
 	public void clickrecp() {
-		jsClickfb(rd.recpbtn);
+		try {
+			HelperClass.logger.info("clicking reception button");
+			jsClickfb(rd.recpbtn);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void clksign() {
-		clickfb(rd.subbtn);
+		try {
+			HelperClass.logger.info("clicking sign in button");
+			clickfb(rd.subbtn);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void frontofc() {
-		clickfb(rd.frontof);
+		try {
+			HelperClass.logger.info("clicking front office");
+			clickfb(rd.frontof);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void exceldown() {
-		clickfb(rd.excel);
+		try {
+			HelperClass.logger.info("clicking excel download");
+			clickfb(rd.excel);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void pdfdown() {
-		clickfb(rd.pdf);
+		try {
+			HelperClass.logger.info("clicking pdf download");
+			clickfb(rd.pdf);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void csvdown() {
-		clickfb(rd.csv);
+		try {
+			HelperClass.logger.info("clicking csv download");
+			clickfb(rd.csv);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public boolean verifydown() throws InterruptedException {
-		File folder = new File(System.getProperty("user.dir") + File.separator + "downloads");
-		File[] files = folder.listFiles();
-		if (files != null) {
-			for (File file : files) {
-				String filename = file.getName().toLowerCase();
-				if (filename.endsWith(".pdf") || filename.endsWith(".csv") || filename.endsWith(".xlsx")) {
-					return true;
+		try {
+			File folder = new File(System.getProperty("user.dir") + File.separator + "downloads");
+			File[] files = folder.listFiles();
+			if (files != null) {
+				for (File file : files) {
+					String filename = file.getName().toLowerCase();
+					if (filename.endsWith(".pdf") || filename.endsWith(".csv") || filename.endsWith(".xlsx")) {
+						HelperClass.logger.info("file downloaded successfully");
+						return true;
+					}
 				}
 			}
+			return false;
+
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+			return false;
 		}
-
-		return true;
 	}
-
 }
