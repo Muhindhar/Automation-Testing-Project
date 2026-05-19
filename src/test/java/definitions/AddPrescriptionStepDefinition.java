@@ -17,7 +17,6 @@ public class AddPrescriptionStepDefinition {
     private final PrescriptionAction prescriptionAction =
             new PrescriptionAction(DriverFactory.getDriver());
 
-    // Column index constants — matches PrescriptionTestData.xlsx column order
     private static final int COL_HEADER_NOTE        = 0;
     private static final int COL_PRESCRIBE_BY       = 1;
     private static final int COL_PATHOLOGY          = 2;
@@ -66,10 +65,6 @@ public class AddPrescriptionStepDefinition {
         prescriptionAction.clickAddPrescription();
     }
 
-    // -----------------------------------------------------------------------
-    //  Excel-driven step  (used by @ValidPrescriptionSave)
-    // -----------------------------------------------------------------------
-
     @When("enters prescription details from Excel file {string} sheet {string} row {int}")
     public void enters_prescription_details_from_excel(String filePath, String sheetName, int rowNum) throws IOException {
 
@@ -89,10 +84,6 @@ public class AddPrescriptionStepDefinition {
         prescriptionAction.uploadAttachment       (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_ATTACHMENT));
         prescriptionAction.enterFooterNote        (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_FOOTER_NOTE));
     }
-
-    // -----------------------------------------------------------------------
-    //  DataTable-driven step  (used by @MissingMandatoryFields)
-    // -----------------------------------------------------------------------
 
     @When("enters prescription details")
     public void enters_prescription_details(DataTable dataTable) {

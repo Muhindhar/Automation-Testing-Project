@@ -297,8 +297,7 @@ public class PrescriptionAction extends BaseAction {
     public boolean isPrintPreviewOpened() {
         try {
             String parentHandle = driver.getWindowHandle();
-
-            // Wait for new window/tab
+            
             wait.until(d -> d.getWindowHandles().size() > 1);
 
             for (String handle : driver.getWindowHandles()) {
@@ -308,7 +307,7 @@ public class PrescriptionAction extends BaseAction {
                 }
             }
 
-            sleep(2000); // Allow page to load
+            sleep(2000);
 
             String currentUrl = driver.getCurrentUrl().toLowerCase();
             String title = driver.getTitle().toLowerCase();
@@ -339,6 +338,97 @@ public class PrescriptionAction extends BaseAction {
         } catch (Exception e) {
             System.out.println("[getErrorMessage] Error message not found.");
             return "";
+        }
+    }
+    
+    public void clickViewPrescription() {
+        wait.until(ExpectedConditions.elementToBeClickable(page.getPrescriptionButtonDel));
+        jsClick(page.getPrescriptionButtonDel);
+        System.out.println("[clickViewPrescription] Clicked View Prescription.");
+    }
+    
+    public void clickEdit() {
+        wait.until(ExpectedConditions.elementToBeClickable(page.editBtn));
+        jsClick(page.editBtn);
+        System.out.println("[clickEdit] Clicked Edit.");
+    }
+    
+    public void updatePrescriptionDetails() {
+        try {
+            driver.switchTo().defaultContent();
+
+            WebElement iframe = wait.until(ExpectedConditions.visibilityOfElementLocated(page.headerNote));
+            driver.switchTo().frame(iframe);
+            WebElement body = driver.findElement(By.tagName("body"));
+
+            body.clear();
+            body.sendKeys("Updated prescription details");
+
+            driver.switchTo().defaultContent();
+            System.out.println("[updatePrescriptionDetails] Updated Header Note.");
+
+        } catch (Exception e) {
+            System.out.println("[updatePrescriptionDetails] Failed: " + e.getMessage());
+        }
+    }
+    
+    public boolean isPrescriptionUpdated() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(page.getPrescriptionTable));
+            System.out.println("[isPrescriptionUpdated] Prescription updated successfully.");
+            return true;
+        } catch (Exception e) {
+            System.out.println("[isPrescriptionUpdated] Failed: " + e.getMessage());
+            return false;
+        }
+    }
+    
+    public void clickDelete() {
+        wait.until(ExpectedConditions.elementToBeClickable(page.deleteBtn));
+        jsClick(page.deleteBtn);
+        System.out.println("[clickDelete] Clicked Delete.");
+    }
+    
+    public boolean isDeleteConfirmationPopupDisplayed() {
+
+        try {
+
+            wait.until(ExpectedConditions.alertIsPresent());
+            String alertText =driver.switchTo().alert().getText();
+            System.out.println("[Delete Popup] Alert text: "+ alertText);
+            return alertText.contains("Are You Sure You Want To Delete This?");
+
+        } catch (Exception e) {
+            System.out.println("[Delete Popup] NOT displayed: "+ e.getMessage());
+            return false;
+        }
+    }
+    
+    public void confirmDelete() {
+
+        try {
+
+            wait.until(ExpectedConditions.alertIsPresent());
+            driver.switchTo().alert().accept();
+            System.out.println( "[confirmDelete] Alert accepted.");
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(page.deleteBtn));
+
+        } catch (Exception e) {
+            System.out.println("[confirmDelete] Failed: "+ e.getMessage());
+        }
+    }
+    
+    public boolean isPrescriptionDeletedSuccessfully() {
+
+        try {
+
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(page.deleteBtn));
+            System.out.println("[Delete Success] Prescription deleted successfully.");
+            return true;
+        } catch (Exception e) {
+
+            System.out.println("[Delete Success] Validation failed: " + e.getMessage());
+            return false;
         }
     }
 }

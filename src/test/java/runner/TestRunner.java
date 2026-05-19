@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features\\prescription\\add_prescription.feature",
+		features = "src\\test\\resources\\features",
 		glue = "definitions",
 		plugin = {"pretty",
 				"html:target/cucumber-report.html",
@@ -15,8 +15,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				"rerun:target/failed-rerun.txt" },
-		monochrome = true,
-		tags       = "@ValidPrescriptionSave or @ValidPrescriptionPrint or @MissingMandatoryFields or @InvalidPrescription"
+		monochrome = true
+		//tags       = "@ValidPrescriptionSave or @ValidPrescriptionPrint or @MissingMandatoryFields or @InvalidPrescription"
 		)
 
 
