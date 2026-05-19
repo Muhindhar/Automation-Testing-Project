@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import utilities.HelperClass;
 
 public class DownloadPdfpage {
-	public By recbtn = By.cssSelector(".btn.btn-primary.width50[href='#'][onclick=\"copy('maria@gmail.com', 'password')\"]");
-	//public By recbtn = By.xpath("//div[@class = 'form-bottom']//a[text() = 'Receptionist']");
+	//public By recbtn = By.cssSelector(".btn.btn-primary.width50[href='#'][onclick=\"copy('maria@gmail.com', 'password')\"]");
+	public By recbtn = By.xpath("//div[@class = 'form-bottom']//a[text() = 'Receptionist']");
 	public By signin = By.xpath("//button[@type='submit']");
 	public By appbtn = By.xpath("//li//a//span[text() = 'Appointment']");
 	public By tdyapp = By.xpath("//ul[@class='nav nav-tabs navlistscroll']//li[1]");

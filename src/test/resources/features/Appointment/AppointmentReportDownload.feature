@@ -1,3 +1,4 @@
+@Muhindhar
 Feature: Muhindhar_13-05-2026_Downloading the PDF (Printing)
   Description:
     Verify whether receptionist user is able to download
