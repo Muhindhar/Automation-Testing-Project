@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 
 
-		features = "src\\test\\resources\\features\\Appointment\\AppointmentReportDownload.feature",
+		features = "src\\test\\resources\\features",
 
 
 		glue = "definitions",
