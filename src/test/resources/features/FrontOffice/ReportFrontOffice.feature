@@ -4,7 +4,7 @@ Description:
 downloading the reports from the front office page in different formats
 
   Background:
-   Given the user launches the application
+    Given the user launches the application
     And the user is on the login page
     When the user clicks the "Receptionist" button
     And clicks on the Login button
