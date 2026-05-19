@@ -2,6 +2,8 @@ package actions;
 
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.Select;
@@ -11,13 +13,32 @@ import utilities.DriverFactory;
 
 public class AddPatientAction extends DriverFactory {
 
-
     public void clickInPatient() {
         getDriver().findElement(AddPatientPage.inPatientMenu).click();
     }
 
-    public void clickAddPatient() {
-        getDriver().findElement(AddPatientPage.addPatientButton).click();
+    public void clickAddPatient() throws InterruptedException {
+
+        WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+
+        WebElement addPatientBtn = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(
+                        AddPatientPage.addPatientButton));
+
+        ((JavascriptExecutor) getDriver()).executeScript(
+                "arguments[0].scrollIntoView({block:'center'});",
+                addPatientBtn);
+
+        Thread.sleep(1500);
+
+        try {
+            addPatientBtn.click();
+        } catch (Exception e) {
+
+            ((JavascriptExecutor) getDriver()).executeScript(
+                    "arguments[0].click();",
+                    addPatientBtn);
+        }
     }
 
     public void clickNewPatient() {
@@ -27,7 +48,6 @@ public class AddPatientAction extends DriverFactory {
     public void clickSave() {
         getDriver().findElement(AddPatientPage.saveButton).click();
     }
-
 
     public void enterPatientName(String name) {
         if (name != null && !name.trim().isEmpty()) {
