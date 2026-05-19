@@ -9,7 +9,7 @@ Feature: Jerishwin_Joseph_13-05-2026_Download OPD Report (User Story 4.4)
     Given the user is logged into the Smart Hospital portal as a receptionist
     And the user is on the "OPD - Out Patient" page
 
-  Scenario: Download a patient's OPD bill report
+  Scenario: Download a patient's OPD Vist report
     When the user clicks the "Show" icon for that patient
     And navigates to the "Visits" tab
     And clicks the "Print" icon on a specific visit record
