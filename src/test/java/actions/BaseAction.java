@@ -1,6 +1,7 @@
 package actions;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,62 +10,95 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.DriverFactory;
+
 public class BaseAction {
+	WebDriver driver;
+	WebDriverWait wait;
+	JavascriptExecutor js;
+	private static final int TIMEOUT = 10;
 
-    WebDriver driver;
-    WebDriverWait wait;
-    JavascriptExecutor js;
+	public BaseAction(WebDriver driver) {
+		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
+		this.js = (JavascriptExecutor) driver;
+	}
 
-    private static final int TIMEOUT = 10;
+	public void click(By locator) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+		js.executeScript("arguments[0].click();", element);
+	}
 
-    public BaseAction(WebDriver driver) {
+	public void clickfb(WebElement element) {
+		WebElement ele = wait.until(ExpectedConditions.elementToBeClickable(element));
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", ele);
+		js.executeScript("arguments[0].click();", ele);
+	}
 
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
-        this.js = (JavascriptExecutor) driver;
-    }
+	public void jsClick(By locator) {
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", DriverFactory.getDriver().findElement(locator));
+		js.executeScript("arguments[0].click();", DriverFactory.getDriver().findElement(locator));
+	}
+	public void jsClickfb(WebElement w) {
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});",w);
+		js.executeScript("arguments[0].click();", w);
+	}
+	
 
-    public void click(By locator) {
+	public void sendKeys(By locator, String value) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		element.clear();
+		element.sendKeys(value);
+	}
 
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
-    }
+	public void sendKeysfb(WebElement element, String value) {
+		WebElement ele = wait.until(ExpectedConditions.visibilityOf(element));
+		ele.clear();
+		ele.sendKeys(value);
+	}
 
+	public void jsSendKeys(By locator, String value) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		js.executeScript("arguments[0].value=arguments[1];", element, value);
+	}
 
-    public void jsClick(By locator) {
+	public String getText(By locator) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		return element.getText();
+	}
 
-        WebElement element =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	public String getTextfb(WebElement element) {
+		WebElement ele = wait.until(ExpectedConditions.visibilityOf(element));
+		return ele.getText();
+	}
 
-        js.executeScript("arguments[0].click();", element);
-    }
+	public boolean isDisplayed(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
+	}
 
- 
-    public void sendKeys(By locator, String value) {
+	public boolean isDisplayedfb(WebElement element) {
+		return wait.until(ExpectedConditions.visibilityOf(element)).isDisplayed();
+	}
 
-        WebElement element =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-        element.sendKeys(value);
-    }
+	public WebElement waitForVisibility(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
 
+	public WebElement waitForClickable(By locator) {
+		return wait.until(ExpectedConditions.elementToBeClickable(locator));
+	}
 
-    public void jsSendKeys(By locator, String value) {
+	public List<WebElement> getElements(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+	}
 
-        WebElement element =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-
-        js.executeScript(
-                "arguments[0].value=arguments[1];",
-                element,
-                value
-        );
-    }
-
-
-    public String getText(By locator) {
-
-        WebElement element =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-
-        return element.getText();
-    }
+	public WebElement getElement(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+	
+	public void jsClickElement(WebElement webElement) {
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", webElement);
+		js.executeScript("arguments[0].click();", webElement);
+	}
 }
