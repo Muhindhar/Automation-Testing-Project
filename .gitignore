@@ -1,34 +1,55 @@
+# Eclipse
 .metadata
-.idea/
 .project
 .classpath
 .settings/
 .factorypath
+
+# IntelliJ
+.idea/
 *.iml
-.git
+
+# VS Code
+.vscode/
+
+# Git
+# DO NOT ADD .git
+
+# Logs
 logs/
+*.log
+
+# Maven
 target/
+
+# Test Reports
 test-output/
-allure-report/
-allure-results/
 ExtentReports/
 reports/
+allure-report/
+allure-results/
 
 # Screenshots
 screenshots/
 test-output/Screenshots/
+
+# Downloads
+downloads/
+
+# OS Files
 .DS_Store
 Thumbs.db
-src/test/java/com/runner/TestRunner.java
+
+# Compiled Files
 bin/
-downloads/
+*.class
+
+# Generated Files
 /.apt_generated/
-<<<<<<< HEAD
 /.apt_generated_tests/
-=======
-<<<<<<< HEAD
-/.apt_generated_tests/
-=======
-/.apt_generated_tests/
->>>>>>> e78f85d6f0d520cda9cff3d37621b04cadf64e3d
->>>>>>> 98917aa702fd6d86257d65f149a9982ed15e2749
+
+# Cucumber
+cucumber-report.html
+cucumber-report.json
+rerun.txt
+failed-rerun.txt

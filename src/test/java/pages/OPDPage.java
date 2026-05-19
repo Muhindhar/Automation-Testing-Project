@@ -22,7 +22,7 @@ public class OPDPage {
     // Report Download
     public By opdOutPatientNavLink = By.xpath("//table[@id='DataTables_Table_1']/tbody/tr/td[1]");
     public By showIconFirstPatient = By.xpath("//table[@id='DataTables_Table_1']/tbody[1]/tr[1]/td[1]");
-    public By visitsTab            = By.xpath("//ul[@class='nav nav-tabs border-0 navlistscroll']/li[2]/a");
+    public By visitsTab            = By.xpath("//ul[@class='nav nav-tabs border-0 navlistscroll']/li[2]/child::a");
     public By printIcon            = By.xpath("//a[contains(@class,'buttons-pdf') and @aria-controls='DataTables_Table_1']");
     
  // User Story 4.2 - Add Patient

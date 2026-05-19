@@ -20,7 +20,7 @@ public class ReportFrontOfcAction extends BaseAction {
 	}
 
 	public void clickrecp() {
-		clickfb(rd.recpbtn);
+		jsClickfb(rd.recpbtn);
 	}
 
 	public void clksign() {

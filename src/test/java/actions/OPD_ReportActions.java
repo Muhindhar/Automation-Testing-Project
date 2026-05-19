@@ -26,6 +26,7 @@ public class OPD_ReportActions extends BaseAction {
 
     // Expand OPD menu and click OPD - Out Patient tab
     public void navigateToOPDOutPatientPage() {
+    	wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdButton));
     	HelperClass.logger.info("opening ODP page");
         jsClick(opdPage.opdButton);
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdOutPatientNavLink));
