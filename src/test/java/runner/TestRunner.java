@@ -8,6 +8,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 
 		features = "src\\test\\resources\\features\\FrontOffice\\FrontOfficeComplaint.feature",
+
 		glue = "definitions",
 		
 		plugin = {"pretty",
@@ -15,9 +16,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				"json:target/cucumber-report.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-				"rerun:target/failed-rerun.txt" },
-		
+				"rerun:target/failed-rerun.txt" },		
 		monochrome = true)
+
 
 
 public class TestRunner extends AbstractTestNGCucumberTests {

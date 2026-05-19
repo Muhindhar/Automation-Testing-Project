@@ -1,5 +1,4 @@
-Feature: IPD Patient Search Module
-
+Feature: V_MALAVICKA_2026_05_14_SmartHospital_IPD Search Module
   As a hospital staff member
   I want to search IPD patients
   So that I can quickly find inpatient records

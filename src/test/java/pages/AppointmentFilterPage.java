@@ -13,7 +13,6 @@ public class AppointmentFilterPage {
         PageFactory.initElements(DriverFactory.getDriver(), this);
     }
 
-    // ── Login Page Elements ──────────────────────────────────────────────────
     @FindBy(xpath = "//div[@class = 'form-bottom']//a[text() = 'Receptionist']")
     public WebElement recpbtn;
 
