@@ -20,6 +20,7 @@ public class ProfileStepDefinition {
 	    la.clickLoginButton();
 	}
 	
+	
 	@When("the user clicks the profile image")
 	public void the_user_clicks_the_profile_image() {
 	    pa.clickProfileIcon();

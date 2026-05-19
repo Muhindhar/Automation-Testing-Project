@@ -17,7 +17,7 @@ public class AppointmentFilterAction extends BaseAction {
 
 	public void recptbnclick() {
 		HelperClass.logger.info("clicking reception button");
-		clickfb(af.recpbtn);
+		jsClickfb(af.recpbtn);
 	}
 
 	public void subbtn() {
@@ -27,7 +27,7 @@ public class AppointmentFilterAction extends BaseAction {
 
 	public void clickapp() {
 		HelperClass.logger.info("clicking appointment button");
-		click(af.appointmentMenu);
+		jsClick(af.appointmentMenu);
 	}
 
 	public void clicktdyapp() {
