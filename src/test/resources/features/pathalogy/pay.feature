@@ -1,3 +1,4 @@
+@Mythily
 Feature: S_MYTHILY_2026_05_18_Pay pathology report validation - Smart Hospital
 
   Background:
