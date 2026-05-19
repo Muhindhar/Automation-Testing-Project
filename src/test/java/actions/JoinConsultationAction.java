@@ -2,7 +2,9 @@ package actions;
 
 import java.util.Set;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -120,12 +122,13 @@ public class JoinConsultationAction extends BaseAction {
 	}
 
 	public void setPatient(String patient) {
-		Actions action = (Actions) DriverFactory.getDriver();
-		
-		action.click(getElement(jp.patientName)).perform();
-		action.moveToElement(getElement(jp.patientNameInput)).sendKeys(patient).build().perform();
+	    getElement(jp.patientName).click();
+	    
+	    WebElement input = getElement(jp.patientNameInput);
+	    input.click();
+	    input.sendKeys(patient);
+	    input.sendKeys(Keys.ENTER);
 	}
-	
 	
 
 }

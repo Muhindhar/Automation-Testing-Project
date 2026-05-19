@@ -1,4 +1,4 @@
-Feature: M_VIGNESHWARAN_2026_05_12_SmartHospital_JoinConsultationFeature
+Feature: M_VIGNESHWARAN_2026_05_16_SmartHospital_JoinConsultationFeature
 
   Background:
     Given the user launches the application
