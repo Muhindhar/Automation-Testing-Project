@@ -6,7 +6,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature",
+		features = "src/test/resources/features",
 
 		glue = "definitions",
 
