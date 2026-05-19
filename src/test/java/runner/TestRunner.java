@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-		features = "src/test/resources/features/IPD/AddPatient.feature",
+		features = "src/test/resources/features/IPD/PatientDischarge.feature",
 		glue = "definitions",
 		plugin = {"pretty", 
 						"html:target/cucumber-report.html",
