@@ -1,6 +1,7 @@
 package actions;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -8,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import utilities.DriverFactory;
 
 public class BaseAction {
 	WebDriver driver;
@@ -22,7 +25,7 @@ public class BaseAction {
 	}
 
 	public void click(By locator) {
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
 		js.executeScript("arguments[0].click();", element);
 	}
@@ -37,6 +40,11 @@ public class BaseAction {
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
 		js.executeScript("arguments[0].click();", element);
+	}
+
+	public void jsClickfb(WebElement w) {
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", w);
+		js.executeScript("arguments[0].click();", w);
 	}
 
 	public void sendKeys(By locator, String value) {
@@ -82,10 +90,16 @@ public class BaseAction {
 		return wait.until(ExpectedConditions.elementToBeClickable(locator));
 	}
 
-	protected void sleep(long ms) {
-		try {
-			Thread.sleep(ms);
-		} catch (InterruptedException ignored) {
-		}
+	public List<WebElement> getElements(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+	}
+
+	public WebElement getElement(By locator) {
+		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+
+	public void jsClickElement(WebElement webElement) {
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", webElement);
+		js.executeScript("arguments[0].click();", webElement);
 	}
 }

@@ -1,5 +1,7 @@
 package definitions;
 
+import java.time.Duration;
+
 import org.testng.Assert;
 import actions.LoginAction;
 import actions.OPD_SearchActions;

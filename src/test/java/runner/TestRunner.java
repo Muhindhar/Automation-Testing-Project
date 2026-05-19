@@ -7,9 +7,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-
 		features = "src\\test\\resources\\features",
 		glue = "definitions",
+		
 		plugin = {"pretty",
 				"html:target/cucumber-report.html",
 				"json:target/cucumber-report.json",
@@ -19,7 +19,6 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 		monochrome = true,
 		tags       = "@ValidPathologySearch"
 		)
-
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 

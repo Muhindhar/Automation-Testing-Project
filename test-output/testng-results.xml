@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-19T12:46:17 IST" name="Default suite" finished-at="2026-05-19T12:49:07 IST" duration-ms="169632">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2026-05-19T12:46:17 IST" name="Default test" finished-at="2026-05-19T12:49:07 IST" duration-ms="169632">
+      <class name="runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:46:17 IST" name="setUpClass" finished-at="2026-05-19T12:46:18 IST" duration-ms="781" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@32d46229]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:46:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:46:29 IST" duration-ms="10764" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Attendance Report"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_16-05-2026_Attendance Report"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:46:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:46:40 IST" duration-ms="11406" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Attendance Report"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_16-05-2026_Attendance Report"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:46:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:46:57 IST" duration-ms="16416" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Attendance Report"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_16-05-2026_Attendance Report"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:46:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:47:10 IST" duration-ms="13261" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Attendance Report"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_16-05-2026_Attendance Report"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:47:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:47:23 IST" duration-ms="13472" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Profile Details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_16-05-2026_Profile"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:47:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:47:38 IST" duration-ms="14779" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Profile Details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_16-05-2026_Profile"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:47:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:47:49 IST" duration-ms="11326" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Profile Details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_16-05-2026_Profile"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:47:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:48:02 IST" duration-ms="12329" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["View Profile Details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_16-05-2026_Profile"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:48:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:48:14 IST" duration-ms="12403" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for an OPD patient (Valid and Invalid)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_13-05-2026_OPD Patient Search"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:48:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:48:27 IST" duration-ms="13084" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for an OPD patient (Valid and Invalid)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_13-05-2026_OPD Patient Search"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:48:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:48:41 IST" duration-ms="13854" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add a new OPD patient successfully (Valid Case)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_17-05-2026_Add New OPD Patient"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:48:41 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:48:55 IST" duration-ms="13531" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Fail to add patient with missing required fields (Invalid Case)"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_17-05-2026_Add New OPD Patient"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:48:55 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T12:49:06 IST" duration-ms="11613" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Download a patient's OPD Vist report"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Jerishwin_Joseph_13-05-2026_Download OPD Report (User Story 4.4)"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T12:49:06 IST" name="tearDownClass" finished-at="2026-05-19T12:49:07 IST" duration-ms="506" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- runner.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

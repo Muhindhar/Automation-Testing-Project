@@ -3,16 +3,18 @@ package definitions;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import actions.AddPatient;
+import actions.AddPatientAction;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utilities.DriverFactory;
 
 public class AddPatientSteps {
-
-    AddPatient addPatientAction = new AddPatient();
+	 WebDriver driver = DriverFactory.getDriver();
+    AddPatientAction addPatientAction = new AddPatientAction();
 
     @When("the user clicks on the In Patient option")
     public void the_user_clicks_on_the_in_patient_option() {
@@ -25,7 +27,7 @@ public class AddPatientSteps {
     }
 
     @When("the user clicks on the Add Patient button")
-    public void click_add_patient_button() {
+    public void click_add_patient_button() throws InterruptedException {
         addPatientAction.clickAddPatient();
     }
 
@@ -39,7 +41,6 @@ public class AddPatientSteps {
         System.out.println("Popup displayed");
     }
 
- 
     @When("the user enters patient details")
     public void enter_patient_details(DataTable dataTable) {
 
@@ -69,7 +70,6 @@ public class AddPatientSteps {
         Assert.assertTrue(addPatientAction.successMessageDisplayed());
     }
 
- 
     @When("the user enters invalid patient details")
     public void the_user_enters_invalid_patient_details(DataTable dataTable) {
 
@@ -85,7 +85,6 @@ public class AddPatientSteps {
         Assert.assertTrue(addPatientAction.validationMessageDisplayed());
     }
 
-  
     @When("the user enters admission and medical details")
     public void the_user_enters_admission_and_medical_details(DataTable dataTable) {
 
