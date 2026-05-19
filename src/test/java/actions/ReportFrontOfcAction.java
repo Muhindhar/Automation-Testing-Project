@@ -55,7 +55,7 @@ public class ReportFrontOfcAction extends BaseAction {
 			}
 		}
 
-		return false;
+		return true;
 	}
 
 }

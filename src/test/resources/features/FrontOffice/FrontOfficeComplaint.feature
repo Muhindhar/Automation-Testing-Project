@@ -5,9 +5,10 @@ Feature: Muhindhar_16-05-2026_Add a complaint in the front office page
   different sources using excel data.
 
   Background:
-    Given user is on login page of site
-    And user clicks on receptionist button
-    And click signin button
+    Given the user launches the application
+    And the user is on the login page
+    When the user clicks the "Receptionist" button
+    And clicks on the Login button
     And user navigates to the front office link
 
   @DifferentComplaints
