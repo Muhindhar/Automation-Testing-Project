@@ -1,4 +1,4 @@
-Feature: MALAVICKA_V_19/5/2026_Generate patient certificate in IPD module
+Feature: V_MALAVICKA_2026_05_14_Generate patient certificate in IPD module
 
 As a doctor
 I want to generate patient certificates
