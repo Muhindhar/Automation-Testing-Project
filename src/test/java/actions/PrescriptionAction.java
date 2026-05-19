@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 //package actions;
 //
 //import org.openqa.selenium.By;
@@ -448,7 +448,7 @@
 //		}
 //	}
 //}
-=======
+
 package actions;
 
 import org.openqa.selenium.By;
@@ -898,4 +898,3 @@ public class PrescriptionAction extends BaseAction {
 		}
 	}
 }
->>>>>>> 5c03a0d681150682deb68e7f3f07247ab1149ab7
