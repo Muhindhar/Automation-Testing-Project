@@ -1,7 +1,8 @@
 package runner;
 
-
 import io.cucumber.testng.CucumberOptions;
+
+import org.testng.annotations.DataProvider;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
@@ -19,9 +20,6 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 		tags = "@jerishwin",
 		monochrome = true)
 
-
-
-public class TestRunner extends AbstractTestNGCucumberTests {
-
+public class TestRunner extends AbstractTestNGCucumberTests{
+	
 }
-
