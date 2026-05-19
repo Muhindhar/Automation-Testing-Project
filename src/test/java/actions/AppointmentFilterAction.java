@@ -78,7 +78,7 @@ public class AppointmentFilterAction extends BaseAction {
 
 	public boolean verifyrecord() {
 		try {
-			return af.appointmentRows.size() > 0;
+			return af.appointmentRows.size()>0;
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
