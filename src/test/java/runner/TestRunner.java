@@ -6,13 +6,12 @@ import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
-<<<<<<< HEAD
-		features = "src/test/resources/features/IPD/PatientDischarge.feature",
-=======
+
+		features = "src/test/resources/features/IPD/Search.feature",
 
 		features = "src\\test\\resources\\features\\FrontOffice\\FrontOfficeComplaint.feature",
 
->>>>>>> 5e8af20570419d5e34a7f167dcb3fd4525b24cce
+
 		glue = "definitions",
 		
 		plugin = {"pretty",
