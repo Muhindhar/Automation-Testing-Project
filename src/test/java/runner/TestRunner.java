@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features\\prescription\\add_prescription",
+		features = "src\\test\\resources\\features\\prescription\\add_prescription.feature",
 		glue = "definitions",
 		
 		plugin = {"pretty",
