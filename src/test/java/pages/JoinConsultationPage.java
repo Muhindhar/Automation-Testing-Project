@@ -15,6 +15,7 @@ public class JoinConsultationPage {
 	public By date = By.cssSelector("input#datetimepicker");
 	public By duration = By.cssSelector("input#duration");
 	public By ipdOrOpd = By.xpath("//select[@class = \"form-control module_type\"]");
+	public By description = By.cssSelector("textarea#description");
 	
 	
 	public By getStatusDropdown(int rowIndex) {
