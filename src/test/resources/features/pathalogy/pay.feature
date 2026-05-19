@@ -1,4 +1,5 @@
-Feature: S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital
+@Mythily
+Feature: S_MYTHILY_2026_05_18_Pay pathology report validation - Smart Hospital
 
   Background:
     Given the user launches the application
@@ -24,8 +25,7 @@ Feature: S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital
     Examples:
       | billNo | amt  |    mobile  |     upiId         |
       |   638  | 1.00 | 9025590255 | mythily@gmail.com |
-      
-      
+          
       
   @InvalidPaymentExceedAmount
   Scenario Outline: Verify payment fails when amount exceeds balance

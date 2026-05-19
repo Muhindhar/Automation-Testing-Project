@@ -37,14 +37,15 @@ public class BaseAction {
 	}
 
 	public void jsClick(By locator) {
-		js.executeScript("arguments[0].scrollIntoView({block:'center'});", DriverFactory.getDriver().findElement(locator));
-		js.executeScript("arguments[0].click();", DriverFactory.getDriver().findElement(locator));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+		js.executeScript("arguments[0].click();", element);
 	}
+
 	public void jsClickfb(WebElement w) {
-		js.executeScript("arguments[0].scrollIntoView({block:'center'});",w);
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", w);
 		js.executeScript("arguments[0].click();", w);
 	}
-	
 
 	public void sendKeys(By locator, String value) {
 		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
@@ -96,7 +97,7 @@ public class BaseAction {
 	public WebElement getElement(By locator) {
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
-	
+
 	public void jsClickElement(WebElement webElement) {
 		js.executeScript("arguments[0].scrollIntoView({block:'center'});", webElement);
 		js.executeScript("arguments[0].click();", webElement);

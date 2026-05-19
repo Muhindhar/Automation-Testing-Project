@@ -24,9 +24,11 @@ public class OPD_SearchActions extends BaseAction {
 	}
 	
 	public void navigateToOPDPage() {
+		wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdButton));
 		HelperClass.logger.info("clicking opd button");
 		jsClick(opdPage.opdButton);
 		HelperClass.logger.info("clicking old opd tab");
+		wait.until(ExpectedConditions.elementToBeClickable(opdPage.oldOpdTab));
 		jsClick(opdPage.oldOpdTab);
 	}
 	

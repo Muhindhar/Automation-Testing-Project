@@ -3,10 +3,12 @@ package pages;
 import org.openqa.selenium.By;
 
 public class CallLogFrontofcPages {
-	public By recbtnfo = By.cssSelector(".btn.btn-primary.width50[href='#'][onclick=\\\"copy('maria@gmail.com', 'password')\\\"]");
+	public By recbtnfo = By
+			.cssSelector(".btn.btn-primary.width50[href='#'][onclick=\\\"copy('maria@gmail.com', 'password')\\\"]");
 	public By signinfo = By.xpath("//button[@type='submit']");
-	public By frontofc = By.xpath("//li//a//span[text() = 'Front Office']");
-	public By phcalllog = By.xpath("//div[@class = 'box-tools pull-right']//a[@href = 'https://demo.smart-hospital.in/admin/generalcall']");
+	public By frontofc = By.xpath("//span[normalize-space()='Front Office'] | //li//a//span[text()='Front Office']");
+	public By phcalllog = By.xpath(
+			"//div[@class = 'box-tools pull-right']//a[@href = 'https://demo.smart-hospital.in/admin/generalcall']");
 	public By addlog = By.xpath("//a[@class='btn btn-primary btn-sm call_log']");
 	public By name = By.xpath("//form[@id='formadd']//input[@name='name']");
 	public By phone = By.xpath("//input[@fdprocessedid='panood']");
