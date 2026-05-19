@@ -6,7 +6,6 @@ import org.testng.Assert;
 import actions.AddVisitorActions;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 import utilities.CSVReaderUtil;
 import utilities.DriverFactory;
 
@@ -29,8 +28,12 @@ public class AddVisiorStepDefinition {
 
 	@When("user enters visitor details from CSV {string}")
 	public void user_enters_visitor_details_from_csv(String rowNumber) throws Exception {
+
 		int row = Integer.parseInt(rowNumber);
+
 		data = CSVReaderUtil.getCSVData("src/test/resources/testdata/Addvisitor.csv", row);
+
+		
 		ava.enterdetails(data[1], data[2], data[3]);
 	}
 
@@ -53,7 +56,7 @@ public class AddVisiorStepDefinition {
 
 		data = CSVReaderUtil.getCSVData("src/test/resources/testdata/Addvisitor.csv", row);
 
-		ava.enterdetails(data[1], data[2], data[3]);
+		ava.enterinvaloiddet(data[1], data[2], data[3], data[4]);
 	}
 
 	@Then("proper validation message should be displayed")

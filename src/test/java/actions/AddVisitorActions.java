@@ -27,26 +27,38 @@ public class AddVisitorActions extends BaseAction {
 
 	public void clkaddvistor() {
 
-	    HelperClass.logger.info("clicking add visitor button");
+		HelperClass.logger.info("clicking front office");
 
-	    waitForVisibility(vp.addVisitorBtn);
+		jsClick(vp.frontofc);
 
-	    jsClick(vp.addVisitorBtn);
+		HelperClass.logger.info("clicking add visitor button");
 
-	    waitForVisibility(vp.visitorName);
+		waitForVisibility(vp.addVisitorBtn);
+
+		jsClick(vp.addVisitorBtn);
+
+		waitForVisibility(vp.visitorName);
 	}
 
-	public void enterdetails(String purpose, String visitorName, String checkinDate) {
+	public void enterdetails(String purpose,
+			String visitorName,
+			String checkinDate) {
 
+		System.out.println(purpose + visitorName + checkinDate);
+		
 		HelperClass.logger.info("entering visitor details");
+
+		selectByVisibleText(vp.purpose, purpose);
 
 		sendKeys(vp.visitorName, visitorName);
 
-		sendKeys(vp.checkinDate, checkinDate);
+		jsSendKeys(vp.checkinDate, checkinDate);
 	}
 
-	public void enterinvaloiddet(String visitorName, String phoneNumber, String purpose, String personToVisit,
-			String checkinDate, String noOfPersons) {
+	public void enterinvaloiddet(String visitorName,
+			String phoneNumber,
+			String purpose,
+			String checkinDate) {
 
 		HelperClass.logger.info("entering invalid visitor details");
 
@@ -54,15 +66,10 @@ public class AddVisitorActions extends BaseAction {
 
 		sendKeys(vp.phoneNumber, phoneNumber);
 
-		sendKeys(vp.purpose, purpose);
+		selectByVisibleText(vp.purpose, purpose);
 
-		sendKeys(vp.personToVisit, personToVisit);
-
-		sendKeys(vp.checkinDate, checkinDate);
-
-		sendKeys(vp.noOfPersons, noOfPersons);
+		jsSendKeys(vp.checkinDate, checkinDate);
 	}
-
 	public void clicksave() {
 
 		HelperClass.logger.info("clicking save button");
