@@ -9,7 +9,6 @@ Feature: M_VIGNESHWARAN_2026_05_17_SmartHospital_AddConsultationFeature
     And clicks on the live consultation from the dropdown appeared
     And clicks on the add button
 
-  @One
   Scenario: Add consultation with all valid fields using data table
     When User enters consultation details:
       | patient           | Olivier Thomas                          |

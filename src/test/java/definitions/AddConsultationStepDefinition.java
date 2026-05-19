@@ -1,11 +1,13 @@
 package definitions;
 
+import java.io.IOException;
 import java.util.Map;
 
 import actions.JoinConsultationAction;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import utilities.DriverFactory;
+import utilities.ExcelData;
 
 public class AddConsultationStepDefinition {
 	
@@ -16,23 +18,43 @@ public class AddConsultationStepDefinition {
 	    ja.clickAddButton();
 	}
 
-	@When("User enters consultation details:")
-	public void user_enters_consultation_details(io.cucumber.datatable.DataTable dataTable) {
-		Map<String, String> consultationData = dataTable.asMap(String.class, String.class);
+	@When("User enters consultation details from excel row {int}")
+	public void user_enters_consultation_details_from_excel_row(Integer rowNum) throws IOException {
 
-	    String patient = consultationData.get("patient");
-	    String consultationTitle = consultationData.get("consultationTitle");
-	    String consultationDate = consultationData.get("consultationDate");
-	    String duration = consultationData.get("duration");
-	    String opdOrIpd = consultationData.get("opdOrIpd");
-	    String opdIpdNo = consultationData.get("opdIpdNo");
-	    String consultantDoctor = consultationData.get("consultantDoctor");
-	    String hostVideo = consultationData.get("hostVideo");
-	    String clientVideo = consultationData.get("clientVideo");
-	    String description = consultationData.get("description");
-	    
-	    ja.setPatient(patient);
+	    Map<String, String> consultationData =
+	            ExcelData.getRowData(
+	                    "src/test/resources/testdata/consultation.xlsx",
+	                    "Sheet1",
+	                    rowNum);
 
+	    ja.setPatient(consultationData.get("patient"));
+
+	    ja.setConsultationTitle(
+	            consultationData.get("consultationTitle"));
+
+	    ja.setConsultationDate(
+	            consultationData.get("consultationDate"));
+
+	    ja.setDuration(
+	            consultationData.get("duration"));
+
+	    ja.setOpdOrIpd(
+	            consultationData.get("opdOrIpd"));
+
+	    ja.setOpdIpdNo(
+	            consultationData.get("opdIpdNo"));
+
+	    ja.setConsultantDoctor(
+	            consultationData.get("consultantDoctor"));
+
+	    ja.setHostVideo(
+	            consultationData.get("hostVideo"));
+
+	    ja.setClientVideo(
+	            consultationData.get("clientVideo"));
+
+	    ja.setDescription(
+	            consultationData.get("description"));
 	}
 
 	@When("User clicks on Save button")

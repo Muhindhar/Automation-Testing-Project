@@ -129,6 +129,51 @@ public class JoinConsultationAction extends BaseAction {
 	    input.sendKeys(patient);
 	    input.sendKeys(Keys.ENTER);
 	}
+
+	public void setDescription(String description) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setClientVideo(String clientVideo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setHostVideo(String hostVideo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setConsultantDoctor(String consultantDoctor) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setOpdIpdNo(String opdIpdNo) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setConsultationTitle(String consultationTitle) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setConsultationDate(String consultationDate) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setDuration(String duration) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setOpdOrIpd(String opdOrIpd) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 
 }
