@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features\\FrontOffice\\ReportFrontOffice.feature",
+		features = "src\\test\\resources\\features\\FrontOffice\\FrontOfficeComplaint.feature",
 		glue = "definitions",
 		
 		plugin = {"pretty",

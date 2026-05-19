@@ -12,8 +12,11 @@ public class ReportDownloadFrontOfficePages {
 
 //	@FindBy(css = ".btn.btn-primary.width50[href='#'][onclick=\"copy('maria@gmail.com', 'password')\"]")
 //	public WebElement recpbtn;
+//	@FindBy(xpath =
+//			"//a[contains(@onclick,'maria@gmail.com')]")
+//			public WebElement recpbtn;
 	@FindBy(xpath =
-			"//a[contains(@onclick,'maria@gmail.com')]")
+			"//a[contains(text(),'Receptionist')]")
 			public WebElement recpbtn;
 
 	@FindBy(xpath = "//button[@type='submit']")
