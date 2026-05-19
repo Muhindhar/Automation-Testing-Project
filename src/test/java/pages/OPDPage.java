@@ -24,7 +24,7 @@ public class OPDPage {
     public By visitsTab            = By.xpath("//ul[@class='nav nav-tabs border-0 navlistscroll']/li[2]/child::a");
     public By printIcon            = By.xpath("//a[contains(@class,'buttons-pdf') and @aria-controls='DataTables_Table_1']");
     
- // User Story 4.2 - Add Patient
+ // Add Patient
     public By addPatientButton  = By.xpath("//div[@id='tab_2']/child::div/a");
     public By addIcon           = By.xpath("//div[@id='myModal']/child::div/div/div/div/div/a");
 
