@@ -27,7 +27,7 @@ public class AddPatientSteps {
     }
 
     @When("the user clicks on the Add Patient button")
-    public void click_add_patient_button() {
+    public void click_add_patient_button() throws InterruptedException {
         addPatientAction.clickAddPatient();
     }
 
@@ -41,7 +41,6 @@ public class AddPatientSteps {
         System.out.println("Popup displayed");
     }
 
- 
     @When("the user enters patient details")
     public void enter_patient_details(DataTable dataTable) {
 
@@ -71,7 +70,6 @@ public class AddPatientSteps {
         Assert.assertTrue(addPatientAction.successMessageDisplayed());
     }
 
- 
     @When("the user enters invalid patient details")
     public void the_user_enters_invalid_patient_details(DataTable dataTable) {
 
@@ -87,7 +85,6 @@ public class AddPatientSteps {
         Assert.assertTrue(addPatientAction.validationMessageDisplayed());
     }
 
-  
     @When("the user enters admission and medical details")
     public void the_user_enters_admission_and_medical_details(DataTable dataTable) {
 

@@ -26,17 +26,17 @@ public class OPD_ReportActions extends BaseAction {
 
     // Expand OPD menu and click OPD - Out Patient tab
     public void navigateToOPDOutPatientPage() {
+    	wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdButton));
     	HelperClass.logger.info("opening ODP page");
         jsClick(opdPage.opdButton);
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdOutPatientNavLink));
         HelperClass.logger.info("clicking opdOutPatientNavLink ");
-        jsClick(opdPage.opdOutPatientNavLink);
     }
 
     // Click the Show/name link of first patient in table
     public void clickShowIcon() {
-        wait.until(ExpectedConditions.elementToBeClickable(opdPage.showIconFirstPatient));
-        jsClick(opdPage.showIconFirstPatient);
+        wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdOutPatientNavLink));
+        jsClick(opdPage.opdOutPatientNavLink);
     }
 
     // JS click to bypass overlapping pull-right div
@@ -63,7 +63,7 @@ public class OPD_ReportActions extends BaseAction {
 		if (files != null) {
 			for (File file : files) {
 				String filename = file.getName().toLowerCase();
-				if (filename.endsWith(".pdf") || filename.endsWith(".csv") || filename.endsWith(".xlsx")) {
+				if (filename.endsWith(".pdf")) {
 					return true;
 				}
 			}

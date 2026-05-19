@@ -34,10 +34,11 @@ public class OPD_AddPatientDefinitions {
     public void the_user_fills_the_add_patient_form(Map<String, String> data) {
         apa.fillPatientForm(data);
     }
+    
 
-    @And("the user leaves the mandatory {string} field blank")
-    public void the_user_leaves_the_mandatory_field_blank(String fieldName, Map<String, String> data) {
-        apa.fillPatientForm(data); // Name is blank in the table — handled inside fillPatientForm
+    @And("the user fills the Add Patient form with data from Excel")
+    public void the_user_fills_the_add_patient_form_with_data_from_excel() throws Exception {
+        apa.fillPatientFormFromExcel();
     }
 
     @And("clicks the {string} button")
