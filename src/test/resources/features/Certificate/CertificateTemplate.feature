@@ -22,7 +22,6 @@ Feature: V_MALAVICKA_2026_05_14_Generate patient certificate in IPD module
     When the user selects the patient from excel data
     And the user clicks on the Generate button
     Then the patient certificate details should be displayed successfully
-    When the user clicks on the Cancel button
     Then the certificate popup should be closed successfully
 
   Scenario: Generate patient certificate using invalid details
