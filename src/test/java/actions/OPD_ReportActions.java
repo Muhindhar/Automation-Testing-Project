@@ -63,7 +63,7 @@ public class OPD_ReportActions extends BaseAction {
 		if (files != null) {
 			for (File file : files) {
 				String filename = file.getName().toLowerCase();
-				if (filename.endsWith(".pdf") || filename.endsWith(".csv") || filename.endsWith(".xlsx")) {
+				if (filename.endsWith(".pdf")) {
 					return true;
 				}
 			}
