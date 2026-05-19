@@ -12,7 +12,7 @@ Feature: M_VIGNESHWARAN_2026_05_17_SmartHospital_AddConsultationFeature
   @One
   Scenario: Add consultation with all valid fields using data table
     When User enters consultation details:
-      | patient           | John Doe                          |
+      | patient           | Olivier Thomas                          |
       | consultationTitle | General Consultation              |
       | consultationDate  | 20/05/2026 10:30 AM               |
       | duration          | 30                                |

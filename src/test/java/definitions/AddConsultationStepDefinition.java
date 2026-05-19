@@ -13,13 +13,12 @@ public class AddConsultationStepDefinition {
 	
 	@When("clicks on the add button")
 	public void clicks_on_the_add_button() {
-		ja.clickAddButton();
+	    ja.clickAddButton();
 	}
 
 	@When("User enters consultation details:")
 	public void user_enters_consultation_details(io.cucumber.datatable.DataTable dataTable) {
-
-	    Map<String, String> consultationData = dataTable.asMap(String.class, String.class);
+		Map<String, String> consultationData = dataTable.asMap(String.class, String.class);
 
 	    String patient = consultationData.get("patient");
 	    String consultationTitle = consultationData.get("consultationTitle");
@@ -33,11 +32,12 @@ public class AddConsultationStepDefinition {
 	    String description = consultationData.get("description");
 	    
 	    ja.setPatient(patient);
+
 	}
 
 	@When("User clicks on Save button")
 	public void user_clicks_on_save_button() {
-	    
+	  
 	}
 
 	@Then("Consultation should be added successfully")
@@ -54,4 +54,5 @@ public class AddConsultationStepDefinition {
 	public void validation_message_should_be_displayed_for_mandatory_fields() {
 	    
 	}
+
 }
