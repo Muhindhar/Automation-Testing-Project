@@ -1,0 +1,1647 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>36/30/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon May 18 23:28:07 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>982 seconds (982032 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate invalid appointment filter", "Muhindhar_13-05-2026_Downloading the PDF (Printing)"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49229}, goog:processID: 11468, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49229/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d583c84a16895d64680b3d0c90a1de6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2117938877", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2117938877'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49229}, goog:processID: 11468, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49229/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7d583c84a16895d64680b3d0c90a1de6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download a patient's OPD bill report", "Jerishwin_Joseph_13-05-2026_Download OPD Report (User Story 4.4)"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //table[@id=&apos;DataTables_Table_1&apos;]/tbody[1]/tr[1]/td[1]/a to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table[@id=&apos;DataTables_Table_1&apos;]/tbody[1]/tr[1]/td[1]/a&quot;}.
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49285}, goog:processID: 5956, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49285/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 65ff7d20e6fe5d45f687db0795fe4ede
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.OPD_ReportActions.clickShowIcon(OPD_ReportActions.java:35)
+	at definitions.OPD_ReportDefinitions.the_user_clicks_the_icon_for_that_patient(OPD_ReportDefinitions.java:32)
+	at ✽.the user clicks the &quot;Show&quot; icon for that patient(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/report_download.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace860196228", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace860196228'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //table[@id=&apos;DataTables_Table_1&apos;]/tbody[1]/tr[1]/td[1]/a to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table[@id=&apos;DataTables_Table_1&apos;]/tbody[1]/tr[1]/td[1]/a&quot;}.
+(tried for 15 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49285}, goog:processID: 5956, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49285/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 65ff7d20e6fe5d45f687db0795fe4ede
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.OPD_ReportActions.clickShowIcon(OPD_ReportActions.java:35)
+	at definitions.OPD_ReportDefinitions.the_user_clicks_the_icon_for_that_patient(OPD_ReportDefinitions.java:32)
+	at ✽.the user clicks the &quot;Show&quot; icon for that patient(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/report_download.feature:13)
+</pre></div></td>
+<td>33</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify payment fails when amount exceeds balance", "S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //td[@class=&apos;text-right&apos;]//button[normalize-space()=&apos;Pay&apos;] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62227}, goog:processID: 5520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62227/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d3ba68887d23dfdef0d95cfc0c5e30b6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.PathalogyAction.clickpay(PathalogyAction.java:83)
+	at definitions.PayPathologyStepDefinition.click_pay_on_resulted_report(PayPathologyStepDefinition.java:16)
+	at ✽.click pay on resulted report(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/pathalogy/pay.feature:35)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1743660719", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1743660719'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //td[@class=&apos;text-right&apos;]//button[normalize-space()=&apos;Pay&apos;] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62227}, goog:processID: 5520, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62227/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d3ba68887d23dfdef0d95cfc0c5e30b6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.PathalogyAction.clickpay(PathalogyAction.java:83)
+	at definitions.PayPathologyStepDefinition.click_pay_on_resulted_report(PayPathologyStepDefinition.java:16)
+	at ✽.click pay on resulted report(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/pathalogy/pay.feature:35)
+</pre></div></td>
+<td>25</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify payment fails when negative amount is entered", "S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //td[@class=&apos;text-right&apos;]//button[normalize-space()=&apos;Pay&apos;] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49804}, goog:processID: 10204, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49804/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fe78623b50c693c08851fdc3c6d5ca4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.PathalogyAction.clickpay(PathalogyAction.java:83)
+	at definitions.PayPathologyStepDefinition.click_pay_on_resulted_report(PayPathologyStepDefinition.java:16)
+	at ✽.click pay on resulted report(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/pathalogy/pay.feature:49)
+</pre></div><a href='#' onClick='toggleBox("stack-trace324477266", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace324477266'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //td[@class=&apos;text-right&apos;]//button[normalize-space()=&apos;Pay&apos;] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49804}, goog:processID: 10204, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49804/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1fe78623b50c693c08851fdc3c6d5ca4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.PathalogyAction.clickpay(PathalogyAction.java:83)
+	at definitions.PayPathologyStepDefinition.click_pay_on_resulted_report(PayPathologyStepDefinition.java:16)
+	at ✽.click pay on resulted report(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/pathalogy/pay.feature:49)
+</pre></div></td>
+<td>34</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add complaint using excel data", "Muhindhar_16-05-2026_Add a complaint in the front office page"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49331}, goog:processID: 4188, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49331/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 197fd3cb247f134f847e7b8644b295b1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.jsClick(BaseAction.java:37)
+	at actions.CallLogFrontofcActions.clckrecp(CallLogFrontofcActions.java:25)
+	at definitions.CallLogfrontofc.user_is_on_login_page_of_site(CallLogfrontofc.java:22)
+	at ✽.user is on login page of site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/FrontOfficeComplaint.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace286787408", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace286787408'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49331}, goog:processID: 4188, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49331/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 197fd3cb247f134f847e7b8644b295b1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.jsClick(BaseAction.java:37)
+	at actions.CallLogFrontofcActions.clckrecp(CallLogFrontofcActions.java:25)
+	at definitions.CallLogfrontofc.user_is_on_login_page_of_site(CallLogfrontofc.java:22)
+	at ✽.user is on login page of site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/FrontOfficeComplaint.feature:7)
+</pre></div></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download reports", "Muhindhar_16-05-2026_Downloading report from the front office"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Receptionist&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60127}, goog:processID: 4652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60127/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c72a4d7cc04290eac06e1a10834e2cb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.ReportFrontOfcAct.clickrecp(ReportFrontOfcAct.java:23)
+	at definitions.ReportOfcFo.user_clicks_on_receptionist_button_in_site(ReportOfcFo.java:24)
+	at ✽.user clicks on receptionist button in site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/ReportFrontOffice.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1974062116", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1974062116'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Receptionist&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60127}, goog:processID: 4652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60127/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c72a4d7cc04290eac06e1a10834e2cb
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.ReportFrontOfcAct.clickrecp(ReportFrontOfcAct.java:23)
+	at definitions.ReportOfcFo.user_clicks_on_receptionist_button_in_site(ReportOfcFo.java:24)
+	at ✽.user clicks on receptionist button in site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/ReportFrontOffice.feature:7)
+</pre></div></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate invalid report download format", "Muhindhar_16-05-2026_Downloading report from the front office"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Receptionist&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57572}, goog:processID: 6664, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57572/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b31657a623b312937fea0e6248cd6705
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.ReportFrontOfcAct.clickrecp(ReportFrontOfcAct.java:23)
+	at definitions.ReportOfcFo.user_clicks_on_receptionist_button_in_site(ReportOfcFo.java:24)
+	at ✽.user clicks on receptionist button in site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/ReportFrontOffice.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace184147252", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace184147252'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Receptionist&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57572}, goog:processID: 6664, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57572/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b31657a623b312937fea0e6248cd6705
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.ReportFrontOfcAct.clickrecp(ReportFrontOfcAct.java:23)
+	at definitions.ReportOfcFo.user_clicks_on_receptionist_button_in_site(ReportOfcFo.java:24)
+	at ✽.user clicks on receptionist button in site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/ReportFrontOffice.feature:7)
+</pre></div></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Join button is not visible when consultation status is not awaited", "M_VIGNESHWARAN_2026_05_12_SmartHospital_JoinConsultationFeature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //li[contains(@class ,&quot;treeview&quot;)][28] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59926}, goog:processID: 18980, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59926/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e2575c9364d8518ee31267a2912f139b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.JoinConsultationAction.clickLiveConsultationDropDown(JoinConsultationAction.java:21)
+	at definitions.JoinConsultationStepDefinition.clicks_on_the_live_consultation_from_the_sidebar(JoinConsultationStepDefinition.java:15)
+	at ✽.clicks on the live consultation from the sidebar(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/liveConsultation/joinconsultation.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace685573007", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace685573007'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //li[contains(@class ,&quot;treeview&quot;)][28] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59926}, goog:processID: 18980, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59926/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e2575c9364d8518ee31267a2912f139b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.JoinConsultationAction.clickLiveConsultationDropDown(JoinConsultationAction.java:21)
+	at definitions.JoinConsultationStepDefinition.clicks_on_the_live_consultation_from_the_sidebar(JoinConsultationStepDefinition.java:15)
+	at ✽.clicks on the live consultation from the sidebar(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/liveConsultation/joinconsultation.feature:8)
+</pre></div></td>
+<td>28</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify pathology report search using valid bill number", "S_MYTHILY_2025_05_18_Pay pathology report validation - Smart Hospital"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //td[@class=&apos;text-right&apos;]//button[normalize-space()=&apos;Pay&apos;] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61715}, goog:processID: 14244, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61715/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 685f40fb98caa78f4910ab03045ab88b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.PathalogyAction.clickpay(PathalogyAction.java:83)
+	at definitions.PayPathologyStepDefinition.click_pay_on_resulted_report(PayPathologyStepDefinition.java:16)
+	at ✽.click pay on resulted report(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/pathalogy/pay.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace37108197", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace37108197'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //td[@class=&apos;text-right&apos;]//button[normalize-space()=&apos;Pay&apos;] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61715}, goog:processID: 14244, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61715/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 685f40fb98caa78f4910ab03045ab88b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.PathalogyAction.clickpay(PathalogyAction.java:83)
+	at definitions.PayPathologyStepDefinition.click_pay_on_resulted_report(PayPathologyStepDefinition.java:16)
+	at ✽.click pay on resulted report(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/pathalogy/pay.feature:14)
+</pre></div></td>
+<td>24</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Edit existing prescription", "S_MYTHILY_2026_05_14_SmartHospital_Edit Prescription Validation"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the doctor user is on the login page&apos; and 11 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;the doctor user is on the login page&quot;)
+public void the_doctor_user_is_on_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user selects Doctor login&quot;)
+public void the_user_selects_doctor_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Login&quot;)
+public void clicks_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the doctor dashboard should be displayed&quot;)
+public void the_doctor_dashboard_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user navigates to IPD&quot;)
+public void the_user_navigates_to_ipd() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks Show for a specific patient&quot;)
+public void clicks_show_for_a_specific_patient() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Prescription&quot;)
+public void clicks_on_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on View Prescription&quot;)
+public void clicks_on_view_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Edit&quot;)
+public void clicks_on_edit() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;updates prescription details&quot;)
+public void updates_prescription_details() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Save&quot;)
+public void clicks_on_save() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription should be updated successfully&quot;)
+public void the_prescription_should_be_updated_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.the doctor user is on the login page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/prescription/edit_prescription.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace331163051", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace331163051'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the doctor user is on the login page&apos; and 11 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;the doctor user is on the login page&quot;)
+public void the_doctor_user_is_on_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user selects Doctor login&quot;)
+public void the_user_selects_doctor_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Login&quot;)
+public void clicks_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the doctor dashboard should be displayed&quot;)
+public void the_doctor_dashboard_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user navigates to IPD&quot;)
+public void the_user_navigates_to_ipd() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks Show for a specific patient&quot;)
+public void clicks_show_for_a_specific_patient() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Prescription&quot;)
+public void clicks_on_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on View Prescription&quot;)
+public void clicks_on_view_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Edit&quot;)
+public void clicks_on_edit() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;updates prescription details&quot;)
+public void updates_prescription_details() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Save&quot;)
+public void clicks_on_save() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription should be updated successfully&quot;)
+public void the_prescription_should_be_updated_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.the doctor user is on the login page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/prescription/edit_prescription.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Join button is visible when consultation status is Awaited", "M_VIGNESHWARAN_2026_05_12_SmartHospital_JoinConsultationFeature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //li[contains(@class ,&quot;treeview&quot;)][28] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56596}, goog:processID: 18356, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56596/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 197f8603f7ff7545e108212ce1d9a7b3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.JoinConsultationAction.clickLiveConsultationDropDown(JoinConsultationAction.java:21)
+	at definitions.JoinConsultationStepDefinition.clicks_on_the_live_consultation_from_the_sidebar(JoinConsultationStepDefinition.java:15)
+	at ✽.clicks on the live consultation from the sidebar(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/liveConsultation/joinconsultation.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1334198737", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1334198737'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //li[contains(@class ,&quot;treeview&quot;)][28] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56596}, goog:processID: 18356, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56596/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 197f8603f7ff7545e108212ce1d9a7b3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.JoinConsultationAction.clickLiveConsultationDropDown(JoinConsultationAction.java:21)
+	at definitions.JoinConsultationStepDefinition.clicks_on_the_live_consultation_from_the_sidebar(JoinConsultationStepDefinition.java:15)
+	at ✽.clicks on the live consultation from the sidebar(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/liveConsultation/joinconsultation.feature:8)
+</pre></div></td>
+<td>28</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate mandatory field error messages", "Muhindhar_16-05-2026_To check the call log in the front office module"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //li[contains(@class,&apos;treeview&apos;)][12]
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59574}, goog:processID: 13156, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59574/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dbe30e427809edee4d515c05a3d634b2
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.jsClick(BaseAction.java:37)
+	at actions.CallLogFrontofcActions.frontofclink(CallLogFrontofcActions.java:33)
+	at definitions.CallLogfrontofc.user_navigates_to_the_front_office_link(CallLogfrontofc.java:36)
+	at ✽.user navigates to the front office link(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/FrontOfcCallLog.feature:9)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1045101840", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1045101840'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //li[contains(@class,&apos;treeview&apos;)][12]
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59574}, goog:processID: 13156, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59574/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dbe30e427809edee4d515c05a3d634b2
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.jsClick(BaseAction.java:37)
+	at actions.CallLogFrontofcActions.frontofclink(CallLogFrontofcActions.java:33)
+	at definitions.CallLogfrontofc.user_navigates_to_the_front_office_link(CallLogfrontofc.java:36)
+	at ✽.user navigates to the front office link(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/FrontOfcCallLog.feature:9)
+</pre></div></td>
+<td>22</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate today appointment filter", "Muhindhar_13-05-2026_Appointment Filter Functionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;nav nav-tabs navlistscroll&apos;]//li[1]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52929}, goog:processID: 15732, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52929/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 561fc927ca2cc5841e7233de215a9732
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.AppointmentFilterAction.clicktdyapp(AppointmentFilterAction.java:30)
+	at definitions.AppointmentFilterDef.user_clicks_on_the_today_appointment_filter(AppointmentFilterDef.java:50)
+	at ✽.user clicks on the Today Appointment filter(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/Appointmentfilter.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1221439830", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1221439830'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;nav nav-tabs navlistscroll&apos;]//li[1]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52929}, goog:processID: 15732, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52929/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 561fc927ca2cc5841e7233de215a9732
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.AppointmentFilterAction.clicktdyapp(AppointmentFilterAction.java:30)
+	at definitions.AppointmentFilterDef.user_clicks_on_the_today_appointment_filter(AppointmentFilterDef.java:50)
+	at ✽.user clicks on the Today Appointment filter(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/Appointmentfilter.feature:13)
+</pre></div></td>
+<td>23</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "add outgoing call log", "Muhindhar_16-05-2026_To check the call log in the front office module"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[text() = &quot;Receptionist&quot;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text() = &quot;Receptionist&quot;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53841}, goog:processID: 14684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53841/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 26e55279e1202f50e5e44ce0ce53288b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.LoginAction.clickLogin(LoginAction.java:85)
+	at definitions.LoginStepDefinition.the_user_clicks_the_button(LoginStepDefinition.java:82)
+	at ✽.the user clicks the &quot;Receptionist&quot; button(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/FrontOfcCallLog.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace293786079", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace293786079'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[text() = &quot;Receptionist&quot;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[text() = &quot;Receptionist&quot;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53841}, goog:processID: 14684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53841/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 26e55279e1202f50e5e44ce0ce53288b
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.LoginAction.clickLogin(LoginAction.java:85)
+	at definitions.LoginStepDefinition.the_user_clicks_the_button(LoginStepDefinition.java:82)
+	at ✽.the user clicks the &quot;Receptionist&quot; button(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/FrontOfcCallLog.feature:7)
+</pre></div></td>
+<td>12</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download reports", "Muhindhar_16-05-2026_Downloading report from the front office"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Receptionist&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61700}, goog:processID: 17852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61700/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17a8985f5dccd8ff6bbe19ece11646e9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.ReportFrontOfcAct.clickrecp(ReportFrontOfcAct.java:23)
+	at definitions.ReportOfcFo.user_clicks_on_receptionist_button_in_site(ReportOfcFo.java:24)
+	at ✽.user clicks on receptionist button in site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/ReportFrontOffice.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace679137498", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace679137498'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Receptionist&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61700}, goog:processID: 17852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61700/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17a8985f5dccd8ff6bbe19ece11646e9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.ReportFrontOfcAct.clickrecp(ReportFrontOfcAct.java:23)
+	at definitions.ReportOfcFo.user_clicks_on_receptionist_button_in_site(ReportOfcFo.java:24)
+	at ✽.user clicks on receptionist button in site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/ReportFrontOffice.feature:7)
+</pre></div></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download appointment filter in different formats", "Muhindhar_13-05-2026_Downloading the PDF (Printing)"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59390}, goog:processID: 14444, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59390/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ed6d6b97be0ca832043a649c53a66c53
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1344345219", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1344345219'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59390}, goog:processID: 14444, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59390/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ed6d6b97be0ca832043a649c53a66c53
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate old appointment filter", "Muhindhar_13-05-2026_Appointment Filter Functionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;nav nav-tabs navlistscroll&apos;]//li[3]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63467}, goog:processID: 17524, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63467/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a8fc61cd389fd518f5124e89f437af7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.AppointmentFilterAction.clickoldapp(AppointmentFilterAction.java:38)
+	at definitions.AppointmentFilterDef.user_clicks_on_the_old_appointment_filter(AppointmentFilterDef.java:78)
+	at ✽.user clicks on the Old Appointment filter(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/Appointmentfilter.feature:23)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1055317122", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1055317122'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;nav nav-tabs navlistscroll&apos;]//li[3]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63467}, goog:processID: 17524, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63467/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a8fc61cd389fd518f5124e89f437af7
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.AppointmentFilterAction.clickoldapp(AppointmentFilterAction.java:38)
+	at definitions.AppointmentFilterDef.user_clicks_on_the_old_appointment_filter(AppointmentFilterDef.java:78)
+	at ✽.user clicks on the Old Appointment filter(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/Appointmentfilter.feature:23)
+</pre></div></td>
+<td>21</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete prescription from View Prescription", "S_MYTHILY_2026_05_14_SmartHospital_Delete Prescription Validation"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the doctor user is on the login page&apos; and 11 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;the doctor user is on the login page&quot;)
+public void the_doctor_user_is_on_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user selects Doctor login&quot;)
+public void the_user_selects_doctor_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Login&quot;)
+public void clicks_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the doctor dashboard should be displayed&quot;)
+public void the_doctor_dashboard_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user navigates to IPD&quot;)
+public void the_user_navigates_to_ipd() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks Show for a specific patient&quot;)
+public void clicks_show_for_a_specific_patient() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Prescription&quot;)
+public void clicks_on_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on View Prescription&quot;)
+public void clicks_on_view_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Delete&quot;)
+public void clicks_on_delete() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;a confirmation popup should be displayed&quot;)
+public void a_confirmation_popup_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user confirms deletion&quot;)
+public void the_user_confirms_deletion() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription should be deleted successfully&quot;)
+public void the_prescription_should_be_deleted_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.the doctor user is on the login page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/prescription/delete_prescription.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1515956223", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1515956223'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the doctor user is on the login page&apos; and 11 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;the doctor user is on the login page&quot;)
+public void the_doctor_user_is_on_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user selects Doctor login&quot;)
+public void the_user_selects_doctor_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Login&quot;)
+public void clicks_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the doctor dashboard should be displayed&quot;)
+public void the_doctor_dashboard_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user navigates to IPD&quot;)
+public void the_user_navigates_to_ipd() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks Show for a specific patient&quot;)
+public void clicks_show_for_a_specific_patient() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Prescription&quot;)
+public void clicks_on_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on View Prescription&quot;)
+public void clicks_on_view_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Delete&quot;)
+public void clicks_on_delete() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;a confirmation popup should be displayed&quot;)
+public void a_confirmation_popup_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user confirms deletion&quot;)
+public void the_user_confirms_deletion() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription should be deleted successfully&quot;)
+public void the_prescription_should_be_deleted_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.the doctor user is on the login page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/prescription/delete_prescription.feature:4)
+</pre></div></td>
+<td>1</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add new patient with valid details in popup form", "Add New IPD Patient Popup Module"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-toggle=&quot;modal&quot; onclick=&quot;holdModal(&apos;myModal&apos;)&quot; id=&quot;addp&quot; class=&quot;btn btn-primary btn-sm addpatient&quot;&gt;...&lt;/a&gt; is not clickable at point (572, 85). Other element would receive the click: &lt;a data-target=&quot;modal&quot; data-placement=&quot;bottom&quot; data-toggle=&quot;tooltip&quot; href=&quot;#&quot; id=&quot;beddata&quot; data-original-title=&quot;Bed Status&quot; data-loading-text=&quot;&amp;lt;i class=&apos;fa fa-spinner fa-spin &apos;&amp;gt;&amp;lt;/i&amp;gt; Loading...&quot; onclick=&quot;getbedstatus()&quot;&gt;...&lt;/a&gt;
+  (Session info: chrome=148.0.7778.168)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [41c4dd843e6fccd4b7386c5d30c212e4, clickElement {id=f.1579B05B2A54899C7E9627AEF11C17B5.d.D5C217A791FF247B93518EBD5A350D4C.e.387}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63137}, goog:processID: 15832, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63137/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (41c4dd843e6fccd4b7386c5d30c212e4)] -&gt; xpath: //a[@id=&apos;addp&apos;]]
+Session ID: 41c4dd843e6fccd4b7386c5d30c212e4
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at actions.AddPatient.clickAddPatient(AddPatient.java:20)
+	at definitions.AddPatientSteps.click_add_patient_button(AddPatientSteps.java:29)
+	at ✽.the user clicks on the Add Patient button(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/IPD/AddPatient.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace618785034", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace618785034'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-toggle=&quot;modal&quot; onclick=&quot;holdModal(&apos;myModal&apos;)&quot; id=&quot;addp&quot; class=&quot;btn btn-primary btn-sm addpatient&quot;&gt;...&lt;/a&gt; is not clickable at point (572, 85). Other element would receive the click: &lt;a data-target=&quot;modal&quot; data-placement=&quot;bottom&quot; data-toggle=&quot;tooltip&quot; href=&quot;#&quot; id=&quot;beddata&quot; data-original-title=&quot;Bed Status&quot; data-loading-text=&quot;&amp;lt;i class=&apos;fa fa-spinner fa-spin &apos;&amp;gt;&amp;lt;/i&amp;gt; Loading...&quot; onclick=&quot;getbedstatus()&quot;&gt;...&lt;/a&gt;
+  (Session info: chrome=148.0.7778.168)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [41c4dd843e6fccd4b7386c5d30c212e4, clickElement {id=f.1579B05B2A54899C7E9627AEF11C17B5.d.D5C217A791FF247B93518EBD5A350D4C.e.387}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63137}, goog:processID: 15832, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63137/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (41c4dd843e6fccd4b7386c5d30c212e4)] -&gt; xpath: //a[@id=&apos;addp&apos;]]
+Session ID: 41c4dd843e6fccd4b7386c5d30c212e4
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at actions.AddPatient.clickAddPatient(AddPatient.java:20)
+	at definitions.AddPatientSteps.click_add_patient_button(AddPatientSteps.java:29)
+	at ✽.the user clicks on the Add Patient button(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/IPD/AddPatient.feature:14)
+</pre></div></td>
+<td>14</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add patient with missing mandatory fields", "Add New IPD Patient Popup Module"</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-toggle=&quot;modal&quot; onclick=&quot;holdModal(&apos;myModal&apos;)&quot; id=&quot;addp&quot; class=&quot;btn btn-primary btn-sm addpatient&quot;&gt;...&lt;/a&gt; is not clickable at point (557, 85). Other element would receive the click: &lt;a data-placement=&quot;bottom&quot; data-toggle=&quot;tooltip&quot; data-original-title=&quot;Notifications&quot; href=&quot;https://demo.smart-hospital.in/admin/systemnotification&quot;&gt;...&lt;/a&gt;
+  (Session info: chrome=148.0.7778.168)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54c9b7d5f8c26761ca91921c566dc412, clickElement {id=f.522B6BD6577DF5910D86B65956CA0B34.d.8332CD076A5B291FFC80D9A44A9AB0BC.e.376}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53329}, goog:processID: 4652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53329/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (54c9b7d5f8c26761ca91921c566dc412)] -&gt; xpath: //a[@id=&apos;addp&apos;]]
+Session ID: 54c9b7d5f8c26761ca91921c566dc412
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at actions.AddPatient.clickAddPatient(AddPatient.java:20)
+	at definitions.AddPatientSteps.click_add_patient_button(AddPatientSteps.java:29)
+	at ✽.the user clicks on the Add Patient button(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/IPD/AddPatient.feature:14)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1425169218", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1425169218'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a data-toggle=&quot;modal&quot; onclick=&quot;holdModal(&apos;myModal&apos;)&quot; id=&quot;addp&quot; class=&quot;btn btn-primary btn-sm addpatient&quot;&gt;...&lt;/a&gt; is not clickable at point (557, 85). Other element would receive the click: &lt;a data-placement=&quot;bottom&quot; data-toggle=&quot;tooltip&quot; data-original-title=&quot;Notifications&quot; href=&quot;https://demo.smart-hospital.in/admin/systemnotification&quot;&gt;...&lt;/a&gt;
+  (Session info: chrome=148.0.7778.168)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [54c9b7d5f8c26761ca91921c566dc412, clickElement {id=f.522B6BD6577DF5910D86B65956CA0B34.d.8332CD076A5B291FFC80D9A44A9AB0BC.e.376}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53329}, goog:processID: 4652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53329/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (54c9b7d5f8c26761ca91921c566dc412)] -&gt; xpath: //a[@id=&apos;addp&apos;]]
+Session ID: 54c9b7d5f8c26761ca91921c566dc412
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:606)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at actions.AddPatient.clickAddPatient(AddPatient.java:20)
+	at definitions.AddPatientSteps.click_add_patient_button(AddPatientSteps.java:29)
+	at ✽.the user clicks on the Add Patient button(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/IPD/AddPatient.feature:14)
+</pre></div></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add prescription with valid details and click Save", "Add Prescription Validation - Smart Hospital"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;clicks the IPD -In Patient menu&apos; and 9 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;clicks the IPD -In Patient menu&quot;)
+public void clicks_the_ipd_in_patient_menu() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;searches patient by IPD Number {string}&quot;)
+public void searches_patient_by_ipd_number(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;only patient {string} IPD should be displayed&quot;)
+public void only_patient_ipd_should_be_displayed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks the IPD Number {string}&quot;)
+public void clicks_the_ipd_number(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Prescription&quot;)
+public void clicks_on_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Add Prescription&quot;)
+public void clicks_on_add_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;enters prescription details&quot;)
+public void enters_prescription_details(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or
+    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Save&quot;)
+public void clicks_on_save() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription should be saved successfully&quot;)
+public void the_prescription_should_be_saved_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription should appear in the prescription list&quot;)
+public void the_prescription_should_appear_in_the_prescription_list() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.clicks the IPD -In Patient menu(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/prescription/add_prescription.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1330950053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1330950053'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;clicks the IPD -In Patient menu&apos; and 9 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When(&quot;clicks the IPD -In Patient menu&quot;)
+public void clicks_the_ipd_in_patient_menu() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;searches patient by IPD Number {string}&quot;)
+public void searches_patient_by_ipd_number(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;only patient {string} IPD should be displayed&quot;)
+public void only_patient_ipd_should_be_displayed(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks the IPD Number {string}&quot;)
+public void clicks_the_ipd_number(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Prescription&quot;)
+public void clicks_on_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Add Prescription&quot;)
+public void clicks_on_add_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;enters prescription details&quot;)
+public void enters_prescription_details(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or
+    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Save&quot;)
+public void clicks_on_save() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription should be saved successfully&quot;)
+public void the_prescription_should_be_saved_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription should appear in the prescription list&quot;)
+public void the_prescription_should_appear_in_the_prescription_list() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.clicks the IPD -In Patient menu(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/prescription/add_prescription.feature:13)
+</pre></div></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Print prescription from View Prescription", "S_MYTHILY_2026_05_14_SmartHospital_Print Prescription Validation"</td>
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the doctor user is on the login page&apos; and 9 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;the doctor user is on the login page&quot;)
+public void the_doctor_user_is_on_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user selects Doctor login&quot;)
+public void the_user_selects_doctor_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Login&quot;)
+public void clicks_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the doctor dashboard should be displayed&quot;)
+public void the_doctor_dashboard_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user navigates to IPD&quot;)
+public void the_user_navigates_to_ipd() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks Show for a specific patient&quot;)
+public void clicks_show_for_a_specific_patient() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Prescription&quot;)
+public void clicks_on_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on View Prescription&quot;)
+public void clicks_on_view_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Print&quot;)
+public void clicks_on_print() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription print preview should be displayed&quot;)
+public void the_prescription_print_preview_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.the doctor user is on the login page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/prescription/print_prescription.feature:4)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1381881263", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1381881263'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;the doctor user is on the login page&apos; and 9 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;the doctor user is on the login page&quot;)
+public void the_doctor_user_is_on_the_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user selects Doctor login&quot;)
+public void the_user_selects_doctor_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Login&quot;)
+public void clicks_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the doctor dashboard should be displayed&quot;)
+public void the_doctor_dashboard_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;the user navigates to IPD&quot;)
+public void the_user_navigates_to_ipd() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks Show for a specific patient&quot;)
+public void clicks_show_for_a_specific_patient() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Prescription&quot;)
+public void clicks_on_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on View Prescription&quot;)
+public void clicks_on_view_prescription() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;clicks on Print&quot;)
+public void clicks_on_print() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;the prescription print preview should be displayed&quot;)
+public void the_prescription_print_preview_should_be_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.the doctor user is on the login page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/prescription/print_prescription.feature:4)
+</pre></div></td>
+<td>0</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download reports", "Muhindhar_16-05-2026_Downloading report from the front office"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Receptionist&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58893}, goog:processID: 9496, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58893/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2797787e5d6672a9c70a633d3655743
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.ReportFrontOfcAct.clickrecp(ReportFrontOfcAct.java:23)
+	at definitions.ReportOfcFo.user_clicks_on_receptionist_button_in_site(ReportOfcFo.java:24)
+	at ✽.user clicks on receptionist button in site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/ReportFrontOffice.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1757731703", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1757731703'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&apos;Receptionist&apos;)]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58893}, goog:processID: 9496, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58893/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2797787e5d6672a9c70a633d3655743
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.ReportFrontOfcAct.clickrecp(ReportFrontOfcAct.java:23)
+	at definitions.ReportOfcFo.user_clicks_on_receptionist_button_in_site(ReportOfcFo.java:24)
+	at ✽.user clicks on receptionist button in site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/ReportFrontOffice.feature:7)
+</pre></div></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Start Now button is displayed in the Join Consultation popup", "M_VIGNESHWARAN_2026_05_12_SmartHospital_JoinConsultationFeature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //li[contains(@class ,&quot;treeview&quot;)][28] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49721}, goog:processID: 8080, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49721/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0431e7aea6b541511340a67ad41fdeb0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.JoinConsultationAction.clickLiveConsultationDropDown(JoinConsultationAction.java:21)
+	at definitions.JoinConsultationStepDefinition.clicks_on_the_live_consultation_from_the_sidebar(JoinConsultationStepDefinition.java:15)
+	at ✽.clicks on the live consultation from the sidebar(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/liveConsultation/joinconsultation.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1881258837", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1881258837'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //li[contains(@class ,&quot;treeview&quot;)][28] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49721}, goog:processID: 8080, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49721/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0431e7aea6b541511340a67ad41fdeb0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.JoinConsultationAction.clickLiveConsultationDropDown(JoinConsultationAction.java:21)
+	at definitions.JoinConsultationStepDefinition.clicks_on_the_live_consultation_from_the_sidebar(JoinConsultationStepDefinition.java:15)
+	at ✽.clicks on the live consultation from the sidebar(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/liveConsultation/joinconsultation.feature:8)
+</pre></div></td>
+<td>21</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify clicking Start Now opens Zoom meeting in a new tab", "M_VIGNESHWARAN_2026_05_12_SmartHospital_JoinConsultationFeature"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //li[contains(@class ,&quot;treeview&quot;)][28] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62012}, goog:processID: 3968, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62012/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4835de81bcf507938d448c1984d3c5e5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.JoinConsultationAction.clickLiveConsultationDropDown(JoinConsultationAction.java:21)
+	at definitions.JoinConsultationStepDefinition.clicks_on_the_live_consultation_from_the_sidebar(JoinConsultationStepDefinition.java:15)
+	at ✽.clicks on the live consultation from the sidebar(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/liveConsultation/joinconsultation.feature:8)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1155636121", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1155636121'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //li[contains(@class ,&quot;treeview&quot;)][28] to be clickable, but the element was not visible.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62012}, goog:processID: 3968, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62012/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4835de81bcf507938d448c1984d3c5e5
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.JoinConsultationAction.clickLiveConsultationDropDown(JoinConsultationAction.java:21)
+	at definitions.JoinConsultationStepDefinition.clicks_on_the_live_consultation_from_the_sidebar(JoinConsultationStepDefinition.java:15)
+	at ✽.clicks on the live consultation from the sidebar(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/liveConsultation/joinconsultation.feature:8)
+</pre></div></td>
+<td>22</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate invalid appointment download format", "Muhindhar_13-05-2026_Downloading the PDF (Printing)"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55029}, goog:processID: 18052, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55029/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7027cce9aa37a51362794451385da2c6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace51325109", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace51325109'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55029}, goog:processID: 18052, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55029/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7027cce9aa37a51362794451385da2c6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download appointment filter in different formats", "Muhindhar_13-05-2026_Downloading the PDF (Printing)"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55847}, goog:processID: 228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55847/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c9c4ab98d6690ee0843c56237f03cb2e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1642619282", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1642619282'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55847}, goog:processID: 228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55847/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c9c4ab98d6690ee0843c56237f03cb2e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div></td>
+<td>12</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate upcoming appointment filter", "Muhindhar_13-05-2026_Appointment Filter Functionality"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;nav nav-tabs navlistscroll&apos;]//li[2]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54782}, goog:processID: 13876, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54782/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c207b18ebdbaa75d37e7cfeda76276c4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.AppointmentFilterAction.clickupapp(AppointmentFilterAction.java:34)
+	at definitions.AppointmentFilterDef.user_clicks_on_the_upcoming_appointment_filter(AppointmentFilterDef.java:64)
+	at ✽.user clicks on the Upcoming Appointment filter(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/Appointmentfilter.feature:18)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1327907419", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1327907419'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//ul[@class=&apos;nav nav-tabs navlistscroll&apos;]//li[2]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54782}, goog:processID: 13876, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54782/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c207b18ebdbaa75d37e7cfeda76276c4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.clickfb(BaseAction.java:31)
+	at actions.AppointmentFilterAction.clickupapp(AppointmentFilterAction.java:34)
+	at definitions.AppointmentFilterDef.user_clicks_on_the_upcoming_appointment_filter(AppointmentFilterDef.java:64)
+	at ✽.user clicks on the Upcoming Appointment filter(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/Appointmentfilter.feature:18)
+</pre></div></td>
+<td>22</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate mandatory fields in complaint form", "Muhindhar_16-05-2026_Add a complaint in the front office page"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54578}, goog:processID: 3608, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54578/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb4495b2fcfbe8f1f61a2103fdee40fa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.jsClick(BaseAction.java:37)
+	at actions.CallLogFrontofcActions.clckrecp(CallLogFrontofcActions.java:25)
+	at definitions.CallLogfrontofc.user_is_on_login_page_of_site(CallLogfrontofc.java:22)
+	at ✽.user is on login page of site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/FrontOfficeComplaint.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1128856117", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1128856117'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54578}, goog:processID: 3608, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54578/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb4495b2fcfbe8f1f61a2103fdee40fa
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.jsClick(BaseAction.java:37)
+	at actions.CallLogFrontofcActions.clckrecp(CallLogFrontofcActions.java:25)
+	at definitions.CallLogfrontofc.user_is_on_login_page_of_site(CallLogfrontofc.java:22)
+	at ✽.user is on login page of site(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/FrontOffice/FrontOfficeComplaint.feature:7)
+</pre></div></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Download appointment filter in different formats", "Muhindhar_13-05-2026_Downloading the PDF (Printing)"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51303}, goog:processID: 13072, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51303/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0de4db3ce617693e40f26c0208278294
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace627707285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace627707285'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //a[normalize-space()=&apos;Receptionist&apos;] to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[normalize-space()=&apos;Receptionist&apos;]&quot;}.
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: &apos;4.43.0&apos;, revision: &apos;dd0f534&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;25&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51303}, goog:processID: 13072, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51303/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0de4db3ce617693e40f26c0208278294
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	at actions.BaseAction.click(BaseAction.java:25)
+	at actions.DownloadPdfAction.clickrecp(DownloadPdfAction.java:22)
+	at definitions.DownloadPdfDef.the_user_is_logged_in_as_receptionist(DownloadPdfDef.java:19)
+	at ✽.the user is logged in as receptionist(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/Appointment/AppointmentReportDownload.feature:7)
+</pre></div></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search with invalid bill number", "S_MYTHILY_2025_05_17_Search pathology report validation - Smart Hospital"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Profile Details", "Jerishwin_Joseph_16-05-2026_Profile"</td>
+<td></td>
+<td>18</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for an OPD patient (Valid and Invalid)", "Jerishwin_Joseph_13-05-2026_OPD Patient Search"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify pathology report search using valid bill number", "S_MYTHILY_2025_05_17_Search pathology report validation - Smart Hospital"</td>
+<td></td>
+<td>16</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Profile Details", "Jerishwin_Joseph_16-05-2026_Profile"</td>
+<td></td>
+<td>15</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add a new OPD patient successfully (Valid Case)", "Jerishwin_Joseph_17-05-2026_Add New OPD Patient"</td>
+<td></td>
+<td>17</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search patient using invalid patient name", "IPD Patient Search Module"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search with invalid bill number", "S_MYTHILY_2025_05_17_Search pathology report validation - Smart Hospital"</td>
+<td></td>
+<td>15</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with empty email", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>6</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify pathology report search using valid bill number", "S_MYTHILY_2025_05_17_Search pathology report validation - Smart Hospital"</td>
+<td></td>
+<td>19</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify pathology report search using valid bill number", "S_MYTHILY_2025_05_17_Search pathology report validation - Smart Hospital"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with empty password", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>5</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>17</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Attendance Report", "Jerishwin_Joseph_16-05-2026_Attendance Report"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Attendance Report", "Jerishwin_Joseph_16-05-2026_Attendance Report"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>17</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "search with invalid bill number", "S_MYTHILY_2025_05_17_Search pathology report validation - Smart Hospital"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Attendance Report", "Jerishwin_Joseph_16-05-2026_Attendance Report"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Profile Details", "Jerishwin_Joseph_16-05-2026_Profile"</td>
+<td></td>
+<td>14</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search patient using valid patient name", "IPD Patient Search Module"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Fail to add patient with missing required fields (Invalid Case)", "Jerishwin_Joseph_17-05-2026_Add New OPD Patient"</td>
+<td></td>
+<td>15</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with empty email and password", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>5</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search patient using invalid patient name", "IPD Patient Search Module"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>11</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search for an OPD patient (Valid and Invalid)", "Jerishwin_Joseph_13-05-2026_OPD Patient Search"</td>
+<td></td>
+<td>17</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with invalid email and password", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>5</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with valid email and invalid password", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>5</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>12</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>12</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search patient using valid patient name", "IPD Patient Search Module"</td>
+<td></td>
+<td>12</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Profile Details", "Jerishwin_Joseph_16-05-2026_Profile"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify login functionality for multiple user roles", "M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature"</td>
+<td></td>
+<td>18</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Attendance Report", "Jerishwin_Joseph_16-05-2026_Attendance Report"</td>
+<td></td>
+<td>13</td>
+<td>runner.TestRunner@c05fddc</td></tr>
+</table><p>
+</body>
+</html>
