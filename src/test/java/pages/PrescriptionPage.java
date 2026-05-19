@@ -1,8 +1,10 @@
-//package pages;
+package pages;
 //
 //import org.openqa.selenium.By;
 //
-//public class PrescriptionPage {
+public class PrescriptionPage {
+}
+
 //
 //    public final By doctorTab    = By.xpath("//a[normalize-space()='Doctor']");
 //    public final By signInButton = By.xpath("//button[contains(normalize-space(),'Sign In')]");

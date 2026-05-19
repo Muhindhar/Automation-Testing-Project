@@ -1,5 +1,8 @@
 //
-////package actions;
+package actions;
+
+import org.openqa.selenium.WebDriver;
+
 ////
 ////import org.openqa.selenium.By;
 ////import org.openqa.selenium.Keys;
@@ -11,7 +14,14 @@
 ////import pages.PrescriptionPage;
 ////import utilities.HelperClass;
 ////
-////public class PrescriptionAction extends BaseAction {
+public class PrescriptionAction extends BaseAction {
+
+	public PrescriptionAction(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+
+}
 ////
 ////	WebDriver driver;
 ////	PrescriptionPage prescriptionPage;
