@@ -8,7 +8,6 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(
 
 		features = "src\\test\\resources\\features",
-
 		glue = "definitions",
 		
 		plugin = {"pretty",
@@ -19,8 +18,6 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				"rerun:target/failed-rerun.txt" },
 		tags = "@jerishwin",
 		monochrome = true)
-
-
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 

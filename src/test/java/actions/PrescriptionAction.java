@@ -1,449 +1,296 @@
-//package actions;
-//
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.Keys;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.support.ui.ExpectedConditions;
-//import org.openqa.selenium.support.ui.Select;
-//
-//import pages.PrescriptionPage;
-//import utilities.HelperClass;
-//
-//public class PrescriptionAction extends BaseAction {
-//
-//	WebDriver driver;
-//	PrescriptionPage prescriptionPage;
-//
-//	public PrescriptionAction(WebDriver driver) {
-//		super(driver);
-//		this.driver = driver;
-//		this.prescriptionPage = new PrescriptionPage();
-//	}
-//
-//	public void clickDoctorTab() {
-//		HelperClass.logger.info("Clicking doctor tab");
-//		click(prescriptionPage.doctorTab);
-//	}
-//
-//	public void clickSignIn() {
-//		HelperClass.logger.info("clicking signin button");
-//		click(prescriptionPage.signInButton);
-//	}
-//
-//	public void clickIPDMenu() {
-//		jsClick(prescriptionPage.ipdMenu);
-//
-//		wait.until(driver -> driver.findElement(prescriptionPage.patientSearchBox).isDisplayed());
-//	}
-//
-//	public void searchPatientByIPD(String ipdNumber) {
-//		sendKeys(prescriptionPage.patientSearchBox, ipdNumber);
-//
-//		wait.until(driver -> getText(By.xpath("//a[contains(text(),'" + ipdNumber + "')]")).contains(ipdNumber));
-//	}
-//
-//	public boolean isCorrectPatientDisplayed(String ipdNumber) {
-//		try {
-//			String displayedIPD = getText(By.xpath("//a[contains(text(),'" + ipdNumber + "')]")).trim();
-//
-//			System.out.println("Displayed IPD: " + displayedIPD);
-//			System.out.println("Expected IPD: " + ipdNumber);
-//
-//			return displayedIPD.contains(ipdNumber);
-//
-//		} catch (Exception e) {
-//			System.out.println("Patient not displayed: " + e.getMessage());
-//			return false;
-//		}
-//	}
-//
-//	public void clickIPDNumber(String ipdNumber) {
-//		jsClick(By.xpath("//a[contains(text(),'" + ipdNumber + "')]"));
-//	}
-//
-//	public void clickPrescriptionTab() {
-//		jsClick(prescriptionPage.prescriptionTab);
-//
-//		//wait.until(driver -> driver.findElement(prescriptionPage.addPrescriptionButton).isDisplayed());
-//	}
-//
-//	public void clickAddPrescription() {
-//		//jsClick(prescriptionPage.addPrescriptionButton);
-//
-//		wait.until(ExpectedConditions.presenceOfElementLocated(prescriptionPage.headerNote));
-//	}
-//
-//	private void typeInWysihtml5(By iframeLocator, String value) {
-//		WebElement iframe = wait.until(ExpectedConditions.presenceOfElementLocated(iframeLocator));
-//
-//		driver.switchTo().frame(iframe);
-//
-//		try {
-//			WebElement body = driver.findElement(By.tagName("body"));
-//			body.click();
-//			body.sendKeys(value);
-//		} finally {
-//			driver.switchTo().defaultContent();
-//			try {
-//				Thread.sleep(800);
-//			} catch (InterruptedException ignored) {
-//			}
-//
-//			try {
-//				driver.getTitle();
-//			} catch (Exception e) {
-//				driver.switchTo().defaultContent();
-//			}
-//		}
-//	}
-//
-//	// ─────────────────────────────────────────
-//	// Visible Select Helper
-//	// ─────────────────────────────────────────
-//
-//	private void selectByVisibleText(By locator, String value) {
-//		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-//		new Select(element).selectByVisibleText(value);
-//	}
-//
-//	private void selectHiddenDropdown(By locator, String value) {
-//		WebElement select = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-//		js.executeScript(
-//				"var select = arguments[0];" + "for(var i=0; i<select.options.length; i++){"
-//						+ "  if(select.options[i].text.trim() === arguments[1]){" + "    select.selectedIndex = i;"
-//						+ "    select.dispatchEvent(new Event('change', {bubbles: true}));"
-//						+ "    select.dispatchEvent(new Event('input', {bubbles: true}));" + "    break;" + "  }" + "}",
-//				select, value);
-//		try {
-//			Thread.sleep(300);
-//		} catch (InterruptedException ignored) {
-//		}
-//	}
-//
-//	public void enterHeaderNote(String value) {
-//		typeInWysihtml5(prescriptionPage.headerNote, value);
-//	}
-//
-//	public void selectPrescribeBy(String value) {
-//		driver.switchTo().defaultContent();
-//		selectByVisibleText(prescriptionPage.prescribeByDropdown, value);
-//	}
-//
-//	public void selectDoctorNotification() throws InterruptedException {
-//		try {
-//			WebElement prescribeBy = driver.findElement(By.cssSelector("select[name='prescribe_by']"));
-//
-//			String currentValue = (String) js.executeScript("return arguments[0].value;", prescribeBy);
-//			System.out.println("[selectDoctorNotification] prescribe_by value: '" + currentValue + "'");
-//
-//			if (currentValue == null || currentValue.isEmpty()) {
-//				Select sel = new Select(prescribeBy);
-//				for (WebElement opt : sel.getOptions()) {
-//					System.out
-//							.println("  option: '" + opt.getText().trim() + "' = '" + opt.getAttribute("value") + "'");
-//					if (opt.getText().trim().contains("Amit Singh")) {
-//						sel.selectByVisibleText(opt.getText().trim());
-//						System.out.println("[selectDoctorNotification] Re-selected: " + opt.getText().trim());
-//						break;
-//					}
-//				}
-//			}
-//
-//		} catch (Exception e) {
-//			System.out.println("[selectDoctorNotification] Error: " + e.getMessage());
-//		}
-//	}
-//
-//	public void selectPathology(String value) {
-//		selectByVisibleText(prescriptionPage.pathologyDropdown, value);
-//	}
-//
-//	public void selectRadiology(String value) {
-//		selectByVisibleText(prescriptionPage.radiologyDropdown, value);
-//	}
-//
-//	public void enterFindingCategory(String value) throws InterruptedException {
-//		driver.switchTo().defaultContent();
-//		selectHiddenDropdown(prescriptionPage.findingCategory, value);
-//	}
-//
-//	public void enterFindings(String value) throws InterruptedException {
-//		driver.switchTo().defaultContent();
-//
-//		try {
-//			driver.findElement(By.tagName("body")).sendKeys(Keys.ESCAPE);
-//			
-//		} catch (Exception ignored) {
-//		}
-//
-//		WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(prescriptionPage.findings));
-//		input.click();
-//		input.sendKeys(value);
-//
-//		try {
-//			By option = By.xpath("//label[contains(normalize-space(),'" + value + "')]"
-//					+ "/preceding-sibling::input[@type='checkbox'] | " + "//li[contains(normalize-space(),'" + value
-//					+ "')]");
-//			wait.until(ExpectedConditions.visibilityOfElementLocated(option)).click();
-//		} catch (Exception e) {
-//			input.sendKeys(Keys.ENTER);
-//		}
-//	}
-//
-//	public void enterFindingDescription(String value) {
-//		HelperClass.logger.info("Driver switching");
-//		driver.switchTo().defaultContent();
-//		sendKeys(prescriptionPage.findingDescription, value);
-//	}
-//
-//	private void setSelect2Value(By locator, String displayText) throws InterruptedException {
-//		WebElement select = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-//
-//		String optionValue = (String) js.executeScript("var sel = arguments[0], txt = arguments[1].trim();"
-//				+ "for (var i = 0; i < sel.options.length; i++) {" + "  if (sel.options[i].text.trim() === txt || "
-//				+ "      sel.options[i].text.trim().indexOf(txt) !== -1) {" + "    return sel.options[i].value;" + "  }"
-//				+ "}" + "return null;", select, displayText);
-//
-//		System.out.println("[setSelect2Value] '" + displayText + "' → value='" + optionValue + "'");
-//
-//		if (optionValue == null) {
-//			System.out.println("[setSelect2Value] WARNING: no match for: " + displayText);
-//			return;
-//		}
-//
-//		js.executeScript("jQuery(arguments[0]).val(arguments[1]).trigger('change');", select, optionValue);
-//	}
-//
-//	public void selectMedicineCategory(String value) throws InterruptedException {
-//
-//		WebElement select = wait
-//				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("select[name='medicine_cat_1']")));
-//
-//		String optionValue = (String) js.executeScript("var sel=arguments[0],txt=arguments[1].trim();"
-//				+ "for(var i=0;i<sel.options.length;i++){" + " if(sel.options[i].text.trim()===txt){"
-//				+ "   return sel.options[i].value;" + " }" + "}" + "return null;", select, value.trim());
-//
-//		System.out.println("[selectMedicineCategory] '" + value + "' → '" + optionValue + "'");
-//
-//		js.executeScript("$(arguments[0]).val(arguments[1]);" + "$(arguments[0]).trigger('change');"
-//				+ "$(arguments[0]).trigger('select2:select');", select, optionValue);
-//
-//		wait.until(driver -> {
-//			java.util.List<WebElement> options = driver
-//					.findElements(By.cssSelector("select[name='medicine_1'] option"));
-//
-//			return options.size() > 1;
-//		});
-//
-//		System.out.println("[selectMedicineCategory] Medicine loaded successfully");
-//	}
-//
-//	public void selectMedicine(String value) {
-//
-//		WebElement medicineDropdown = wait
-//				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("select[name='medicine_1']")));
-//
-//		try {
-//			Thread.sleep(5000);
-//		} catch (InterruptedException ignored) {
-//		}
-//
-//		java.util.List<WebElement> options = medicineDropdown.findElements(By.tagName("option"));
-//
-//		System.out.println("========= MEDICINE OPTIONS =========");
-//
-//		String matchedValue = null;
-//
-//		for (WebElement option : options) {
-//
-//			String text = option.getText().trim();
-//			String optionValue = option.getAttribute("value");
-//
-//			System.out.println("Text = " + text + " | Value = " + optionValue);
-//
-//			if (text.equalsIgnoreCase(value.trim()) || text.contains(value.trim())) {
-//
-//				matchedValue = optionValue;
-//			}
-//		}
-//
-//		System.out.println("Matched Value = " + matchedValue);
-//
-//		if (matchedValue == null) {
-//			throw new RuntimeException("Medicine not found: " + value);
-//		}
-//
-//		js.executeScript("$(arguments[0]).val(arguments[1]).trigger('change');", medicineDropdown, matchedValue);
-//
-//		try {
-//			Thread.sleep(3000);
-//		} catch (InterruptedException ignored) {
-//		}
-//	}
-//
-//	public void selectDose(String value) {
-//
-//		WebElement doseDropdown = wait
-//				.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("select[name='dosage_1']")));
-//
-//		java.util.List<WebElement> options = doseDropdown.findElements(By.tagName("option"));
-//
-//		System.out.println("========= DOSE OPTIONS =========");
-//
-//		String matchedValue = null;
-//
-//		for (WebElement option : options) {
-//
-//			String text = option.getText().trim();
-//			String optionValue = option.getAttribute("value");
-//
-//			System.out.println("Text = " + text + " | Value = " + optionValue);
-//
-//			if (text.equalsIgnoreCase(value.trim()) || text.contains(value.trim())) {
-//
-//				matchedValue = optionValue;
-//			}
-//		}
-//
-//		System.out.println("Matched Dose = " + matchedValue);
-//
-//		if (matchedValue == null) {
-//			throw new RuntimeException("Dose not found: " + value);
-//		}
-//
-//		js.executeScript("$(arguments[0]).val(arguments[1]).trigger('change');", doseDropdown, matchedValue);
-//
-//		try {
-//			Thread.sleep(1000);
-//		} catch (InterruptedException ignored) {
-//		}
-//	}
-//
-//	public void selectDoseInterval(String value) throws InterruptedException {
-//		setSelect2Value(prescriptionPage.doseIntervalDropdown, value);
-//	}
-//
-//	public void selectDoseDuration(String value) throws InterruptedException {
-//		setSelect2Value(prescriptionPage.doseDurationDropdown, value);
-//	}
-//
-//	// ── Shared helper ────────────────────────────────────────────────────────
-//	private void selectWithFallback(WebElement select, String value) {
-//		Select sel = new Select(select);
-//		boolean found = false;
-//		for (WebElement opt : sel.getOptions()) {
-//			if (opt.getText().trim().equals(value.trim())) {
-//				sel.selectByVisibleText(opt.getText().trim());
-//				found = true;
-//				break;
-//			}
-//		}
-//		if (!found) {
-//			js.executeScript(
-//					"var s=arguments[0],v=arguments[1];" + "for(var i=0;i<s.options.length;i++){"
-//							+ "  if(s.options[i].text.trim()===v||s.options[i].value.trim()===v){"
-//							+ "    s.selectedIndex=i;" + "    s.dispatchEvent(new Event('change',{bubbles:true}));"
-//							+ "    s.dispatchEvent(new Event('input',{bubbles:true}));" + "    break;" + "  }" + "}",
-//					select, value.trim());
-//			System.out.println("[selectWithFallback] JS used for: " + value);
-//		}
-//		try {
-//			Thread.sleep(400);
-//		} catch (InterruptedException ignored) {
-//		}
-//	}
-//
-//	public void enterInstruction(String value) {
-//		sendKeys(prescriptionPage.instruction, value);
-//	}
-//
-//	public void uploadAttachment(String filePath) {
-//		String absolutePath = System.getProperty("user.dir") + java.io.File.separator
-//				+ filePath.replace("/", java.io.File.separator);
-//		driver.findElement(prescriptionPage.attachmentInput).sendKeys(absolutePath);
-//	}
-//
-//	public void enterFooterNote(String value) {
-//		typeInWysihtml5(prescriptionPage.footerNote, value);
-//	}
-//
-//	public void clickSave() {
-//		try {
-//			// Get the Save button that has actual size (index 30 — 70x32)
-//			WebElement saveButton = (WebElement) js
-//					.executeScript("var buttons = document.querySelectorAll('button.btn-info');"
-//							+ "for(var i=0; i<buttons.length; i++){"
-//							+ "  if(buttons[i].textContent.trim()==='Save' && buttons[i].offsetWidth>0){"
-//							+ "    return buttons[i];" + "  }" + "} return null;");
-//
-//			System.out.println("Save button found: " + (saveButton != null));
-//			js.executeScript("arguments[0].scrollIntoView({block:'center'});", saveButton);
-//			try {
-//				Thread.sleep(300);
-//			} catch (InterruptedException ignored) {
-//			}
-//			js.executeScript("arguments[0].click();", saveButton);
-//			System.out.println("Save clicked successfully");
-//			try {
-//				Thread.sleep(2000);
-//			} catch (InterruptedException ignored) {
-//			}
-//
-//		} catch (Exception e) {
-//			System.out.println("Unable to click save: " + e.getMessage());
-//			throw e;
-//		}
-//	}
-//	// ─────────────────────────────────────────
-//	// Verification
-//	// ─────────────────────────────────────────
-//
-//	public boolean isPrescriptionSaved() {
-//		try {
-//			wait.until(driver -> {
-//				// Check for any success message
-//				java.util.List<WebElement> alerts = driver.findElements(By.cssSelector(
-//						".alert-success, .toast-success, .growl-message, " + "[class*='success'], [class*='alert']"));
-//				for (WebElement a : alerts) {
-//					try {
-//						if (a.isDisplayed() && !a.getText().isEmpty()) {
-//							System.out.println("Success msg: " + a.getText());
-//							return true;
-//						}
-//					} catch (Exception ignored) {
-//					}
-//				}
-//				// Check if modal closed (form disappeared)
-//				java.util.List<WebElement> modals = driver.findElements(
-//						By.cssSelector(".modal.in, .modal.show, [class*='modal'][style*='display: block']"));
-//				if (modals.isEmpty()) {
-//					System.out.println("Modal closed — saved.");
-//					return true;
-//				}
-//				return false;
-//			});
-//			return true;
-//		} catch (Exception e) {
-//			System.out.println("Prescription not saved: " + e.getMessage());
-//			return false;
-//		}
-//	}
-//
-//	public boolean isPrescriptionInList() {
-//		try {
-//
-//			//wait.until(ExpectedConditions.visibilityOfElementLocated(prescriptionPage.prescriptionRow));
-//
-//			System.out.println("Prescription appeared in list");
-//
-//			return true;
-//
-//		} catch (Exception e) {
-//
-//			System.out.println("Prescription not found in list");
-//
-//			return false;
-//		}
-//	}
-//}
+
+package actions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import pages.PrescriptionPage;
+
+import java.util.List;
+
+public class PrescriptionAction extends BaseAction {
+
+    private final WebDriver driver;
+    private final PrescriptionPage page;
+
+    public PrescriptionAction(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+        this.page   = new PrescriptionPage();
+    }
+
+    public void clickIPDMenu() {
+        jsClick(page.ipdMenu);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(page.patientSearchBox));
+    }
+
+    public void searchPatientByIPD(String ipdNumber) {
+        sendKeys(page.patientSearchBox, ipdNumber);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//a[contains(text(),'" + ipdNumber + "')]")));
+    }
+
+    public boolean isCorrectPatientDisplayed(String ipdNumber) {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//a[contains(text(),'" + ipdNumber + "')]")))
+                    .getText().trim().contains(ipdNumber);
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void clickIPDNumber(String ipdNumber) {
+        try {
+            jsClick(page.click128Tab);
+        } catch (Exception e) {
+            jsClick(By.xpath("//tr[@class='odd']//a[contains(text(),'IPDN" + ipdNumber + "')]"));
+        }
+    }
+
+    public void clickPrescriptionTab() {
+        jsClick(page.prescriptionTab);
+        wait.until(ExpectedConditions.elementToBeClickable(page.prescriptionButton));
+        jsClick(page.prescriptionButton);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(page.addprescbtn));
+    }
+
+    public void clickAddPrescription() {
+        wait.until(ExpectedConditions.elementToBeClickable(page.addprescbtn));
+        jsClick(page.addprescbtn);
+        wait.until(ExpectedConditions.presenceOfElementLocated(page.headerNote));
+    }
+
+    private boolean isBlank(String value) {
+        return value == null || value.trim().isEmpty();
+    }
+
+    private void typeInWysihtml5(By iframeLocator, String value) {
+        if (isBlank(value)) return;
+        WebElement iframe = wait.until(ExpectedConditions.visibilityOfElementLocated(iframeLocator));
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});", iframe);
+        driver.switchTo().frame(iframe);
+        try {
+            WebElement body = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+            js.executeScript("arguments[0].innerHTML='';", body);
+            body.sendKeys(value);
+        } finally {
+            driver.switchTo().defaultContent();
+        }
+    }
+
+    private void selectByVisibleText(By locator, String visibleText) {
+        if (isBlank(visibleText)) return;
+        WebElement select = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        String optionValue = (String) js.executeScript(
+                "var s=arguments[0], t=arguments[1].trim();" +
+                "for(var i=0;i<s.options.length;i++){" +
+                "  if(s.options[i].text.trim()===t || s.options[i].text.trim().indexOf(t)!==-1)" +
+                "    return s.options[i].value;" +
+                "} return null;", select, visibleText);
+        if (optionValue == null) return;
+        js.executeScript(
+                "$(arguments[0]).val(arguments[1]).trigger('change').trigger('select2:select');",
+                select, optionValue);
+        wait.until(ExpectedConditions.attributeToBe(locator, "value", optionValue));
+    }
+
+    private void selectByText(By locator, String value) {
+        if (isBlank(value)) return;
+        WebElement select = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+        for (WebElement opt : select.findElements(By.tagName("option"))) {
+            if (opt.getText().trim().equalsIgnoreCase(value) || opt.getText().trim().contains(value)) {
+                js.executeScript("$(arguments[0]).val(arguments[1]).trigger('change');",
+                        select, opt.getAttribute("value"));
+                return;
+            }
+        }
+    }
+
+    public void enterHeaderNote(String value)      { typeInWysihtml5(page.headerNote, value); }
+    public void enterFooterNote(String value)      { typeInWysihtml5(page.footerNote, value); }
+    public void selectPrescribeBy(String value)    { selectByVisibleText(page.prescribeByDropdown, value); }
+    public void selectPathology(String value)      { selectByVisibleText(page.pathologyDropdown, value); }
+    public void selectRadiology(String value)      { selectByVisibleText(page.radiologyDropdown, value); }
+    public void enterFindingCategory(String value) { selectByVisibleText(page.findingCategory, value); }
+    public void selectDoseInterval(String value)   { selectByVisibleText(page.doseIntervalDropdown, value); }
+    public void selectDoseDuration(String value)   { selectByVisibleText(page.doseDurationDropdown, value); }
+    public void selectMedicine(String value)       { selectByText(page.medicineDropdown, value); }
+    public void selectDose(String value)           { selectByText(page.doseDropdown, value); }
+
+    public void selectMedicineCategory(String value) {
+        if (isBlank(value)) return;
+        selectByVisibleText(page.medicineCategoryDropdown, value);
+        // Wait until medicine dropdown is populated after category selection
+        wait.until(d -> d.findElement(page.medicineDropdown)
+                .findElements(By.tagName("option")).size() > 1);
+    }
+
+    public void enterFindings(String value) {
+        if (isBlank(value)) return;
+        driver.switchTo().defaultContent();
+        WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(page.findings));
+        input.click();
+        input.sendKeys(value);
+        try {
+            By option = By.xpath(
+                    "//label[contains(normalize-space(),'" + value + "')]/preceding-sibling::input[@type='checkbox']"
+                    + " | //li[contains(normalize-space(),'" + value + "')]");
+            wait.until(ExpectedConditions.elementToBeClickable(option)).click();
+        } catch (Exception e) {
+            input.sendKeys(Keys.ENTER);
+        }
+    }
+
+    public void enterFindingDescription(String value) {
+        if (isBlank(value)) return;
+        driver.switchTo().defaultContent();
+        sendKeys(page.findingDescription, value);
+    }
+
+    public void enterInstruction(String value) {
+        if (isBlank(value)) return;
+        sendKeys(page.instruction, value);
+    }
+
+    public void uploadAttachment(String filePath) {
+        if (isBlank(filePath)) return;
+        String absolutePath = System.getProperty("user.dir")
+                + java.io.File.separator
+                + filePath.replace("/", java.io.File.separator);
+        wait.until(ExpectedConditions.presenceOfElementLocated(page.attachmentInput))
+                .sendKeys(absolutePath);
+    }
+
+    public void clickSave() {
+        WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(page.saveButton));
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});", btn);
+        js.executeScript("arguments[0].click();", btn);
+        wait.until(ExpectedConditions.or(
+                ExpectedConditions.visibilityOfElementLocated(page.getPrescriptionTable),
+                ExpectedConditions.visibilityOfElementLocated(page.errormsg)));
+    }
+
+    public void clickSaveAndPrint() {
+        WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(page.saveAndPrintButton));
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});", btn);
+        js.executeScript("arguments[0].click();", btn);
+        wait.until(d -> d.getWindowHandles().size() > 1);
+    }
+
+    public void clickViewPrescription() {
+        wait.until(ExpectedConditions.elementToBeClickable(page.getPrescriptionButtonDel));
+        jsClick(page.getPrescriptionButtonDel);
+    }
+
+    public void clickEdit() {
+        wait.until(ExpectedConditions.elementToBeClickable(page.editBtn));
+        jsClick(page.editBtn);
+    }
+
+    public void updatePrescriptionDetails() {
+        driver.switchTo().defaultContent();
+        WebElement iframe = wait.until(ExpectedConditions.visibilityOfElementLocated(page.headerNote));
+        driver.switchTo().frame(iframe);
+        try {
+            WebElement body = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+            js.executeScript("arguments[0].innerHTML='';", body);
+            body.sendKeys("Updated prescription details");
+        } finally {
+            driver.switchTo().defaultContent();
+        }
+    }
+
+    public void clickDelete() {
+        wait.until(ExpectedConditions.elementToBeClickable(page.deleteBtn));
+        jsClick(page.deleteBtn);
+    }
+
+    public void confirmDelete() {
+        wait.until(ExpectedConditions.alertIsPresent());
+        driver.switchTo().alert().accept();
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(page.deleteBtn));
+    }
+
+    public boolean isPrescriptionSaved() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(page.getPrescriptionTable));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isPrescriptionInList() {
+        try {
+            By firstRow = By.xpath(
+                    "//table[@id='DataTables_Table_2']//tbody/tr[not(contains(@class,'dataTables_empty'))]");
+            List<WebElement> rows = wait.until(
+                    ExpectedConditions.visibilityOfAllElementsLocatedBy(firstRow));
+            return !rows.isEmpty();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isPrescriptionUpdated() {
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(page.getPrescriptionTable));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isDeleteConfirmationPopupDisplayed() {
+        try {
+            String alertText = wait.until(ExpectedConditions.alertIsPresent())
+                    .getText();
+            return alertText.contains("Are You Sure You Want To Delete This?");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isPrescriptionDeletedSuccessfully() {
+        try {
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(page.deleteBtn));
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public boolean isPrintPreviewOpened() {
+        try {
+            String parent = driver.getWindowHandle();
+            wait.until(d -> d.getWindowHandles().size() > 1);
+            for (String handle : driver.getWindowHandles()) {
+                if (!handle.equals(parent)) {
+                    driver.switchTo().window(handle);
+                    break;
+                }
+            }
+            wait.until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete';"));
+            String url   = driver.getCurrentUrl().toLowerCase();
+            String title = driver.getTitle().toLowerCase();
+            return url.contains("print") || title.contains("print")
+                    || driver.getPageSource().toLowerCase().contains("print-preview");
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getErrorMessage() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(page.errormsg))
+                    .getText().trim();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+}
+

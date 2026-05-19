@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="13" passed="10" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
   <suite started-at="2026-05-19T16:21:07 IST" name="Default suite" finished-at="2026-05-19T16:25:21 IST" duration-ms="253750">
+=======
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-19T15:59:00 IST" name="Default suite" finished-at="2026-05-19T16:00:23 IST" duration-ms="82899">
+>>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
+<<<<<<< HEAD
     <test started-at="2026-05-19T16:21:07 IST" name="Default test" finished-at="2026-05-19T16:25:21 IST" duration-ms="253750">
       <class name="runner.TestRunner">
         <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:07 IST" name="setUpClass" finished-at="2026-05-19T16:21:08 IST" duration-ms="832" status="PASS">
@@ -15,60 +23,82 @@
             <param index="0">
               <value>
                 <![CDATA[org.testng.TestRunner@4c78e00c]]>
+=======
+    <test started-at="2026-05-19T15:59:00 IST" name="Default test" finished-at="2026-05-19T16:00:23 IST" duration-ms="82899">
+      <class name="runner.TestRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T15:59:00 IST" name="setUpClass" finished-at="2026-05-19T15:59:02 IST" duration-ms="1537" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@6d617b07]]>
+>>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:21:23 IST" duration-ms="14663" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T15:59:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T15:59:54 IST" duration-ms="52595" status="PASS">
+>>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
           <params>
             <param index="0">
               <value>
-                <![CDATA["View Attendance Report"]]>
+                <![CDATA["Verify pathology report search using valid bill number"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Jerishwin_Joseph_16-05-2026_Attendance Report"]]>
+                <![CDATA["S_MYTHILY_2026_05_18_Pay pathology report validation - Smart Hospital"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:21:37 IST" duration-ms="13640" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T15:59:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:00:10 IST" duration-ms="16113" status="PASS">
+>>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
           <params>
             <param index="0">
               <value>
-                <![CDATA["View Attendance Report"]]>
+                <![CDATA["Verify payment fails when amount exceeds balance"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Jerishwin_Joseph_16-05-2026_Attendance Report"]]>
+                <![CDATA["S_MYTHILY_2026_05_18_Pay pathology report validation - Smart Hospital"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:21:50 IST" duration-ms="13480" status="PASS">
+=======
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T16:00:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:00:22 IST" duration-ms="11813" status="PASS">
+>>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
           <params>
             <param index="0">
               <value>
-                <![CDATA["View Attendance Report"]]>
+                <![CDATA["Verify payment fails when negative amount is entered"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Jerishwin_Joseph_16-05-2026_Attendance Report"]]>
+                <![CDATA["S_MYTHILY_2026_05_18_Pay pathology report validation - Smart Hospital"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
+<<<<<<< HEAD
         <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:22:06 IST" duration-ms="15415" status="PASS">
           <params>
             <param index="0">
@@ -308,6 +338,9 @@ at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Auto
           </reporter-output>
         </test-method> <!-- runScenario -->
         <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:25:21 IST" name="tearDownClass" finished-at="2026-05-19T16:25:21 IST" duration-ms="405" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T16:00:22 IST" name="tearDownClass" finished-at="2026-05-19T16:00:23 IST" duration-ms="748" status="PASS">
+>>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
