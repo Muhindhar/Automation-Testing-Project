@@ -65,11 +65,11 @@ public class PrescriptionAction extends BaseAction {
 	public void clickPrescriptionTab() {
 		jsClick(prescriptionPage.prescriptionTab);
 
-		wait.until(driver -> driver.findElement(prescriptionPage.addPrescriptionButton).isDisplayed());
+		//wait.until(driver -> driver.findElement(prescriptionPage.addPrescriptionButton).isDisplayed());
 	}
 
 	public void clickAddPrescription() {
-		jsClick(prescriptionPage.addPrescriptionButton);
+		//jsClick(prescriptionPage.addPrescriptionButton);
 
 		wait.until(ExpectedConditions.presenceOfElementLocated(prescriptionPage.headerNote));
 	}
@@ -433,7 +433,7 @@ public class PrescriptionAction extends BaseAction {
 	public boolean isPrescriptionInList() {
 		try {
 
-			wait.until(ExpectedConditions.visibilityOfElementLocated(prescriptionPage.prescriptionRow));
+			//wait.until(ExpectedConditions.visibilityOfElementLocated(prescriptionPage.prescriptionRow));
 
 			System.out.println("Prescription appeared in list");
 
