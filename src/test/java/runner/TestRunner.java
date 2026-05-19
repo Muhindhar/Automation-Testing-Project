@@ -7,8 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features\\FrontOffice\\FrontOfcCallLog.feature",
-
+		features = "src\\test\\resources\\features",
 		glue = "definitions",
 		
 		plugin = {"pretty",
@@ -16,10 +15,10 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				"json:target/cucumber-report.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-				"rerun:target/failed-rerun.txt" },		
-		monochrome = true)
-
-
+				"rerun:target/failed-rerun.txt" },
+		monochrome = true,
+		tags       = "@ValidPathologySearch"
+		)
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 
