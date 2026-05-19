@@ -3,15 +3,17 @@ package definitions;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import actions.AddPatientAction;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utilities.DriverFactory;
 
 public class AddPatientSteps {
-
+	 WebDriver driver = DriverFactory.getDriver();
     AddPatientAction addPatientAction = new AddPatientAction();
 
     @When("the user clicks on the In Patient option")

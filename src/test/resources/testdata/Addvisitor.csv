@@ -1,0 +1,6 @@
+rowNumber,purpose,visitorName,checkinDate,type
+1,Visit,Muhindhar,05/19/2026,valid
+2,Inquiry,Vignesh,05/19/2026,valid
+3,Visit,,05/19/2026,invalid
+4,,Jerishwin,05/19/2026,invalid
+5,Visit,Malavicka,,invalid
