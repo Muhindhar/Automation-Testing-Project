@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features\\FrontOffice\\FrontOfficeComplaint.feature",
+		features = "src\\test\\resources\\features",
 
 		glue = "definitions",
 		
@@ -16,7 +16,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				"json:target/cucumber-report.json",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"rerun:target/failed-rerun.txt" },
-		tags = "@OpdReport",
+		tags = "@jerishwin",
 		monochrome = true)
 
 

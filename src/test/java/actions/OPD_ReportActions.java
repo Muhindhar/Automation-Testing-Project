@@ -31,13 +31,12 @@ public class OPD_ReportActions extends BaseAction {
         jsClick(opdPage.opdButton);
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdOutPatientNavLink));
         HelperClass.logger.info("clicking opdOutPatientNavLink ");
-        jsClick(opdPage.opdOutPatientNavLink);
     }
 
     // Click the Show/name link of first patient in table
     public void clickShowIcon() {
-        wait.until(ExpectedConditions.elementToBeClickable(opdPage.showIconFirstPatient));
-        jsClick(opdPage.showIconFirstPatient);
+        wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdOutPatientNavLink));
+        jsClick(opdPage.opdOutPatientNavLink);
     }
 
     // JS click to bypass overlapping pull-right div
