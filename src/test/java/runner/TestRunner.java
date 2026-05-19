@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features\\Appointment\\Appointmentfilter.feature",
+		features = "src\\test\\resources\\features\\FrontOffice\\FrontOfcCallLog.feature",
 
 		glue = "definitions",
 		
