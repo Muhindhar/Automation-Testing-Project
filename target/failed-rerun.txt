@@ -1,2 +1,0 @@
-file:src/test/resources/features/Profile/AttendaceDetails.feature:5
-file:src/test/resources/features/opd/report_download.feature:12
