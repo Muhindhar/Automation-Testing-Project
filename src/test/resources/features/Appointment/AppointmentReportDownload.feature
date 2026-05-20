@@ -4,7 +4,10 @@ Feature: Muhindhar_13-05-2026_Downloading the PDF (Printing)
     appointment details successfully.
 
   Background:
-    Given the user is logged in as receptionist
+    Given the user launches the application
+    And the user is on the login page
+    When the user clicks the "Receptionist" button
+    And clicks on the Login button
     And user is on appointment page
 
   @DownloadAppointment

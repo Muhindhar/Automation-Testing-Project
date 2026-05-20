@@ -1,4 +1,5 @@
-Feature: M_VIGNESHWARAN_2026_05_12_SmartHospital_LoginFeature
+@Vigneshwaran
+Feature: M_VIGNESHWARAN_2026_05_12_Smart_Hospital_Login_Feature
 
   Background:
     Given the user launches the application
