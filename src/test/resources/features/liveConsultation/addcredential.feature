@@ -1,4 +1,5 @@
 @Vigneshwaran
+@Bug
 Feature: M_VIGNESHWARAN_2026_05_17_SmartHospital_Add_Credential_In_Consultation_Feature
 
   Background:
