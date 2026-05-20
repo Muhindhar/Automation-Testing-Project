@@ -1,4 +1,3 @@
-@Malavicka
 Feature: V_MALAVICKA_2026_05_14_SmartHospital_IPD Search Module
   As a hospital staff member
   I want to search IPD patients
@@ -13,7 +12,6 @@ Feature: V_MALAVICKA_2026_05_14_SmartHospital_IPD Search Module
   Scenario Outline: Search patient using valid patient name
     When the user enters "<patient_name>" in the search box
     Then matching patient records should be displayed
-
     Examples:
       | patient_name |
       | Seher        |
