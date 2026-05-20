@@ -11,8 +11,11 @@ public class CallLogFrontofcPages {
 			"//div[@class = 'box-tools pull-right']//a[@href = 'https://demo.smart-hospital.in/admin/generalcall']");
 	public By addlog = By.xpath("//a[@class='btn btn-primary btn-sm call_log']");
 	public By name = By.xpath("//form[@id='formadd']//input[@name='name']");
-	public By phone = By.xpath("//input[@fdprocessedid='panood']");
-	public By desc = By.xpath("//div[@id='myModal']//div[2]//div[1]//textarea[1]");
+	public By phone = By.xpath("//form[@id='formadd']//input[@name='contact']");
+	public By desc = By.xpath("//label[text()='Description']//following-sibling::textarea[@id='description']");
+	public By callduration = By.xpath("//form[@id='formadd']//input[@name='call_dureation']	");
+	//public By callduration = By.xpath("//label[text()='Call Duration']//following-sibling::*[@fdprocessedid='ggf30t']");
+	public By note = By.xpath("//label[text()='Note']//following-sibling::textarea[@id='description']");
 	public By incom = By.xpath("//form[@id='formadd']//input[@name='call_type' and @value='Incoming']");
 	public By outgng = By.xpath("//form[@id='formadd']//input[@name='call_type' and @value='Outgoing']");
 	public By savebtn = By.xpath("//button[@id='formaddbtn']");
