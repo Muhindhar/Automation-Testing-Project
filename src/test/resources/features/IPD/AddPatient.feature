@@ -1,3 +1,4 @@
+@Malavicka
 Feature: V_MALAVICKA_2026_05_14_SmartHospital_IPD Patient Popup Module
   As a doctor admin
   I want to add a new IPD patient through the New Patient popup form
