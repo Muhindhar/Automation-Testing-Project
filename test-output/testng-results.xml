@@ -5,7 +5,7 @@
   <suite started-at="2026-05-20T17:02:49 IST" name="Default suite" finished-at="2026-05-20T17:03:06 IST" duration-ms="17149">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.FailedRerun$Failed_TestNgRunner@25df00a0]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
     <test started-at="2026-05-20T17:02:49 IST" name="Default test" finished-at="2026-05-20T17:03:06 IST" duration-ms="17149">
@@ -41,7 +41,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.TestRunner -->
+      </class> <!-- runner.FailedRerun$Failed_TestNgRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

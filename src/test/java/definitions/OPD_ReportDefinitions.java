@@ -22,23 +22,19 @@ public class OPD_ReportDefinitions {
         la = new LoginAction(DriverFactory.getDriver());
     }
 
-    @Given("the user is on the {string} page")
-    public void the_user_is_on_the_page(String pageName) {
-        ra.navigateToOPDOutPatientPage();
-    }
 
-    @When("the user clicks the {string} icon for that patient")
-    public void the_user_clicks_the_icon_for_that_patient(String iconName) {
+    @When("the user clicks the ID link for that patient")
+    public void the_user_clicks_the_icon_for_that_patient() {
         ra.clickShowIcon();
     }
 
-    @And("navigates to the {string} tab")
-    public void navigates_to_the_tab(String tabName) {
+    @And("navigates to the Visits tab")
+    public void navigates_to_the_tab() {
         ra.clickVisitsTab();
     }
 
-    @And("clicks the {string} icon on a specific visit record")
-    public void clicks_the_icon_on_a_specific_visit_record(String iconName) {
+    @And("clicks the Pdf icon on the visit record")
+    public void clicks_the_icon_on_a_specific_visit_record() {
         ra.clickPrintIcon();
     }
 
