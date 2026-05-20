@@ -1,0 +1,4 @@
+testCase,patient,title,doctor,duration,date
+Valid Consultation,John,Fever Discussion,Doctor 1,30,20-05-2026
+Mandatory Fields Consultation,John,General Checkup,Doctor 1,,
+Empty Consultation,,,,,

@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.DriverFactory;
+
 public class BaseAction {
 
 	WebDriver driver;
@@ -38,9 +40,9 @@ public class BaseAction {
 	}
 
 	public void jsClick(By locator) {
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
-		js.executeScript("arguments[0].click();", element);
+		
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", DriverFactory.getDriver().findElement(locator));
+		js.executeScript("arguments[0].click();", DriverFactory.getDriver().findElement(locator));
 	}
 
 	public void jsClickfb(WebElement w) {

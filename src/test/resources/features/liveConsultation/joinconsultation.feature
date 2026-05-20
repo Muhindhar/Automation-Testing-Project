@@ -1,13 +1,15 @@
-Feature: M_VIGNESHWARAN_2026_05_16_SmartHospital_JoinConsultationFeature
+@Vigneshwaran
+Feature: M_VIGNESHWARAN_2026_05_16_SmartHospital_Join_Consultation_Feature
 
   Background:
     Given the user launches the application
     And the user is on the login page
-    When the user clicks the "Super Admin" button
+    When the user clicks the "Doctor" button
     And clicks on the Login button
     And clicks on the live consultation from the sidebar
     And clicks on the live consultation from the dropdown appeared
 
+	
   Scenario: Verify Join button is visible when consultation status is Awaited
     Given the user identifies a consultation record with status "Awaited"
     Then the Join button should be visible for that consultation
