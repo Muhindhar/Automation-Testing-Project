@@ -52,8 +52,7 @@ public class OPD_ReportActions extends BaseAction {
     public void clickVisitsTab() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.visitsTab));
         WebElement tab = driver.findElement(opdPage.visitsTab);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tab);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", tab);
+        jsClickElement(tab);
     }
 
     public void clickPrintIcon() {
