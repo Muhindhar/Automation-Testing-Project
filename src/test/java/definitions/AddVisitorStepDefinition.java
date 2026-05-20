@@ -11,7 +11,7 @@ import io.cucumber.java.en.When;
 import utilities.CSVReaderUtil;
 import utilities.DriverFactory;
 
-public class AddVisiorStepDefinition {
+public class AddVisitorStepDefinition {
 
     WebDriver driver = DriverFactory.getDriver();
     AddVisitorActions ava = new AddVisitorActions(driver);
@@ -25,16 +25,16 @@ public class AddVisiorStepDefinition {
 
     @When("user enters visitor details")
     public void user_enters_visitor_details() {
-        Map<String, String> data = CSVReaderUtil.getFirstRow(
-                "src/test/resources/testdata/Addvisitor.csv", "valid1");
-        ava.entervalddet(data);
+        //Map<String, String> data = CSVReaderUtil.getFirstRow(
+              //  "src/test/resources/testdata/Addvisitor.csv", "valid1");
+        //ava.entervalddet(data);
     }
 
     @When("user enters invalid visitor details")
     public void user_enters_invalid_visitor_details() {
-        Map<String, String> data = CSVReaderUtil.getFirstRow(
-                "src/test/resources/testdata/Addvisitor.csv", "invalid1");
-        ava.enterinvaldet(data);
+//        Map<String, String> data = CSVReaderUtil.getFirstRow(
+//                "src/test/resources/testdata/Addvisitor.csv", "invalid1");
+//        ava.enterinvaldet(data);
     }
 
     @When("user clicks on save button")

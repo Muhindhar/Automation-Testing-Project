@@ -39,7 +39,7 @@ public class CallLogfrontofficeStepDefinition {
 	@Given("user clicks on phone call log link")
 	public void user_clicks_on_phone_call_log_link() {
 		// Write code here that turns the phrase above into concrete actions
-		
+
 		HelperClass.logger.info("Clicking on phone call log");
 		cfa.phcalllog();
 	}
@@ -67,10 +67,12 @@ public class CallLogfrontofficeStepDefinition {
 			String phone = row.get("phone");
 			String description = row.get("description");
 			String calltype = row.get("calltype");
-			cfa.enterdet(name, phone, description, calltype);
+			String note = row.get("note");
+			String duration = row.get("call duration");
+
+			cfa.enterdet(name, phone, description, calltype, note, duration);
 		}
 	}
-	
 
 	@When("click save button")
 	public void click_save_button() {
@@ -123,7 +125,7 @@ public class CallLogfrontofficeStepDefinition {
 		Assert.assertTrue(cfa.errorcheck());
 		HelperClass.logger.info("Error displayed");
 		System.out.println("Error message displayed");
-		
+
 	}
 
 }

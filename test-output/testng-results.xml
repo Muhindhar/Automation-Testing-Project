@@ -1,346 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="13" passed="10" failed="3" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-19T16:21:07 IST" name="Default suite" finished-at="2026-05-19T16:25:21 IST" duration-ms="253750">
-=======
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2026-05-19T15:59:00 IST" name="Default suite" finished-at="2026-05-19T16:00:23 IST" duration-ms="82899">
->>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
+  <suite started-at="2026-05-20T17:02:49 IST" name="Default suite" finished-at="2026-05-20T17:03:06 IST" duration-ms="17149">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-<<<<<<< HEAD
-    <test started-at="2026-05-19T16:21:07 IST" name="Default test" finished-at="2026-05-19T16:25:21 IST" duration-ms="253750">
+    <test started-at="2026-05-20T17:02:49 IST" name="Default test" finished-at="2026-05-20T17:03:06 IST" duration-ms="17149">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:07 IST" name="setUpClass" finished-at="2026-05-19T16:21:08 IST" duration-ms="832" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-20T17:02:49 IST" name="setUpClass" finished-at="2026-05-20T17:02:50 IST" duration-ms="853" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@4c78e00c]]>
-=======
-    <test started-at="2026-05-19T15:59:00 IST" name="Default test" finished-at="2026-05-19T16:00:23 IST" duration-ms="82899">
-      <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T15:59:00 IST" name="setUpClass" finished-at="2026-05-19T15:59:02 IST" duration-ms="1537" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6d617b07]]>
->>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
+                <![CDATA[org.testng.TestRunner@213012a0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:21:23 IST" duration-ms="14663" status="PASS">
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T15:59:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T15:59:54 IST" duration-ms="52595" status="PASS">
->>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-20T17:02:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-20T17:03:06 IST" duration-ms="15949" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify pathology report search using valid bill number"]]>
+                <![CDATA["add outgoing call log"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["S_MYTHILY_2026_05_18_Pay pathology report validation - Smart Hospital"]]>
+                <![CDATA["Muhindhar_16-05-2026_To check the call log in the front office module"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:21:37 IST" duration-ms="13640" status="PASS">
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T15:59:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:00:10 IST" duration-ms="16113" status="PASS">
->>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify payment fails when amount exceeds balance"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["S_MYTHILY_2026_05_18_Pay pathology report validation - Smart Hospital"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:21:50 IST" duration-ms="13480" status="PASS">
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T16:00:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:00:22 IST" duration-ms="11813" status="PASS">
->>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify payment fails when negative amount is entered"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["S_MYTHILY_2026_05_18_Pay pathology report validation - Smart Hospital"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:21:50 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:22:06 IST" duration-ms="15415" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["View Attendance Report"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_16-05-2026_Attendance Report"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:22:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:22:22 IST" duration-ms="16663" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["View Profile Details"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_16-05-2026_Profile"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:22:22 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:22:35 IST" duration-ms="13127" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["View Profile Details"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_16-05-2026_Profile"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:22:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:22:49 IST" duration-ms="13946" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["View Profile Details"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_16-05-2026_Profile"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:22:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:23:04 IST" duration-ms="14819" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["View Profile Details"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_16-05-2026_Profile"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:23:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:23:19 IST" duration-ms="15159" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Search for an OPD patient (Valid and Invalid)"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_13-05-2026_OPD Patient Search"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:23:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:23:36 IST" duration-ms="16267" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Search for an OPD patient (Valid and Invalid)"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_13-05-2026_OPD Patient Search"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:23:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:24:10 IST" duration-ms="34292" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Add a new OPD patient successfully (Valid Case)"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_17-05-2026_Add New OPD Patient"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element found by By.xpath: //table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a"}.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59453}, goog:processID: 74612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59453/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5c5e03f3100dd71c88d91f20e0af1d28]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a"}.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59453}, goog:processID: 74612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59453/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5c5e03f3100dd71c88d91f20e0af1d28
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-at actions.OPD_ReportActions.navigateToOPDOutPatientPage(OPD_ReportActions.java:43)
-at definitions.OPD_ReportDefinitions.the_user_is_on_the_page(OPD_ReportDefinitions.java:27)
-at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/add_patient.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:24:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:24:44 IST" duration-ms="34318" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Fail to add patient with missing required fields (Invalid Case)"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_17-05-2026_Add New OPD Patient"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element found by By.xpath: //table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a"}.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61512}, goog:processID: 83524, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61512/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f99b198886dfb1a590c935c926f75644]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a"}.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61512}, goog:processID: 83524, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61512/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f99b198886dfb1a590c935c926f75644
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-at actions.OPD_ReportActions.navigateToOPDOutPatientPage(OPD_ReportActions.java:43)
-at definitions.OPD_ReportDefinitions.the_user_is_on_the_page(OPD_ReportDefinitions.java:27)
-at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/add_patient.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:24:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T16:25:21 IST" duration-ms="36632" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Download a patient's OPD Vist report"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Jerishwin_Joseph_13-05-2026_Download OPD Report (User Story 4.4)"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element found by By.xpath: //table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a"}.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56730}, goog:processID: 83016, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56730/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d47f1806d2706741016cf877cfbce8da]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.xpath: //table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a to be clickable, but the element was not found: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//table[@id='DataTables_Table_1']/tbody/tr[1]/td[1]/child::a"}.
-(tried for 15 seconds with 500 milliseconds interval)
-Build info: version: '4.43.0', revision: 'dd0f534'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.168, chrome: {chromedriverVersion: 148.0.7778.167 (65db666ac2c..., userDataDir: C:\Users\JERISH~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56730}, goog:processID: 83016, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56730/devtoo..., se:cdpVersion: 148.0.7778.168, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d47f1806d2706741016cf877cfbce8da
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-at actions.OPD_ReportActions.navigateToOPDOutPatientPage(OPD_ReportActions.java:43)
-at definitions.OPD_ReportDefinitions.the_user_is_on_the_page(OPD_ReportDefinitions.java:27)
-at ✽.the user is on the "OPD - Out Patient" page(file:///E:/SmartHospital/Automation-Testing-Project/src/test/resources/features/opd/report_download.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@c05fddc]" started-at="2026-05-19T16:25:21 IST" name="tearDownClass" finished-at="2026-05-19T16:25:21 IST" duration-ms="405" status="PASS">
-=======
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-19T16:00:22 IST" name="tearDownClass" finished-at="2026-05-19T16:00:23 IST" duration-ms="748" status="PASS">
->>>>>>> fa74766aa42236b41df6b21e99382416993cf18c
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@56dc1551]" started-at="2026-05-20T17:03:06 IST" name="tearDownClass" finished-at="2026-05-20T17:03:06 IST" duration-ms="281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
