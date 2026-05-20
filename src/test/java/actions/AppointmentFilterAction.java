@@ -1,6 +1,7 @@
 package actions;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import pages.AppointmentFilterPage;
 import utilities.HelperClass;
@@ -84,5 +85,14 @@ public class AppointmentFilterAction extends BaseAction {
 			e.printStackTrace();
 			return false;
 		}
+	}
+	public boolean loggedin() {
+		try {
+			return isDisplayedfb(af.verify);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 }
