@@ -27,11 +27,11 @@ public class JoinConsultationStepDefinition {
 	public void the_user_identifies_a_consultation_record_with_status(String string) {
 	   index = ja.findRecordWithStatus(string);
 	}
-//
-//	@Then("the Join button should be visible for that consultation")
-//	public void the_join_button_should_be_visible_for_that_consultation() {
-//	    Assert.assertTrue(ja.isActionPresent(index));
-//	}
+
+	@Then("the Join button should be visible for that consultation")
+	public void the_join_button_should_be_visible_for_that_consultation() {
+	    Assert.assertTrue(ja.isActionPresent(index));
+	}
 
 	@Then("the user should be able to click the Join button")
 	public void the_user_should_be_able_to_click_the_join_button() {
