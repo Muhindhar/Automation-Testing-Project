@@ -35,7 +35,7 @@ public class ComplaintFrontOfficeStepDefinition {
 	public void user_enters_the_complaint_details_from_excel() throws IOException {
 		// Write code here that turns the phrase above into concrete actions
 		HelperClass.logger.info("Taking data from the excel sheet");
-		String path = "src\\test\\resources\\FocomplaintData.xlsx";
+		String path = "src\\test\\resources\\testdata\\FocomplaintData.xlsx";
 		String complainttype = ExcelUtility.getCellData(path, "Sheet1", 1, 0);
 		String source = ExcelUtility.getCellData(path, "Sheet1", 1, 1);
 		String phone = ExcelUtility.getCellData(path, "Sheet1", 1, 2);
@@ -59,12 +59,10 @@ public class ComplaintFrontOfficeStepDefinition {
 		String act = ca.checklistcom();
 		Assert.assertEquals(exp, act);
 	}
+
 	@When("user leaves all complaint fields empty")
 	public void user_leaves_all_complaint_fields_empty() {
-	    // Write code here that turns the phrase above into concrete actions
-	    ca.emptyfields();
-	    System.out.println("Fields are empty");
+		HelperClass.logger.info("Leaving all complaint fields empty");
 	}
-
 
 }

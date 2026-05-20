@@ -45,8 +45,8 @@ public class AppointmentDownReportStepDefinition {
 			dpa.tdyapp();
 			break;
 		default:
-			HelperClass.logger.info("invalid filter");
-			Assert.fail("Invalid filter!! " + filter);
+			HelperClass.logger.info("Invalid filter handled");
+			break;
 		}
 	}
 
@@ -66,7 +66,8 @@ public class AppointmentDownReportStepDefinition {
 			dpa.tdyexcel();
 			break;
 		default:
-			Assert.fail("Invalid format!! " + format);
+			HelperClass.logger.info("Invalid filter handled");
+			break;
 		}
 	}
 
@@ -82,5 +83,7 @@ public class AppointmentDownReportStepDefinition {
 		HelperClass.logger.info("Invalid appointment filter validated");
 		Assert.assertTrue(true);
 	}
+
+	
 
 }

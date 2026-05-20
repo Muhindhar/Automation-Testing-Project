@@ -7,6 +7,7 @@ import org.testng.Assert;
 import actions.PathalogyAction;
 import io.cucumber.java.en.*;
 import utilities.DriverFactory;
+import utilities.HelperClass;
 
 public class SearchPathalogyStepDefinition {
 
@@ -16,15 +17,15 @@ public class SearchPathalogyStepDefinition {
     
     @Given("the user is logged into the patient dashboard")
     public void the_user_is_logged_into_the_patient_dashboard() {
-        System.out.println("User is on the login page");
+    	HelperClass.logger.info("User is on the login page");
     }
 
     @When("the user clicks on the Sign In button")
     public void the_user_clicks_on_the_sign_in_button() {
 
         DriverFactory.getDriver().get("https://demo.smart-hospital.in/site/userlogin");
+        HelperClass.logger.info("Clicking Sign In button");
         pathoAction.clickSignup();
-        System.out.println("Clicked Sign In button");
     }
 
     @Then("the user should be redirected to the patient dashboard")
@@ -36,38 +37,40 @@ public class SearchPathalogyStepDefinition {
         String currentUrl = DriverFactory.getDriver().getCurrentUrl();
         String title      = DriverFactory.getDriver().getTitle();
 
-        System.out.println("Current URL  : " + currentUrl);
-        System.out.println("Current Title: " + title);
-
+        HelperClass.logger.info("Current URL: {}",currentUrl);
+        HelperClass.logger.info("Current Title: {}",title);
+        
         Assert.assertFalse(currentUrl.contains("userlogin"),
             "User is still on login page — login may have failed");
 
         Assert.assertTrue(
             currentUrl.contains("patient") || currentUrl.contains("dashboard"),
             "User is NOT on patient dashboard. Actual URL: " + currentUrl);
+        HelperClass.logger.info("User redirected to patient dashboard successfully");
     }
     
 	@When("the user clicks the Pathology menu")
     public void the_user_clicks_the_pathology_menu() {
+		HelperClass.logger.info("Clicking Pathology menu");
         pathoAction.clickPathology();
-        System.out.println("Clicked Pathology menu");
     }
 
     @When("the user searches pathology reports by Bill Number {string}")
     public void the_user_searches_pathology_reports_by_bill_number(String billNo) {
+    	HelperClass.logger.info("Searching pathology report with Bill Number: {}",billNo);
         pathoAction.searchreport(billNo);
-        System.out.println("Searching bill number: " + billNo);
     }
 
     @Then("only pathology report results for Bill Number {string} should be displayed")
     public void only_pathology_report_results_for_bill_number_should_be_displayed(String billNo) {
         pathoAction.isRecDisplayed(billNo);
-        System.out.println("Validated bill number: " + billNo);
+        HelperClass.logger.info("Validated pathology report for Bill Number: {}",billNo);
     }
 
     @Then("{string} should be displayed")
     public void should_be_displayed(String string) {
-        String Nofound = pathoAction.getErrorTxt();
-        Assert.assertEquals(string, Nofound);
+        String NoFound = pathoAction.getErrorTxt();
+        HelperClass.logger.info("Validation message displayed: {}",NoFound);
+        Assert.assertEquals(string, NoFound);
     }
 }

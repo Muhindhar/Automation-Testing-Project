@@ -5,19 +5,22 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.DriverFactory;
 
 public class BaseAction {
+
 	WebDriver driver;
 	WebDriverWait wait;
 	JavascriptExecutor js;
 	private static final int TIMEOUT = 10;
-
 	public BaseAction(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
@@ -37,9 +40,9 @@ public class BaseAction {
 	}
 
 	public void jsClick(By locator) {
-		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
-		js.executeScript("arguments[0].click();", element);
+		
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", DriverFactory.getDriver().findElement(locator));
+		js.executeScript("arguments[0].click();", DriverFactory.getDriver().findElement(locator));
 	}
 
 	public void jsClickfb(WebElement w) {
@@ -101,5 +104,31 @@ public class BaseAction {
 	public void jsClickElement(WebElement webElement) {
 		js.executeScript("arguments[0].scrollIntoView({block:'center'});", webElement);
 		js.executeScript("arguments[0].click();", webElement);
+	}
+
+	public void selectByVisibleText(By locator, String text) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		Select select = new Select(element);
+		select.selectByVisibleText(text);
+	}
+
+	public void selectByValue(By locator, String value) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		Select select = new Select(element);
+		select.selectByValue(value);
+	}
+
+	public void selectByIndex(By locator, int index) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		Select select = new Select(element);
+		select.selectByIndex(index);
+	}
+
+	public void customDropdown(By locator, String value) {
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+		element.click();
+		element.sendKeys(value);
+		element.sendKeys(Keys.ENTER);
 	}
 }
