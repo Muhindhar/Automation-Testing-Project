@@ -53,7 +53,6 @@ public class AddCredentialStepDefinition {
 			    ja.getZoomApiSecretValue());
 		
 		ja.clickSaveCredentialButton();
-		Thread.sleep(3000);
 	}
 
 	@Then("the credential should be saved successfully")
@@ -67,16 +66,16 @@ public class AddCredentialStepDefinition {
 	@When("enters invalid credential data for {string}")
 	public void enters_invalid_credential_data_for(String testCase) throws IOException {
 
-//		excelData =
-//		        ExcelUtility.getTestDataByTestCase(
-//		                "AddCredential_TestData",
-//		                "AddCredential",
-//		                testCase);
-		
 		excelData =
-		        CSVReaderUtil.getTestDataByTestCase(
-		                "AddCredential_CSVData",
+		        ExcelUtility.getTestDataByTestCase(
+		                "AddCredential_TestData",
+		                "AddCredential",
 		                testCase);
+		
+//		excelData =
+//		        CSVReaderUtil.getTestDataByTestCase(
+//		                "AddCredential_CSVData",
+//		                testCase);
 
 		if (excelData.get("zoomApiKey").length() != 0)
 			ja.enterZoomApiKey(excelData.get("zoomApiKey"));
