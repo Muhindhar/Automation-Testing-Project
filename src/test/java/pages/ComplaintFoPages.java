@@ -34,5 +34,5 @@ public class ComplaintFoPages {
 	public By desc = By.xpath("//textarea");
 	public By savebtn = By.xpath("//button[@id='formaddbtn']");
 	public By checklistcomp = By.xpath("//h3[contains(@class,'titlefix')]");
-	public By emptyfields = By.xpath("//div[contains(@class,'toast-message')]");
+	public By emptyfields = By.xpath("//*[contains(text(),'required')]");
 }

@@ -29,7 +29,6 @@ public class AddPatientAction extends DriverFactory {
                 "arguments[0].scrollIntoView({block:'center'});",
                 addPatientBtn);
 
-        Thread.sleep(1500);
 
         try {
             addPatientBtn.click();

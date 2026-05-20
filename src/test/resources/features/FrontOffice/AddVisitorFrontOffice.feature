@@ -1,4 +1,4 @@
-@Muhindhar
+@Muhindhar_Updating
 Feature: Muhindhar_19-05-2026_Add Visitor Functionality
   Description:
     Verify whether receptionist/admin user is able to add
@@ -10,10 +10,10 @@ Feature: Muhindhar_19-05-2026_Add Visitor Functionality
     When the user clicks the "Receptionist" button
     And clicks on the Login button
 
-  @Muhindhar @ValidAddVisitor
+   @ValidAddVisitor
   Scenario Outline: Validate add visitor with valid details
     When user clicks on "Add Visitor" button
-    And user enters visitor details from CSV "<rowNumber>"
+    And user enters visitor details 
     And user clicks on save button
     Then visitor should be added successfully
 
@@ -22,7 +22,7 @@ Feature: Muhindhar_19-05-2026_Add Visitor Functionality
       | 1         |
       | 2         |
 
-  @Muhindhar @InvalidAddVisitor
+   @InvalidAddVisitor
   Scenario Outline: Validate add visitor with invalid details
     When user clicks on "Add Visitor" button
     And user enters invalid visitor details from CSV "<rowNumber>"
@@ -35,7 +35,7 @@ Feature: Muhindhar_19-05-2026_Add Visitor Functionality
       | 4         |
       | 5         |
 
-  @Muhindhar @MandatoryFieldValidation
+   @MandatoryFieldValidation
   Scenario: Validate add visitor without mandatory fields
     When user clicks on "Add Visitor" button
     And user clicks on save button
