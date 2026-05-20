@@ -14,11 +14,11 @@ Description: As a receptionist user i want to add call logs and see all the call
     And user clicks on phone call log link
     And user click on add call log link
     When user enters following details
-      | name      | phone      | description  | calltype |
-      | muhindhar | 9876543254 | emergency    | Outgoing |
-      | user      | 9833543254 | family       | Incoming |
-      | admin     | 9876543265 | friends      | Outgoing |
-      | vignesh   | 9876543765 | conversation | Incoming |
+      | name      | phone      | description  | calltype | note   | call duration |
+      | muhindhar | 9876543254 | emergency    | Outgoing | simply | 1:02          |
+      | user      | 9833543254 | family       | Incoming | error  | 3:03          |
+      | admin     | 9876543265 | friends      | Outgoing | random | 00:45         |
+      | vignesh   | 9876543765 | conversation | Incoming | simple | 11:22         |
     And click save button
     Then user should be able to see in the call log list
 
