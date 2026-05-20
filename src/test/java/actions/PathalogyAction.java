@@ -24,29 +24,21 @@ public class PathalogyAction extends BaseAction {
    //for search
     
     public void clickLogin() {
-    	HelperClass.logger.info("Clicking login ");
     	click(pathoPage.login);
     }
 
     public void clickUserlog() {
-    	HelperClass.logger.info("clicking login");
         click(pathoPage.userlog);
         waitForVisibility(pathoPage.signup);
-        System.out.println("After User Login click URL: "+ driver.getCurrentUrl());
     }
 
     public void clickSignup() {
     	
         waitForVisibility(pathoPage.signup);
-
-        System.out.println("Current URL before Sign In: "+ driver.getCurrentUrl());
-        HelperClass.logger.info("Getting url");
         click(pathoPage.signup);
-        System.out.println("Clicked Sign In button");
     }
 
     public void clickPathology() {
-    	HelperClass.logger.info("Clicking pathology");
         click(pathoPage.pathlogyMenu);
     }
 
@@ -66,9 +58,7 @@ public class PathalogyAction extends BaseAction {
             System.out.println("Records found: " + (actualRows - 1));
         }
 
-        wait.until(ExpectedConditions.presenceOfElementLocated(
-            By.xpath("//*[contains(text(),'" + billNo + "')]")));
-
+        wait.until(ExpectedConditions.presenceOfElementLocated(pathoPage.billNumber(billNo)));
         boolean isPresent = driver.getPageSource().contains(billNo);
         Assert.assertTrue(isPresent, "Bill number not displayed in results");
     }
@@ -98,10 +88,7 @@ public class PathalogyAction extends BaseAction {
     public void ensure_makepay() {
 
         click(pathoPage.makepay);
-
-        System.out.println("Clicked Make Payment");
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.tagName("iframe")));
-        System.out.println("Switched to Razorpay iframe");
     }
     
     public void enterMob(String mobile) {
@@ -111,9 +98,8 @@ public class PathalogyAction extends BaseAction {
                 .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.mobile));
             mobileField.clear();
             mobileField.sendKeys(mobile);
-            System.out.println("Entered mobile number");
         } catch (org.openqa.selenium.TimeoutException e) {
-            System.out.println("Mobile input screen skipped — number already pre-filled by Razorpay");
+        	System.out.println("Mobile field not displayed");
         }
     }
 
@@ -123,9 +109,8 @@ public class PathalogyAction extends BaseAction {
             WebElement continueBtn = wait.withTimeout(java.time.Duration.ofSeconds(5))
                 .until(ExpectedConditions.elementToBeClickable(pathoPage.cont));
             continueBtn.click();
-            System.out.println("Clicked Continue button");
         } catch (org.openqa.selenium.TimeoutException e) {
-            System.out.println("Continue button not found — already on Payment Options screen");
+        	 System.out.println("Continue button not clickable");
         }
     }
     
@@ -145,7 +130,6 @@ public class PathalogyAction extends BaseAction {
 
         try {
             driver.switchTo().defaultContent();
-            System.out.println("Switched back to main page from iframe");
         } catch (Exception e) {
             System.out.println("Already on main page — no iframe switch needed");
         }
@@ -162,13 +146,11 @@ public class PathalogyAction extends BaseAction {
             WebElement errorEl = wait.withTimeout(java.time.Duration.ofSeconds(8))
                 .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.payError));
             String errorTxt = errorEl.getText().trim();
-            System.out.println("Error message displayed: " + errorTxt);
             return errorTxt;
         } catch (org.openqa.selenium.TimeoutException e) {
             String pageSource = driver.getPageSource();
             boolean hasExceed = pageSource.contains("Amount Should Not Be Greater Than Balance");
             boolean hasInvalid = pageSource.contains("Invalid Amount");
-            System.out.println("Error in page source — exceed: " + hasExceed + ", invalid: " + hasInvalid);
             if (hasExceed) return "Amount Should Not Be Greater Than Balance";
             if (hasInvalid) return "Invalid Amount";
             return "";

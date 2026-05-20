@@ -28,15 +28,14 @@ public class PrescriptionAction extends BaseAction {
 
     public void searchPatientByIPD(String ipdNumber) {
         sendKeys(page.patientSearchBox, ipdNumber);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//a[contains(text(),'" + ipdNumber + "')]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(page.patientByIPD(ipdNumber)));
     }
 
     public boolean isCorrectPatientDisplayed(String ipdNumber) {
         try {
-            return wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("//a[contains(text(),'" + ipdNumber + "')]")))
-                    .getText().trim().contains(ipdNumber);
+        	boolean isDisplayed = wait.until(ExpectedConditions.visibilityOfElementLocated(page.patientByIPD(ipdNumber)))
+                    .getText().trim() .contains(ipdNumber);
+        	return isDisplayed;
         } catch (Exception e) {
             return false;
         }
@@ -46,7 +45,7 @@ public class PrescriptionAction extends BaseAction {
         try {
             jsClick(page.click128Tab);
         } catch (Exception e) {
-            jsClick(By.xpath("//tr[@class='odd']//a[contains(text(),'IPDN" + ipdNumber + "')]"));
+        	jsClick(page.ipdNumber(ipdNumber));
         }
     }
 
@@ -73,7 +72,7 @@ public class PrescriptionAction extends BaseAction {
         js.executeScript("arguments[0].scrollIntoView({block:'center'});", iframe);
         driver.switchTo().frame(iframe);
         try {
-            WebElement body = wait.until(ExpectedConditions.presenceOfElementLocated(By.tagName("body")));
+            WebElement body = wait.until(ExpectedConditions.presenceOfElementLocated(page.frameBody));
             js.executeScript("arguments[0].innerHTML='';", body);
             body.sendKeys(value);
         } finally {
@@ -100,7 +99,7 @@ public class PrescriptionAction extends BaseAction {
     private void selectByText(By locator, String value) {
         if (isBlank(value)) return;
         WebElement select = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        for (WebElement opt : select.findElements(By.tagName("option"))) {
+        for (WebElement opt : select.findElements(page.dropdownOptions)) {
             if (opt.getText().trim().equalsIgnoreCase(value) || opt.getText().trim().contains(value)) {
                 js.executeScript("$(arguments[0]).val(arguments[1]).trigger('change');",
                         select, opt.getAttribute("value"));
@@ -125,7 +124,7 @@ public class PrescriptionAction extends BaseAction {
         selectByVisibleText(page.medicineCategoryDropdown, value);
         // Wait until medicine dropdown is populated after category selection
         wait.until(d -> d.findElement(page.medicineDropdown)
-                .findElements(By.tagName("option")).size() > 1);
+                .findElements(page.dropdownOptions).size() > 1);
     }
 
     public void enterFindings(String value) {
@@ -135,11 +134,9 @@ public class PrescriptionAction extends BaseAction {
         input.click();
         input.sendKeys(value);
         try {
-            By option = By.xpath(
-                    "//label[contains(normalize-space(),'" + value + "')]/preceding-sibling::input[@type='checkbox']"
-                    + " | //li[contains(normalize-space(),'" + value + "')]");
-            wait.until(ExpectedConditions.elementToBeClickable(option)).click();
-        } catch (Exception e) {
+        	wait.until(ExpectedConditions.elementToBeClickable(page.findingOption(value))).click();
+            input.sendKeys(Keys.ENTER);
+        }catch (Exception e) {
             input.sendKeys(Keys.ENTER);
         }
     }
@@ -225,16 +222,15 @@ public class PrescriptionAction extends BaseAction {
 
     public boolean isPrescriptionInList() {
         try {
-            By firstRow = By.xpath(
-                    "//table[@id='DataTables_Table_2']//tbody/tr[not(contains(@class,'dataTables_empty'))]");
-            List<WebElement> rows = wait.until(
-                    ExpectedConditions.visibilityOfAllElementsLocatedBy(firstRow));
-            return !rows.isEmpty();
+            List<WebElement> rows =wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
+                                            page.prescriptionFirstRow));
+            boolean hasRows = !rows.isEmpty();
+            return hasRows;
         } catch (Exception e) {
             return false;
         }
     }
-
+    
     public boolean isPrescriptionUpdated() {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(page.getPrescriptionTable));

@@ -7,6 +7,7 @@ import org.testng.Assert;
 import actions.PrescriptionAction;
 import utilities.DriverFactory;
 import utilities.ExcelUtility;
+import utilities.HelperClass;
 
 import java.io.IOException;
 import java.util.List;
@@ -35,16 +36,19 @@ public class AddPrescriptionStepDefinition {
 
     @When("clicks the IPD -In Patient menu")
     public void clicks_the_ipd_in_patient_menu() {
+    	HelperClass.logger.info("Clicking IPD - In Patient menu");
         prescriptionAction.clickIPDMenu();
     }
 
     @When("searches patient by IPD Number {string}")
     public void searches_patient_by_ipd_number(String ipdNumber) {
+    	HelperClass.logger.info("Searching patient using IPD: {}",ipdNumber);
         prescriptionAction.searchPatientByIPD(ipdNumber);
     }
 
     @Then("only patient {string} IPD should be displayed")
     public void only_patient_ipd_should_be_displayed(String ipdNumber) {
+    	HelperClass.logger.info("Verifying patient with IPD: {}",ipdNumber);
         Assert.assertTrue(
                 prescriptionAction.isCorrectPatientDisplayed(ipdNumber),
                 "Expected patient IPD: " + ipdNumber + " was not displayed.");
@@ -53,15 +57,18 @@ public class AddPrescriptionStepDefinition {
     @When("clicks the IPD Number {string}")
     public void clicks_the_ipd_number(String ipdNumber) {
         prescriptionAction.clickIPDNumber(ipdNumber);
+        HelperClass.logger.info("Clicking IPD Number: {}",ipdNumber);
     }
 
     @When("clicks on Prescription")
     public void clicks_on_prescription() {
+    	HelperClass.logger.info("Clicking Prescription tab");
         prescriptionAction.clickPrescriptionTab();
     }
 
     @When("clicks on Add Prescription")
     public void clicks_on_add_prescription() {
+    	 HelperClass.logger.info("Clicking Add Prescription");
         prescriptionAction.clickAddPrescription();
     }
 
@@ -110,16 +117,19 @@ public class AddPrescriptionStepDefinition {
 
     @When("clicks on Save")
     public void clicks_on_save() {
+    	HelperClass.logger.info("Clicking Save button");
         prescriptionAction.clickSave();
     }
 
     @When("clicks on Save and Print")
     public void clicks_on_save_and_print() {
+    	HelperClass.logger.info("Clicking Save and Print button");
         prescriptionAction.clickSaveAndPrint();
     }
 
     @Then("the prescription should be saved successfully")
     public void the_prescription_should_be_saved_successfully() {
+    	HelperClass.logger.info("Verifying prescription save");
         Assert.assertTrue(
                 prescriptionAction.isPrescriptionSaved(),
                 "Prescription was not saved successfully. List table did not appear.");
