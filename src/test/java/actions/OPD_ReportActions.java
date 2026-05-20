@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import pages.OPDPage;
 import utilities.HelperClass;
 
@@ -51,8 +52,7 @@ public class OPD_ReportActions extends BaseAction {
     public void clickVisitsTab() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.visitsTab));
         WebElement tab = driver.findElement(opdPage.visitsTab);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tab);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", tab);
+        jsClickElement(tab);
     }
 
     public void clickPrintIcon() {

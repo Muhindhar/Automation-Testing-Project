@@ -1,3 +1,4 @@
+
 package actions;
 
 import org.openqa.selenium.By;
@@ -288,3 +289,4 @@ public class PrescriptionAction extends BaseAction {
         }
     }
 }
+

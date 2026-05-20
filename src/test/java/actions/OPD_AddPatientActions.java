@@ -58,11 +58,10 @@ public class OPD_AddPatientActions extends BaseAction {
         if (day   != null && !day.isBlank())   sendKeys(opdPage.dayField,   day);
     }
 
-    // ✅ NEW METHOD — reads from Excel, builds Map, calls fillPatientForm()
     public void fillPatientFormFromExcel() throws Exception {
         Map<String, String> data = new HashMap<>();
 
-        data.put("Name",   ExcelUtility.getCellData(FILE_PATH, SHEET_NAME, 1, 1)); // blank
+        data.put("Name",   ExcelUtility.getCellData(FILE_PATH, SHEET_NAME, 1, 1));
         data.put("Gender", ExcelUtility.getCellData(FILE_PATH, SHEET_NAME, 2, 1));
         data.put("Year",   ExcelUtility.getCellData(FILE_PATH, SHEET_NAME, 3, 1));
         data.put("Month",  ExcelUtility.getCellData(FILE_PATH, SHEET_NAME, 4, 1));
@@ -70,7 +69,7 @@ public class OPD_AddPatientActions extends BaseAction {
 
         System.out.println("Excel Data Loaded: " + data);
 
-        fillPatientForm(data); // reuses existing method
+        fillPatientForm(data);
     }
 
     public void clickSave() {
