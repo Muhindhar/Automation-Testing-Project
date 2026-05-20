@@ -56,4 +56,30 @@ public class PrescriptionPage {
     	);
     public final By deleteSuccessMessage = By.xpath("//*[contains(text(),'Record Deleted Successfully') or contains(text(),'Deleted Successfully')]");
     public final By updateSaveBtn = By.xpath("//form[@id='form_prescription']//button[@value='save']");
+
+    public By patientByIPD(String ipdNumber) {
+        return By.xpath("//a[contains(text(),'" + ipdNumber + "')]");
+    }
+    
+    public final By dropdownOptions = By.tagName("option");
+
+    public By ipdNumber(String ipdNumber) {
+        return By.xpath(
+            "//tr[@class='odd']//a[contains(text(),'IPDN" 
+            + ipdNumber + "')]");
+    }
+
+    public final By frameBody = By.tagName("body");
+
+    public final By prescriptionFirstRow = By.xpath(
+        "//table[@id='DataTables_Table_2']" +
+        "//tbody/tr[not(contains(@class,'dataTables_empty'))]"
+    );
+    public By findingOption(String value) {
+        return By.xpath(
+            "//label[contains(normalize-space(),'" + value + "')]" +
+            "/preceding-sibling::input[@type='checkbox']" +
+            " | //li[contains(normalize-space(),'" + value + "')]"
+        );
+    }
 }

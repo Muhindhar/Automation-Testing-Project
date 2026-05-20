@@ -35,4 +35,7 @@ public class PathalogyPage {
 		    "//*[contains(text(),'Amount Should Not Be Greater Than Balance')] | " +
 		    "//*[contains(text(),'Invalid Amount')]"
 		);
+	public By billNumber(String billNo) {
+	    return By.xpath("//*[contains(text(),'" + billNo + "')]");
+	}
 }
