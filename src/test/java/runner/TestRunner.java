@@ -8,7 +8,6 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-
 		features = "src/test/resources/features",
 
 		glue = "definitions",
@@ -17,17 +16,12 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 
-				"rerun:target/failed-rerun.txt" },
-
-		monochrome = true,
-		tags = "@Muhindhar"
-		)
-
+				"rerun:target/failed-rerun.txt" }, tags = "@Muhindhar", monochrome = true)
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 	@Override
-    @DataProvider(parallel = true)
-    public Object[][] scenarios() {
-        return super.scenarios();
-    }
+	@DataProvider(parallel = true)
+	public Object[][] scenarios() {
+		return super.scenarios();
+	}
 }
