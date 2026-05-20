@@ -9,7 +9,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features",
+		features = "src\\test\\resources\\features\\Certificate\\CertificateTemplate.feature",
 		glue = "definitions",
 		
 		plugin = {"pretty",
