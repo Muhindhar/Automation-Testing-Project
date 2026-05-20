@@ -80,7 +80,7 @@ public class PrescriptionAction extends BaseAction {
         }
     }
 
-    private void selectByVisibleText(By locator, String visibleText) {
+    public void selectByVisibleText(By locator, String visibleText) {
         if (isBlank(visibleText)) return;
         WebElement select = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         String optionValue = (String) js.executeScript(
