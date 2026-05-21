@@ -92,14 +92,14 @@ public class PrescriptionAction extends BaseAction {
 		}
 	}
 
-	private void selectByVisibleText(By locator, String visibleText) {
-		if (isBlank(visibleText))
+	public void selectByVisibleText(By locator, String value) {
+		if (isBlank(value))
 			return;
 		WebElement select = wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 		String optionValue = (String) js
 				.executeScript("var s=arguments[0], t=arguments[1].trim();" + "for(var i=0;i<s.options.length;i++){"
 						+ "  if(s.options[i].text.trim()===t || s.options[i].text.trim().indexOf(t)!==-1)"
-						+ "    return s.options[i].value;" + "} return null;", select, visibleText);
+						+ "    return s.options[i].value;" + "} return null;", select, value);
 		if (optionValue == null)
 			return;
 		js.executeScript("$(arguments[0]).val(arguments[1]).trigger('change').trigger('select2:select');", select,
