@@ -63,9 +63,7 @@ public class ReportFrontOfficeStepDefinition {
 		HelperClass.logger.info("File downloaded");
 
 		Assert.assertTrue(rfa.verifydown());
-
 		Assert.assertTrue(true);
-
 		
 	}
 
