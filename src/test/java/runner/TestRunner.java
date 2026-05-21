@@ -4,6 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
+
 		features = "src/test/resources/features",
 		glue = "definitions",
 		plugin = { "pretty", "html:target/cucumber-report.html", "json:target/cucumber-report.json",
@@ -12,7 +13,6 @@ import io.cucumber.testng.CucumberOptions;
 				tags = "(@Muhindhar or @Vigneshwaran or @jerishwin or @Malavicka or @Mythily) and not (@Developing or @Bug or @UnderDevelopment or @develop)",
 		//tags = "@Addcall",
 		monochrome = true)
-
 
 
 public class TestRunner extends AbstractTestNGCucumberTests {
