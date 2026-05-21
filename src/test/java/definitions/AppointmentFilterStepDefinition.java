@@ -26,13 +26,13 @@ public class AppointmentFilterStepDefinition {
 	public void user_clicks_on_signin_button() {
 		// Write code here that turns the phrase above into concrete actions
 		HelperClass.logger.info("Clicking signin button");
-
 		af.subbtn();
 	}
 
 	@Then("user should navigate to receptionist dashboard")
 	public void user_should_navigate_to_receptionist_dashboard() {
 		// Write code here that turns the phrase above into concrete actions
+		af.loggedin();
 		HelperClass.logger.info("Navigated to receptionist dashboard");
 		
 	}

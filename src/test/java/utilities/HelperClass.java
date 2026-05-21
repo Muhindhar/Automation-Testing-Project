@@ -27,27 +27,27 @@ public class HelperClass {
 	}
 
 	
-	public static String captureScreenshot(String screenshotName) {
-		String dir = "reports/screenshots/";
-		new File(dir).mkdirs();
-		String path = dir + screenshotName + "_" + System.currentTimeMillis() + ".png";
-		try {
-			FileUtils.copyFile(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE), new File(path));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return path;
-	}
+//	public static String captureScreenshot(String screenshotName) {
+//		String dir = "reports/screenshots/";
+//		new File(dir).mkdirs();
+//		String path = dir + screenshotName + "_" + System.currentTimeMillis() + ".png";
+//		try {
+//			FileUtils.copyFile(((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE), new File(path));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		return path;
+//	}
 
 	public static byte[] captureScreenshotBytes() {
 		return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
 	}
 
-	public static void sleep(long millis) {
-		try {
-			Thread.sleep(millis);
-		} catch (InterruptedException e) {
-			Thread.currentThread().interrupt();
-		}
-	}
+//	public static void sleep(long millis) {
+//		try {
+//			//Thread.sleep(millis);
+//		} catch (InterruptedException e) {
+//			Thread.currentThread().interrupt();
+//		}
+//	}
 }

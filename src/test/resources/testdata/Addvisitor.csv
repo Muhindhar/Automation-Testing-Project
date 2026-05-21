@@ -1,6 +1,6 @@
-rowNumber,purpose,visitorName,checkinDate,type
-1,Visit,Muhindhar,05/19/2026,valid
-2,Inquiry,Vignesh,05/19/2026,valid
-3,Visit,,05/19/2026,invalid
-4,,Jerishwin,05/19/2026,invalid
-5,Visit,Malavicka,,invalid
+scenario,purpose,visitorName,phoneNumber,checkinDate
+valid1,Visit,Muhindhar,9876543210,05/19/2026
+valid2,Inquiry,Vignesh,9123456789,05/19/2026
+invalid1,Visit,,9876543210,05/19/2026
+invalid2,,Jerishwin,9123456789,05/19/2026
+invalid3,Visit,Malavicka,9876543210,
