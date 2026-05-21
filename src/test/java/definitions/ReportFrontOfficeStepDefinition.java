@@ -62,6 +62,7 @@ public class ReportFrontOfficeStepDefinition {
 		// Write code here that turns the phrase above into concrete actions
 		HelperClass.logger.info("File downloaded");
 		Assert.assertTrue(rfa.verifydown());
+		
 	}
 
 	@Then("invalid download format message should be displayed")
