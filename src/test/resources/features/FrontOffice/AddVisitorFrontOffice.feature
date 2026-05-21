@@ -1,5 +1,4 @@
-@Muhindhar
-@Developing
+@SkipVisitor
 Feature: Muhindhar_19-05-2026_Add Visitor Functionality
   Description:
     Verify whether receptionist/admin user is able to add
