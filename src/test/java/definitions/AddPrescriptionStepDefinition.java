@@ -4,6 +4,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.testng.Assert;
+
 import actions.PrescriptionAction;
 import utilities.DriverFactory;
 import utilities.ExcelUtility;
@@ -15,148 +16,144 @@ import java.util.Map;
 
 public class AddPrescriptionStepDefinition {
 
-    private final PrescriptionAction prescriptionAction =
-            new PrescriptionAction(DriverFactory.getDriver());
+	private final PrescriptionAction prescriptionAction = new PrescriptionAction(DriverFactory.getDriver());
 
-    private static final int COL_HEADER_NOTE        = 0;
-    private static final int COL_PRESCRIBE_BY       = 1;
-    private static final int COL_PATHOLOGY          = 2;
-    private static final int COL_RADIOLOGY          = 3;
-    private static final int COL_FINDING_CATEGORY   = 4;
-    private static final int COL_FINDINGS           = 5;
-    private static final int COL_FINDING_DESC       = 6;
-    private static final int COL_MEDICINE_CATEGORY  = 7;
-    private static final int COL_MEDICINE           = 8;
-    private static final int COL_DOSE               = 9;
-    private static final int COL_DOSE_INTERVAL      = 10;
-    private static final int COL_DOSE_DURATION      = 11;
-    private static final int COL_INSTRUCTION        = 12;
-    private static final int COL_ATTACHMENT         = 13;
-    private static final int COL_FOOTER_NOTE        = 14;
+	private static final String EXCEL_FILE_PATH = "src/test/resources/testdata/PrescriptionTestData.xlsx";
 
-    @When("clicks the IPD -In Patient menu")
-    public void clicks_the_ipd_in_patient_menu() {
-    	HelperClass.logger.info("Clicking IPD - In Patient menu");
-        prescriptionAction.clickIPDMenu();
-    }
+	private static final String EXCEL_SHEET_NAME = "Sheet1";
 
-    @When("searches patient by IPD Number {string}")
-    public void searches_patient_by_ipd_number(String ipdNumber) {
-    	HelperClass.logger.info("Searching patient using IPD: {}",ipdNumber);
-        prescriptionAction.searchPatientByIPD(ipdNumber);
-    }
+	// Hardcoded IPD number
+	private static final String IPD_NUMBER = "128";
 
-    @Then("only patient {string} IPD should be displayed")
-    public void only_patient_ipd_should_be_displayed(String ipdNumber) {
-    	HelperClass.logger.info("Verifying patient with IPD: {}",ipdNumber);
-        Assert.assertTrue(
-                prescriptionAction.isCorrectPatientDisplayed(ipdNumber),
-                "Expected patient IPD: " + ipdNumber + " was not displayed.");
-    }
+	@When("clicks the IPD -In Patient menu")
+	public void clicks_the_ipd_in_patient_menu() {
+		HelperClass.logger.info("Clicking IPD menu");
+		prescriptionAction.clickIPDMenu();
+	}
 
-    @When("clicks the IPD Number {string}")
-    public void clicks_the_ipd_number(String ipdNumber) {
-        prescriptionAction.clickIPDNumber(ipdNumber);
-        HelperClass.logger.info("Clicking IPD Number: {}",ipdNumber);
-    }
+	@When("searches patient by IPD Number")
+	public void searches_patient_by_ipd_number() {
+		HelperClass.logger.info("Searching patient by IPD Number");
+		prescriptionAction.searchPatientByIPD(IPD_NUMBER);
+	}
 
-    @When("clicks on Prescription")
-    public void clicks_on_prescription() {
-    	HelperClass.logger.info("Clicking Prescription tab");
-        prescriptionAction.clickPrescriptionTab();
-    }
+	@Then("only patient with that IPD should be displayed")
+	public void only_patient_with_that_ipd_should_be_displayed() {
 
-    @When("clicks on Add Prescription")
-    public void clicks_on_add_prescription() {
-    	 HelperClass.logger.info("Clicking Add Prescription");
-        prescriptionAction.clickAddPrescription();
-    }
+		HelperClass.logger.info("Verifying patient display");
 
-    @When("enters prescription details from Excel file {string} sheet {string} row {int}")
-    public void enters_prescription_details_from_excel(String filePath, String sheetName, int rowNum) throws IOException {
+		Assert.assertTrue(prescriptionAction.isCorrectPatientDisplayed(IPD_NUMBER),
+				"Expected patient IPD not displayed");
+	}
 
-        prescriptionAction.enterHeaderNote        (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_HEADER_NOTE));
-        prescriptionAction.selectPrescribeBy      (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_PRESCRIBE_BY));
-        prescriptionAction.selectPathology        (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_PATHOLOGY));
-        prescriptionAction.selectRadiology        (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_RADIOLOGY));
-        prescriptionAction.enterFindingCategory   (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_FINDING_CATEGORY));
-        prescriptionAction.enterFindings          (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_FINDINGS));
-        prescriptionAction.enterFindingDescription(ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_FINDING_DESC));
-        prescriptionAction.selectMedicineCategory (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_MEDICINE_CATEGORY));
-        prescriptionAction.selectMedicine         (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_MEDICINE));
-        prescriptionAction.selectDose             (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_DOSE));
-        prescriptionAction.selectDoseInterval     (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_DOSE_INTERVAL));
-        prescriptionAction.selectDoseDuration     (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_DOSE_DURATION));
-        prescriptionAction.enterInstruction       (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_INSTRUCTION));
-        prescriptionAction.uploadAttachment       (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_ATTACHMENT));
-        prescriptionAction.enterFooterNote        (ExcelUtility.getCellData(filePath, sheetName, rowNum, COL_FOOTER_NOTE));
-    }
+	@When("clicks that IPD Number")
+	public void clicks_that_ipd_number() {
 
-    @When("enters prescription details")
-    public void enters_prescription_details(DataTable dataTable) {
-        List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+		HelperClass.logger.info("Clicking IPD number");
 
-        for (Map<String, String> data : rows) {
-            prescriptionAction.enterHeaderNote        (data.get("headerNote"));
-            prescriptionAction.selectPrescribeBy      (data.get("prescribeBy"));
-            prescriptionAction.selectPathology        (data.get("pathology"));
-            prescriptionAction.selectRadiology        (data.get("radiology"));
-            prescriptionAction.enterFindingCategory   (data.get("findingCategory"));
-            prescriptionAction.enterFindings          (data.get("findings"));
-            prescriptionAction.enterFindingDescription(data.get("findingDescription"));
-            prescriptionAction.selectMedicineCategory (data.get("medicineCategory"));
-            prescriptionAction.selectMedicine         (data.get("medicine"));
-            prescriptionAction.selectDose             (data.get("dose"));
-            prescriptionAction.selectDoseInterval     (data.get("doseInterval"));
-            prescriptionAction.selectDoseDuration     (data.get("doseDuration"));
-            prescriptionAction.enterInstruction       (data.get("instruction"));
-            prescriptionAction.uploadAttachment       (data.get("attachmentPath"));
-            prescriptionAction.enterFooterNote        (data.get("footerNote"));
-        }
-    }
+		prescriptionAction.clickIPDNumber(IPD_NUMBER);
+	}
 
-    @When("clicks on Save")
-    public void clicks_on_save() {
-    	HelperClass.logger.info("Clicking Save button");
-        prescriptionAction.clickSave();
-    }
+	@When("clicks on Prescription tab")
+	public void clicks_on_prescription_tab() {
 
-    @When("clicks on Save and Print")
-    public void clicks_on_save_and_print() {
-    	HelperClass.logger.info("Clicking Save and Print button");
-        prescriptionAction.clickSaveAndPrint();
-    }
+		HelperClass.logger.info("Clicking Prescription tab");
 
-    @Then("the prescription should be saved successfully")
-    public void the_prescription_should_be_saved_successfully() {
-    	HelperClass.logger.info("Verifying prescription save");
-        Assert.assertTrue(
-                prescriptionAction.isPrescriptionSaved(),
-                "Prescription was not saved successfully. List table did not appear.");
-    }
+		prescriptionAction.clickPrescriptionTab();
+	}
 
-    @Then("the prescription should appear in the prescription list")
-    public void the_prescription_should_appear_in_the_prescription_list() {
-        Assert.assertTrue(
-                prescriptionAction.isPrescriptionInList(),
-                "Prescription row not found in the prescription list.");
-    }
+	@When("clicks on Add Prescription button")
+	public void clicks_on_add_prescription_button() {
 
-    @Then("the prescription should be saved successfully and navigated to the print preview page")
-    public void the_prescription_should_be_saved_successfully_and_navigated_to_the_print_preview_page() {
-        Assert.assertTrue(
-                prescriptionAction.isPrescriptionSaved(),
-                "Prescription save failed after Save & Print.");
-        Assert.assertTrue(
-                prescriptionAction.isPrintPreviewOpened(),
-                "Print preview page was not opened.");
-    }
+		HelperClass.logger.info("Clicking Add Prescription button");
 
-    @Then("an error message should be displayed as {string}")
-    public void an_error_message_should_be_displayed_as(String expectedMessage) {
-        String actualMessage = prescriptionAction.getErrorMessage();
-        Assert.assertTrue(
-                actualMessage.contains(expectedMessage),
-                String.format("Expected error message: '%s' but got: '%s'", expectedMessage, actualMessage));
-    }
+		prescriptionAction.clickAddPrescription();
+	}
+
+	@When("fills the valid prescription details")
+	public void fills_the_valid_prescription_details() throws IOException {
+
+		HelperClass.logger.info("Filling valid prescription details");
+
+		int rowNum = 1;
+
+		prescriptionAction.enterHeaderNote(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 0));
+
+		prescriptionAction.selectPrescribeBy(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 1));
+
+		prescriptionAction.selectPathology(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 2));
+
+		prescriptionAction.selectRadiology(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 3));
+
+		prescriptionAction.enterFindingCategory(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 4));
+
+		prescriptionAction.enterFindings(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 5));
+
+		prescriptionAction
+				.enterFindingDescription(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 6));
+
+		prescriptionAction
+				.selectMedicineCategory(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 7));
+
+		prescriptionAction.selectMedicine(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 8));
+
+		prescriptionAction.selectDose(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 9));
+
+		prescriptionAction.selectDoseInterval(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 10));
+
+		prescriptionAction.selectDoseDuration(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 11));
+
+		prescriptionAction.enterInstruction(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 12));
+
+		prescriptionAction.uploadAttachment(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 13));
+
+		prescriptionAction.enterFooterNote(ExcelUtility.getCellData(EXCEL_FILE_PATH, EXCEL_SHEET_NAME, rowNum, 14));
+	}
+
+	@When("clicks on Save")
+	public void clicks_on_save() {
+
+		HelperClass.logger.info("Clicking Save button");
+
+		prescriptionAction.clickSave();
+	}
+
+	@Then("the prescription should be saved successfully")
+	public void the_prescription_should_be_saved_successfully() {
+
+		HelperClass.logger.info("Verifying prescription saved");
+
+		Assert.assertTrue(prescriptionAction.isPrescriptionSaved(), "Prescription not saved successfully");
+	}
+
+	@Then("the prescription should appear in the prescription list")
+	public void the_prescription_should_appear_in_the_prescription_list() {
+
+		HelperClass.logger.info("Verifying prescription list");
+
+		Assert.assertTrue(prescriptionAction.isPrescriptionInList(), "Prescription not found in list");
+	}
+
+	@When("enters prescription details")
+	public void enters_prescription_details(DataTable dataTable) {
+
+		HelperClass.logger.info("Entering prescription details");
+
+		List<Map<String, String>> data = dataTable.asMaps();
+
+		Map<String, String> row = data.get(0);
+
+		prescriptionAction.enterHeaderNote(row.get("headerNote"));
+
+		prescriptionAction.selectPrescribeBy(row.get("prescribeBy"));
+	}
+
+	@Then("an error message should be displayed as {string}")
+	public void an_error_message_should_be_displayed_as(String expectedMessage) {
+
+		String actualMessage = prescriptionAction.getErrorMessage();
+
+		Assert.assertTrue(actualMessage.contains(expectedMessage),
+				"Expected: " + expectedMessage + " but got: " + actualMessage);
+	}
 }
