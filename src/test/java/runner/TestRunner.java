@@ -19,7 +19,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				"rerun:target/failed-rerun.txt" },
 		monochrome = true,
-		tags = "(@Vigneshwaran) and not (@UnderDevelopment)"
+		tags = "not @UnderDevelopment and not @Bug"
 		)
 
 public class TestRunner extends AbstractTestNGCucumberTests {
