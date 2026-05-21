@@ -15,9 +15,9 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				"rerun:target/failed-rerun.txt" },
-		tags = "@Malavicka",
-		monochrome = true)
-
+		monochrome = true,
+		tags = "not @UnderDevelopment and not @Bug"
+		)
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 
