@@ -16,7 +16,7 @@ import io.cucumber.testng.CucumberOptions;
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "rerun:target/failed-rerun.txt"
         },
-        tags = "@Muhindhar",
+        tags = "@Muhindhar" and not ""
         // tags = "@Addcall",
         monochrome = true
 )
