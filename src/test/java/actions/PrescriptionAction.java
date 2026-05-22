@@ -78,18 +78,28 @@ public class PrescriptionAction extends BaseAction {
 	}
 
 	private void typeInWysihtml5(By iframeLocator, String value) {
-		if (isBlank(value))
-			return;
-		WebElement iframe = wait.until(ExpectedConditions.visibilityOfElementLocated(iframeLocator));
-		js.executeScript("arguments[0].scrollIntoView({block:'center'});", iframe);
-		driver.switchTo().frame(iframe);
-		try {
-			WebElement body = wait.until(ExpectedConditions.presenceOfElementLocated(page.frameBody));
-			js.executeScript("arguments[0].innerHTML='';", body);
-			body.sendKeys(value);
-		} finally {
-			driver.switchTo().defaultContent();
-		}
+	    if (isBlank(value)) return;
+	    driver.switchTo().defaultContent();
+	    try {
+	        WebElement iframe = wait.until(ExpectedConditions.presenceOfElementLocated(iframeLocator));
+	        js.executeScript("arguments[0].scrollIntoView({block:'center'});", iframe);
+	        wait.until(ExpectedConditions.visibilityOfElementLocated(iframeLocator));
+	        driver.switchTo().frame(iframe);
+	        WebElement body = wait.until(ExpectedConditions.presenceOfElementLocated(page.frameBody));
+	        body.clear();
+	        body.sendKeys(value);
+
+	    } catch (org.openqa.selenium.StaleElementReferenceException e) {
+	        driver.switchTo().defaultContent();
+	        WebElement iframe = wait.until(ExpectedConditions.visibilityOfElementLocated(iframeLocator));
+	        driver.switchTo().frame(iframe);
+	        WebElement body = wait.until(ExpectedConditions.presenceOfElementLocated(page.frameBody));
+	        body.clear();
+	        body.sendKeys(value);
+
+	    } finally {
+	        driver.switchTo().defaultContent();
+	    }
 	}
 
 	public void selectByVisibleText(By locator, String value) {
@@ -125,8 +135,17 @@ public class PrescriptionAction extends BaseAction {
 	}
 
 	public void enterFooterNote(String value) {
-	    WebElement label = waitForVisibility(page.footerNoteLabel);
-	    js.executeScript("arguments[0].scrollIntoView({block:'center'});", label);
+	    if (isBlank(value)) return;
+
+	    driver.switchTo().defaultContent();
+	    WebElement label = wait.until(
+	        ExpectedConditions.presenceOfElementLocated(page.footerNoteLabel));
+	    js.executeScript("arguments[0].scrollIntoView({block: 'center'});", label);
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(page.footerNoteLabel));
+	    js.executeScript("arguments[0].click();", label);
+	    wait.until(ExpectedConditions.presenceOfElementLocated(page.footerNote));
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(page.footerNote));
+
 	    typeInWysihtml5(page.footerNote, value);
 	}
 
@@ -166,7 +185,6 @@ public class PrescriptionAction extends BaseAction {
 		if (isBlank(value))
 			return;
 		selectByVisibleText(page.medicineCategoryDropdown, value);
-		// Wait until medicine dropdown is populated after category selection
 		wait.until(d -> d.findElement(page.medicineDropdown).findElements(page.dropdownOptions).size() > 1);
 	}
 
@@ -193,31 +211,54 @@ public class PrescriptionAction extends BaseAction {
 	}
 
 	public void enterInstruction(String value) {
-	    if (isBlank(value))
-	        return;
+		if (isBlank(value))
+			return;
 
-	    driver.switchTo().defaultContent();
-	    WebElement instructionField = wait.until(ExpectedConditions.presenceOfElementLocated(page.instruction));
-	    js.executeScript("arguments[0].scrollIntoView({block:'center'});", instructionField);
-	    wait.until(ExpectedConditions.visibilityOf(instructionField));
-	    instructionField.clear();
-	    instructionField.sendKeys(value);
+		driver.switchTo().defaultContent();
+		WebElement instructionField = wait.until(ExpectedConditions.presenceOfElementLocated(page.instruction));
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", instructionField);
+		wait.until(ExpectedConditions.visibilityOf(instructionField));
+		instructionField.clear();
+		instructionField.sendKeys(value);
 	}
 
 	public void uploadAttachment(String filePath) {
-		if (isBlank(filePath))
-			return;
-		String absolutePath = System.getProperty("user.dir") + java.io.File.separator
-				+ filePath.replace("/", java.io.File.separator);
-		wait.until(ExpectedConditions.presenceOfElementLocated(page.attachmentInput)).sendKeys(absolutePath);
+	    if (isBlank(filePath)) return;
+	    driver.switchTo().defaultContent();
+	    String absolutePath = System.getProperty("user.dir") + java.io.File.separator
+	            + filePath.replace("/", java.io.File.separator);
+
+	    try {
+	        WebElement input = wait.until(
+	            ExpectedConditions.refreshed(
+	                ExpectedConditions.presenceOfElementLocated(page.attachmentInput)));
+	        input.sendKeys(absolutePath);
+	    } catch (org.openqa.selenium.StaleElementReferenceException e) {
+	        WebElement input = wait.until(
+	            ExpectedConditions.presenceOfElementLocated(page.attachmentInput));
+	        input.sendKeys(absolutePath);
+	    }
 	}
 
 	public void clickSave() {
-		WebElement btn = wait.until(ExpectedConditions.elementToBeClickable(page.saveButton));
-		js.executeScript("arguments[0].scrollIntoView({block:'center'});", btn);
-		js.executeScript("arguments[0].click();", btn);
-		wait.until(ExpectedConditions.or(ExpectedConditions.visibilityOfElementLocated(page.getPrescriptionTable),
-				ExpectedConditions.visibilityOfElementLocated(page.errormsg)));
+
+	    try {
+	        WebElement btn = wait.until(
+	            ExpectedConditions.refreshed(
+	                ExpectedConditions.elementToBeClickable(page.saveButton)));
+	        js.executeScript("arguments[0].scrollIntoView({block:'center'});", btn);
+	        js.executeScript("arguments[0].click();", btn);
+
+	    } catch (org.openqa.selenium.StaleElementReferenceException e) {
+	        WebElement freshBtn = wait.until(
+	            ExpectedConditions.elementToBeClickable(page.saveButton));
+	        js.executeScript("arguments[0].scrollIntoView({block:'center'});", freshBtn);
+	        js.executeScript("arguments[0].click();", freshBtn);
+	    }
+
+	    wait.until(ExpectedConditions.or(
+	        ExpectedConditions.visibilityOfElementLocated(page.getPrescriptionTable),
+	        ExpectedConditions.visibilityOfElementLocated(page.errormsg)));
 	}
 
 	public void clickSaveAndPrint() {
