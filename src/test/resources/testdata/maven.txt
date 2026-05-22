@@ -1,0 +1,64 @@
+1. fixed,2.range,3. releae,4 latest,property based
+
+goals are predefined tasks used to automate building, compiling, testing, packaging, and deploying a project. 
+
+Main Purpose of Maven
+1. Dependency Management
+Automatically downloads required libraries from Maven repository.
+Example:
+Selenium
+TestNG
+WebDriverManager
+Instead of manually adding JAR files, Maven manages them through pom.xml.
+2. Buid Automation
+Automates project build process.
+Commands:
+mvn clean
+mvn compile
+mvn test
+mvn package
+Purpose:
+Reducs manual work
+Standardizes build process
+3. Project Structure Management
+Provides standard folder structure.
+Example:
+src/main/java
+src/test/java
+src/test/resources
+Purpose:
+Easy maintenance
+Better team collaboration
+4. Test Execution
+Runs automation or unit tests easily.
+Example:
+
+mvn test
+Used with:
+Selenium
+TestNG
+JUnit
+5. CI/CD Integration
+Integrates with tools like:
+Jenkins
+GitHub
+Docker
+Purpose:
+Automatic build and test execution in pipelines
+6. Reporting
+
+Generates reports after execution.
+
+Examples:
+
+Surefire reports
+Allure reports
+Extent reports
+7. Version Management
+
+Manages dependency versions centrally using pom.xml.
+
+Purpose:
+
+Avoids conflicts
+Ensures compatibility

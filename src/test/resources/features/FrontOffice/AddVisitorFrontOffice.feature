@@ -1,5 +1,9 @@
 @Muhindhar
+<<<<<<< HEAD
 @Developing
+=======
+@UnderDevelopment
+>>>>>>> f86e621b7d645b765e062b8f0a965e5efa728436
 Feature: Muhindhar_19-05-2026_Add Visitor Functionality
   Description:
     Verify whether receptionist/admin user is able to add
@@ -26,7 +30,7 @@ Feature: Muhindhar_19-05-2026_Add Visitor Functionality
    @InvalidAddVisitor
   Scenario Outline: Validate add visitor with invalid details
     When user clicks on "Add Visitor" button
-    And user enters invalid visitor details from CSV "<rowNumber>"
+    And user enters invalid visitor details "<rowNumber>"
     And user clicks on save button
     Then proper validation message should be displayed
 
