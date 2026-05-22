@@ -18,9 +18,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 
 	@Override
 	@DataProvider
-
 	public Object[][] scenarios() {
-
 		return super.scenarios();
 	}
 }
