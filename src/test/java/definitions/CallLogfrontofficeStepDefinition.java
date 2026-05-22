@@ -257,10 +257,8 @@ public class CallLogfrontofficeStepDefinition {
 		Assert.assertTrue(cfa.errorcheck());
 		HelperClass.logger.info("Error displayed");
 		System.out.println("Error message displayed");
-<<<<<<< HEAD
-=======
 		return true;
->>>>>>> f86e621b7d645b765e062b8f0a965e5efa728436
+
 
 	}
 

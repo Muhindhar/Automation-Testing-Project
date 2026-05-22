@@ -61,11 +61,11 @@ public class ReportFrontOfficeStepDefinition {
 	public void the_document_should_be_downloaded_successfully() throws InterruptedException {
 		// Write code here that turns the phrase above into concrete actions
 		HelperClass.logger.info("File downloaded");
-<<<<<<< HEAD
+
 		Assert.assertTrue(rfa.verifydown());
-=======
+
 		Assert.assertTrue(true);
->>>>>>> f86e621b7d645b765e062b8f0a965e5efa728436
+
 		
 	}
 
