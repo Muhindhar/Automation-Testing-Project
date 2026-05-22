@@ -15,7 +15,7 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				"rerun:target/failed-rerun.txt" },
-		tags = "@jerishwin",
+		tags = "@Malavicka",
 		monochrome = true)
 
 
