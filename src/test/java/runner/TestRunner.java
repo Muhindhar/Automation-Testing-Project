@@ -1,4 +1,4 @@
-package runner;
+﻿package runner;
 import org.testng.annotations.DataProvider;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -17,11 +17,10 @@ import io.cucumber.testng.CucumberOptions;
 		tags = "not @UnderDevelopment and not @Bug and not @Developing")
 
 public class TestRunner extends AbstractTestNGCucumberTests {
-
-	@Override
-	@DataProvider
-	public Object[][] scenarios() {
-		return super.scenarios();
-	}
+    @Override
+    @DataProvider
+    public Object[][] scenarios() {
+        return super.scenarios();
+    }
 }
 
