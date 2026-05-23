@@ -13,6 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 				"rerun:target/failed-rerun.txt" },
 		monochrome = true,
 		tags = "@Mythily"
+	)
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 
