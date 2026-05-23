@@ -11,7 +11,7 @@ Feature: S_MYTHILY_2026_05_18_SmartHospital_Delete Prescription Validation
     And searches patient by IPD Number
     Then only patient with that IPD should be displayed
     When clicks that IPD Number
-    And clicks on Prescription
+    And clicks on Prescription tab
 
   @DeletePrescription
   Scenario: Delete prescription from View Prescription
