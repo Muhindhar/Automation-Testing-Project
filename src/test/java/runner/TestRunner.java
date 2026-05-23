@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features\\prescription\\edit_prescription.feature",
+		features = "src\\test\\resources\\features\\prescription\\delete_prescription.feature",
 
 		glue = "definitions",
 		plugin = { "pretty", "html:target/cucumber-report.html", "json:target/cucumber-report.json",
@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
 				"rerun:target/failed-rerun.txt" },
 		monochrome = true,
-		tags = "not @UnderDevelopment and not @Bug and not @Developing")
+		tags = "@Mythily"
 
 public class TestRunner extends AbstractTestNGCucumberTests {
 
