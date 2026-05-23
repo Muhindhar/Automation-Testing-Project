@@ -1,4 +1,4 @@
-﻿package runner;
+package runner;
 import org.testng.annotations.DataProvider;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
@@ -22,5 +22,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     public Object[][] scenarios() {
         return super.scenarios();
     }
+
 }
 
