@@ -21,7 +21,7 @@ public class SearchPathalogyStepDefinition {
     }
     @Then("the user should be redirected to the patient dashboard")
     public void the_user_should_be_redirected_to_the_patient_dashboard() {
-        String currentUrl = pathoAction.getCurrentUrl();
+        String currentUrl = DriverFactory.getDriver().getCurrentUrl();
         HelperClass.logger.info("Current URL: {}", currentUrl);
         Assert.assertTrue(
             currentUrl.contains("patient") || currentUrl.contains("dashboard"),
