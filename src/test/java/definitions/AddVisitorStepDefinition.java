@@ -31,33 +31,7 @@ public class AddVisitorStepDefinition {
     }
 
     @When("user enters visitor details")
-<<<<<<< HEAD:src/test/java/definitions/AddVisiorStepDefinition.java
-    public void user_enters_visitor_details()
-            throws IOException {
 
-        Map<String, String> data =
-
-                CSVReaderUtil.getFirstRow(
-                        "Addvisitor",
-                        "valid1"
-                );
-
-        ava.entervalddet(data);
-    }
-
-    @When("user enters invalid visitor details")
-    public void user_enters_invalid_visitor_details()
-            throws IOException {
-
-        Map<String, String> data =
-
-                CSVReaderUtil.getFirstRow(
-                        "Addvisitor",
-                        "invalid1"
-                );
-
-        ava.enterinvaldet(data);
-=======
     public void user_enters_visitor_details() {
         //Map<String, String> data = CSVReaderUtil.getFirstRow(
               //  "src/test/resources/testdata/Addvisitor.csv", "valid1");
@@ -69,7 +43,7 @@ public class AddVisitorStepDefinition {
 //        Map<String, String> data = CSVReaderUtil.getFirstRow(
 //                "src/test/resources/testdata/Addvisitor.csv", "invalid1");
 //        ava.enterinvaldet(data);
->>>>>>> 66d126c (updated add complaint):src/test/java/definitions/AddVisitorStepDefinition.java
+
     }
 
     @When("user clicks on save button")
