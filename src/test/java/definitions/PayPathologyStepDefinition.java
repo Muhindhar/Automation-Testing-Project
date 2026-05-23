@@ -71,6 +71,8 @@ public class PayPathologyStepDefinition {
             Assert.assertTrue(succTxt.contains(string),
                 "Expected message to contain: '" + string + "' but got: '" + succTxt + "'");
         }
+        Assert.assertTrue(succTxt.contains(string),
+            "Expected message to contain: '" + string + "' but got: '" + succTxt + "'");
     }
     @Then("an error message should be displayed for invalid payment amount")
     public void an_error_message_should_be_displayed_for_invalid_payment_amount() {
