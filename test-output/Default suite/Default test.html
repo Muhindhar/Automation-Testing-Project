@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 20 17:02:49 IST 2026</td>
+<td>Started on:</td><td>Sun May 24 21:05:34 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>17 seconds (17149 ms)</td>
+<tr><td>Total time:</td><td>254 seconds (254150 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,9 +76,112 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "add outgoing call log", "Muhindhar_16-05-2026_To check the call log in the front office module"</td>
-<td></td>
-<td>15</td>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate add visitor with invalid details", "Muhindhar_19-05-2026_Add Visitor Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Expected validation message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.proper_validation_message_should_be_displayed(AddVisitorStepDefinition.java:53)
+	at ✽.proper validation message should be displayed(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1331052438", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1331052438'><pre>java.lang.AssertionError: Expected validation message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.proper_validation_message_should_be_displayed(AddVisitorStepDefinition.java:53)
+	at ✽.proper validation message should be displayed(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:31)
+</pre></div></td>
+<td>32</td>
+<td>runner.TestRunner@56dc1551</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate add visitor with valid details", "Muhindhar_19-05-2026_Add Visitor Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Expected success message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.visitor_should_be_added_successfully(AddVisitorStepDefinition.java:47)
+	at ✽.visitor should be added successfully(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:19)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1859227008", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1859227008'><pre>java.lang.AssertionError: Expected success message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.visitor_should_be_added_successfully(AddVisitorStepDefinition.java:47)
+	at ✽.visitor should be added successfully(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:19)
+</pre></div></td>
+<td>57</td>
+<td>runner.TestRunner@56dc1551</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate add visitor with invalid details", "Muhindhar_19-05-2026_Add Visitor Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Expected validation message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.proper_validation_message_should_be_displayed(AddVisitorStepDefinition.java:53)
+	at ✽.proper validation message should be displayed(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace383127665", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace383127665'><pre>java.lang.AssertionError: Expected validation message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.proper_validation_message_should_be_displayed(AddVisitorStepDefinition.java:53)
+	at ✽.proper validation message should be displayed(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:31)
+</pre></div></td>
+<td>30</td>
+<td>runner.TestRunner@56dc1551</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate add visitor with invalid details", "Muhindhar_19-05-2026_Add Visitor Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Expected validation message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.proper_validation_message_should_be_displayed(AddVisitorStepDefinition.java:53)
+	at ✽.proper validation message should be displayed(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:31)
+</pre></div><a href='#' onClick='toggleBox("stack-trace110238970", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace110238970'><pre>java.lang.AssertionError: Expected validation message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.proper_validation_message_should_be_displayed(AddVisitorStepDefinition.java:53)
+	at ✽.proper validation message should be displayed(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:31)
+</pre></div></td>
+<td>46</td>
+<td>runner.TestRunner@56dc1551</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate add visitor with valid details", "Muhindhar_19-05-2026_Add Visitor Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Expected success message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.visitor_should_be_added_successfully(AddVisitorStepDefinition.java:47)
+	at ✽.visitor should be added successfully(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:19)
+</pre></div><a href='#' onClick='toggleBox("stack-trace203829039", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace203829039'><pre>java.lang.AssertionError: Expected success message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.visitor_should_be_added_successfully(AddVisitorStepDefinition.java:47)
+	at ✽.visitor should be added successfully(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:19)
+</pre></div></td>
+<td>51</td>
+<td>runner.TestRunner@56dc1551</td></tr>
+<tr>
+<td title='runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate add visitor without mandatory fields", "Muhindhar_19-05-2026_Add Visitor Functionality"</td>
+<td><div><pre>java.lang.AssertionError: Expected mandatory field validation message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.mandatory_field_validation_message_should_be_displayed(AddVisitorStepDefinition.java:58)
+	at ✽.mandatory field validation message should be displayed(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:43)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1060041730", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1060041730'><pre>java.lang.AssertionError: Expected mandatory field validation message not displayed expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at definitions.AddVisitorStepDefinition.mandatory_field_validation_message_should_be_displayed(AddVisitorStepDefinition.java:58)
+	at ✽.mandatory field validation message should be displayed(file:///D:/Automation_Project/Automation-Testing-Project/src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:43)
+</pre></div></td>
+<td>30</td>
 <td>runner.TestRunner@56dc1551</td></tr>
 </table><p>
 </body>
