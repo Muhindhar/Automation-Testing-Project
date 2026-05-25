@@ -57,3 +57,5 @@ cucumber-report.json
 rerun.txt
 failed-rerun.txt
 
+
+target/
