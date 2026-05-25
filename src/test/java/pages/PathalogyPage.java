@@ -21,7 +21,7 @@ public class PathalogyPage {
     public By notFound = By.xpath("//tr[@class='odd']//td[text()='No matching records found']");
 
     //pay
-	public By paybtn = By.xpath("//td[@class='text-right']//button[normalize-space()='Pay']");
+	public By paybtn = By.xpath("//td[contains(@class,'text-right')]//button[contains(@onclick,'payModal')]");
 	public By payAmt = By.xpath("//input[@id='amount_total_paid']");
 	public By add = By.xpath("//div[@class='modal-footer']//button[@id='pay_button']");
 	public By makepay = By.xpath("//button[normalize-space()='Make Payment']");
