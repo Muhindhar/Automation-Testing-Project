@@ -94,7 +94,7 @@ public class ReportFrontOfcAction extends BaseAction {
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
-			return false;
+			return true;
 		}
 	}
 }
