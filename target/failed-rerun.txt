@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-file:src/test/resources/features/FrontOffice/AddVisitorFrontOffice.feature:23:24:35:36:37:40
-=======
-file:src/test/resources/features/opd/report_download.feature:12
->>>>>>> 892436bd914aa2bd29cd49f1940169ce8ff2766e
