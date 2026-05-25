@@ -1,34 +1,64 @@
-# IDE
+# Eclipse
 .metadata
-.idea/
 .project
 .classpath
 .settings/
 .factorypath
 
 # IntelliJ
+.idea/
 *.iml
 
+# VS Code
+.vscode/
+
 # Git
-.git
+# DO NOT ADD .git
 
 # Logs
 logs/
+*.log
 
-# Build folders
+# Maven
 target/
+
+# Test Reports
 test-output/
+ExtentReports/
+reports/
 allure-report/
 allure-results/
-ExtentReports/
 
 # Screenshots
 screenshots/
 test-output/Screenshots/
 
-# OS files
+# Downloads
+downloads/
+
+# OS Files
 .DS_Store
 Thumbs.db
 
-# Runner
-src/test/java/com/runner/TestNgRunner.java
+# Compiled Files
+bin/
+*.class
+
+<<<<<<< HEAD
+#downloads
+downloads/
+/.apt_generated/
+/.apt_generated_tests/
+=======
+# Generated Files
+/.apt_generated/
+/.apt_generated_tests/
+
+# Cucumber
+cucumber-report.html
+cucumber-report.json
+rerun.txt
+failed-rerun.txt
+>>>>>>> d8ebfbe287afa1ac1c455472f402e04151093016
+
+target/
