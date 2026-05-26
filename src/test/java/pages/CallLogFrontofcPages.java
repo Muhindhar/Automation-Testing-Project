@@ -6,7 +6,7 @@ public class CallLogFrontofcPages {
 	public By recbtnfo = By
 			.cssSelector(".btn.btn-primary.width50[href='#'][onclick=\\\"copy('maria@gmail.com', 'password')\\\"]");
 	public By signinfo = By.xpath("//button[@type='submit']");
-	public By frontofc = By.xpath("//span[normalize-space()='Front Office'] | //li//a//span[text()='Front Office']");
+	public By frontofc = By.xpath("//li//a//span[text()='Front Office'] | //span[contains(text(),'Front Office')] | //li/a/span[contains(.,'Front Office')]");
 	public By phcalllog = By.xpath(
 			"//div[@class = 'box-tools pull-right']//a[@href = 'https://demo.smart-hospital.in/admin/generalcall']");
 	public By addlog = By.xpath("//a[@class='btn btn-primary btn-sm call_log']");
