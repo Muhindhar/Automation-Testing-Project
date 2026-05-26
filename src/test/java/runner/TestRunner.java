@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-        features = "src/test/resources/features/FrontOffice/FrontOfficeComplaint.feature",
+        features = "src/test/resources/features",
 
         glue = "definitions",
 
@@ -16,7 +16,7 @@ import io.cucumber.testng.CucumberOptions;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "rerun:target/failed-rerun.txt"
         },
-
+        tags = "@Muhindhar"
         monochrome = true
 )
 
