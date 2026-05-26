@@ -12,7 +12,7 @@ public class PathalogyPage {
     }
     //search and filter
     public By login = By.xpath("//a[text()='Login']");
-    public By userlog = By.xpath("//a[normalize-space()='User Login']");
+    public By userlog = By.xpath("//p[@style='margin-top: 20px;']//a[@href='https://demo.smart-hospital.in/site/userlogin']");
     public By signup = By.xpath("//button[@type='submit'] | //button[contains(text(),'Sign')]");
     public By pathlogyMenu = By.xpath("//a[normalize-space()='Pathology']");
     public By search = By.xpath("//input[@type='search' or @placeholder='Search...']");
@@ -21,7 +21,7 @@ public class PathalogyPage {
     public By notFound = By.xpath("//tr[@class='odd']//td[text()='No matching records found']");
 
     //pay
-	public By paybtn = By.xpath("//td[@class='text-right']//button[normalize-space()='Pay']");
+	public By paybtn = By.xpath("//td[contains(@class,'text-right')]//button[contains(@onclick,'payModal')]");
 	public By payAmt = By.xpath("//input[@id='amount_total_paid']");
 	public By add = By.xpath("//div[@class='modal-footer']//button[@id='pay_button']");
 	public By makepay = By.xpath("//button[normalize-space()='Make Payment']");

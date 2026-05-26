@@ -41,3 +41,5 @@ Feature: S_MYTHILY_2026_05_14_SmartHospital_Add Prescription Validation
 
     When clicks on Save
     Then an error message should be displayed as "Please select any one pathology, radiology or medicine details"
+    
+    
