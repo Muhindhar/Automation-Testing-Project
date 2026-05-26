@@ -66,19 +66,31 @@ public class CallLogFrontofcActions extends BaseAction {
 		}
 	}
 
-	public void enterdet(String name, String phone, String description, String calltype) {
+	public void enterdet(String name, String phone, String description, String calltype, String note, String duration) {
+
 		try {
+
 			sendKeys(cfp.name, name);
+
+			sendKeys(cfp.phone, phone);
+
 			sendKeys(cfp.desc, description);
+
+			sendKeys(cfp.note, note);
+
+			sendKeys(cfp.callduration, duration);
+
 			if (calltype.equalsIgnoreCase("Incoming")) {
-				HelperClass.logger.info("clicking Incoming call ");
+
 				jsClick(cfp.incom);
+
 			} else if (calltype.equalsIgnoreCase("Outgoing")) {
-				HelperClass.logger.info("clicking outgoing call");
+
 				jsClick(cfp.outgng);
 			}
-		} 
-		catch (Exception e) {
+
+		} catch (Exception e) {
+
 			e.printStackTrace();
 		}
 	}
@@ -87,8 +99,7 @@ public class CallLogFrontofcActions extends BaseAction {
 		try {
 			HelperClass.logger.info("clicking save button");
 			jsClick(cfp.savebtn);
-		} 
-		catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
@@ -97,8 +108,7 @@ public class CallLogFrontofcActions extends BaseAction {
 		try {
 			HelperClass.logger.info("checking whether the list is visible");
 			return getText(cfp.checklist);
-		} 
-		catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return "";
 		}
@@ -107,8 +117,7 @@ public class CallLogFrontofcActions extends BaseAction {
 	public boolean errorcheck() {
 		try {
 			return isDisplayed(cfp.error);
-		} 
-		catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return false;
 		}

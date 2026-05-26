@@ -44,12 +44,9 @@ Thumbs.db
 bin/
 *.class
 
-<<<<<<< HEAD
-#downloads
+
 downloads/
-/.apt_generated/
-/.apt_generated_tests/
-=======
+
 # Generated Files
 /.apt_generated/
 /.apt_generated_tests/
@@ -59,4 +56,6 @@ cucumber-report.html
 cucumber-report.json
 rerun.txt
 failed-rerun.txt
->>>>>>> d8ebfbe287afa1ac1c455472f402e04151093016
+
+
+target/

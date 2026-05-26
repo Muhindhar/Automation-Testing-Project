@@ -1,4 +1,5 @@
 @Vigneshwaran
+@Bug
 Feature: M_VIGNESHWARAN_2026_05_17_SmartHospital_Add_Credential_In_Consultation_Feature
 
   Background:
@@ -18,7 +19,7 @@ Feature: M_VIGNESHWARAN_2026_05_17_SmartHospital_Add_Credential_In_Consultation_
     And clicks on the save credential button
     Then the credential should be saved successfully
 
-  @InvalidCredential
+  @Bug @InvalidCredential
   Scenario Outline: Verify validation message when mandatory credential fields are missing
     When clicks on the add credential button
     And enters invalid credential data for "<testCase>"
@@ -30,4 +31,3 @@ Feature: M_VIGNESHWARAN_2026_05_17_SmartHospital_Add_Credential_In_Consultation_
       | Empty Api Key     |
       | Empty Api Secret  |
       | Empty Both Fields |
-

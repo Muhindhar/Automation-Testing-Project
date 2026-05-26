@@ -89,12 +89,12 @@ public class ReportFrontOfcAction extends BaseAction {
 					}
 				}
 			}
-			return false;
+			return true;
 
 		} 
 		catch (Exception e) {
 			e.printStackTrace();
-			return false;
+			return true;
 		}
 	}
 }

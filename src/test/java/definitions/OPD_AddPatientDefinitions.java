@@ -41,20 +41,20 @@ public class OPD_AddPatientDefinitions {
         apa.fillPatientFormFromExcel();
     }
 
-    @And("clicks the {string} button")
-    public void clicks_the_button(String buttonName) {
+    @And("clicks the Save button")
+    public void clicks_the_button() {
         apa.clickSave();
     }
 
-    @Then("a {string} message should appear")
-    public void a_message_should_appear(String message) {
+    @Then("a Record Saved Successfully message should appear")
+    public void a_message_should_appear() {
         Assert.assertTrue(apa.isSuccessMessageDisplayed(),
-            "Expected success message not displayed: " + message);
+            "Expected success message not displayed");
     }
 
-    @Then("the system should show a message {string}")
-    public void the_system_should_show_a_message(String message) {
+    @Then("the system should show a message Name field is required")
+    public void the_system_should_show_a_message() {
         Assert.assertTrue(apa.isNameErrorDisplayed(),
-            "Expected error message not displayed: " + message);
+            "Expected error message not displayed: ");
     }
 }

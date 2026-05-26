@@ -6,7 +6,7 @@ public class AddVisitorPages {
 
     public By frontofc         = By.xpath("//span[normalize-space()='Front Office']");
     public By addVisitorBtn    = By.xpath("//a[contains(@class,'addvisitor')]");
-    public By select = By.xpath("//select[@fdprocessedid='bmihev']");
+    public By select = By.xpath("//form[@id='formadd']//select[@name='purpose']");
     public By visitorName      = By.xpath("(//input[@type='text'])[1]");
     public By phoneNumber      = By.xpath("(//input[@type='text'])[2]");
     public By purpose          = By.xpath("(//select)[1]");

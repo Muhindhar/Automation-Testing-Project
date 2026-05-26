@@ -1,4 +1,5 @@
-@Malavicka_Updating
+@Malavicka
+@UnderDevelopment
 Feature: V_MALAVICKA_2026_05_14_Generate patient certificate in IPD module
 
   As a doctor
