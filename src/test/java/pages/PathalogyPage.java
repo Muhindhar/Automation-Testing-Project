@@ -12,7 +12,7 @@ public class PathalogyPage {
     }
     //search and filter
     public By login = By.xpath("//a[text()='Login']");
-    public By userlog = By.xpath("//a[normalize-space()='User Login']");
+    public By userlog = By.xpath("//p[@style='margin-top: 20px;']//a[@href='https://demo.smart-hospital.in/site/userlogin']");
     public By signup = By.xpath("//button[@type='submit'] | //button[contains(text(),'Sign')]");
     public By pathlogyMenu = By.xpath("//a[normalize-space()='Pathology']");
     public By search = By.xpath("//input[@type='search' or @placeholder='Search...']");

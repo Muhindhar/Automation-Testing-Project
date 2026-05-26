@@ -11,6 +11,5 @@ Feature: Jerishwin_Joseph_13-05-2026_Discharge Patient
   Scenario: Download a patients OPD Vist report
     When the user clicks the ID link for that patient
     And clicks on the Discharge icon
-    And fills in the discharge form
-    And clicks the Save button
+    And fills in the discharge form and clicks the Save button
     Then a Record Saved Successfully message should appear

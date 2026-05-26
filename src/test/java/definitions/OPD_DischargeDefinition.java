@@ -1,19 +1,25 @@
 package definitions;
 
-import io.cucumber.java.en.When;
+import actions.OPD_DischargeAction;
+import io.cucumber.java.en.And;
+import utilities.DriverFactory;
 
 public class OPD_DischargeDefinition {
-	@When("clicks on the Discharge icon")
-	public void clicks_on_the_discharge_icon() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
 
-	@When("fills in the discharge form")
-	public void fills_in_the_discharge_form() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
+    OPD_DischargeAction dischargeAction =
+            new OPD_DischargeAction(DriverFactory.getDriver());
+    
+    @And("fills in the discharge form and clicks the Save button")
+    public void fills_in_the_discharge_form_and_clicks_the_save_button() throws Exception {
+        dischargeAction.fillDischargeForm(); 
+        dischargeAction.clickSaveDischargeButton();
+    }
 
+    @And("clicks on the Discharge icon")
+    public void clicks_on_the_discharge_icon() {
+        dischargeAction.clickDischargeIcon();
+    }
+
+    
 
 }
