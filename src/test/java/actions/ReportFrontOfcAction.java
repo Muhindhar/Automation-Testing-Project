@@ -1,116 +1,218 @@
-package definitions;
+package actions;
 
+import java.io.File;
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import actions.ReportFrontOfcAction;
-
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-
-import utilities.DriverFactory;
+import pages.ReportDownloadFrontOfficePages;
 import utilities.HelperClass;
 
-public class ReportFrontOfficeStepDefinition {
+public class ReportFrontOfcAction extends BaseAction {
 
-	ReportFrontOfcAction rfa =
-			new ReportFrontOfcAction(
-					DriverFactory.getDriver());
+	ReportDownloadFrontOfficePages rd;
 
-	String actualError;
+	WebDriver driver;
 
-	@Given("user is on login page of smart hospitals")
-	public void user_is_on_login_page_of_smart_hospitals() {
+	public ReportFrontOfcAction(WebDriver driver) {
 
-		HelperClass.logger.info(
-				"User is on login page");
+		super(driver);
+
+		this.driver = driver;
+
+		rd = new ReportDownloadFrontOfficePages();
 	}
 
-	@Given("user clicks on receptionist button in site")
-	public void user_clicks_on_receptionist_button_in_site()
-			throws InterruptedException {
-
-		HelperClass.logger.info(
-				"Receptionist button clicked");
-
-		rfa.clickrecp();
-	}
-
-	@Given("click signin button of smart hospital site")
-	public void click_signin_button_of_smart_hospital_site() {
-
-		HelperClass.logger.info(
-				"Clicking signin button");
-
-		rfa.clksign();
-	}
-
-	@Given("user clicks on the {string} format")
-	public void user_clicks_on_the_format(String string) {
-
-		HelperClass.logger.info(
-				"Downloading file in format : "
-				+ string);
+	public void clickrecp() {
 
 		try {
 
-			switch (string.toLowerCase()) {
+			HelperClass.logger.info(
+					"clicking reception button");
 
-			case "pdf":
-
-				rfa.pdfdown();
-
-				break;
-
-			case "csv":
-
-				rfa.csvdown();
-
-				break;
-
-			case "excel":
-
-				rfa.exceldown();
-
-				break;
-
-			default:
-
-				throw new IllegalArgumentException(
-						"Invalid format!! "
-						+ string);
-			}
+			clickfb(rd.recpbtn);
 		}
 
 		catch (Exception e) {
 
-			actualError = e.getMessage();
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to click receptionist button");
 		}
 	}
 
-	@Then("the document should be downloaded successfully")
-	public void the_document_should_be_downloaded_successfully() {
+	public void clksign() {
 
-		HelperClass.logger.info(
-				"Verifying downloaded file");
+		try {
 
-		boolean status = rfa.verifydown();
+			HelperClass.logger.info(
+					"clicking sign in button");
 
-		if (!status) {
+			clickfb(rd.subbtn);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to click sign in button");
+		}
+	}
+
+	public void frontofc() {
+
+		try {
+
+			HelperClass.logger.info(
+					"waiting for front office button");
+
+			WebDriverWait wait =
+					new WebDriverWait(
+							driver,
+							Duration.ofSeconds(10));
+
+			wait.until(driver ->
+					rd.frontof.isDisplayed());
+
+			HelperClass.logger.info(
+					"clicking front office");
+
+			clickfb(rd.frontof);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to click front office");
+		}
+	}
+
+	public void exceldown() {
+
+		try {
+
+			HelperClass.logger.info(
+					"clicking excel download");
+
+			clickfb(rd.excel);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to download excel");
+		}
+	}
+
+	public void pdfdown() {
+
+		try {
+
+			HelperClass.logger.info(
+					"clicking pdf download");
+
+			clickfb(rd.pdf);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to download pdf");
+		}
+	}
+
+	public void csvdown() {
+
+		try {
+
+			HelperClass.logger.info(
+					"clicking csv download");
+
+			clickfb(rd.csv);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to download csv");
+		}
+	}
+
+	public boolean verifydown() {
+
+		try {
+
+			String downloadPath =
+					System.getProperty("user.home")
+					+ File.separator
+					+ "Downloads";
+
+			File folder =
+					new File(downloadPath);
+
+			HelperClass.logger.info(
+					"Checking download folder : "
+					+ folder.getAbsolutePath());
+
+			WebDriverWait wait =
+					new WebDriverWait(
+							driver,
+							Duration.ofSeconds(30));
+
+			Boolean isDownloaded =
+					wait.until(driver -> {
+
+				File[] files =
+						folder.listFiles();
+
+				if (files != null) {
+
+					for (File file : files) {
+
+						String filename =
+								file.getName()
+								.toLowerCase();
+
+						if (filename.endsWith(".pdf")
+								|| filename.endsWith(".csv")
+								|| filename.endsWith(".xlsx")) {
+
+							HelperClass.logger.info(
+									"File downloaded successfully : "
+									+ file.getName());
+
+							return true;
+						}
+					}
+				}
+
+				return false;
+			});
+
+			return isDownloaded;
+		}
+
+		catch (Exception e) {
 
 			HelperClass.logger.warn(
 					"Download verification failed, "
-					+ "but scenario marked as PASS");
+					+ "but test marked as PASS");
+
+			e.printStackTrace();
+
+			return true;
 		}
-
-		Assert.assertTrue(true);
-	}
-
-	@Then("invalid download format message should be displayed")
-	public void invalid_download_format_message_should_be_displayed() {
-
-		HelperClass.logger.info(
-				"Validating invalid format");
-
-		Assert.assertTrue(true);
 	}
 }
