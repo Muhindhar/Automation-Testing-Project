@@ -1,5 +1,7 @@
 package runner;
 
+import org.testng.annotations.DataProvider;
+
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -16,9 +18,12 @@ import io.cucumber.testng.CucumberOptions;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "rerun:target/failed-rerun.txt"
         },
-        tags = "and not @UnderDevelopment",
+
+        tags = "@Muhindhar and not @UnderDevelopment",
+
         monochrome = true
 )
+
 public class TestRunner extends AbstractTestNGCucumberTests {
 
     @Override
@@ -27,4 +32,3 @@ public class TestRunner extends AbstractTestNGCucumberTests {
         return super.scenarios();
     }
 }
-
