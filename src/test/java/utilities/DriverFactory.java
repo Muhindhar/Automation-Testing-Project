@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 public class DriverFactory {
+
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     public static WebDriver initDriver() {
         ChromeOptions options = new ChromeOptions();
@@ -54,3 +55,4 @@ public class DriverFactory {
         }
     }
 }
+
