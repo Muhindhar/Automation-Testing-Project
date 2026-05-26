@@ -41,6 +41,7 @@ public class PrescriptionPage {
     public final By doseDurationDropdown     = By.cssSelector("select[name='duration_dosage_1']");
     public final By instruction     = By.cssSelector("input[name='instruction_1'], textarea[name='instruction_1']");
     public final By attachmentInput = By.name("document");
+    public final By footerNoteLabel = By.xpath("//label[normalize-space()='Footer Note']");
     public final By saveButton = By.xpath("//form[@id = 'form_prescription']//div[@class = 'pull-right']//button[@value = 'save']");
     public final By saveAndPrintButton = By.xpath("//button[@name = 'save_print']");
     public final By errormsg = By.xpath("//p[text() = 'Please select any one pathology, radiology or medicine details']");

@@ -1,28 +1,26 @@
 @Mythily
 Feature: S_MYTHILY_2026_05_14_SmartHospital_Add Prescription Validation
 
-  Background:
+   Background:
     Given the user launches the application
     And the user is on the login page
     When the user clicks the "Doctor" button
     And clicks on the Login button
     Then the user should be redirected to the dashboard
     When clicks the IPD -In Patient menu
-    And searches patient by IPD Number "128"
-    Then only patient "128" IPD should be displayed
-    When clicks the IPD Number "128"
-    And clicks on Prescription
-    And clicks on Add Prescription
-
+    And searches patient by IPD Number
+    Then only patient with that IPD should be displayed
+    When clicks that IPD Number
+    And clicks on Prescription tab
+    And clicks on Add Prescription button
 
   @ValidPrescriptionSave
   Scenario: Add prescription with valid details from Excel and click Save
 
-    When enters prescription details from Excel file "src/test/resources/testdata/PrescriptionTestData.xlsx" sheet "Sheet1" row 1
+    When fills the valid prescription details
     And clicks on Save
     Then the prescription should be saved successfully
     And the prescription should appear in the prescription list
-
 
   @MissingMandatoryFields
   Scenario Outline: Validate error message when Save is clicked without mandatory prescription details
@@ -37,7 +35,6 @@ Feature: S_MYTHILY_2026_05_14_SmartHospital_Add Prescription Validation
       | headerNote                                                                                      | prescribeBy      |
       | Patient complains of fever, cough, and body pain for the past 3 days. Patient condition stable. | Amit Singh(9009) |
       |                                                                                                 |                  |
-
 
   @InvalidPrescription
   Scenario: Validate error message when Save is clicked without filling any prescription details
