@@ -80,7 +80,9 @@ public class PathalogyAction extends BaseAction {
     //for payment
     
     public void clickpay() {
-    	click(pathoPage.paybtn);
+        wait.until(ExpectedConditions.presenceOfElementLocated(pathoPage.paybtn));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(pathoPage.paybtn));
+        click(pathoPage.paybtn);
     }
     
     public void enterAmt(String amt) {
@@ -137,7 +139,7 @@ public class PathalogyAction extends BaseAction {
         try {
             driver.switchTo().defaultContent();
         } catch (Exception e) {
-            System.out.println("Already on main page — no iframe switch needed");
+            System.out.println("Already on main page â€” no iframe switch needed");
         }
 
         wait.withTimeout(java.time.Duration.ofSeconds(30))

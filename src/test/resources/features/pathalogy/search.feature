@@ -3,7 +3,7 @@ Feature: S_MYTHILY_2026_05_17_Search pathology report validation - Smart Hospita
 
   Background:
     Given the user launches the application
-    When the user clicks on the Sign In button
+    And the user clicks on the Sign In button
     Then the user should be redirected to the patient dashboard
 
   @ValidPathologySearch
