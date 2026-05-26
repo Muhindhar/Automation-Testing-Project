@@ -1,4 +1,4 @@
-@Muhindhar_calllog
+@Muhindhar
 Feature: Muhindhar_16-05-2026_To check the call log in the front office module
 Description: As a receptionist user i want to add call logs and see all the call logs
 
