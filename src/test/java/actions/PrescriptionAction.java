@@ -190,8 +190,7 @@ public class PrescriptionAction extends BaseAction {
         try {
             waitForClickable(page.findingOption(value)).click();
         } catch (Exception e) {
-
-            //input.sendKeys(Keys.ENTER);
+            input.sendKeys(Keys.ENTER);
         }
     }
 
