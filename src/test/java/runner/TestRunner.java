@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
                 "rerun:target/failed-rerun.txt" },
         monochrome = true,
-        tags = "not @UnderDevelopment and not @Bug"
+        tags = "@Mythily"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
