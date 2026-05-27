@@ -5,7 +5,9 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.DataProvider;
 
 public class FailedRerun {
-	@CucumberOptions(features = { "@target/failed-rerun.txt" }, glue = { "definitions" }, plugin = {
+	@CucumberOptions(features = { "@target/failed-rerun.txt" }, 
+			glue = { "definitions" }, 
+			plugin = {
 			"pretty", "html:target/cucumber-report-rerun.html", "json:target/cucumber-rerun-report.json",
 			"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 			"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm" }, monochrome = true)
