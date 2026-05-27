@@ -23,6 +23,12 @@ public class PathalogyAction extends BaseAction {
     
    //for search
     
+    public String getCurrentUrl() {
+        wait.until(ExpectedConditions.not(
+            ExpectedConditions.urlContains("userlogin")));
+        return driver.getCurrentUrl();
+    }
+    
     public void clickLogin() {
     	click(pathoPage.login);
     }

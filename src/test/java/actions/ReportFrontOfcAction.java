@@ -5,9 +5,11 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.Assert;
 
 import pages.ReportDownloadFrontOfficePages;
+
 import utilities.HelperClass;
 
 public class ReportFrontOfcAction extends BaseAction {
@@ -17,65 +19,94 @@ public class ReportFrontOfcAction extends BaseAction {
 	WebDriver driver;
 
 	public ReportFrontOfcAction(WebDriver driver) {
+
 		super(driver);
+
 		this.driver = driver;
+
 		rd = new ReportDownloadFrontOfficePages();
 	}
 
 	public void clickrecp() {
+
 		try {
+
 			HelperClass.logger.info("clicking reception button");
+
 			clickfb(rd.recpbtn);
 		}
 
 		catch (Exception e) {
+
 			e.printStackTrace();
+
 			Assert.fail("Unable to click receptionist button");
 		}
 	}
 
 	public void clksign() {
+
 		try {
+
 			HelperClass.logger.info("clicking sign in button");
+
 			clickfb(rd.subbtn);
 		}
 
 		catch (Exception e) {
+
 			e.printStackTrace();
+
 			Assert.fail("Unable to click sign in button");
 		}
 	}
 
 	public void frontofc() {
+
 		try {
+
 			HelperClass.logger.info("waiting for front office button");
+
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
 			wait.until(driver -> rd.frontof.isDisplayed());
+
 			HelperClass.logger.info("clicking front office");
+
 			clickfb(rd.frontof);
 		}
 
 		catch (Exception e) {
+
 			e.printStackTrace();
+
 			Assert.fail("Unable to click front office");
 		}
 	}
 
 	public void exceldown() {
+
 		try {
+
 			HelperClass.logger.info("clicking excel download");
+
 			clickfb(rd.excel);
 		}
 
 		catch (Exception e) {
+
 			e.printStackTrace();
+
 			Assert.fail("Unable to download excel");
 		}
 	}
 
 	public void pdfdown() {
+
 		try {
+
 			HelperClass.logger.info("clicking pdf download");
+
 			clickfb(rd.pdf);
 		}
 
@@ -108,46 +139,70 @@ public class ReportFrontOfcAction extends BaseAction {
 
 		try {
 
-			String downloadPath = System.getProperty("user.home") + File.separator + "Downloads";
+			String downloadPath =
+
+					System.getProperty("user.home")
+
+							+ File.separator
+
+							+ "Downloads";
 
 			File folder = new File(downloadPath);
 
-			HelperClass.logger.info("Checking download folder : " + folder.getAbsolutePath());
+			HelperClass.logger.info(
 
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+					"Checking download folder : "
 
-			Boolean isDownloaded = wait.until(driver -> {
+							+ folder.getAbsolutePath());
 
-				File[] files = folder.listFiles();
+			WebDriverWait wait =
 
-				if (files != null) {
+					new WebDriverWait(driver, Duration.ofSeconds(30));
 
-					for (File file : files) {
+			Boolean isDownloaded =
 
-						String filename = file.getName().toLowerCase();
+					wait.until(driver -> {
 
-						if (filename.endsWith(".pdf") || filename.endsWith(".csv") || filename.endsWith(".xlsx")) {
+						File[] files = folder.listFiles();
 
-							HelperClass.logger.info("File downloaded successfully : " + file.getName());
+						if (files != null) {
 
-							return true;
+							for (File file : files) {
+
+								String filename =
+
+										file.getName().toLowerCase();
+
+								if (filename.endsWith(".pdf")
+
+										|| filename.endsWith(".csv")
+
+										|| filename.endsWith(".xlsx")) {
+
+									HelperClass.logger.info(
+
+											"File downloaded successfully : "
+
+													+ file.getName());
+
+									return true;
+								}
+							}
 						}
-					}
-				}
 
-				return false;
-			});
+						return false;
+					});
 
 			return isDownloaded;
 		}
 
 		catch (Exception e) {
 
-			HelperClass.logger.warn("Download verification failed, " + "but test marked as PASS");
-
 			e.printStackTrace();
 
-			return true;
+			HelperClass.logger.warn("Download verification failed");
+
+			return false;
 		}
 	}
 }
