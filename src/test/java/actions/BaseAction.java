@@ -131,4 +131,8 @@ public class BaseAction {
 		element.sendKeys(value);
 		element.sendKeys(Keys.ENTER);
 	}
+	
+	public void switchToFrame(By locator) {
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(locator));
+	}
 }
