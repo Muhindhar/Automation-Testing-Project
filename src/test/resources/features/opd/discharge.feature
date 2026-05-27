@@ -1,6 +1,6 @@
 @OpdDischarge
 @jerishwin
-Feature: Jerishwin_Joseph_13-05-2026_Discharge Patient
+Feature: Jerishwin_Joseph_25-05-2026_Discharge Patient
   As a receptionist
   I want to discharge a patient from the OPD
 
