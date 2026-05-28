@@ -19,7 +19,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
                 "rerun:target/failed-rerun.txt"
         },
 
-        tags = "@Muhindhar and not @UnderDevelopment",
+        tags = "not @Bug and not @UnderDevelopment",
 
         monochrome = true
 )
@@ -33,4 +33,5 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     public Object[][] scenarios() {
         return super.scenarios();
     }
+}
 }
