@@ -30,11 +30,13 @@ public class PathalogyPage {
 	public By upi = By.xpath("//*[self::a or self::li or self::div or self::span][normalize-space()='UPI']");
 	public By email = By.xpath("//input[contains(@placeholder,'upi') or contains(@placeholder,'UPI') or contains(@placeholder,'okhdfcbank') or contains(@placeholder,'@')]");
 	public By verify = By.xpath("//button[contains(normalize-space(),'Verify') or contains(normalize-space(),'Pay') or contains(normalize-space(),'verify')]");
-	public By succ = By.xpath("//div[contains(@class,'alert-success')]");
+	public By succ = By.xpath("//div[@class='alert alert-success alert-dismissible']");
 	public By payError = By.xpath(
 		    "//*[contains(text(),'Amount Should Not Be Greater Than Balance')] | " +
 		    "//*[contains(text(),'Invalid Amount')]"
 		);
+	
+	public By frame = By.tagName("iframe");
 	public By billNumber(String billNo) {
 	    return By.xpath("//*[contains(text(),'" + billNo + "')]");
 	}

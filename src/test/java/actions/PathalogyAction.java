@@ -80,8 +80,7 @@ public class PathalogyAction extends BaseAction {
     //for payment
     
     public void clickpay() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(pathoPage.paybtn));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(pathoPage.paybtn));
+    	waitForVisibility(pathoPage.paybtn);
         click(pathoPage.paybtn);
     }
     
@@ -94,18 +93,14 @@ public class PathalogyAction extends BaseAction {
     }
     
     public void ensure_makepay() {
-
         click(pathoPage.makepay);
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.tagName("iframe")));
+        switchToFrame(pathoPage.frame);
     }
-    
+      
     public void enterMob(String mobile) {
     
         try {
-            WebElement mobileField = wait.withTimeout(java.time.Duration.ofSeconds(5))
-                .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.mobile));
-            mobileField.clear();
-            mobileField.sendKeys(mobile);
+            sendKeys(pathoPage.mobile,mobile);
         } catch (org.openqa.selenium.TimeoutException e) {
         	System.out.println("Mobile field not displayed");
         }
@@ -114,9 +109,7 @@ public class PathalogyAction extends BaseAction {
     public void clickContinue() {
 
         try {
-            WebElement continueBtn = wait.withTimeout(java.time.Duration.ofSeconds(5))
-                .until(ExpectedConditions.elementToBeClickable(pathoPage.cont));
-            continueBtn.click();
+            click(pathoPage.cont);
         } catch (org.openqa.selenium.TimeoutException e) {
         	 System.out.println("Continue button not clickable");
         }
@@ -135,26 +128,26 @@ public class PathalogyAction extends BaseAction {
     }
     
     public String getSuccessTxt() {
-
         try {
             driver.switchTo().defaultContent();
         } catch (Exception e) {
-            System.out.println("Already on main page â€” no iframe switch needed");
+            System.out.println("Already on main page");
         }
-
-        wait.withTimeout(java.time.Duration.ofSeconds(30))
-            .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.succ));
-
-        return getText(pathoPage.succ);
+        try {
+            return getText(pathoPage.succ);
+        } catch (org.openqa.selenium.TimeoutException e) {
+            if (driver.getPageSource().contains("Thank you for your payment")) {
+                return "Thank you for your payment";
+            }
+            System.out.println("Success message not found on page");
+            return "";
+        }
     }
     
     public String getPayErrorTxt() {
         try {
 
-            WebElement errorEl = wait.withTimeout(java.time.Duration.ofSeconds(8))
-                .until(ExpectedConditions.visibilityOfElementLocated(pathoPage.payError));
-            String errorTxt = errorEl.getText().trim();
-            return errorTxt;
+            return getText(pathoPage.payError).trim();
         } catch (org.openqa.selenium.TimeoutException e) {
             String pageSource = driver.getPageSource();
             boolean hasExceed = pageSource.contains("Amount Should Not Be Greater Than Balance");

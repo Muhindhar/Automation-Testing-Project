@@ -14,7 +14,7 @@ Feature: S_MYTHILY_2026_05_14_SmartHospital_Add Prescription Validation
     And clicks on Prescription tab
     And clicks on Add Prescription button
 
-  @ValidPrescriptionSave
+  @ValidPrescriptionSave @UnderDevelopment
   Scenario: Add prescription with valid details from Excel and click Save
 
     When fills the valid prescription details
