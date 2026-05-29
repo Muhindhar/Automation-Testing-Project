@@ -6,22 +6,40 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
+        features = "src\\test\\resources\\features",
 
         features = "src\\test\\resources\\features\\IPD\\IPDPatientDetails.feature",
 
         glue = "definitions",
-        plugin = { "pretty", "html:target/cucumber-report.html", "json:target/cucumber-report.json",
+
+        plugin = {
+
+                "pretty",
+
+                "html:target/cucumber-report.html",
+
+                "json:target/cucumber-report.json",
+
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-                "rerun:target/failed-rerun.txt" },
+
+                "rerun:target/failed-rerun.txt"
+        },
+
+        tags = "not @Bug and not @UnderDevelopment",
+
         monochrome = true,
-        tags = "@Malavicka"
+
+        publish = true
 )
+
 public class TestRunner extends AbstractTestNGCucumberTests {
 
     @Override
-    @DataProvider(parallel = true)
+
+    @DataProvider(parallel = false)
+
     public Object[][] scenarios() {
+
         return super.scenarios();
     }
 }
