@@ -9,12 +9,13 @@ Verify whether the user is able to chat with the doctor
     When the user clicks the "Receptionist" button
     And clicks on the Login button
 
-  @ValidMessage
+  @ValidCheck
   Scenario: Validate chat with doctor
     When user clicks on appointment section
     And clicks on chat icon in the appointment page
     And user selects the doctor in the chat page
     And user sends the message in the chatbox
     Then user should be able to send the message
+    
     
    
