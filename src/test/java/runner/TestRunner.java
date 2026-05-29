@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         
-        features = "src\\test\\resources\\features\\IPD\\IPDPatientDetails.feature",
+        features = "src\\test\\resources\\features\\",
 
         glue = "definitions",
 
@@ -24,7 +24,7 @@ import io.cucumber.testng.CucumberOptions;
                 "rerun:target/failed-rerun.txt"
         },
 
-        tags = "not @Bug and not @UnderDevelopment",
+        tags = "not @Bug and not @UnderDevelopment and @Malavicka",
 
         monochrome = true,
 
