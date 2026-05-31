@@ -16,5 +16,3 @@ Verify whether the user is able to chat with the doctor
     And user selects the doctor in the chat page
     And user sends the message in the chatbox
     Then user should be able to send the message
-    
-   
