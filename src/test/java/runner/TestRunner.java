@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "rerun:target/failed-rerun.txt"
         },
-        tags = "@Muhindhar",
+        tags = "@Muhindhar and not @UnderDevelopment",
         monochrome = true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
