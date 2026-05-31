@@ -259,8 +259,6 @@ public class CallLogfrontofficeStepDefinition {
 		System.out.println("Error message displayed");
 		return true;
 
-
 	}
 
 }
-
