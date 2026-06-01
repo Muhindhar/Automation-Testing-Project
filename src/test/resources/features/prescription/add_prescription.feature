@@ -14,10 +14,7 @@ Feature: S_MYTHILY_2026_05_14_SmartHospital_Add Prescription Validation
     And clicks on Prescription tab
     And clicks on Add Prescription button
 
-  @ValidPrescriptionSave
-
   @ValidPrescriptionSave @UnderDevelopment
-
   Scenario: Add prescription with valid details from Excel and click Save
 
     When fills the valid prescription details
@@ -44,5 +41,3 @@ Feature: S_MYTHILY_2026_05_14_SmartHospital_Add Prescription Validation
 
     When clicks on Save
     Then an error message should be displayed as "Please select any one pathology, radiology or medicine details"
-    
-    

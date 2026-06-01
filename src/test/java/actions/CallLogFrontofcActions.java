@@ -3,10 +3,13 @@ package actions;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.Assert;
 
 import pages.CallLogFrontofcPages;
+
 import utilities.HelperClass;
 
 public class CallLogFrontofcActions extends BaseAction {
@@ -15,13 +18,16 @@ public class CallLogFrontofcActions extends BaseAction {
 
 	WebDriverWait wait;
 
-	public CallLogFrontofcActions(WebDriver driver) {
+	public CallLogFrontofcActions(
+			WebDriver driver) {
 
 		super(driver);
 
 		this.driver = driver;
 
-		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait = new WebDriverWait(
+				driver,
+				Duration.ofSeconds(10));
 
 		cfp = new CallLogFrontofcPages();
 	}
@@ -30,17 +36,20 @@ public class CallLogFrontofcActions extends BaseAction {
 
 		try {
 
-			HelperClass.logger.info("clicking reception button");
+			HelperClass.logger.info(
+					"clicking reception button");
 
 			waitForVisibility(cfp.recbtnfo);
 
 			jsClick(cfp.recbtnfo);
 
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 
 			e.printStackTrace();
 
-			Assert.fail("Unable to click receptionist button");
+			Assert.fail(
+					"Unable to click receptionist button");
 		}
 	}
 
@@ -48,17 +57,20 @@ public class CallLogFrontofcActions extends BaseAction {
 
 		try {
 
-			HelperClass.logger.info("clicking sign in button");
+			HelperClass.logger.info(
+					"clicking sign in button");
 
 			waitForVisibility(cfp.signinfo);
 
 			jsClick(cfp.signinfo);
 
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 
 			e.printStackTrace();
 
-			Assert.fail("Unable to click sign in button");
+			Assert.fail(
+					"Unable to click sign in button");
 		}
 	}
 
@@ -66,17 +78,20 @@ public class CallLogFrontofcActions extends BaseAction {
 
 		try {
 
-			HelperClass.logger.info("clicking front office link");
+			HelperClass.logger.info(
+					"clicking front office link");
 
 			waitForVisibility(cfp.frontofc);
 
 			jsClick(cfp.frontofc);
 
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 
 			e.printStackTrace();
 
-			Assert.fail("Unable to click front office link");
+			Assert.fail(
+					"Unable to click front office link");
 		}
 	}
 
@@ -84,17 +99,20 @@ public class CallLogFrontofcActions extends BaseAction {
 
 		try {
 
-			HelperClass.logger.info("clicking phone call log button");
+			HelperClass.logger.info(
+					"clicking phone call log button");
 
 			waitForVisibility(cfp.phcalllog);
 
 			jsClick(cfp.phcalllog);
 
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 
 			e.printStackTrace();
 
-			Assert.fail("Unable to click phone call log");
+			Assert.fail(
+					"Unable to click phone call log");
 		}
 	}
 
@@ -102,26 +120,35 @@ public class CallLogFrontofcActions extends BaseAction {
 
 		try {
 
-			HelperClass.logger.info("clicking add call button");
+			HelperClass.logger.info(
+					"clicking add call button");
 
 			waitForVisibility(cfp.addlog);
 
 			jsClick(cfp.addlog);
 
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 
 			e.printStackTrace();
 
-			Assert.fail("Unable to click add call button");
+			Assert.fail(
+					"Unable to click add call button");
 		}
 	}
 
 	public void enterdet(
+
 			String name,
+
 			String phone,
+
 			String description,
+
 			String calltype,
+
 			String note,
+
 			String duration) {
 
 		try {
@@ -136,20 +163,25 @@ public class CallLogFrontofcActions extends BaseAction {
 
 			sendKeys(cfp.callduration, duration);
 
-			if (calltype.equalsIgnoreCase("Incoming")) {
+			if (calltype.equalsIgnoreCase(
+					"Incoming")) {
 
 				jsClick(cfp.incom);
+			}
 
-			} else if (calltype.equalsIgnoreCase("Outgoing")) {
+			else if (calltype.equalsIgnoreCase(
+					"Outgoing")) {
 
 				jsClick(cfp.outgng);
 			}
 
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 
 			e.printStackTrace();
 
-			Assert.fail("Unable to enter call details");
+			Assert.fail(
+					"Unable to enter call details");
 		}
 	}
 
@@ -157,17 +189,20 @@ public class CallLogFrontofcActions extends BaseAction {
 
 		try {
 
-			HelperClass.logger.info("clicking save button");
+			HelperClass.logger.info(
+					"clicking save button");
 
 			waitForVisibility(cfp.savebtn);
 
 			jsClick(cfp.savebtn);
 
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 
 			e.printStackTrace();
 
-			Assert.fail("Unable to click save button");
+			Assert.fail(
+					"Unable to click save button");
 		}
 	}
 
@@ -175,17 +210,19 @@ public class CallLogFrontofcActions extends BaseAction {
 
 		try {
 
-			HelperClass.logger.info("checking whether list is visible");
+			HelperClass.logger.info(
+					"checking whether list is visible");
 
 			waitForVisibility(cfp.checklist);
 
 			return getText(cfp.checklist);
-
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 
 			e.printStackTrace();
 
-			Assert.fail("Checklist not visible");
+			Assert.fail(
+					"Checklist not visible");
 
 			return "";
 		}
@@ -196,8 +233,8 @@ public class CallLogFrontofcActions extends BaseAction {
 		try {
 
 			return isDisplayed(cfp.error);
-
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 
 			e.printStackTrace();
 
