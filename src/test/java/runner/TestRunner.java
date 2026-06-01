@@ -7,7 +7,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 @CucumberOptions(
 
-		features = "src\\test\\resources\\features\\pathalogist\\SendSms.feature",
+		features = "src\\test\\resources\\features",
 		glue = "definitions",
 		
 		plugin = {"pretty",
