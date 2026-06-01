@@ -1,9 +1,6 @@
 @Muhindhar
-<<<<<<< HEAD
 @Developing
-=======
 @UnderDevelopment
->>>>>>> f86e621b7d645b765e062b8f0a965e5efa728436
 Feature: Muhindhar_19-05-2026_Add Visitor Functionality
   Description:
     Verify whether receptionist/admin user is able to add
