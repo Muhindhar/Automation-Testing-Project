@@ -16,7 +16,7 @@ import io.cucumber.testng.CucumberOptions;
         "rerun:target/failed-rerun.txt"
     },
     monochrome = true,
-    tags = "@Mythily and @Muhindhar and @Malavicka and @jerishwin and @Vigneshwaran and not @UnderDevelopment"
+    tags = "@Muhindhar" 
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
