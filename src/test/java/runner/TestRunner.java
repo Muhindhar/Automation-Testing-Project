@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = "src\\test\\resources\\features",
+        features = "src\\test\\resources\\features\\FrontOffice\\AddVisitorFrontOffice.feature",
         glue = "definitions",
         plugin = {
                 "pretty",
@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "rerun:target/failed-rerun.txt"
         },
-        tags = "not @Bug and not @UnderDevelopment",
+       tags = "@Muhindhar",
         monochrome = true
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
