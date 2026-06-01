@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        features = "src\\test\\resources\\features\\FrontOffice\\AddVisitorFrontOffice.feature",
+        features = "src\\test\\resources\\features\\Appointment\\NoticeBoard.feature",
         glue = "definitions",
         plugin = {
                 "pretty",

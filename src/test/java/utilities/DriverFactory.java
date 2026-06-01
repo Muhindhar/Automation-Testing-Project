@@ -12,7 +12,7 @@ public class DriverFactory {
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     public static WebDriver initDriver() {
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless=new");
+      //  options.addArguments("--headless=new");
         options.addArguments("--window-size=1920,1080");
         options.addArguments("--disable-notifications");
         options.addArguments("--disable-popup-blocking");
