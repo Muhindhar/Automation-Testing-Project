@@ -35,6 +35,7 @@ test-output/Screenshots/
 
 # Downloads
 downloads/
+*.crdownload
 
 # OS Files
 .DS_Store
