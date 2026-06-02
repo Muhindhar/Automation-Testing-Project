@@ -1,6 +1,5 @@
 package definitions;
 
-import java.io.IOException;
 import java.util.Map;
 
 import org.junit.Assert;
@@ -24,7 +23,7 @@ public class AddConsultationStepDefinition {
 	}
 
 	@When("User enters consultation details for {string}")
-	public void user_enters_consultation_details_for(String testCase) throws IOException {
+	public void user_enters_consultation_details_for(String testCase) throws Exception {
 
 		excelData =
 		        CSVReaderUtil.getTestDataByTestCase(
