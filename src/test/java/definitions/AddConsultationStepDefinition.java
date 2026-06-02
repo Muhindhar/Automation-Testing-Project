@@ -32,10 +32,10 @@ public class AddConsultationStepDefinition {
 		                testCase);
 
 		ja.setPatient(excelData.get("patient"));
-		ja.setConsultationTitle(excelData.get("title"));
-		ja.setConsultantDoctor(excelData.get("doctor"));
-		ja.setDuration(excelData.get("duration"));
-		ja.setConsultationDate(excelData.get("date"));
+//		ja.setConsultationTitle(excelData.get("title"));
+//		ja.setConsultantDoctor(excelData.get("doctor"));
+//		ja.setDuration(excelData.get("duration"));
+//		ja.setConsultationDate(excelData.get("date"));
 	}
 
 	@When("User clicks on Save button")

@@ -8,8 +8,9 @@ public class JoinConsultationPage {
 	public By tableBody = By.xpath("//div/table/tbody/tr");
 	public By popUp = By.xpath("//div[@id = \"modal-chkstatus\"]");
 	public By startNow = By.xpath("//a[contains(@href , \"zoom\") and @class = \"btn btn-outline-success btn-sm pull-right\"]");
-	public By addButton = By.xpath("//button[@class=\"btn btn-primary btn-sm addappointment\"]");
-	public By patientName = By.xpath("//span[@id = \"select2-addpatient_id-container\"]/following-sibling::span");
+	public By addButton = By.xpath("//div[@class = \"box-tools pull-right box-tools-md\"]/button[1]");
+	public By patientName = By.xpath("//select[@id = \"addpatient_id\"]/following-sibling::span/span/span/span[2]");
+	public By firstPatientoption = By.xpath("//span[@class = \"select2-results\"]/ul/li[1]");
 	public By patientNameInput =By.cssSelector("input.select2-search__field");
 	public By title = By.xpath("//input[@name = \"title\"]");
 	public By date = By.cssSelector("input#datetimepicker");
