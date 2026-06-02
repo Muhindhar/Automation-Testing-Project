@@ -2,7 +2,6 @@ package actions;
 import java.io.File;
 import java.time.Duration;
 import java.util.Map;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -47,17 +46,19 @@ public class OPD_ReportActions extends BaseAction {
     public void clickShowIcon() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.opdOutPatientNavLink));
         jsClick(opdPage.opdOutPatientNavLink);
+        HelperClass.logger.info("clicking ID Link");
     }
 
     public void clickVisitsTab() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.visitsTab));
         WebElement tab = driver.findElement(opdPage.visitsTab);
         jsClickElement(tab);
+        HelperClass.logger.info("clicking visits tab");
     }
 
     public void clickPrintIcon() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.printIcon));
-        HelperClass.logger.info("Clicking print icon");
+        HelperClass.logger.info("Clicking PDF icon");
         click(opdPage.printIcon);
     }
 
