@@ -4,58 +4,197 @@ import java.io.File;
 
 import org.openqa.selenium.WebDriver;
 
+import org.testng.Assert;
+
 import pages.ReportDownloadFrontOfficePages;
+
 import utilities.HelperClass;
 
 public class ReportFrontOfcAction extends BaseAction {
+
 	ReportDownloadFrontOfficePages rd;
+
 	WebDriver driver;
 
-	public ReportFrontOfcAction(WebDriver driver) {
+	public ReportFrontOfcAction(
+			WebDriver driver) {
+
 		super(driver);
-		rd = new ReportDownloadFrontOfficePages();
+
 		this.driver = driver;
-		driver = HelperClass.getDriver();
-		// TODO Auto-generated constructor stub
+
+		rd = new ReportDownloadFrontOfficePages();
 	}
 
 	public void clickrecp() {
-		jsClickfb(rd.recpbtn);
+
+		try {
+
+			HelperClass.logger.info(
+					"clicking reception button");
+
+			clickfb(rd.recpbtn);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to click receptionist button");
+		}
 	}
 
 	public void clksign() {
-		clickfb(rd.subbtn);
+
+		try {
+
+			HelperClass.logger.info(
+					"clicking sign in button");
+
+			clickfb(rd.subbtn);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to click sign in button");
+		}
 	}
 
 	public void frontofc() {
-		clickfb(rd.frontof);
+
+		try {
+
+			HelperClass.logger.info(
+					"waiting for dashboard to load");
+
+			Thread.sleep(5000);
+
+			HelperClass.logger.info(
+					"clicking front office");
+
+			clickfb(rd.frontof);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to click front office");
+		}
 	}
 
 	public void exceldown() {
-		clickfb(rd.excel);
+
+		try {
+
+			HelperClass.logger.info(
+					"clicking excel download");
+
+			clickfb(rd.excel);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to download excel");
+		}
 	}
 
 	public void pdfdown() {
-		clickfb(rd.pdf);
+
+		try {
+
+			HelperClass.logger.info(
+					"clicking pdf download");
+
+			clickfb(rd.pdf);
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to download pdf");
+		}
 	}
 
 	public void csvdown() {
-		clickfb(rd.csv);
-	}
 
-	public boolean verifydown() throws InterruptedException {
-		File folder = new File(System.getProperty("user.dir") + File.separator + "downloads");
-		File[] files = folder.listFiles();
-		if (files != null) {
-			for (File file : files) {
-				String filename = file.getName().toLowerCase();
-				if (filename.endsWith(".pdf") || filename.endsWith(".csv") || filename.endsWith(".xlsx")) {
-					return true;
-				}
-			}
+		try {
+
+			HelperClass.logger.info(
+					"clicking csv download");
+
+			clickfb(rd.csv);
 		}
 
-		return false;
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Unable to download csv");
+		}
 	}
 
+	public boolean verifydown() {
+
+		try {
+
+			File folder = new File(
+
+					System.getProperty("user.dir")
+
+					+ File.separator
+
+					+ "downloads");
+
+			File[] files = folder.listFiles();
+
+			if (files != null) {
+
+				for (File file : files) {
+
+					String filename =
+							file.getName()
+							.toLowerCase();
+
+					if (filename.endsWith(".pdf")
+
+							|| filename.endsWith(".csv")
+
+							|| filename.endsWith(".xlsx")) {
+
+						HelperClass.logger.info(
+								"file downloaded successfully");
+
+						return true;
+					}
+				}
+			}
+
+			HelperClass.logger.info(
+					"file not downloaded");
+
+			return false;
+		}
+
+		catch (Exception e) {
+
+			e.printStackTrace();
+
+			Assert.fail(
+					"Error while verifying downloaded file");
+
+			return false;
+		}
+	}
 }

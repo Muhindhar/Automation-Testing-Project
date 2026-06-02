@@ -1,0 +1,119 @@
+pipeline {
+    agent {
+        label 'Error404_Smart_Hospital'
+    }
+
+    tools {
+        maven 'MAVEN_HOME'
+        jdk 'JAVA_HOME'
+    }
+
+    stages {
+
+        stage('Workspace Cleanup') {
+            steps {
+                cleanWs()
+            }
+        }
+
+        stage('Checkout Source Code') {
+            steps {
+                git(
+                    branch: 'feature/appointment-module',
+                    url: 'https://github.com/VIGNESHWARAN-USER/Automation-Testing-Project.git'
+                )
+            }
+        }
+
+        stage('Build & Execute Automation Suite') {
+            steps {
+
+                echo "Executing Maven Test Suite..."
+
+                catchError(buildResult: 'UNSTABLE', stageResult: 'FAILURE') {
+
+                    bat 'mvn clean test'
+
+                }
+            }
+        }
+
+        stage('Publish Cucumber Report') {
+            steps {
+
+                cucumber(
+                    fileIncludePattern: '**/target/cucumber-report.json'
+                )
+
+            }
+        }
+
+        stage('Publish Extent Report') {
+            steps {
+
+                publishHTML([
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/ExtentReport',
+                    reportFiles: 'Spark.html',
+                    reportName: 'Extent Report'
+                ])
+
+            }
+        }
+
+        stage('Publish TestNG Surefire Report') {
+            steps {
+
+                publishHTML([
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/surefire-reports',
+                    reportFiles: 'index.html',
+                    reportName: 'TestNG Surefire Report'
+                ])
+
+            }
+        }
+
+        stage('Publish Allure Report') {
+            steps {
+
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    commandline: 'Allure',
+                    results: [[path: 'target/allure-results']]
+                ])
+
+            }
+        }
+    }
+
+    post {
+
+        always {
+
+            junit 'target/surefire-reports/*.xml'
+
+            archiveArtifacts(
+                artifacts: '''
+                    test-output/**,
+                    target/surefire-reports/**,
+                    target/ExtentReport/**,
+                    target/allure-results/**,
+                    logs/**,
+                    test-output/screenshots/**,
+                    target/cucumber-report.html,
+                    target/cucumber-report.json
+                ''',
+
+                allowEmptyArchive: true
+            )
+
+            echo "Pipeline completed with status: ${currentBuild.currentResult}"
+        }
+    }
+}

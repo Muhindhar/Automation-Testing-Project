@@ -7,7 +7,7 @@ Feature: Jerishwin_Joseph_17-05-2026_Add New OPD Patient
 
   Background:
     Given the user is logged into the Smart Hospital portal as a receptionist
-    And the user is on the "OPD - Out Patient" page
+    And the user is on the OPD page
     When the user clicks the Add Patient button
     And selects add icon
 
@@ -19,12 +19,12 @@ Feature: Jerishwin_Joseph_17-05-2026_Add New OPD Patient
       | Year           | 30         |
       | Month		   | 05 		|
       | Day			   | 14		    |
-    And clicks the "Save" button
-    Then a "Record Saved Successfully" message should appear
+    And clicks the Save button
+    Then a Record Saved Successfully message should appear
 
   
   Scenario: Fail to add patient with missing required fields (Invalid Case)
 
    	And the user fills the Add Patient form with data from Excel
-    And clicks the "Save" button
-    Then the system should show a message "Name field is required"
+    And clicks the Save button
+    Then the system should show a message Name field is required

@@ -219,7 +219,7 @@ public class JoinConsultationAction extends BaseAction {
 		}
 	}
 
-	public void setPatient(String patient) {
+	public void setPatient(String patient) throws Exception {
 
 	    try {
 
@@ -227,6 +227,7 @@ public class JoinConsultationAction extends BaseAction {
 
 	        Actions actions = new Actions(DriverFactory.getDriver());
 
+	        
 	        WebElement dropdown = getElement(jp.patientName);
 	        actions.moveToElement(dropdown).click().build().perform();
 	        sendKeysAndEnter(jp.patientNameInput, patient);

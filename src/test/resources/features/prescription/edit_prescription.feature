@@ -8,16 +8,16 @@ Feature: S_MYTHILY_2026_05_14_SmartHospital_Edit Prescription Validation
     And clicks on the Login button
     Then the user should be redirected to the dashboard
     When clicks the IPD -In Patient menu
-    And searches patient by IPD Number "128"
-    Then only patient "128" IPD should be displayed
-    When clicks the IPD Number "128"
-    And clicks on Prescription
+    And searches patient by IPD Number
+    Then only patient with that IPD should be displayed
+    When clicks that IPD Number
+    And clicks on Prescription tab
 
   @EditPrescription
   Scenario: Edit existing prescription
 
     And clicks on View Prescription
     And clicks on Edit
-    And updates prescription details
+    And updates the prescription details
     And clicks on Save
     Then the prescription should be updated successfully
