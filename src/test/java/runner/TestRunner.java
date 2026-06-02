@@ -1,7 +1,6 @@
 package runner;
 
 import org.testng.annotations.DataProvider;
-
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -13,15 +12,11 @@ import io.cucumber.testng.CucumberOptions;
 				"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm", "rerun:target/failed-rerun.txt" },
 				tags = "@jerishwin",
 		monochrome = true)
-
 public class TestRunner extends AbstractTestNGCucumberTests {
 
     @Override
-
-    @DataProvider(parallel = false)
-
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
-
         return super.scenarios();
     }
 }

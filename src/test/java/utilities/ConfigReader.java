@@ -1,10 +1,16 @@
 package utilities;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
 public class ConfigReader {
 
     private static Properties prop;
+
+    static {
+        loadProperties();
+    }
 
     public static void loadProperties() {
 
@@ -32,7 +38,6 @@ public class ConfigReader {
 
     public static String getProperty(String key) {
 
-        loadProperties();
         return prop.getProperty(key);
     }
 }
