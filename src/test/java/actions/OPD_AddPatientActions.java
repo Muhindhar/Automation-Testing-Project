@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pages.OPDPage;
 import utilities.ExcelUtility;
+import utilities.HelperClass;
 
 public class OPD_AddPatientActions extends BaseAction {
 
@@ -30,11 +31,13 @@ public class OPD_AddPatientActions extends BaseAction {
     public void clickAddPatientButton() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.addPatientButton));
         click(opdPage.addPatientButton);
+        HelperClass.logger.info("Clicked on Add Patient button");
     }
 
     public void clickAddIcon() {
         wait.until(ExpectedConditions.elementToBeClickable(opdPage.addIcon));
         click(opdPage.addIcon);
+         HelperClass.logger.info("Clicked on Add Icon");
     }
 
     public void fillPatientForm(Map<String, String> data) {
@@ -74,13 +77,16 @@ public class OPD_AddPatientActions extends BaseAction {
 
     public void clickSave() {
         click(opdPage.saveButton);
+         HelperClass.logger.info("Clicked on Save button");
     }
 
     public boolean isSuccessMessageDisplayed() {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.successMessage));
+            HelperClass.logger.info("Success message is displayed");
             return true;
         } catch (Exception e) {
+        	HelperClass.logger.warn("Success message is NOT displayed");
             return false;
         }
     }
@@ -88,8 +94,10 @@ public class OPD_AddPatientActions extends BaseAction {
     public boolean isNameErrorDisplayed() {
         try {
             wait.until(ExpectedConditions.visibilityOfElementLocated(opdPage.nameErrorMessage));
+            HelperClass.logger.info("error message is displayed");
             return true;
         } catch (Exception e) {
+        	HelperClass.logger.warn("error message is NOT displayed");
             return false;
         }
     }
