@@ -228,19 +228,23 @@ public class JoinConsultationAction extends BaseAction {
 	        Actions actions = new Actions(DriverFactory.getDriver());
 
 	        WebElement dropdown = getElement(jp.patientName);
-
-	        WebElement input = getElement(jp.patientNameInput);
-
-	        actions.moveToElement(dropdown)
-	               .click()
-	               .pause(Duration.ofSeconds(1))
-	               .moveToElement(input)
-	               .click()
-	               .sendKeys(patient)
-	               .pause(Duration.ofSeconds(1))
-	               .sendKeys(Keys.ENTER)
-	               .build()
-	               .perform();
+	        actions.moveToElement(dropdown).click().build().perform();
+	        sendKeysAndEnter(jp.patientNameInput, patient);
+	        WebElement option = getElement(jp.firstPatientoption);
+	        Thread.sleep(2000);
+	        actions.moveToElement(option).click().build().perform();
+	        
+	        
+//	        actions.moveToElement(dropdown)
+//	               .click()
+//	               .pause(Duration.ofSeconds(1))
+//	               .moveToElement(input)
+//	               .click()
+//	               .sendKeys(patient)
+//	               .pause(Duration.ofSeconds(1))
+//	               .sendKeys(Keys.ENTER)
+//	               .build()
+//	               .perform();
 
 	    } catch (Exception e) {
 
