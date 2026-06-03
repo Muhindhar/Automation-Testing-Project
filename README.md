@@ -41,7 +41,7 @@ The framework follows the **Page Object Model (POM)** design pattern and automat
 | 🧑‍💻 Vigneshwaran |
 | 🧑‍💻 Muhindhar |
 | 🧑‍💻 Jerishwin |
-| 🧑‍💻 Mythili |
+| 🧑‍💻 Mythily |
 | 🧑‍💻 Malavicka |
 
 ---
