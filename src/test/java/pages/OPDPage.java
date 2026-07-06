@@ -37,4 +37,16 @@ public class OPDPage {
     public By saveButton        = By.cssSelector("div.pull-right button#formaddpabtn");
     public By successMessage    = By.cssSelector("div#toast-container div.toast-success");
     public By nameErrorMessage  = By.cssSelector("div#toast-container div.toast-error");
+    
+    //discharge
+    public By revert =By.xpath("//div[@class='editviewdelete-icon pt8 text-center']/child::a[4]");
+    public By dischargeIcon = By.xpath("//div[@class='pull-right']/div/child::a[3]");
+    public By dateField = By.xpath("//form[@id='patient_discharge']/child::div[2]/child::div[1]/child::*/child::input");
+    public By reasonDropDown = By.xpath("//form[@id='patient_discharge']/child::div[2]/child::div[2]/child::*/child::select");
+    public By noteField = By.xpath("//textarea[@id='note']");
+    public By operationField = By.xpath("//textarea[@id='operation']");
+    public By diagnosisField = By.xpath("//textarea[@id='diagnosis']");
+    public By investigationField = By.xpath("//textarea[@id='investigations']");
+    public By saveDischargeButton = By.xpath("//div[@class='pull-right']/button[@id='add_paymentbtn']");
+    
 }

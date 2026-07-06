@@ -55,6 +55,12 @@ public class BaseAction {
 		element.clear();
 		element.sendKeys(value);
 	}
+	
+	public void sendKeysAndEnter(By locator, String value) {
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		element.clear();
+		element.sendKeys(value, Keys.ENTER);
+	}
 
 	public void sendKeysfb(WebElement element, String value) {
 		WebElement ele = wait.until(ExpectedConditions.visibilityOf(element));

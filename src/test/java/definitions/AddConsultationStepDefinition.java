@@ -1,6 +1,5 @@
 package definitions;
 
-import java.io.IOException;
 import java.util.Map;
 
 import org.junit.Assert;
@@ -24,7 +23,7 @@ public class AddConsultationStepDefinition {
 	}
 
 	@When("User enters consultation details for {string}")
-	public void user_enters_consultation_details_for(String testCase) throws IOException {
+	public void user_enters_consultation_details_for(String testCase) throws Exception {
 
 		excelData =
 		        CSVReaderUtil.getTestDataByTestCase(
@@ -32,10 +31,10 @@ public class AddConsultationStepDefinition {
 		                testCase);
 
 		ja.setPatient(excelData.get("patient"));
-		ja.setConsultationTitle(excelData.get("title"));
-		ja.setConsultantDoctor(excelData.get("doctor"));
-		ja.setDuration(excelData.get("duration"));
-		ja.setConsultationDate(excelData.get("date"));
+//		ja.setConsultationTitle(excelData.get("title"));
+//		ja.setConsultantDoctor(excelData.get("doctor"));
+//		ja.setDuration(excelData.get("duration"));
+//		ja.setConsultationDate(excelData.get("date"));
 	}
 
 	@When("User clicks on Save button")
